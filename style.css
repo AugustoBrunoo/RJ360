@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap');
+
+* {
+    --verde-escuro: rgb(54, 98, 62);
+    --verde-claro: #99BC85;
+    --azul-claro: #E4EFE7;
+    --off-white: #FDFAF6;
+    --creme: #FDFAF6;
+}
+
+.img-logo {
+    width: 95px;
+    margin-right: 15px;
+    /* border-radius: 50%;
+    border: 1px solid black; */
+}
+
+.navbar-brand {
+    font-family: "Special Gothic Expanded One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.span-logo {
+    color: var(--verde-claro);
+}
+
+.bg-body-custom {
+    background-color: #E4EFE7;
+}
+
+body {
+    background-color: #FAF1E6;
+}
+
+.icon-home {
+    font-size: 25px;
+}
+
+.icon-home:hover {
+    color: #769763;
+    transition: 0.2s ease-in;
+
+}
+
+.textosContainer{
+    gap: 40px;
+}
+
+.texto {
+    width: fit-content;
+}
