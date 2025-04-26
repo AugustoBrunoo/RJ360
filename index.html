@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
+  <link rel="shortcut icon" href="./assets/logos/logo.png" type="image/x-icon">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -12,13 +12,14 @@
   <title>RJ360</title>
 </head>
 
-<body>
+<body data-bs-theme="light">
+  <!-- Inicio do Rodapé -->
   <header>
     <nav class="navbar navbar-expand-lg bg-body-custom">
       <div class="container-fluid">
         <div class="d-flex align-items-center">
           <a class="navbar-brand" href="#">
-            <img class="img-logo" src="./assets/logo-rj360-removebg-preview.png" alt="">
+            <img class="img-logo" src="./assets/logos/logo-rj360-removebg-preview.png" alt="">
             <span class="span-logo">RJ</span><span class="span-logo2">360</span>
           </a>
         </div>
@@ -29,8 +30,14 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0 px-4 d-flex align-items-center">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#"><i
-                  class="icon-home bi bi-house-door-fill"></i></a>
+              <a class="nav-link active" aria-current="page" href="#">
+                <i class="bi bi-circle-half icon-aparencia" id="modo-noturno"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">
+                <i class="icon-home bi bi-house-door-fill"></i>
+              </a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -56,8 +63,10 @@
       </div>
     </nav>
   </header>
+  <!-- Fim do Rodape -->
 
   <main>
+    <!-- Início do Carrossel -->
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
       <div class="carousel-indicators">
         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
@@ -157,36 +166,174 @@
         </span>
       </button>
     </div>
+    <!-- Fim do Carrossel -->
 
+    <!-- Inicio Container de Textos -->
     <div class="containerSobreNos container">
       <h3 class="text-center mt-4">A Essência</h3>
-      <div class="textosContainer d-flex mt-4 justify-content-around">
-        <p class="texto">
-          Descubra o Rio de Janeiro além dos cartões-postais com o RJ360. Nosso guia foi feito para viajantes que querem
-          viver o melhor da cidade maravilhosa: das praias perfeitas aos bares escondidos que só os locais conhecem.
-          Cada
-          região tem sua alma, e a gente te leva por todas elas. Dicas reais, experiências autênticas e aquele calor
-          carioca que só quem vem sente. Viva o Rio por inteiro, em 360 graus.
-        </p>
-        <p class="texto">
-          Explore o Rio de Janeiro de uma maneira totalmente nova com o RJ360, muito além dos clichês turísticos.
-          Criamos
-          este guia pensando em você, que deseja desfrutar ao máximo tudo que a cidade tem a oferecer: desde as praias
-          paradisíacas até os bares mais autênticos, frequentados pelos moradores. Cada canto da cidade possui uma
-          identidade única, e nós vamos te guiar por todos eles. Conte com sugestões valiosas, vivências originais e o
-          espírito acolhedor do Rio, que só quem visita consegue sentir. Desfrute da experiência carioca completa, em
-          todos os seus ângulos.
-        </p>
+      <div class="textosContainer row">
+        <div class="col-12 col-xl-6">
+          <p class="texto text-center">
+            Descubra o Rio de Janeiro além dos cartões-postais com o RJ360. Nosso guia foi feito para viajantes que
+            querem
+            viver o melhor da cidade maravilhosa: das praias perfeitas aos bares escondidos que só os locais conhecem.
+            Cada
+            região tem sua alma, e a gente te leva por todas elas. Dicas reais, experiências autênticas e aquele calor
+            carioca que só quem vem sente. Viva o Rio por inteiro, em 360 graus.
+          </p>
+        </div>
+        <div class="col-12 col-xl-6">
+          <p class="texto text-center">
+            Explore o Rio de Janeiro de uma maneira totalmente nova com o RJ360, muito além dos clichês turísticos.
+            Criamos
+            este guia pensando em você, que deseja desfrutar ao máximo tudo que a cidade tem a oferecer: desde as praias
+            paradisíacas até os bares mais autênticos, frequentados pelos moradores. Cada canto da cidade possui uma
+            identidade única, e nós vamos te guiar por todos eles. Conte com sugestões valiosas, vivências originais e o
+            espírito acolhedor do Rio, que só quem visita consegue sentir. Desfrute da experiência carioca completa, em
+            todos os seus ângulos.
+          </p>
+        </div>
       </div>
     </div>
+    <!-- Fim do Container de Textos -->
+
+    <!-- Inicio dos Cards -->
+    <div class="container">
+      <h3 class="textoZona text-center mt-4 mb-4">Conheça as 4 regiões do Rio de Janeiro:</h3>
+      <div class="row">
+        <div class="col-12 col-md-6">
+          <div class="card mb-3" style="max-width: 540px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <!-- <img src="./assets/regioes-card/zona-sul.png" class="img-fluid rounded-start imagem-zona" alt=""> -->
+              </div>
+              <div class="col-md-8 card-bg-zonas">
+                <div class="card-body">
+                  <h5 class="card-title">Zona Sul</h5>
+                  <p class="card-text">
+                    A Zona Sul é o cartão-postal do Rio, com praias mundialmente conhecidas como Copacabana, Ipanema e
+                    Leblon, além de pontos turísticos como o Cristo Redentor e o Pão de Açúcar, sendo a região mais
+                    procurada por turistas que buscam beleza natural, sofisticação e uma experiência carioca
+                    inesquecível.
+                  </p>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6">
+          <div class="card mb-3" style="max-width: 540px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <!-- <img src="./assets/regioes-card/zona-oeste.png" class="img-fluid rounded-start imagem-zona" alt=""> -->
+              </div>
+              <div class="col-md-8">
+                <div class="card-body card-bg-zonas">
+                  <h5 class="card-title">Zona Oeste</h5>
+                  <p class="card-text">
+                    A Zona Oeste do Rio de Janeiro combina natureza, lazer e crescimento urbano, com destaques como a
+                    Barra da Tijuca, famosa por suas praias extensas, centros comerciais e vida noturna, além de áreas
+                    como Guaratiba e Recreio, que oferecem contato direto com a natureza e turismo ecológico em
+                    expansão.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6">
+          <div class="card mb-3" style="max-width: 540px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <svg class="bd-placeholder-img img-fluid rounded-start" width="100%" height="250"
+                  xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image"
+                  preserveAspectRatio="xMidYMid slice">
+                  <title>Placeholder</title>
+                  <rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6"
+                    dy=".3em">Image</text>
+                </svg>
+              </div>
+              <div class="col-md-8 card-bg-zonas">
+                <div class="card-body">
+                  <h5 class="card-title">Zona Norte</h5>
+                  <p class="card-text">
+                    A Zona Norte é rica em cultura popular, com destaque para o samba de Madureira, o lendário Maracanã
+                    e experiências autênticas que revelam a vibração das tradições cariocas, com gastronomia local,
+                    feiras e eventos de rua que fortalecem ainda mais seu potencial turístico.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6">
+          <div class="card mb-3" style="max-width: 540px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <svg class="bd-placeholder-img img-fluid rounded-start" width="100%" height="250"
+                  xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image"
+                  preserveAspectRatio="xMidYMid slice">
+                  <title>Placeholder</title>
+                  <rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6"
+                    dy=".3em">Image</text>
+                </svg>
+              </div>
+              <div class="col-md-8 card-bg-zonas">
+                <div class="card-body">
+                  <h5 class="card-title">Centro</h5>
+                  <p class="card-text">
+                    O Centro do Rio reúne história, arte e arquitetura em cada esquina, sendo um polo turístico que
+                    conecta o passado colonial à modernidade dos grandes centros culturais, encantando visitantes que
+                    buscam conhecimento, arte e movimento urbano.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Fim dos Cards -->
+
+
 
 
 
   </main>
-  <footer></footer>
+  <!-- Início do Rodapé -->
+  <footer class="container-rodape container-fluid d-flex justify-content-around align-items-center py-2">
+
+    <div class="rodapeLinks">
+      <div class="rodape--texto">
+        <p>Siga a gente nas Redes Sociais:</p>
+      </div>
+      <div class="rodape--redes-sociais d-flex justify-content-evenly">
+        <a href="#"><i class="icones-rodape bi bi-instagram"></i></a>
+        <a href="#"><i class="icones-rodape bi bi-twitter-x"></i></a>
+        <a href="#"><i class="icones-rodape bi bi-facebook"></i></a>
+      </div>
+    </div>
+
+    <div class="rodape-copywrite">
+      <p id="anoAtual" class="text-center pt-2"></p>
+    </div>
+
+    <div class="rodapeLogo">
+      <a class="navbar-brand" href="#">
+        <img class="img-logo" src="./assets/logos/logo-rj360-removebg-preview.png" alt="">
+        <span class="span-logo-rodape">RJ</span><span class="span-logo2-rodape">360</span>
+      </a>
+    </div>
+  </footer>
+  <!-- Fim do Rodapé -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
-    crossorigin="anonymous"></script>
+    integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous">
+  </script>
+  <script src="./script.js"></script>
 </body>
 
 </html>

@@ -4,8 +4,13 @@
     --verde-escuro: rgb(54, 98, 62);
     --verde-claro: #99BC85;
     --azul-claro: #E4EFE7;
-    --off-white: #FDFAF6;
+    --off-white: #FAF1E6;
     --creme: #FDFAF6;
+
+    --noturno-preto: #1A1A19;
+    --noturno-verde: #31511E;
+    --noturno-verde-claro: #859F3D;
+    --noturno-verde-off: #F6FCDF;
 }
 
 .img-logo {
@@ -30,23 +35,123 @@
 }
 
 body {
-    background-color: #FAF1E6;
+    background-color: var(--off-white);
 }
 
-.icon-home {
+.icon-home,
+.icon-aparencia {
     font-size: 25px;
 }
 
+.icon-aparencia:hover,
 .icon-home:hover {
     color: #769763;
     transition: 0.2s ease-in;
 
 }
 
-.textosContainer{
+/* .textosContainer{
     gap: 40px;
-}
+} */
 
 .texto {
     width: fit-content;
+}
+
+.imagem-zona {
+    height: 240px;
+    width: 100%;
+}
+
+.card-bg-zonas {
+    background-color: var(--creme);
+    
+}
+
+.container-rodape {
+    background-color: var(--azul-claro);
+}
+
+.rodape-copywrite {
+    width: 400px;
+}
+
+.icones-rodape {
+    font-size: 30px;
+    /* color: white; */
+
+    color: #1A1A19;
+    border-radius: 55%;
+}
+
+.icones-rodape:hover {
+    transition: 0.2s;
+    color: var(--noturno-verde);
+}
+
+.rodapeLinks {
+    /* background-color: var(--noturno-verde-claro); */
+    /* color: white; */
+
+    color: #1A1A19;
+    /* border: 2px solid var(--noturno-verde); */
+    padding: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.rodapeLogo {
+    background-color: var(--noturno-verde-claro);
+    border-radius: 10px;
+    padding-right: 10px;
+}
+
+.span-logo-rodape {
+    color: var(--noturno-verde);
+}
+
+[data-bs-theme="dark"] {
+    transform: 0.5s;
+    color: var(--off-white);
+    background-color: var(--noturno-preto);
+
+    .bg-body-custom {
+        transition: 0.5s;
+        background-color: var(--noturno-verde-claro);
+    }
+
+    .span-logo {
+        color: var(--off-white);
+    }
+
+    .span-logo2 {
+        transform: 0.8s;
+        color: var(--noturno-verde);
+    }
+
+    .card-body {
+        color: var(--noturno-preto);
+        background-color: var(--off-white);
+    }
+
+    .container-rodape {
+        background-color: var(--noturno-verde-claro);
+    }
+
+    .rodapeLogo {
+        background-color: var(--noturno-verde-off);
+    }
+
+    .span-logo-rodape {
+        color: var(--noturno-verde-claro);
+    }
+
+    .span-logo2-rodape {
+        color: var(--noturno-preto);
+    }
+
+}
+
+[data-bs-theme="light"] {
+    transition: 0.5s;
 }
