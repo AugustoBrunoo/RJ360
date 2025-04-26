@@ -1,9 +1,3 @@
-Claro! Vou fazer uma versão mais estilizada para você, com emojis, seções bem organizadas, e também sugerir uma imagem de capa para o projeto.
-
-Aqui está:
-
----
-
 # RJ360 🌎✨
 
 <p align="center">
@@ -41,13 +35,13 @@ Tudo para tornar a experiência do visitante mais inclusiva e intuitiva!
 - HTML5
 - CSS3
 - JavaScript
-- (adicione outras se estiver usando, tipo frameworks ou bibliotecas)
+- Bootstrap 5
 
 ---
 
 ## 🚀 Como acessar
 
-(Se já tiver publicado, adicione o link aqui.)
+(Em breve, será hospedado e o link será fornecido...)
 
 Ou, para rodar localmente:
 
@@ -63,9 +57,11 @@ cd rj360
 
 ---
 
-## 💬 Contribuições
+## 🥷🏽 Desenvolvedores
 
-Sugestões de melhoria, novas ideias ou correções são sempre bem-vindas!  
-Abra uma issue ou envie um pull request. 😄
+Augusto Bruno Menezes - https://github.com/AugustoBrunoo
+Willyam Souza - https://github.com/Willyam-Souza 
+Pierre Chapetta - https://github.com/PierreChapetta
+Daniel Zunanov - https://github.com/7Jester 
 
 ---
