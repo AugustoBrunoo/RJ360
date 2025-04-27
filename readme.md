@@ -59,9 +59,9 @@ cd rj360
 
 ## 🥷🏽 Desenvolvedores
 
-Augusto Bruno Menezes - https://github.com/AugustoBrunoo
-Willyam Souza - https://github.com/Willyam-Souza 
-Pierre Chapetta - https://github.com/PierreChapetta
-Daniel Zunanov - https://github.com/7Jester 
+- Augusto Bruno Menezes - https://github.com/AugustoBrunoo
+- Willyam Souza - https://github.com/Willyam-Souza 
+- Pierre Chapetta - https://github.com/PierreChapetta
+- Daniel Zunanov - https://github.com/7Jester 
 
 ---

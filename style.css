@@ -110,6 +110,11 @@ body {
     color: var(--noturno-verde);
 }
 
+.card-link {
+    text-decoration: none;
+    color: black;
+}
+
 [data-bs-theme="dark"] {
     transform: 0.5s;
     color: var(--off-white);
