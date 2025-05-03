@@ -1,11 +1,209 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
+    <link rel="shortcut icon" href="../../assets/logos/logo-favicon.png" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Rio360: Zona Oeste</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="../../styles/zona-oeste.css">
 </head>
-<body>
-    
+
+<body data-bs-theme="light">
+    <!-- Início do Cabeçalho -->
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-custom">
+            <div class="container-fluid">
+                <div class="d-flex align-items-center">
+                    <a class="navbar-brand" href="../../index.html">
+                        <img class="img-logo" src="../../assets/logos/logo-rj360-removebg-preview.png" alt="">
+                        <span class="span-logo">RJ</span><span class="span-logo2">360</span>
+                    </a>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 px-4 d-flex align-items-center">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">
+                                <i class="bi bi-circle-half icon-aparencia" id="modo-noturno"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">
+                                <i class="icon-home bi bi-house-door-fill"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Regiões
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Zona Sul</a></li>
+                                <li><a class="dropdown-item" href="#">Zona Norte</a></li>
+                                <li><a class="dropdown-item" href="#">Zona Oeste</a></li>
+                                <li><a class="dropdown-item" href="#">Centro</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Destaques</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Sobre Nós</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Fim do Cabeçalho-->
+
+    <main>
+        <!-- Início do Banner -->
+        <div class="banners texto-zona-container d-flex flex-column">
+            <div class="banners-titulo bg-body-none w-100 py-5">
+                <h1 class="nome-zona fs-1">Zona Oeste</h1>
+            </div>
+        </div>
+        <!-- Fim do Banner -->
+        <!-- <div class="container-master row">
+            <div>
+                <div class="row">
+                    <div class="col-4">
+                      <div id="list-example" class="list-group">
+                        <a class="list-group-item list-group-item-action" href="#list-item-1">Item 1</a>
+                        <a class="list-group-item list-group-item-action" href="#list-item-2">Item 2</a>
+                        <a class="list-group-item list-group-item-action" href="#list-item-3">Item 3</a>
+                        <a class="list-group-item list-group-item-action" href="#list-item-4">Item 4</a>
+                      </div>
+                    </div>
+                    <div class="col-8">
+                      <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
+                        <h4 id="list-item-1">Item 1</h4>
+                        <p>...</p>
+                        <h4 id="list-item-2">Item 2</h4>
+                        <p>...</p>
+                        <h4 id="list-item-3">Item 3</h4>
+                        <p>...</p>
+                        <h4 id="list-item-4">Item 4</h4>
+                        <p>...</p>
+                      </div>
+                    </div>
+                  </div>
+            </div> -->
+
+            <div class="textos-principais-zona-container d-flex container flex-column my-4">
+                <!-- Pequeno texto falando da ZO -->
+                <div class="bloco bloco1">
+                    <h5 class="textoHist mb-3">Contexto Histórico</h5>
+                    <p class="texto-principal2">
+                        A Zona Oeste do Rio de Janeiro tem origem rural e colonial, com engenhos de açúcar e fazendas
+                        que
+                        marcaram a economia local. A região começou a se urbanizar no século XX com a expansão
+                        ferroviária e
+                        rodoviária. Bairros como Campo Grande e Bangu cresceram com a industrialização, especialmente
+                        têxtil. Hoje, a área mescla zonas urbanas, rurais e ambientais, e inclui a Barra da Tijuca, que
+                        se
+                        desenvolveu rapidamente nas últimas décadas.
+                    </p>
+                    <p>Veja no botão abaixo, as imagens da zona oeste antigamente.</p>
+                    <button class="btn btn-primary">Ver Imagens</button>
+                </div>
+                <!-- Principais bairros em destaque -->
+                <div class="bloco bloco2">
+                    <h5 class="textoHist mb-3">Destaques da Zona Oeste</h5>
+                    <p class="texto-principal">
+                        A Zona Oeste do Rio de Janeiro é uma das regiões mais extensas e diversas da cidade, conhecida
+                        por
+                        sua combinação única de natureza preservada, desenvolvimento urbano moderno e forte identidade
+                        cultural. É uma área que abriga praias paradisíacas, áreas de proteção ambiental, trilhas
+                        ecológicas, bairros sofisticados e comunidades tradicionais. Diferente do agito das zonas Sul e
+                        Central, a Zona Oeste oferece um ritmo mais tranquilo, ideal tanto para o ecoturismo quanto para
+                        quem busca experiências autênticas e menos exploradas da cidade.
+                    </p>
+                    <p>
+                        Com destaque para bairros como <a
+                            href="https://www.google.com/maps/place/Barra+da+Tijuca,+Rio+de+Janeiro+-+RJ/@-23.0100366,-43.3676333,17429m/data=!3m2!1e3!4b1!4m6!3m5!1s0x9bda4a27b6fe5d:0x63c3f6d1d89e0f4e!8m2!3d-23.0040194!4d-43.3661069!16s%2Fg%2F11b76h6hc0?entry=ttu&g_ep=EgoyMDI1MDQyOC4wIKXMDSoASAFQAw%3D%3D"
+                            class="bairrosDestaques">Barra da Tijuca</a>, <a
+                            href="https://www.google.com/maps/place/Recreio+dos+Bandeirantes,+Rio+de+Janeiro+-+RJ/@-23.0151357,-43.4817171,17428m/data=!3m2!1e3!4b1!4m6!3m5!1s0x9bc2aa587258b1:0x94154e3658afd3a!8m2!3d-23.0178705!4d-43.4647479!16zL20vMDZsNDVt?entry=ttu&g_ep=EgoyMDI1MDQyOC4wIKXMDSoASAFQAw%3D%3D"
+                            class="bairrosDestaques">Recreio</a> e <a
+                            href="https://www.google.com/maps/place/Jo%C3%A1/data=!4m2!3m1!1s0x9bd129386d7e0d:0x89c59d839dd616d?sa=X&ved=1t:155783&ictx=111"
+                            class="bairrosDestaques">Joá</a>, a região encanta por
+                        suas paisagens naturais, como praias selvagens, morros com mirantes e áreas verdes. Ao mesmo
+                        tempo,
+                        apresenta infraestrutura moderna, como shoppings, centros culturais e polos gastronômicos. É um
+                        verdadeiro contraste entre o urbano e o natural, o tradicional e o contemporâneo — e isso é
+                        justamente o seu maior charme.
+                    </p>
+                </div>
+                <div class="bloco bloco3">
+                    <h5 class="textoHist mb-3">O que fazer pela Zona Oeste?</h5>
+                    <p>
+                        Descubra o que a Zona Oeste reserva para você <br>
+                        Explore os contrastes e encantos dessa região única do Rio!
+                    </p>
+                    <input type="button" class="btn btn-primary" value="Comece a Explorar">
+                </div>
+                <div class="bloco bloco4">
+                    <h5 class="textoHist mb-3">Onde se hospedar?</h5>
+                    <p>
+                        Encontre o lugar ideal para descansar na Zona Oeste <br>
+                        Hospedagens para todos os estilos, com conforto,
+                        praticidade e as melhores localizações.
+                    </p>
+                    <input type="button" class="btn btn-primary" value="Ver opções de hospedagem">
+                </div>
+                <div class="bloco bloco5">
+                    <h5>Viaje com tranquilidade e informação</h5>
+                    <p>Conhecer o Rio é uma experiência incrível — e estar bem informado sobre as áreas com maior
+                        atenção ajuda a aproveitar tudo com mais segurança e tranquilidade.</p>
+                    <button type="button" class="btn btn-danger"><i class="bi bi-exclamation-circle-fill"></i> Ver áreas
+                        que exigem atenção</button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <!-- Início do Rodapé -->
+    <footer class="container-rodape container-fluid d-flex justify-content-around align-items-center py-2">
+
+        <div class="rodapeLinks">
+            <div class="rodape--texto">
+                <p>Siga a gente nas Redes Sociais:</p>
+            </div>
+            <div class="rodape--redes-sociais d-flex justify-content-evenly">
+                <a href="#"><i class="icones-rodape bi bi-instagram"></i></a>
+                <a href="#"><i class="icones-rodape bi bi-twitter-x"></i></a>
+                <a href="#"><i class="icones-rodape bi bi-facebook"></i></a>
+            </div>
+        </div>
+
+        <div class="rodape-copywrite">
+            <p id="anoAtual" class="text-center pt-2"></p>
+        </div>
+
+        <div class="rodapeLogo">
+            <a class="navbar-brand" href="#">
+                <img class="img-logo" src="../../assets/logos/logo-rj360-removebg-preview.png" alt="">
+                <span class="span-logo-rodape">RJ</span><span class="span-logo2-rodape">360</span>
+            </a>
+        </div>
+    </footer>
+    <!-- Fim do Rodapé -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous">
+        </script>
+    <script src="../../script.js"></script>
 </body>
+
 </html>

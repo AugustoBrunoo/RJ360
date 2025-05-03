@@ -2,338 +2,481 @@
 <html lang="pt-br">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="./assets/logos/logo.png" type="image/x-icon">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  <link rel="stylesheet" href="style.css">
-  <title>RJ360</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/logos/logo-favicon.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>RJ360</title>
 </head>
 
 <body data-bs-theme="light">
-  <!-- Inicio do Rodapé -->
-  <header>
-    <nav class="navbar navbar-expand-lg bg-body-custom">
-      <div class="container-fluid">
-        <div class="d-flex align-items-center">
-          <a class="navbar-brand" href="#">
-            <img class="img-logo" src="./assets/logos/logo-rj360-removebg-preview.png" alt="">
-            <span class="span-logo">RJ</span><span class="span-logo2">360</span>
-          </a>
-        </div>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 px-4 d-flex align-items-center">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">
-                <i class="bi bi-circle-half icon-aparencia" id="modo-noturno"></i>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">
-                <i class="icon-home bi bi-house-door-fill"></i>
-              </a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                Regiões
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Zona Sul</a></li>
-                <li><a class="dropdown-item" href="#">Zona Norte</a></li>
-                <li><a class="dropdown-item" href="#">Zona Oeste</a></li>
-                <li><a class="dropdown-item" href="#">Centro</a></li>
-                <li>
-                  <hr class="dropdown-divider">
-                </li>
-                <li><a class="dropdown-item" href="#">Destaques</a></li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Sobre Nós</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </header>
-  <!-- Fim do Rodape -->
+    <!-- Inicio do Rodapé -->
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-custom">
+            <div class="container-fluid">
+                <div class="d-flex align-items-center">
+                    <a class="navbar-brand" href="#">
+                        <img class="img-logo" src="./assets/logos/logo-rj360-removebg-preview.png" alt="">
+                        <span class="span-logo">RJ</span><span class="span-logo2">360</span>
+                    </a>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 px-4 d-flex align-items-center">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">
+                                <i class="bi bi-circle-half icon-aparencia" id="modo-noturno"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">
+                                <i class="icon-home bi bi-house-door-fill"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Regiões
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Zona Sul</a></li>
+                                <li><a class="dropdown-item" href="#">Zona Norte</a></li>
+                                <li><a class="dropdown-item" href="#">Zona Oeste</a></li>
+                                <li><a class="dropdown-item" href="#">Centro</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Destaques</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Sobre Nós</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Fim do Rodape -->
 
-  <main>
-    <!-- Início do Carrossel -->
-    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-          aria-label="Slide 1" aria-current="true"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"
-          class=""></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"
-          class=""></button>
-      </div>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400"
-            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Espaço reservado: Primeiro slide"
-            preserveAspectRatio="xMidYMid slice">
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#555" dy=".3em">First
-              slide</text>
-          </svg>
-          <div class="carousel-caption d-none d-md-block">
-            <h5>
-              <font style="vertical-align: inherit;">
-                <font style="vertical-align: inherit;">Rótulo do primeiro slide</font>
-              </font>
-            </h5>
-            <p>
-              <font style="vertical-align: inherit;">
-                <font style="vertical-align: inherit;">Algum conteúdo de espaço reservado representativo para o primeiro
-                  slide.</font>
-              </font>
-            </p>
-          </div>
+    <main>
+        <!-- Início do Carrossel -->
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-label="Slide 1" aria-current="true"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2" class=""></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3" class=""></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400"
+                        xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Espaço reservado: Primeiro slide"
+                        preserveAspectRatio="xMidYMid slice">
+                        <title>Placeholder</title>
+                        <rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#555"
+                            dy=".3em">First
+                            slide</text>
+                    </svg>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Rótulo do primeiro slide</font>
+                            </font>
+                        </h5>
+                        <p>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Algum conteúdo de espaço reservado representativo
+                                    para o primeiro
+                                    slide.</font>
+                            </font>
+                        </p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400"
+                        xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Espaço reservado: Segundo slide"
+                        preserveAspectRatio="xMidYMid slice">
+                        <title>Placeholder</title>
+                        <a href="https://github.com/AugustoBrunoo">
+                            <rect width="100%" height="100%" fill="#666"></rect><text x="50%" y="50%" fill="#444"
+                                dy=".3em">Second
+                                slide</text>
+                        </a>
+
+                    </svg>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Segundo rótulo de slide</font>
+                            </font>
+                        </h5>
+                        <p>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Algum conteúdo de espaço reservado representativo
+                                    para o segundo
+                                    slide.</font>
+                            </font>
+                        </p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400"
+                        xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Espaço reservado: Terceiro slide"
+                        preserveAspectRatio="xMidYMid slice">
+                        <title>Placeholder</title>
+                        <rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%" fill="#333"
+                            dy=".3em">Third
+                            slide</text>
+                    </svg>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Terceiro rótulo de slide</font>
+                            </font>
+                        </h5>
+                        <p>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Algum conteúdo de espaço reservado representativo
+                                    para o terceiro
+                                    slide.</font>
+                            </font>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">Anterior</font>
+                    </font>
+                </span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">Próximo</font>
+                    </font>
+                </span>
+            </button>
         </div>
-        <div class="carousel-item">
-          <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400"
-            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Espaço reservado: Segundo slide"
-            preserveAspectRatio="xMidYMid slice">
-            <title>Placeholder</title>
-            <a href="https://github.com/AugustoBrunoo">
-              <rect width="100%" height="100%" fill="#666"></rect><text x="50%" y="50%" fill="#444" dy=".3em">Second
-                slide</text>
+        <!-- Fim do Carrossel -->
+
+        <!-- Inicio Container de Textos -->
+        <div class="containerSobreNos container">
+
+            <h3 class="text-center mt-4">A Essência</h3>
+
+            <div class="textosContainer row">
+                <div class="col-12 col-xl-6">
+                    <p class="texto text-center">
+                        Descubra o Rio de Janeiro além dos cartões-postais com o RJ360. Nosso guia foi feito para
+                        viajantes que
+                        querem
+                        viver o melhor da cidade maravilhosa: das praias perfeitas aos bares escondidos que só os locais
+                        conhecem.
+                        Cada
+                        região tem sua alma, e a gente te leva por todas elas. Dicas reais, experiências autênticas e
+                        aquele calor
+                        carioca que só quem vem sente. Viva o Rio por inteiro, em 360 graus.
+                    </p>
+                </div>
+                
+                <div class="col-12 col-xl-6">
+                    <p class="texto text-center">
+                        Explore o Rio de Janeiro de uma maneira totalmente nova com o RJ360, muito além dos clichês
+                        turísticos.
+                        Criamos
+                        este guia pensando em você, que deseja desfrutar ao máximo tudo que a cidade tem a oferecer:
+                        desde as praias
+                        paradisíacas até os bares mais autênticos, frequentados pelos moradores. Cada canto da cidade
+                        possui uma
+                        identidade única, e nós vamos te guiar por todos eles. Conte com sugestões valiosas, vivências
+                        originais e o
+                        espírito acolhedor do Rio, que só quem visita consegue sentir. Desfrute da experiência carioca
+                        completa, em
+                        todos os seus ângulos.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- Fim do Container de Textos -->
+
+        <!-- Inicio dos Cards -->
+        <div class="container">
+            <h3 class="textoZona text-center mt-4 mb-4">Conheça as 4 regiões do Rio de Janeiro:</h3>
+            <div class="row">
+
+                <div class="col-12 col-md-6">
+                    <div class="card mb-3" style="max-width: 540px;">
+                        <a href="./pages/zonas/zona-sul.html" class="row g-0 card-link">
+                            <div class="col-md-4">
+                                <!-- <img src="./assets/regioes-card/zona-sul.png" class="img-fluid rounded-start imagem-zona" alt=""> -->
+                            </div>
+                            <div class="col-md-8 card-bg-zonas">
+                                <div class="card-body">
+                                    <h5 class="card-title">Zona Sul</h5>
+                                    <p class="card-text">
+                                        A Zona Sul é o cartão-postal do Rio, com praias mundialmente conhecidas como
+                                        Copacabana, Ipanema e
+                                        Leblon, além de pontos turísticos como o Cristo Redentor e o Pão de Açúcar,
+                                        sendo a região mais
+                                        procurada por turistas que buscam beleza natural, sofisticação e uma experiência
+                                        carioca
+                                        inesquecível.
+                                    </p>
+
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <div class="card mb-3" style="max-width: 540px;">
+                        <a href="./pages/zonas/zona-oeste.html" class="row g-0 card-link">
+                            <div class="col-md-4">
+                                <!-- <img src="./assets/regioes-card/zona-oeste.png" class="img-fluid rounded-start imagem-zona" alt=""> -->
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body card-bg-zonas">
+                                    <h5 class="card-title">Zona Oeste</h5>
+                                    <p class="card-text">
+                                        A Zona Oeste do Rio de Janeiro combina natureza, lazer e crescimento urbano, com
+                                        destaques como a
+                                        Barra da Tijuca, famosa por suas praias extensas, centros comerciais e vida
+                                        noturna, além de áreas
+                                        como Guaratiba e Recreio, que oferecem contato direto com a natureza e turismo
+                                        ecológico em
+                                        expansão.
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <div class="card mb-3" style="max-width: 540px;">
+                        <a href="./pages/zonas/zona-norte.html" class="row g-0 card-link">
+                            <div class="col-md-4">
+                                <svg class="bd-placeholder-img img-fluid rounded-start" width="100%" height="250"
+                                    xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image"
+                                    preserveAspectRatio="xMidYMid slice">
+                                    <title>Placeholder</title>
+                                    <rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%"
+                                        fill="#dee2e6" dy=".3em">Image</text>
+                                </svg>
+                            </div>
+                            <div class="col-md-8 card-bg-zonas">
+                                <div class="card-body">
+                                    <h5 class="card-title">Zona Norte</h5>
+                                    <p class="card-text">
+                                        A Zona Norte é rica em cultura popular, com destaque para o samba de Madureira,
+                                        o lendário Maracanã
+                                        e experiências autênticas que revelam a vibração das tradições cariocas, com
+                                        gastronomia local,
+                                        feiras e eventos de rua que fortalecem ainda mais seu potencial turístico.
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <div class="card mb-3" style="max-width: 540px;">
+                        <a href="./pages/zonas/centro.html" class="row g-0 card-link">
+                            <div class="col-md-4">
+                                <svg class="bd-placeholder-img img-fluid rounded-start" width="100%" height="250"
+                                    xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image"
+                                    preserveAspectRatio="xMidYMid slice">
+                                    <title>Placeholder</title>
+                                    <rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%"
+                                        fill="#dee2e6" dy=".3em">Image</text>
+                                </svg>
+                            </div>
+                            <div class="col-md-8 card-bg-zonas">
+                                <div class="card-body">
+                                    <h5 class="card-title">Centro</h5>
+                                    <p class="card-text">
+                                        O Centro do Rio reúne história, arte e arquitetura em cada esquina, sendo um
+                                        polo turístico que
+                                        conecta o passado colonial à modernidade dos grandes centros culturais,
+                                        encantando visitantes que
+                                        buscam conhecimento, arte e movimento urbano.
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Fim dos Cards -->
+
+        <!-- Início de Avaliações -->
+        <section class="container-avaliacoes">
+            <h3 class="text-center texto-avaliacoes">Avaliações</h3>
+
+            <div id="carouselExampleRide" class="carousel slide carrousel-custom" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active p-3">
+
+                        <div class="card card-avalicao" style="max-width: 510px;">
+                            <div class="row g-0">
+                                <div class="col-4 d-flex flex-column align-items-center justify-content-center">
+                                    <!-- <img src="https://avatars.githubusercontent.com/u/174916340?v=4"
+                                        class="img-avaliacao" alt=""> -->
+                                </div>
+                                <div class="col-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">CCCCC</h5>
+                                        <p class="card-text mb-0">This is a wider card with supporting text below as a
+                                            natural lead-in to additional content. This content is a little bit longer.
+                                        </p>
+                                        <div class="estrelas-avaliacao mb-2 d-flex">
+                                            <i class="bi bi-star-fill estrela-icon-avaliacao"></i>
+                                            <i class="bi bi-star-fill estrela-icon-avaliacao"></i>
+                                            <i class="bi bi-star-fill estrela-icon-avaliacao"></i>
+                                            <i class="bi bi-star-fill estrela-icon-avaliacao"></i>
+                                            <i class="bi bi-star-fill estrela-icon-avaliacao"></i>
+                                        </div>
+                                        <p class="card-text"><small class="text-body-secondary">Postado há 2 minutos
+                                                atrás</small>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item p-3">
+                        <div class="card card-avalicao" style="max-width: 510px;">
+                            <div class="row g-0">
+                                <div class="col-4 d-flex flex-column align-items-center justify-content-center">
+                                    <!-- <svg class="bd-placeholder-img img-fluid rounded-start" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image" preserveAspectRatio="xMidYMid slice"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image</text></svg> -->
+                                    <!-- <img src="https://avatars.githubusercontent.com/u/174916340?v=4"
+                                        class="img-avaliacao" alt=""> -->
+                                </div>
+                                <div class="col-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">BBBBBBBB</h5>
+                                        <p class="card-text mb-0">This is a wider card with supporting text below as a
+                                            natural lead-in to additional content. This content is a little bit longer.
+                                        </p>
+                                        <div class="estrelas-avaliacao mb-2 d-flex">
+                                            <i class="bi bi-star-fill estrela-icon-avaliacao"></i>
+                                            <i class="bi bi-star-fill estrela-icon-avaliacao"></i>
+                                            <i class="bi bi-star-fill estrela-icon-avaliacao"></i>
+                                            <i class="bi bi-star-fill estrela-icon-avaliacao"></i>
+                                            <i class="bi bi-star-fill estrela-icon-avaliacao"></i>
+                                        </div>
+                                        <p class="card-text"><small class="text-body-secondary">Postado há 2 minutos
+                                                atrás</small>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item p-3">
+                        <div class="card card-avalicao" style="max-width: 510px;">
+                            <div class="row g-0">
+                                <div class="col-4 d-flex flex-column align-items-center justify-content-center">
+                                    <!-- <svg class="bd-placeholder-img img-fluid rounded-start" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image" preserveAspectRatio="xMidYMid slice"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image</text></svg> -->
+                                    <img src="https://avatars.githubusercontent.com/u/174916340?v=4"
+                                        class="img-avaliacao" alt="">
+                                </div>
+                                <div class="col-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Aaaaaaa</h5>
+                                        <p class="card-text mb-0">This is a wider card with supporting text below as a
+                                            natural lead-in to additional content. This content is a little bit longer.
+                                        </p>
+                                        <div class="estrelas-avaliacao mb-2 d-flex">
+                                            <i class="bi bi-star-fill estrela-icon-avaliacao"></i>
+                                            <i class="bi bi-star-fill estrela-icon-avaliacao"></i>
+                                            <i class="bi bi-star-fill estrela-icon-avaliacao"></i>
+                                            <i class="bi bi-star-fill estrela-icon-avaliacao"></i>
+                                            <i class="bi bi-star-fill estrela-icon-avaliacao"></i>
+                                        </div>
+                                        <p class="card-text"><small class="text-body-secondary">Postado há 2 minutos
+                                                atrás</small>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Botões de Ir e Voltar  -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide"
+                        data-bs-slide="prev">
+                        <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span> -->
+                        <i class="bi bi bi-arrow-left-circle btn-avaliacoes"></i>
+                        <span class="visually-hidden">Próximo</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide"
+                        data-bs-slide="next">
+                        <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span> -->
+                        <i class="bi bi bi-arrow-right-circle btn-avaliacoes"></i>
+                        <span class="visually-hidden">Voltar</span>
+                    </button>
+                </div>
+        </section>
+
+        <!-- Fim das Avaliações -->
+        <!-- Inicio Planner pre pronto -->
+         
+
+    </main>
+    <!-- Início do Rodapé -->
+    <footer class="container-rodape container-fluid d-flex justify-content-around align-items-center py-2">
+
+        <div class="rodapeLinks">
+            <div class="rodape--texto">
+                <p>Siga a gente nas Redes Sociais:</p>
+            </div>
+            <div class="rodape--redes-sociais d-flex justify-content-evenly">
+                <a href="#"><i class="icones-rodape bi bi-instagram"></i></a>
+                <a href="#"><i class="icones-rodape bi bi-twitter-x"></i></a>
+                <a href="#"><i class="icones-rodape bi bi-facebook"></i></a>
+            </div>
+        </div>
+
+        <div class="rodape-copywrite">
+            <p id="anoAtual" class="text-center pt-2"></p>
+        </div>
+
+        <div class="rodapeLogo">
+            <a class="navbar-brand" href="#">
+                <img class="img-logo" src="./assets/logos/logo-rj360-removebg-preview.png" alt="">
+                <span class="span-logo-rodape">RJ</span><span class="span-logo2-rodape">360</span>
             </a>
-
-          </svg>
-          <div class="carousel-caption d-none d-md-block">
-            <h5>
-              <font style="vertical-align: inherit;">
-                <font style="vertical-align: inherit;">Segundo rótulo de slide</font>
-              </font>
-            </h5>
-            <p>
-              <font style="vertical-align: inherit;">
-                <font style="vertical-align: inherit;">Algum conteúdo de espaço reservado representativo para o segundo
-                  slide.</font>
-              </font>
-            </p>
-          </div>
         </div>
-        <div class="carousel-item">
-          <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400"
-            xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Espaço reservado: Terceiro slide"
-            preserveAspectRatio="xMidYMid slice">
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%" fill="#333" dy=".3em">Third
-              slide</text>
-          </svg>
-          <div class="carousel-caption d-none d-md-block">
-            <h5>
-              <font style="vertical-align: inherit;">
-                <font style="vertical-align: inherit;">Terceiro rótulo de slide</font>
-              </font>
-            </h5>
-            <p>
-              <font style="vertical-align: inherit;">
-                <font style="vertical-align: inherit;">Algum conteúdo de espaço reservado representativo para o terceiro
-                  slide.</font>
-              </font>
-            </p>
-          </div>
-        </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-        data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">
-          <font style="vertical-align: inherit;">
-            <font style="vertical-align: inherit;">Anterior</font>
-          </font>
-        </span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-        data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">
-          <font style="vertical-align: inherit;">
-            <font style="vertical-align: inherit;">Próximo</font>
-          </font>
-        </span>
-      </button>
-    </div>
-    <!-- Fim do Carrossel -->
-
-    <!-- Inicio Container de Textos -->
-    <div class="containerSobreNos container">
-      <h3 class="text-center mt-4">A Essência</h3>
-      <div class="textosContainer row">
-        <div class="col-12 col-xl-6">
-          <p class="texto text-center">
-            Descubra o Rio de Janeiro além dos cartões-postais com o RJ360. Nosso guia foi feito para viajantes que
-            querem
-            viver o melhor da cidade maravilhosa: das praias perfeitas aos bares escondidos que só os locais conhecem.
-            Cada
-            região tem sua alma, e a gente te leva por todas elas. Dicas reais, experiências autênticas e aquele calor
-            carioca que só quem vem sente. Viva o Rio por inteiro, em 360 graus.
-          </p>
-        </div>
-        <div class="col-12 col-xl-6">
-          <p class="texto text-center">
-            Explore o Rio de Janeiro de uma maneira totalmente nova com o RJ360, muito além dos clichês turísticos.
-            Criamos
-            este guia pensando em você, que deseja desfrutar ao máximo tudo que a cidade tem a oferecer: desde as praias
-            paradisíacas até os bares mais autênticos, frequentados pelos moradores. Cada canto da cidade possui uma
-            identidade única, e nós vamos te guiar por todos eles. Conte com sugestões valiosas, vivências originais e o
-            espírito acolhedor do Rio, que só quem visita consegue sentir. Desfrute da experiência carioca completa, em
-            todos os seus ângulos.
-          </p>
-        </div>
-      </div>
-    </div>
-    <!-- Fim do Container de Textos -->
-
-    <!-- Inicio dos Cards -->
-    <div class="container">
-      <h3 class="textoZona text-center mt-4 mb-4">Conheça as 4 regiões do Rio de Janeiro:</h3>
-      <div class="row">
-        <div class="col-12 col-md-6">
-          <div class="card mb-3" style="max-width: 540px;">
-            <div class="row g-0">
-              <div class="col-md-4">
-                <!-- <img src="./assets/regioes-card/zona-sul.png" class="img-fluid rounded-start imagem-zona" alt=""> -->
-              </div>
-              <div class="col-md-8 card-bg-zonas">
-                <div class="card-body">
-                  <h5 class="card-title">Zona Sul</h5>
-                  <p class="card-text">
-                    A Zona Sul é o cartão-postal do Rio, com praias mundialmente conhecidas como Copacabana, Ipanema e
-                    Leblon, além de pontos turísticos como o Cristo Redentor e o Pão de Açúcar, sendo a região mais
-                    procurada por turistas que buscam beleza natural, sofisticação e uma experiência carioca
-                    inesquecível.
-                  </p>
-
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-12 col-md-6">
-          <div class="card mb-3" style="max-width: 540px;">
-            <a href="./pages/zonas/zona-oeste.html" class="row g-0 card-link">
-              <div class="col-md-4">
-                <!-- <img src="./assets/regioes-card/zona-oeste.png" class="img-fluid rounded-start imagem-zona" alt=""> -->
-              </div>
-              <div class="col-md-8">
-                <div class="card-body card-bg-zonas">
-                  <h5 class="card-title">Zona Oeste</h5>
-                  <p class="card-text">
-                    A Zona Oeste do Rio de Janeiro combina natureza, lazer e crescimento urbano, com destaques como a
-                    Barra da Tijuca, famosa por suas praias extensas, centros comerciais e vida noturna, além de áreas
-                    como Guaratiba e Recreio, que oferecem contato direto com a natureza e turismo ecológico em
-                    expansão.
-                  </p>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-
-        <div class="col-12 col-md-6">
-          <div class="card mb-3" style="max-width: 540px;">
-            <div class="row g-0">
-              <div class="col-md-4">
-                <svg class="bd-placeholder-img img-fluid rounded-start" width="100%" height="250"
-                  xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image"
-                  preserveAspectRatio="xMidYMid slice">
-                  <title>Placeholder</title>
-                  <rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6"
-                    dy=".3em">Image</text>
-                </svg>
-              </div>
-              <div class="col-md-8 card-bg-zonas">
-                <div class="card-body">
-                  <h5 class="card-title">Zona Norte</h5>
-                  <p class="card-text">
-                    A Zona Norte é rica em cultura popular, com destaque para o samba de Madureira, o lendário Maracanã
-                    e experiências autênticas que revelam a vibração das tradições cariocas, com gastronomia local,
-                    feiras e eventos de rua que fortalecem ainda mais seu potencial turístico.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-12 col-md-6">
-          <div class="card mb-3" style="max-width: 540px;">
-            <div class="row g-0">
-              <div class="col-md-4">
-                <svg class="bd-placeholder-img img-fluid rounded-start" width="100%" height="250"
-                  xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image"
-                  preserveAspectRatio="xMidYMid slice">
-                  <title>Placeholder</title>
-                  <rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6"
-                    dy=".3em">Image</text>
-                </svg>
-              </div>
-              <div class="col-md-8 card-bg-zonas">
-                <div class="card-body">
-                  <h5 class="card-title">Centro</h5>
-                  <p class="card-text">
-                    O Centro do Rio reúne história, arte e arquitetura em cada esquina, sendo um polo turístico que
-                    conecta o passado colonial à modernidade dos grandes centros culturais, encantando visitantes que
-                    buscam conhecimento, arte e movimento urbano.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Fim dos Cards -->
-
-
-
-
-
-  </main>
-  <!-- Início do Rodapé -->
-  <footer class="container-rodape container-fluid d-flex justify-content-around align-items-center py-2">
-
-    <div class="rodapeLinks">
-      <div class="rodape--texto">
-        <p>Siga a gente nas Redes Sociais:</p>
-      </div>
-      <div class="rodape--redes-sociais d-flex justify-content-evenly">
-        <a href="#"><i class="icones-rodape bi bi-instagram"></i></a>
-        <a href="#"><i class="icones-rodape bi bi-twitter-x"></i></a>
-        <a href="#"><i class="icones-rodape bi bi-facebook"></i></a>
-      </div>
-    </div>
-
-    <div class="rodape-copywrite">
-      <p id="anoAtual" class="text-center pt-2"></p>
-    </div>
-
-    <div class="rodapeLogo">
-      <a class="navbar-brand" href="#">
-        <img class="img-logo" src="./assets/logos/logo-rj360-removebg-preview.png" alt="">
-        <span class="span-logo-rodape">RJ</span><span class="span-logo2-rodape">360</span>
-      </a>
-    </div>
-  </footer>
-  <!-- Fim do Rodapé -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous">
-  </script>
-  <script src="./script.js"></script>
+    </footer>
+    <!-- Fim do Rodapé -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous">
+    </script>
+    
+    <script src="./script.js"></script>
 </body>
 
 </html>

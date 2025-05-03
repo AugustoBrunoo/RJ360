@@ -1,0 +1,66 @@
+* {
+    --verde-escuro: rgb(54, 98, 62);
+    --verde-claro: #99BC85;
+    --azul-claro: #E4EFE7;
+    --off-white: #FAF1E6;
+    --creme: #FDFAF6;
+
+    --noturno-preto: #1A1A19;
+    --noturno-verde: #31511E;
+    --noturno-verde-claro: #859F3D;
+    --noturno-verde-off: #F6FCDF;
+}
+
+.nome-zona {
+    margin-left: 20px;
+    margin-top: 25px;
+}
+
+.banners {
+	/* faz com que o banner ocupe a tela toda */
+	width: 100%;
+	height: 50vh;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	/* Efeito parallax: Deixa a imagem fixa,
+	meio que sumindo a imagem ao descer a página */
+	/* background-attachment: fixed; */
+}
+
+
+.texto-zona-container {
+    background-image: url("../assets/imagens/zona-oeste/vista-barra.jpg");
+}
+
+.banners-titulo {
+	/* Diminui a opacidade da cor do titulo 
+	Valores: 
+	0 - Total Transparente
+	1 - Extremamente Opaco  
+	*/
+	--bs-bg-opacity: .0;
+}
+
+.texto-principal {
+    width: fit-content;
+}
+
+.texto-principal2{
+    width: 60%;
+}
+
+.bairrosDestaques {
+    font-weight: 700;
+    text-decoration: none;
+    color: black;
+}
+
+.bairrosDestaques:hover {
+    transition: 0.5s;
+    color: var(--noturno-verde-claro);
+}
+
+.textos-principais-zona-container  {
+    gap: 30px;
+}

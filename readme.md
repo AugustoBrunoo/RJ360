@@ -62,6 +62,6 @@ cd rj360
 - Augusto Bruno Menezes - https://github.com/AugustoBrunoo
 - Willyam Souza - https://github.com/Willyam-Souza 
 - Pierre Chapetta - https://github.com/PierreChapetta
-- Daniel Zunanov - https://github.com/7Jester 
+- Daniel Zuvanov - https://github.com/7Jester 
 
 ---
