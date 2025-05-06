@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Notable&display=swap');
+
 * {
     --verde-escuro: rgb(54, 98, 62);
     --verde-claro: #99BC85;
@@ -14,6 +16,11 @@
 .nome-zona {
     margin-left: 20px;
     margin-top: 25px;
+
+    font-family: "Notable", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 60px;
 }
 
 .banners {
@@ -63,4 +70,92 @@
 
 .textos-principais-zona-container  {
     gap: 30px;
+}
+
+.blocoContainer {
+    /* width: fit-content; */
+    height: max-content;
+}
+
+.bg-body-focus {
+    /* background-color: black; */
+    color: black;
+    border-radius: 20px;
+}
+
+.blocoContainer {
+    background-color: var(--azul-claro);
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.container-texto-h5 h5{
+    border-bottom: 3px solid #272727;
+    padding-bottom: 15px;
+    width: 700px; /* ou o tamanho desejado */
+    text-align: center;
+}
+
+.card-custom {
+    width: 90%;
+}
+
+.btn-custom-1 {
+    background-color: var(--noturno-verde-claro);
+    color: white;
+}
+
+.btn-custom {
+    background: var(--noturno-verde-claro);
+    border: none;
+    color: white;
+    width: 65%;
+}
+
+.btn-custom-1:hover, .btn-custom:hover {
+    background-color: gray;
+}
+
+[data-bs-theme="dark"] {
+    .nome-zona {
+        color: var(--off-white);
+    }
+
+    .bairrosDestaques {
+        color: var(--noturno-verde-claro);
+    }
+
+    .blocoContainer {
+        background-color: white;
+    }
+
+    /* .bg-body-focus {
+        background-color: white;
+        color: white;
+        border-radius: 20px;
+    } */
+
+    .bairrosDestaques:hover {
+        color: var(--off-white);
+    }
+
+}
+
+@media (max-width: 1145px) {
+    .row.bloco-acoes {
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    .row.bloco-acoes > .col-12 {
+        max-width: 100%;
+    }
+
+    .blocoContainer {
+        width: 90%; /* ou até 100%, mas dentro do limite do container */
+        max-width: 800px; /* impede que fique largo demais em telas pequenas */
+        margin: 0 auto; /* centraliza */
+    }
+
 }
