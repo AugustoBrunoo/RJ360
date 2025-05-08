@@ -13,6 +13,24 @@
     --noturno-verde-off: #F6FCDF;
 }
 
+@keyframes bordaColoridaRJ360 {
+    0% {
+      border-color: var(--noturno-verde-claro);
+    }
+    25% {
+      border-color: var(--verde-claro);
+    }
+    50% {
+      border-color: var(--azul-claro);
+    }
+    75% {
+      border-color: var(--verde-claro);
+    }
+    100% {
+      border-color: var(--noturno-verde-claro);
+    }
+  }
+
 .img-logo {
     width: 95px;
     margin-right: 15px;
@@ -77,7 +95,7 @@ body {
 }
 
 .img-avaliacao {
-    width: 90px;
+    width: 110px;
     border-radius: 50%;
     border: 2px solid var(--verde-claro);
 }
@@ -143,6 +161,20 @@ body {
     color: black;
 }
 
+.text-body-custom {
+    font-style: italic;
+}
+
+.card-hover-zonas {
+    border: 4px solid transparent;
+    transition: border 0.3s ease;
+}
+
+.card-hover-zonas:hover {   
+    animation: bordaColoridaRJ360 3s infinite;
+}
+
+
 [data-bs-theme="dark"] {
     transform: 0.5s;
     color: var(--off-white);
@@ -165,6 +197,19 @@ body {
     .card-body {
         color: var(--noturno-preto);
         background-color: var(--off-white);
+    }
+
+    .text-body-custom {
+        color: #272727;
+        font-style: italic;
+    }
+
+    .bg-fundo-card {
+        background-color: var(--off-white);
+    }
+
+    .bg-fundo-avaliacao {
+        background-color: var(--noturno-preto);
     }
 
     .container-rodape {

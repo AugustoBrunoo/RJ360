@@ -41,12 +41,23 @@
 }
 
 .banners-titulo {
+    /*background-color: rgba(0, 0, 0, 0.4);  fundo escuro semitransparente */
 	/* Diminui a opacidade da cor do titulo 
 	Valores: 
 	0 - Total Transparente
 	1 - Extremamente Opaco  
 	*/
-	--bs-bg-opacity: .0;
+	/* --bs-bg-opacity: .1; */
+}
+
+.nome-zona {
+    background-color: rgba(0, 0, 0, 0.4);
+    width: fit-content;
+    border-radius: 10px;
+    color: white;
+    padding: 20px;
+    padding-top: 5px;
+    
 }
 
 .texto-principal {

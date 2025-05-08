@@ -121,7 +121,12 @@
                             desenvolveu rapidamente nas últimas décadas.
                         </p>
                         <p>Veja no botão abaixo, as imagens da zona oeste antigamente.</p>
-                        <button class="btn btn-custom-1">Ver Imagens</button>
+
+                        <button type="button" class="btn btn-custom-1" data-bs-toggle="modal"
+                            data-bs-target="#modalImagens">
+                            Ver Imagens
+                        </button>
+
                     </div>
                 </div>
 
@@ -157,6 +162,21 @@
                         </p>
                     </div>
                 </div>
+
+                <div class="col-12 col-xl-4 d-flex flex-column align-items-center">
+                    <!-- Principais bairros em destaque -->
+                    <h5 class="text-center mt-">Bairros em destaque:</h5>
+                    <ul>
+                        <div class="d-flex flex-column g-3">
+                            <li><a href="#">Barra da Tijuca</a></li>
+                            <li><a href="#">Recreio dos Bandeirantes</a></li>
+                            <li><a href="#">Vargem Grande</a></li>
+                            <li><a href="#">Jacarepaguá</a></li>
+                            <li><a href="#">Barra de Guaratiba</a></li>
+                        </div>
+                    </ul>
+                </div>
+
             </div>
         </div>
 
@@ -301,6 +321,88 @@
         </div>
     </footer>
     <!-- Fim do Rodapé -->
+
+    <!-- Modais -->
+    <!-- Modal de Imagens -->
+    <div class="modal fade" id="modalImagens" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Imagens da Zona Oeste antigamente</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body container">
+                    <div class="historia-modal-container">
+                        <p>
+                            A Zona Oeste do Rio de Janeiro, antigamente vista como uma área periférica e rural, passou
+                            por uma grande transformação ao longo dos anos.
+                            Até a década de 1970, regiões como a Barra da Tijuca eram predominantemente rurais, com
+                            grandes chácaras e áreas de lazer. Com o crescimento urbano,
+                            a região começou a se urbanizar, especialmente após a construção de novas vias e melhorias
+                            no transporte.
+
+                        <p>
+                            Hoje, a Zona Oeste é uma das áreas mais diversificadas da cidade, com bairros de alto
+                            padrão,
+                            como a Barra e o Recreio, ao lado de áreas mais periféricas, como Campo Grande e Santa Cruz.
+                            Embora tenha se desenvolvido, ainda enfrenta desafios em infraestrutura e segurança, mas se
+                            consolidou como um importante polo de crescimento no Rio de Janeiro.
+                        </p>
+                    </div>
+
+                    <div class="carrosselImagensAntigas">
+                        <div id="carouselExampleFade" class="carousel slide carousel-fade">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <svg aria-label="Placeholder: First slide"
+                                        class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" height="400"
+                                        preserveAspectRatio="xMidYMid slice" role="img" width="800"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <title>Placeholder</title>
+                                        <rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%"
+                                            fill="#555" dy=".3em">First slide</text>
+                                    </svg>
+                                </div>
+                                <div class="carousel-item">
+                                    <svg aria-label="Placeholder: Second slide"
+                                        class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" height="400"
+                                        preserveAspectRatio="xMidYMid slice" role="img" width="800"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <title>Placeholder</title>
+                                        <rect width="100%" height="100%" fill="#666"></rect><text x="50%" y="50%"
+                                            fill="#444" dy=".3em">Second slide</text>
+                                    </svg>
+                                </div>
+                                <div class="carousel-item">
+                                    <svg aria-label="Placeholder: Third slide"
+                                        class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" height="400"
+                                        preserveAspectRatio="xMidYMid slice" role="img" width="800"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <title>Placeholder</title>
+                                        <rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%"
+                                            fill="#333" dy=".3em">Third slide</text>
+                                    </svg>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-custom-1" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous">
