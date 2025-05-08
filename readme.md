@@ -41,7 +41,7 @@ Tudo para tornar a experiência do visitante mais inclusiva e intuitiva!
 
 ## 🚀 Como acessar
 
-(Em breve, será hospedado e o link será fornecido...)
+Acesse o Link: ```https://rj-360.vercel.app/index.html#```
 
 Ou, para rodar localmente:
 
@@ -53,7 +53,6 @@ git clone https://github.com/AugustoBrunoo/RJ360
 cd rj360
 
 # Abra o arquivo index.html em seu navegador
-```
 
 ---
 
