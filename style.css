@@ -72,6 +72,12 @@ body {
     gap: 40px;
 } */
 
+.img-carousel-2 {
+   width: 100%;
+   height: auto;
+   display: block;
+}
+
 .texto {
     width: fit-content;
 }
