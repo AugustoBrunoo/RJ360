@@ -40,15 +40,15 @@
     background-image: url("../assets/imagens/zona-oeste/vista-barra.jpg");
 }
 
-.banners-titulo {
-    /*background-color: rgba(0, 0, 0, 0.4);  fundo escuro semitransparente */
+/*.banners-titulo { 
+    background-color: rgba(0, 0, 0, 0.4);  fundo escuro semitransparente */
 	/* Diminui a opacidade da cor do titulo 
 	Valores: 
 	0 - Total Transparente
 	1 - Extremamente Opaco  
-	*/
-	/* --bs-bg-opacity: .1; */
-}
+	
+	--bs-bg-opacity: .1;
+} */
 
 .nome-zona {
     background-color: rgba(0, 0, 0, 0.4);
@@ -60,12 +60,11 @@
     
 }
 
-.texto-principal {
-    width: fit-content;
-}
 
-.texto-principal2{
-    width: 60%;
+.texto-principal, .texto-principal2 {
+    text-align: justify;
+    word-break: break-word;
+    overflow-wrap: break-word;
 }
 
 .bairrosDestaques {
@@ -75,7 +74,7 @@
 }
 
 .bairrosDestaques:hover {
-    transition: 0.5s;
+    transition: 0.3s;
     color: var(--noturno-verde-claro);
 }
 
@@ -85,7 +84,7 @@
 
 .blocoContainer {
     /* width: fit-content; */
-    height: max-content;
+    height: 100%;
 }
 
 .bg-body-focus {
@@ -123,6 +122,19 @@
     width: 65%;
 }
 
+.bairros-link{
+    text-decoration: none;
+    color: var(--noturno-verde-claro);
+    font-weight: bold;
+    list-style: var(--noturno-verde-claro);
+    font-size: 20px;
+}
+
+.bairros-link:hover {
+    transition: 0.3s;
+    color: black;
+}
+
 .btn-custom-1:hover, .btn-custom:hover {
     background-color: gray;
 }
@@ -150,23 +162,68 @@
         color: var(--off-white);
     }
 
+    .bairros-link:hover {
+        color: #E4EFE7;
+    }
+
 }
 
-@media (max-width: 1145px) {
-    .row.bloco-acoes {
+/* Ordene os media query por ordem crescente */
+/* Ajustar de maneira desordenada pode causar inconsistências */
+
+
+@media (max-width: 1199px) {
+    .container-geral-de-textos {
+        gap: 20px;
+    }
+
+    .bloco1 {
+        display: flex;
         flex-direction: column;
-        gap: 2rem;
-        align-items: center;
     }
 
-    .row.bloco-acoes > .col-12 {
-        max-width: 100%;
+    .btn-custom-1 {
+        width: 60%;
+        align-self: center;
     }
 
-    .blocoContainer {
-        width: 90%; /* ou até 100%, mas dentro do limite do container */
-        max-width: 800px; /* impede que fique largo demais em telas pequenas */
-        margin: 0 auto; /* centraliza */
+    .textoHist {
+        text-align: center;
     }
 
+    .btn-custom-1 {
+        width: 80%;
+        padding: 10px;
+    }
+}
+
+
+@media (max-width: 864px) {
+    .nome-zona {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 613px) {
+    .nome-zona {
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 527px) {
+    .nome-zona {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 527px) {
+    .nome-zona {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 388px) {
+    .nome-zona {
+        font-size: 20px;
+    }
 }
