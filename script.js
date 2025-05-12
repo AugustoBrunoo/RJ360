@@ -19,7 +19,7 @@ console.log(diaAtual.getFullYear());
 const anoAtualizado = (diaAtual.getFullYear()).toString();
 console.log(anoAtualizado);
 footerAnoAtual.innerHTML += `<i class="bi bi-c-circle"></i> `;
-footerAnoAtual.innerHTML += `${anoAtualizado} Todos os direitos reservados. Nenhuma parte deste site pode
+footerAnoAtual.innerHTML += `<span class="c-year">${anoAtualizado}</span> Todos os direitos reservados. Nenhuma parte deste site pode
         ser reproduzida ou transmitida de qualquer forma ou por qualquer meio, incluindo fotocópia, gravação ou
         quaisquer sistemas de armazenamento e recuperação de informação.`;
 

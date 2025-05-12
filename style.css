@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
     --verde-escuro: rgb(54, 98, 62);
@@ -13,23 +14,28 @@
     --noturno-verde-off: #F6FCDF;
 }
 
+/*Faz a animação ao passar o mouse*/
 @keyframes bordaColoridaRJ360 {
     0% {
-      border-color: var(--noturno-verde-claro);
+        border-color: var(--noturno-verde-claro);
     }
+
     25% {
-      border-color: var(--verde-claro);
+        border-color: var(--verde-claro);
     }
+
     50% {
-      border-color: var(--azul-claro);
+        border-color: var(--azul-claro);
     }
+
     75% {
-      border-color: var(--verde-claro);
+        border-color: var(--verde-claro);
     }
+
     100% {
-      border-color: var(--noturno-verde-claro);
+        border-color: var(--noturno-verde-claro);
     }
-  }
+}
 
 .img-logo {
     width: 95px;
@@ -68,19 +74,46 @@ body {
 
 }
 
-/* .textosContainer{
-    gap: 40px;
-} */
 
-.img-carousel-2 {
-   width: 100%;
-   height: auto;
-   display: block;
+/*Imagem do Carrossel do Início*/
+
+.img-carousel-1,
+.img-carousel-2,
+.img-carousel-3 {
+    width: 100%;
+    height: 500px;
+    display: block;
+    object-fit: cover;
 }
 
-.texto {
-    width: fit-content;
+/* Texto Inicial e Textos de Cards Zonas*/
+
+.textoInicial, 
+.card-text,
+.text-body-custom,
+.rodape--texto{
+    text-align: justify;
+    word-break: break-word;
+    overflow-wrap: break-word;
+
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
 }
+
+.text-destaque, 
+.card-title,
+.textoZona,
+.texto-avaliacoes {
+
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* Card de Zonas */
 
 .imagem-zona {
     height: 240px;
@@ -91,13 +124,27 @@ body {
     background-color: var(--creme);
 }
 
+.card-hover-zonas {
+    border: 4px solid transparent;
+    transition: border 0.3s ease;
+}
+
+.card-hover-zonas:hover {
+    animation: bordaColoridaRJ360 3s infinite;
+}
+
+/* Carrosel de Avaliações + Card Avaliações */
+
+/*Altura do card container*/
 .carrousel-custom {
-    background-color: var(--verde-claro);
+    /* background-color: var(--verde-claro); */
+    /* background-color: red; */
+    height: max-content;
 }
 
 .texto-avaliacoes {
-   margin-top: 20px;
-   margin-bottom: 30px;
+    margin-top: 20px;
+    margin-bottom: 30px;
 }
 
 .img-avaliacao {
@@ -108,7 +155,13 @@ body {
 
 .card-avalicao {
     background-color: var(--azul-claro);
+    height: fit-content;
 }
+
+.container-card-geral {
+    height: 256px;
+}
+
 
 .btn-avaliacoes {
     color: black;
@@ -119,6 +172,8 @@ body {
 .estrela-icon-avaliacao {
     color: #859F3D;
 }
+
+/*Rodapé*/
 
 .container-rodape {
     background-color: var(--azul-claro);
@@ -158,6 +213,16 @@ body {
     padding-right: 10px;
 }
 
+.text-custom-footer {
+    text-align: justify;
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+.c-year {
+    font-weight: bold;
+}
+
 .span-logo-rodape {
     color: var(--noturno-verde);
 }
@@ -169,15 +234,6 @@ body {
 
 .text-body-custom {
     font-style: italic;
-}
-
-.card-hover-zonas {
-    border: 4px solid transparent;
-    transition: border 0.3s ease;
-}
-
-.card-hover-zonas:hover {   
-    animation: bordaColoridaRJ360 3s infinite;
 }
 
 
@@ -222,6 +278,14 @@ body {
         background-color: var(--noturno-verde-claro);
     }
 
+    .carrousel-custom {
+        background-color: red
+    }
+
+    .text-custom-footer {
+        color: var(--off-white);
+    }
+
     .rodapeLogo {
         background-color: var(--noturno-verde-off);
     }
@@ -247,9 +311,77 @@ body {
     transition: 0.5s;
 }
 
+/* Media queries globais (Ajuste de responsividade em telas) */
+
 @media (max-width: 900px) {
     .container-rodape {
         flex-direction: column;
         gap: 1rem;
     }
 }
+
+/* @media (max-width: 2560px) {
+    
+
+    .img-carousel-1,
+    .img-carousel-2,
+    .img-carousel-3 {
+        height: 900px;
+    } 
+
+}*/
+
+/* @media (max-width: 1440px) {
+    
+
+    .img-carousel-1,
+    .img-carousel-2,
+    .img-carousel-3 {
+        height: 500px;
+    }
+} */
+
+/* @media (max-width: 768px) {
+    
+
+    .img-carousel-1,
+    .img-carousel-2,
+    .img-carousel-3 {
+        height: 300px;
+    }
+} */
+
+/* @media (max-width: 425px) {
+    
+
+    .img-carousel-1,
+    .img-carousel-2,
+    .img-carousel-3 {
+        height: 200px;
+    }
+} */
+
+    /* Ajustar card de avaliação! esta ficando ruim */
+    /* .bg-fundo-avaliacao {} */
+
+/* @media (max-width: 375px) {
+    
+
+    .img-carousel-1,
+    .img-carousel-2,
+    .img-carousel-3 {
+        height: 180px;
+    }
+
+    
+} */
+
+/* @media (max-width: 320px) {
+    
+
+    .img-carousel-1,
+    .img-carousel-2,
+    .img-carousel-3 {
+        height: 150px;
+    }
+} */
