@@ -1,7 +1,5 @@
 .container-inicial-informativo {
     background-color: rgba(255, 0, 0, 0.593);
-    height: max-content;
-    width: fit-content;
     padding: 15px;
     border-radius: 10px;
 }
