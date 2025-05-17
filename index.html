@@ -9,6 +9,7 @@
         integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleGlobal.css">
     <title>RJ360</title>
 </head>
 
@@ -46,7 +47,8 @@
                                 Regiões
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Zona Sul</a></li>
+                                <li><a class="dropdown-item" href="./pages/zonas/zona sul/zona-sul.html">Zona Sul</a>
+                                </li>
                                 <li><a class="dropdown-item" href="#">Zona Norte</a></li>
                                 <li><a class="dropdown-item" href="#">Zona Oeste</a></li>
                                 <li><a class="dropdown-item" href="#">Centro</a></li>
@@ -170,7 +172,7 @@
                         carioca que só quem vem sente. Viva o Rio por inteiro, em 360 graus.
                     </p>
                 </div>
-                
+
                 <div class="col-12 col-xl-6">
                     <p class="textoInicial">
                         Explore o Rio de Janeiro de uma maneira totalmente nova com o RJ360, muito além dos clichês
@@ -304,6 +306,31 @@
         </div>
         <!-- Fim dos Cards -->
 
+        <!-- Planner Automático -->
+        <div class="container mt-3 d-flex flex-column align-items-center">
+            <div class="container-textoPrincipal-planner">
+                <h3 class="textoGlobalNegrito">Planner Inteligente</h3>
+            </div>
+            <div class="container-textoInformativo-planner d-flex flex-column align-items-center mt-2">
+                <p class="textoGlobalNormal">
+                    Não sabe por onde começar seu passeio no Rio de Janeiro? A gente te ajuda!
+                    Se você chegou na cidade maravilhosa sem um roteiro definido ou quer otimizar 
+                    ao máximo seu tempo por aqui, nosso Planner Automático é a solução ideal!
+                </p>
+
+                <p class="textoGlobalNormal">
+                    Com base no seu tempo disponível, preferências e localização, 
+                    montamos um roteiro personalizado com as melhores atrações, pontos turísticos, 
+                    restaurantes e experiências que combinam com o seu estilo de viagem.
+                </p>
+            </div>
+            <div class="container-botoes-planner d-flex justify-content-start">
+                <a class="btn btn-primary textoGlobalNormal" href="./pages/planner-inteligente/plannerinteligente.html">Eu quero!</a>
+            </div>
+        </div>
+        <!-- Fim do Planner Automático -->
+
+
         <!-- Início de Avaliações -->
         <section class="container-avaliacoes">
             <h3 class="text-center texto-avaliacoes">Avaliações</h3>
@@ -314,15 +341,16 @@
 
                         <div class="card card-avalicao d-block mx-auto" style="max-width: 510px;">
                             <div class="row g-0 container-card-geral">
-                                <div class="bg-fundo-card col-4 d-flex flex-column align-items-center justify-content-center">
+                                <div
+                                    class="bg-fundo-card col-4 d-flex flex-column align-items-center justify-content-center">
                                     <img src="./assets/avaliacoes/nicolas.jpeg" class="img-avaliacao" alt="">
                                 </div>
                                 <div class="col-8">
                                     <div class="card-body">
                                         <h5 class="card-title">Nicolas Lima</h5>
                                         <p class="card-text">
-                                            O RJ360 foi essencial para planejar minha viagem. 
-                                            Descobri lugares incríveis que nem sabia que existiam e 
+                                            O RJ360 foi essencial para planejar minha viagem.
+                                            Descobri lugares incríveis que nem sabia que existiam e
                                             aproveitei muito mais cada passeio.
                                         </p>
                                         <div class="estrelas-avaliacao mb-2 d-flex">
@@ -340,21 +368,22 @@
                             </div>
                         </div>
                     </div>
-                
+
                     <div class="carousel-item p-3 bg-fundo-avaliacao">
                         <div class="card card-avalicao d-block mx-auto" style="max-width: 510px;">
                             <div class="row g-0 container-card-geral">
-                                <div class="bg-fundo-card col-4 d-flex flex-column align-items-center justify-content-center">
+                                <div
+                                    class="bg-fundo-card col-4 d-flex flex-column align-items-center justify-content-center">
                                     <!-- <svg class="bd-placeholder-img img-fluid rounded-start" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image" preserveAspectRatio="xMidYMid slice"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image</text></svg> -->
-                                    <img src="./assets/avaliacoes/pedro_dusek.png"
-                                        class="img-avaliacao" alt="">
+                                    <img src="./assets/avaliacoes/pedro_dusek.png" class="img-avaliacao" alt="">
                                 </div>
                                 <div class="col-8">
                                     <div class="card-body">
                                         <h5 class="card-title">Pedro Dusek</h5>
                                         <p class="card-text mb-0">
-                                            Com o RJ360 consegui organizar meu roteiro de forma prática. 
-                                            As dicas de transporte e segurança foram muito úteis durante toda minha estadia.
+                                            Com o RJ360 consegui organizar meu roteiro de forma prática.
+                                            As dicas de transporte e segurança foram muito úteis durante toda minha
+                                            estadia.
                                         </p>
                                         <div class="estrelas-avaliacao mb-2 d-flex">
                                             <i class="bi bi-star-fill estrela-icon-avaliacao"></i>
@@ -375,16 +404,15 @@
                     <div class="carousel-item p-3 bg-fundo-avaliacao">
                         <div class="card card-avalicao d-block mx-auto" style="max-width: 510px;">
                             <div class="row g-0 container-card-geral">
-                                <div class="bg-fundo-card col-4 d-flex flex-column align-items-center justify-content-center">
-                                    <img src="./assets/avaliacoes/hugo.jpeg"
-                                        class="img-avaliacao" alt=""
-                                    >
+                                <div
+                                    class="bg-fundo-card col-4 d-flex flex-column align-items-center justify-content-center">
+                                    <img src="./assets/avaliacoes/hugo.jpeg" class="img-avaliacao" alt="">
                                 </div>
                                 <div class="col-8">
                                     <div class="card-body">
                                         <h5 class="card-title">Hugo Giffoni</h5>
                                         <p class="card-text mb-0">
-                                            Nunca pensei que explorar o Rio fosse tão fácil! O site me deu sugestões 
+                                            Nunca pensei que explorar o Rio fosse tão fácil! O site me deu sugestões
                                             incríveis e me senti mais confiante para andar pela cidade.
                                         </p>
                                         <div class="estrelas-avaliacao mb-2 d-flex">
@@ -406,16 +434,15 @@
                     <div class="carousel-item p-3 bg-fundo-avaliacao">
                         <div class="card card-avalicao d-block mx-auto" style="max-width: 510px;">
                             <div class="row g-0 container-card-geral">
-                                <div class="bg-fundo-card col-4 d-flex flex-column align-items-center justify-content-center">
-                                    <img src="./assets/avaliacoes/nilton_junior.png"
-                                        class="img-avaliacao" alt=""
-                                    >
+                                <div
+                                    class="bg-fundo-card col-4 d-flex flex-column align-items-center justify-content-center">
+                                    <img src="./assets/avaliacoes/nilton_junior.png" class="img-avaliacao" alt="">
                                 </div>
                                 <div class="col-8">
                                     <div class="card-body">
                                         <h5 class="card-title">Nilton Junior</h5>
                                         <p class="card-text mb-0">
-                                            Nunca pensei que explorar o Rio fosse tão fácil! O site me deu sugestões 
+                                            Nunca pensei que explorar o Rio fosse tão fácil! O site me deu sugestões
                                             incríveis e me senti mais confiante para andar pela cidade.
                                         </p>
                                         <div class="estrelas-avaliacao mb-2 d-flex">
@@ -453,7 +480,7 @@
 
         <!-- Fim das Avaliações -->
         <!-- Inicio Planner pre pronto -->
-         
+
 
     </main>
     <!-- Início do Rodapé -->
@@ -484,8 +511,8 @@
     <!-- Fim do Rodapé -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous">
-    </script>
-    
+        </script>
+
     <script src="./script.js"></script>
 </body>
 

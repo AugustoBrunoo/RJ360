@@ -133,6 +133,12 @@ body {
     animation: bordaColoridaRJ360 3s infinite;
 }
 
+/* Section de Planner Inteligente */
+
+.container-textoInformativo-planner p{
+    width: 50%;
+}
+
 /* Carrosel de Avaliações + Card Avaliações */
 
 /*Altura do card container*/

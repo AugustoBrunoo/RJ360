@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    --verde-escuro: rgb(54, 98, 62);
+    --verde-claro: #99BC85;
+    --azul-claro: #E4EFE7;
+    --off-white: #FAF1E6;
+    --creme: #FDFAF6;
+
+    --noturno-preto: #1A1A19;
+    --noturno-verde: #31511E;
+    --noturno-verde-claro: #859F3D;
+    --noturno-verde-off: #F6FCDF;
+}
+
+/* Textos Globais devem usar esta classe */
+
+.textoGlobalNormal {
+    text-align: justify;
+    word-break: break-word;
+    overflow-wrap: break-word;
+
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.textoGlobalNegrito {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
