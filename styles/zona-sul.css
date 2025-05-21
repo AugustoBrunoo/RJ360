@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Notable&display=swap');
+
+* {
+    --verde-escuro: rgb(54, 98, 62);
+    --verde-claro: #99BC85;
+    --azul-claro: #E4EFE7;
+    --off-white: #FAF1E6;
+    --creme: #FDFAF6;
+
+    --noturno-preto: #1A1A19;
+    --noturno-verde: #31511E;
+    --noturno-verde-claro: #859F3D;
+    --noturno-verde-off: #F6FCDF;
+}
+
+.nome-zona {
+    margin-left: 20px;
+    margin-top: 25px;
+
+    font-family: "Notable", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 60px;
+}
+
+.banners {
+	/* faz com que o banner ocupe a tela toda */
+	width: 100%;
+	height: 50vh;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	/* Efeito parallax: Deixa a imagem fixa,
+	meio que sumindo a imagem ao descer a página */
+	/* background-attachment: fixed; */
+}
+
+
+.texto-zona-container {
+    background-image: url("../assets/imagens/zona-sul/cristorio1.jpg");
+    background-size: cover; /* Cobrirá toda a área, mesmo que corte partes da imagem */
+    background-position: center; /* Centraliza o foco da imagem */
+    background-repeat: no-repeat; /* Evita repetição */
+    width: 100%;
+    height: 50vh; /* Altura do banner */
+}
+
+
+/*.banners-titulo { 
+    background-color: rgba(0, 0, 0, 0.4);  fundo escuro semitransparente */
+	/* Diminui a opacidade da cor do titulo 
+	Valores: 
+	0 - Total Transparente
+	1 - Extremamente Opaco  
+	
+	--bs-bg-opacity: .1;
+} */
+
+.nome-zona {
+    background-color: rgba(0, 0, 0, 0.4);
+    width: fit-content;
+    border-radius: 10px;
+    color: white;
+    padding: 20px;
+    padding-top: 5px;
+    
+}
+
+
+.texto-principal, .texto-principal2 {
+    text-align: justify;
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+.bairrosDestaques {
+    font-weight: 700;
+    text-decoration: none;
+    color: black;
+}
+
+.bairrosDestaques:hover {
+    transition: 0.3s;
+    color: var(--noturno-verde-claro);
+}
+
+.textos-principais-zona-container  {
+    gap: 30px;
+}
+
+.blocoContainer {
+    /* width: fit-content; */
+    height: 100%;
+}
+
+.bg-body-focus {
+    /* background-color: black; */
+    color: black;
+    border-radius: 20px;
+}
+
+.blocoContainer {
+    background-color: var(--azul-claro);
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.container-texto-h5 h5{
+    border-bottom: 3px solid #272727;
+    padding-bottom: 15px;
+    width: 700px; /* ou o tamanho desejado */
+    text-align: center;
+}
+
+.card-custom {
+    width: 90%;
+}
+
+.btn-custom-1 {
+    background-color: var(--noturno-verde-claro);
+    color: white;
+}
+
+.btn-custom {
+    background: var(--noturno-verde-claro);
+    border: none;
+    color: white;
+    width: 65%;
+}
+
+.bairros-link{
+    text-decoration: none;
+    color: var(--noturno-verde-claro);
+    font-weight: bold;
+    list-style: var(--noturno-verde-claro);
+    font-size: 20px;
+}
+
+.bairros-link:hover {
+    transition: 0.3s;
+    color: black;
+}
+
+.btn-custom-1:hover, .btn-custom:hover {
+    background-color: gray;
+}
+
+[data-bs-theme="dark"] {
+    .nome-zona {
+        color: var(--off-white);
+    }
+
+    .bairrosDestaques {
+        color: var(--noturno-verde-claro);
+    }
+
+    .blocoContainer {
+        background-color: white;
+    }
+
+    /* .bg-body-focus {
+        background-color: white;
+        color: white;
+        border-radius: 20px;
+    } */
+
+    .bairrosDestaques:hover {
+        color: var(--off-white);
+    }
+
+    .bairros-link:hover {
+        color: #E4EFE7;
+    }
+
+}
+
+/* Ordene os media query por ordem crescente */
+/* Ajustar de maneira desordenada pode causar inconsistências */
+
+
+@media (max-width: 1199px) {
+    .container-geral-de-textos {
+        gap: 20px;
+    }
+
+    .bloco1 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .btn-custom-1 {
+        width: 60%;
+        align-self: center;
+    }
+
+    .textoHist {
+        text-align: center;
+    }
+
+    .btn-custom-1 {
+        width: 80%;
+        padding: 10px;
+    }
+}
+
+
+@media (max-width: 864px) {
+    .nome-zona {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 613px) {
+    .nome-zona {
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 527px) {
+    .nome-zona {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 527px) {
+    .nome-zona {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 388px) {
+    .nome-zona {
+        font-size: 20px;
+    }
+}
