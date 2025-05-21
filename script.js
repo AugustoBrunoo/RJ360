@@ -25,4 +25,3 @@ footerAnoAtual.innerHTML += `<span class="c-year">${anoAtualizado}</span> Todos 
 
 
 
-
