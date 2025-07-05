@@ -139,6 +139,17 @@ body {
     width: 50%;
 }
 
+.container-planner {
+    background-color: var(--noturno-verde-claro);
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.img-planner {
+    width: 400px;
+    border-radius: 20px;
+}
+
 /* Carrosel de Avaliações + Card Avaliações */
 
 /*Altura do card container*/

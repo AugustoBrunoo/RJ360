@@ -17,7 +17,8 @@ const footerAnoAtual = document.querySelector("#anoAtual");
 const diaAtual = new Date;
 console.log(diaAtual.getFullYear());
 const anoAtualizado = (diaAtual.getFullYear()).toString();
-console.log(anoAtualizado);
+// console.log(anoAtualizado);
+
 footerAnoAtual.innerHTML += `<i class="bi bi-c-circle"></i> `;
 footerAnoAtual.innerHTML += `<span class="c-year">${anoAtualizado}</span> Todos os direitos reservados. Nenhuma parte deste site pode
         ser reproduzida ou transmitida de qualquer forma ou por qualquer meio, incluindo fotocópia, gravação ou
