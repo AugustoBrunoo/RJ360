@@ -1,0 +1,24 @@
+.container-inicial-informativo {
+    background-color: rgba(255, 0, 0, 0.593);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.container-inicial-informativo--h1 {
+    font-size: 30px;
+}
+
+.texto-principal p{
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.texto-principal2 p {
+    padding: 10px;
+    height: 92.5%;
+    border-radius: 10px;
+}
+
+.texto-principal3 p{
+    width: 50%;
+}
