@@ -71,7 +71,7 @@ body {
 .icon-home:hover {
     color: #769763;
     transition: 0.2s ease-in;
-
+    cursor: pointer;
 }
 
 
@@ -132,6 +132,48 @@ body {
 .card-hover-zonas:hover {
     animation: bordaColoridaRJ360 3s infinite;
 }
+
+/* Section de Planner Inteligente */
+
+.container-textoInformativo-planner p{
+    width: 50%;
+}
+
+.container-planner {
+    background-color: var(--noturno-verde-claro);
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.img-planner {
+    width: 400px;
+    border-radius: 20px;
+}
+
+/*Seção Locomoção + Demais funcionalidades*/
+.secao-final {
+    margin-top: 7%;
+}
+
+.texto-locomocao, 
+.btn-locomocao {
+    width: fit-content;
+}
+
+/*Alinhar e fazer um card nos blocos da seção final*/
+/* .card-locomocao {
+    border: 1px solid gray;
+} */
+
+/* .teste {
+    width: fit-content;
+    border: 1px solid gray;
+} */
+
+.text-custom-funcionalidade {
+    font-size: 26px;
+}
+
 
 /* Carrosel de Avaliações + Card Avaliações */
 
