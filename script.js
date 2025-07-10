@@ -5,11 +5,13 @@
 const inputCheck = document.querySelector("#modo-noturno");
 const tagBody = document.querySelector("body");
 
+
 inputCheck.addEventListener("click", () => {
     const atual = tagBody.getAttribute("data-bs-theme");
     const novoTema = atual === 'light' ? 'dark' : 'light';
 
     tagBody.setAttribute('data-bs-theme', novoTema);
+    localStorage.setItem("modoNoturno", novoTema);
 });
 
 /* Script para deixar o ano no rodapé sempre atualizado */
@@ -26,3 +28,13 @@ footerAnoAtual.innerHTML += `<span class="c-year">${anoAtualizado}</span> Todos 
 
 
 
+window.addEventListener("load", () => {
+    const atual = tagBody.getAttribute("data-bs-theme");
+
+    if (!localStorage.getItem("modoNoturno")) {
+        localStorage.setItem("modoNoturno", atual);
+    } else {
+        const valor = localStorage.getItem("modoNoturno");
+        tagBody.setAttribute('data-bs-theme', valor);
+    }
+})

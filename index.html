@@ -16,7 +16,7 @@
 <body data-bs-theme="light">
     <!-- Inicio do Rodapé -->
     <header>
-        <nav class="navbar navbar-expand-lg bg-body-custom">
+        <nav class="navbar navbar-expand-lg bg-body-custom fixed-top">
             <div class="container-fluid">
                 <div class="d-flex align-items-center">
                     <a class="navbar-brand" href="#">
@@ -50,7 +50,8 @@
                                 <li><a class="dropdown-item" href="./pages/zonas/zona sul/zona-sul.html">Zona Sul</a>
                                 </li>
                                 <li><a class="dropdown-item" href="#">Zona Norte</a></li>
-                                <li><a class="dropdown-item" href="#">Zona Oeste</a></li>
+                                <li><a class="dropdown-item" href="./pages/zonas/zona oeste/zona-oeste.html">Zona
+                                        Oeste</a></li>
                                 <li><a class="dropdown-item" href="#">Centro</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
@@ -70,7 +71,7 @@
 
     <main>
         <!-- Início do Carrossel -->
-        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+        <div id="carouselExampleCaptions" class="carousel slide mt-custom" data-bs-ride="carousel" data-bs-interval="5000">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
                     aria-label="Slide 1" aria-current="true"></button>
@@ -330,12 +331,85 @@
                         href="./pages/planner-inteligente/plannerinteligente.html">Eu quero!</a>
                 </div>
             </div>
-            
-            <img src="./assets/planner-inteligente/img-planner-ex1.jpg" class="img-planner" alt="">
-            
-        </div>
-        <!-- Fim do Planner Automático -->
 
+            <img src="./assets/planner-inteligente/img-planner-ex1.jpg" class="img-planner" alt="">
+
+        </div>
+
+        <!-- Fim do Planner Automático -->
+        <!-- Inicio do Eventos por Tempo Limitado -->
+        <div class="container-eventosLimitados mt-5 container">
+            <h3 class="text-center text-destaque">Eventos por Tempo Limitado</h3>
+            <div class="textos-informativos row mt-3">
+                <p class="col-6 textoGlobalNormal">
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                    anim id est laborum."
+                </p>
+                <p class="col-6 textoGlobalNormal">
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                    anim id est laborum."
+                </p>
+            </div>
+            <a href="#" class="btn btn-primary btn-global">Ver mais</a>
+        </div>
+
+        <!-- Fim do Eventos por tempo Limitado -->
+
+        <!-- Inicio da locomoção + Demais funcionalidades -->
+        <div class="secao-final container">
+            <div class="row">
+                <div class="col-6 card-locomocao">
+                    <div class="d-flex flex-column align-items-center">
+                        <h3 class="text-destaque texto-locomocao">Deseja ver a locomoção do Rio?</h3>
+
+                        <p class="mt-3 w-75 textoGlobalNormal">
+                            Nesta seção, você encontrará tudo o que precisa para se locomover com praticidade e
+                            segurança pelo Rio de Janeiro. Reunimos informações completas sobre os principais meios
+                            de transporte público da cidade, como metrô, ônibus, VLT, barcas e trem. Além disso,
+                            indicamos os melhores aplicativos de mobilidade para planejar rotas, consultar horários,
+                            comprar passagens e até pedir corridas por aplicativo. Seja turista ou morador, aqui
+                            você
+                            vai descobrir as melhores formas de circular pelo Rio com eficiência e economia.
+                        </p>
+
+                        <div class="d-flex mt-2">
+                            <a href="#" class="btn btn-primary btn-global btn-locomocao">Quero ver!</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 card-demaisFuncionalidades">
+                    <div class="container-demais-itens">
+                        <div class="d-flex flex-column align-items-center">
+                            <h3 class="text-destaque text-custom-funcionalidade">Descubra tudo o que preparamos para você!</h3>
+
+                            <p class="mt-3 w-75 textoGlobalNormal">
+                                Explore outras experiências criadas para diferentes estilos de viagem, interesses e
+                                momentos. Cada
+                                opção é um convite para viver o Rio de Janeiro de formas únicas, com dicas práticas e
+                                conteúdos que
+                                tornam sua jornada ainda mais completa.
+                                Escolha um dos destaques abaixo e veja o que o Rio tem a oferecer, do seu jeito.
+                            </p>
+
+                            <div class="d-flex mt-2">
+                                <a href="#" class="btn btn-primary btn-global">Quero ver!</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- Início de Avaliações -->
         <section class="container-avaliacoes">
@@ -366,7 +440,8 @@
                                             <i class="bi bi-star-fill estrela-icon-avaliacao"></i>
                                             <i class="bi bi-star-fill estrela-icon-avaliacao"></i>
                                         </div>
-                                        <p class="card-text-custom"><small class="text-body-custom">Postado há 8 dias
+                                        <p class="card-text-custom"><small class="text-body-custom">Postado há 8
+                                                dias
                                                 atrás</small>
                                         </p>
                                     </div>
@@ -398,7 +473,8 @@
                                             <i class="bi bi-star-fill estrela-icon-avaliacao"></i>
                                             <i class="bi bi-star-fill estrela-icon-avaliacao"></i>
                                         </div>
-                                        <p class="card-text-custom"><small class="text-body-custom">Postado há 7 dias
+                                        <p class="card-text-custom"><small class="text-body-custom">Postado há 7
+                                                dias
                                                 atrás</small>
                                         </p>
                                     </div>
@@ -428,7 +504,8 @@
                                             <i class="bi bi-star-fill estrela-icon-avaliacao"></i>
                                             <i class="bi bi-star-fill estrela-icon-avaliacao"></i>
                                         </div>
-                                        <p class="card-text-custom"><small class="text-body-custom">Postado há 2 semanas
+                                        <p class="card-text-custom"><small class="text-body-custom">Postado há 2
+                                                semanas
                                                 atrás</small>
                                         </p>
                                     </div>

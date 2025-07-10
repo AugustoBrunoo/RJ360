@@ -14,6 +14,11 @@
     --noturno-verde-off: #F6FCDF;
 }
 
+.mt-custom{
+    margin-top: 100px;
+    padding-top: 20px;
+}
+
 /* Textos Globais devem usar esta classe */
 
 .textoGlobalNormal {
@@ -32,4 +37,23 @@
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
+}
+
+.btn-global {
+    background-color: var(--noturno-verde-claro);
+    border: none;
+    width: 120px;
+    padding: 10px;
+}
+
+.btn-global:hover {
+    background-color: var(--noturno-verde);
+    color: white;
+}
+
+[data-bs-theme="dark"] {
+    .btn-global:hover {
+        background-color: var(--off-white);
+        color: black;
+    }
 }
