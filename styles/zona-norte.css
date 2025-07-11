@@ -37,7 +37,12 @@
 
 
 .texto-zona-container {
-    background-image: url("../assets/imagens/Zona-norte/img_maracana.webp");
+  background-image: url("../assets/imagens/Zona-norte/BB.jpg");
+  background-size: cover;
+  background-position: center 58%; /* ajuste conforme testar */
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 50vh;
 }
 
 /*.banners-titulo { 

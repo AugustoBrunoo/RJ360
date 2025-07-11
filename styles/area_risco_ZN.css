@@ -1,3 +1,4 @@
+/* Bloco de aviso inicial */
 .container-inicial-informativo {
     background-color: rgba(255, 0, 0, 0.593);
     padding: 15px;
@@ -8,7 +9,8 @@
     font-size: 30px;
 }
 
-.texto-principal p{
+/* Texto lateral principal */
+.texto-principal p {
     padding: 10px;
     border-radius: 10px;
 }
@@ -19,6 +21,56 @@
     border-radius: 10px;
 }
 
-.texto-principal3 p{
+/* Texto inferior explicativo */
+.texto-principal3 p {
     width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* ===== NOVO BLOCO: Mapa ===== */
+.container-mapa {
+    background-color: rgba(0, 123, 255, 0.1); /* azul clarinho, se quiser destaque */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.container-mapa img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+}
+
+.container-mapa p {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* ===== NOVO BLOCO: Possíveis Perigos ===== */
+.container-perigos {
+    background-color: rgba(255, 193, 7, 0.1); /* amarelo clarinho, destaque sutil */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.container-perigos h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.container-perigos h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.container-perigos ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.container-perigos ul li {
+    margin-bottom: 5px;
 }
