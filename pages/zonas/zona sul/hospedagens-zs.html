@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../../assets/logos/logo-favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../../../assets/logos/Logo-removebg-preview.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="../../../styles/zona-sul.css">
     <link rel="stylesheet" href="../../../style.css">
+    <link rel="stylesheet" href="../../../styleGlobal.css">
     <title>RJ360 - Hospedagens</title>
 </head>
 
@@ -19,7 +19,7 @@
         <nav class="navbar navbar-expand-lg bg-body-custom fixed-top">
             <div class="container-fluid">
                 <div class="d-flex align-items-center">
-                    <a class="navbar-brand" href="../../../index.html">
+                    <a class="navbar-brand" href="./index.html">
                         <img class="img-logo" src="../../../assets/logos/logo-rj360-removebg-preview.png" alt="Logo RJ360">
                         <span class="span-logo">RJ</span><span class="span-logo2">360</span>
                     </a>
@@ -37,8 +37,8 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">
-                                <i class="icon-home bi bi-house-door-fill"></i>
+                            <a class="nav-link active" aria-current="page" href="./index.html">
+                                <i class="icon-home bi bi-house-door-fill" title="Página Inicial"></i>
                             </a>
                         </li>
                         <li class="nav-item dropdown">
@@ -72,16 +72,16 @@
         <h1 class="text-center text-destaque mb-5">Encontre sua Hospedagem Ideal no Rio de Janeiro</h1>
 
         <!-- Seção de Filtros e Busca (Conceitual) -->
-        <section class="mb-5 p-4 rounded shadow-sm" style="background-color: var(--azul-claro);">
+        <section class="refine-search mb-5 p-4 rounded shadow-sm">
             <h3 class="text-destaque mb-4">Refine sua Busca</h3>
-            <form class="row g-3 align-items-end">
+            <form id="searchForm" class="row g-3 align-items-end">
                 <div class="col-md-4">
                     <label for="destino" class="form-label textoGlobalNormal">Destino/Região</label>
                     <input type="text" class="form-control" id="destino" placeholder="Ex: Copacabana, Lapa">
                 </div>
                 <div class="col-md-3">
                     <label for="tipoHospedagem" class="form-label textoGlobalNormal">Tipo de Hospedagem</label>
-                    <select id="tipoHospedagem" class="form-select">
+                    <select id="tipoHospedagem" class="form-select" data-filter="type">
                         <option selected>Qualquer tipo...</option>
                         <option>Hotel</option>
                         <option>Hostel</option>
@@ -94,7 +94,7 @@
                     <input type="number" class="form-control" id="precoMax" placeholder="Ex: 500">
                 </div>
                 <div class="col-md-2">
-                    <button type="submit" class="btn btn-primary btn-global w-100">Buscar</button>
+                    <button type="submit" class="btn btn-search w-100">Buscar</button>
                 </div>
             </form>
         </section>
@@ -104,8 +104,8 @@
 
             <!-- Exemplo de Card de Hospedagem 1: Hotel Atlântico Copacabana -->
             <article class="col">
-                <div class="card h-100 shadow-sm card-hover-zonas">
-                    <img src="./assets/hospedagens/hotel-copacabana.jpg" class="card-img-top imagem-hospedagem" alt="Hotel Atlântico Copacabana">
+                <div class="card h-100 shadow-sm card-hover-zonas" data-type="hotel" data-price="350" data-region="copacabana">
+                    <img src="../../../assets/hospedagens/hotel-copacabana.jpg" class="card-img-top imagem-hospedagem" alt="Hotel Atlântico Copacabana">
                     <div class="card-body card-bg-zonas">
                         <h5 class="card-title text-destaque">Hotel Atlântico Copacabana</h5>
                         <p class="card-text textoGlobalNormal">Hotel 4 estrelas localizado a poucos passos da praia de Copacabana, com piscina na cobertura e vista para o mar.</p>
@@ -127,20 +127,20 @@
 
             <!-- Exemplo de Card de Hospedagem 2: Lapa Hostel Rio -->
             <article class="col">
-                <div class="card h-100 shadow-sm card-hover-zonas">
-                    <img src="./assets/hospedagens/hostel-lapa.jpg" class="card-img-top imagem-hospedagem" alt="Lapa Hostel Rio">
+                <div class="card h-100 shadow-sm card-hover-zonas" data-type="hotel" data-price="1200" data-region="ipanema">
+                    <img src="../../../assets/hospedagens/hotel-fasano.jpg" class="card-img-top imagem-hospedagem" alt="Hotel Fasano Rio">
                     <div class="card-body card-bg-zonas">
-                        <h5 class="card-title text-destaque">Lapa Hostel Rio</h5>
-                        <p class="card-text textoGlobalNormal">Hostel vibrante e acolhedor no coração da Lapa, ideal para viajantes que buscam diversão e vida noturna.</p>
+                        <h5 class="card-title text-destaque">Hotel Fasano Rio</h5>
+                        <p class="card-text textoGlobalNormal">Luxuoso hotel 5 estrelas em Ipanema com vista deslumbrante, spa de classe mundial e restaurante premiado.</p>
                         <ul class="list-unstyled">
-                            <li class="textoGlobalNormal"><i class="bi bi-geo-alt-fill"></i> Lapa, Centro</li>
-                            <li class="textoGlobalNormal"><i class="bi bi-currency-dollar"></i> A partir de R$ 80/noite</li>
+                            <li class="textoGlobalNormal"><i class="bi bi-geo-alt-fill"></i> Ipanema, Zona Sul</li>
+                            <li class="textoGlobalNormal"><i class="bi bi-currency-dollar"></i> A partir de R$ 1200/noite</li>
                             <li class="textoGlobalNormal">
                                 <i class="bi bi-star-fill text-warning"></i>
                                 <i class="bi bi-star-fill text-warning"></i>
                                 <i class="bi bi-star-fill text-warning"></i>
                                 <i class="bi bi-star-fill text-warning"></i>
-                                <i class="bi bi-star-half text-warning"></i> (4.5)
+                                <i class="bi bi-star-fill text-warning"></i> (5.0)
                             </li>
                         </ul>
                         <a href="#" class="btn btn-primary btn-global mt-3">Ver Detalhes</a>
@@ -150,8 +150,8 @@
 
             <!-- Exemplo de Card de Hospedagem 3: Apartamento Aconchegante Ipanema -->
             <article class="col">
-                <div class="card h-100 shadow-sm card-hover-zonas">
-                    <img src="./assets/hospedagens/apartamento-ipanema.jpg" class="card-img-top imagem-hospedagem" alt="Apartamento Aconchegante Ipanema">
+                <div class="card h-100 shadow-sm card-hover-zonas" data-type="apartamento" data-price="500" data-region="ipanema">
+                    <img src="../../../assets/hospedagens/apartamento-ipanema.jpg" class="card-img-top imagem-hospedagem" alt="Apartamento Aconchegante Ipanema">
                     <div class="card-body card-bg-zonas">
                         <h5 class="card-title text-destaque">Apartamento Aconchegante Ipanema</h5>
                         <p class="card-text textoGlobalNormal">Apartamento inteiro para aluguel por temporada, mobiliado e próximo à praia de Ipanema, perfeito para famílias ou grupos.</p>
@@ -172,21 +172,22 @@
             </article>
 
             <!-- Adicione mais cards de hospedagem aqui, seguindo a mesma estrutura -->
+            <!-- Novo Hostel em Ipanema -->
             <article class="col">
-                <div class="card h-100 shadow-sm card-hover-zonas">
-                    <img src="./assets/hospedagens/hotel-barra.jpg" class="card-img-top imagem-hospedagem" alt="Hotel na Barra da Tijuca">
+                <div class="card h-100 shadow-sm card-hover-zonas" data-type="hostel" data-price="700" data-region="ipanema">
+                    <img src="../../../assets/hospedagens/hostel-ipanema.jpg" class="card-img-top imagem-hospedagem" alt="Hostel Mellow Mood Ipanema">
                     <div class="card-body card-bg-zonas">
-                        <h5 class="card-title text-destaque">Grand Hyatt Rio de Janeiro</h5>
-                        <p class="card-text textoGlobalNormal">Luxuoso hotel 5 estrelas na Barra da Tijuca, com vista para a Lagoa de Marapendi e acesso direto à praia.</p>
+                        <h5 class="card-title text-destaque">El Misti Ipanema</h5>
+                        <p class="card-text textoGlobalNormal">Situado em uma rua arborizada, este hostel descontraído fica a dois minutos a pé da Praia de Ipanema e a três de uma estação de metrô.</p>
                         <ul class="list-unstyled">
-                            <li class="textoGlobalNormal"><i class="bi bi-geo-alt-fill"></i> Barra da Tijuca, Zona Oeste</li>
+                            <li class="textoGlobalNormal"><i class="bi bi-geo-alt-fill"></i> Ipanema, Zona Sul</li>
                             <li class="textoGlobalNormal"><i class="bi bi-currency-dollar"></i> A partir de R$ 700/noite</li>
                             <li class="textoGlobalNormal">
                                 <i class="bi bi-star-fill text-warning"></i>
                                 <i class="bi bi-star-fill text-warning"></i>
                                 <i class="bi bi-star-fill text-warning"></i>
                                 <i class="bi bi-star-fill text-warning"></i>
-                                <i class="bi bi-star-half text-warning"></i> (4.8)
+                                <i class="bi bi-star-half text-warning"></i> (4.7)
                             </li>
                         </ul>
                         <a href="#" class="btn btn-primary btn-global mt-3">Ver Detalhes</a>
@@ -194,21 +195,22 @@
                 </div>
             </article>
 
+            <!-- Nova Pousada em Copacabana -->
             <article class="col">
-                <div class="card h-100 shadow-sm card-hover-zonas">
-                    <img src="./assets/hospedagens/pousada-santa-teresa.jpg" class="card-img-top imagem-hospedagem" alt="Pousada em Santa Teresa">
+                <div class="card h-100 shadow-sm card-hover-zonas" data-type="pousada" data-price="220" data-region="copacabana">
+                    <img src="../../../assets/hospedagens/pousada-copacabana.jpg" class="card-img-top imagem-hospedagem" alt="Pousada Samba do Copacabana">
                     <div class="card-body card-bg-zonas">
-                        <h5 class="card-title text-destaque">Pousada Santa Teresa</h5>
-                        <p class="card-text textoGlobalNormal">Charme e tranquilidade em Santa Teresa, com arquitetura colonial e vista panorâmica da cidade.</p>
+                        <h5 class="card-title text-destaque">Pousada Samba do Copacabana</h5>
+                        <p class="card-text textoGlobalNormal">Pousada familiar a 1 quadra da praia, com decoração temática e piscina na cobertura com vista para o mar.</p>
                         <ul class="list-unstyled">
-                            <li class="textoGlobalNormal"><i class="bi bi-geo-alt-fill"></i> Santa Teresa, Centro</li>
-                            <li class="textoGlobalNormal"><i class="bi bi-currency-dollar"></i> A partir de R$ 280/noite</li>
+                            <li class="textoGlobalNormal"><i class="bi bi-geo-alt-fill"></i> Copacabana, Zona Sul</li>
+                            <li class="textoGlobalNormal"><i class="bi bi-currency-dollar"></i> A partir de R$ 220/noite</li>
                             <li class="textoGlobalNormal">
                                 <i class="bi bi-star-fill text-warning"></i>
                                 <i class="bi bi-star-fill text-warning"></i>
                                 <i class="bi bi-star-fill text-warning"></i>
                                 <i class="bi bi-star-fill text-warning"></i>
-                                <i class="bi bi-star text-warning"></i> (4.2)
+                                <i class="bi bi-star text-warning"></i> (4.3)
                             </li>
                         </ul>
                         <a href="#" class="btn btn-primary btn-global mt-3">Ver Detalhes</a>
@@ -216,21 +218,22 @@
                 </div>
             </article>
 
+            <!-- Novo Hotel em Leblon -->
             <article class="col">
-                <div class="card h-100 shadow-sm card-hover-zonas">
-                    <img src="./assets/hospedagens/hotel-centro.jpg" class="card-img-top imagem-hospedagem" alt="Hotel no Centro do Rio">
+                <div class="card h-100 shadow-sm card-hover-zonas" data-type="hotel" data-price="850" data-region="leblon">
+                    <img src="../../../assets/hospedagens/hotel-leblon.jpg" class="card-img-top imagem-hospedagem" alt="Hotel Marina All Suites">
                     <div class="card-body card-bg-zonas">
-                        <h5 class="card-title text-destaque">Hotel Rio Centro</h5>
-                        <p class="card-text textoGlobalNormal">Opção prática e confortável no coração do Centro, ideal para quem busca acesso fácil a pontos históricos e comerciais.</p>
+                        <h5 class="card-title text-destaque">Hotel Marina All Suites</h5>
+                        <p class="card-text textoGlobalNormal">Hotel boutique à beira-mar no Leblon, com suítes espaçosas, serviço impecável e restaurante premiado.</p>
                         <ul class="list-unstyled">
-                            <li class="textoGlobalNormal"><i class="bi bi-geo-alt-fill"></i> Centro, Rio de Janeiro</li>
-                            <li class="textoGlobalNormal"><i class="bi bi-currency-dollar"></i> A partir de R$ 200/noite</li>
+                            <li class="textoGlobalNormal"><i class="bi bi-geo-alt-fill"></i> Leblon, Zona Sul</li>
+                            <li class="textoGlobalNormal"><i class="bi bi-currency-dollar"></i> A partir de R$ 850/noite</li>
                             <li class="textoGlobalNormal">
                                 <i class="bi bi-star-fill text-warning"></i>
                                 <i class="bi bi-star-fill text-warning"></i>
                                 <i class="bi bi-star-fill text-warning"></i>
-                                <i class="bi bi-star-half text-warning"></i>
-                                <i class="bi bi-star text-warning"></i> (3.5)
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i> (5.0)
                             </li>
                         </ul>
                         <a href="#" class="btn btn-primary btn-global mt-3">Ver Detalhes</a>
@@ -259,8 +262,8 @@
         </div>
 
         <div class="rodapeLogo">
-            <a class="navbar-brand" href="../../../index.html">
-                <img class="img-logo" src="../../../assets/logos/logo-rj360-removebg-preview.png alt="Logo RJ360">
+            <a class="navbar-brand" href="./index.html">
+                <img class="img-logo" src="../../../assets/logos/logo-rj360-removebg-preview.png" alt="Logo RJ360">
                 <span class="span-logo-rodape">RJ</span><span class="span-logo2-rodape">360</span>
             </a>
         </div>
@@ -270,7 +273,41 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous">
     </script>
-    <script src="../../../"></script>
+    <script src="../../../script.js"></script>
+</body>
+
+```diff
+<<<<<<< SEARCH
+    <script src="../../../script.js"></script>
 </body>
 
 </html>
+=======
+    <script src="../../../script.js"></script>
+    <script>
+        document.getElementById('searchForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const destination = document.getElementById('destino').value.toLowerCase();
+            const type = document.getElementById('tipoHospedagem').value;
+            const price = parseFloat(document.getElementById('precoMax').value) || Infinity;
+
+            const cards = document.querySelectorAll('.card-hover-zonas');
+            
+            cards.forEach(card => {
+                const cardText = card.textContent.toLowerCase();
+                const cardPrice = parseFloat(card.querySelector('li:nth-child(2)').textContent.match(/\d+/)[0]);
+                
+                const matchesDestination = destination ? cardText.includes(destination) : true;
+                const matchesType = type === 'Qualquer tipo...' || cardText.includes(type.toLowerCase());
+                const matchesPrice = cardPrice <= price;
+
+                const article = card.closest('article');
+                article.style.display = matchesDestination && matchesType && matchesPrice ? 'block' : 'none';
+            });
+        });
+    </script>
+</body>
+
+</html>
+
