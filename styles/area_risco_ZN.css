@@ -114,3 +114,44 @@
   font-size: 16px;
 }
 
+/* Offcanvas customizado */
+#offcanvasComentario {
+  height: 70% !important;
+  bottom: 0 !important;
+  overflow-y: auto;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  padding-bottom: 30px;
+}
+
+/* Reserva espaço no body para não encostar */
+body {
+  padding-bottom: 80px;
+}
+
+/* Espaço abaixo do acordeão */
+#accordionFlushExample {
+  margin-bottom: 50px;
+}
+
+/* Offcanvas central customizado */
+.custom-offcanvas {
+  bottom: auto;
+  top: 25% !important;
+  height: auto;
+  max-height: 50vh;
+  width: 100%; /* <- Força ocupar toda a largura */
+  left: 0; /* Garante que grude na lateral esquerda */
+  right: 0; /* Garante que grude na lateral direita */
+  border-radius: 15px 15px 0 0;
+}
+
+.custom-offcanvas .offcanvas-body {
+  overflow-y: auto; /* Se precisar rolar internamente */
+}
+
+/* Opcional: dar margem para o rodapé não colar */
+.container-comentarios {
+  margin-bottom: 80px; /* Já ajuda a afastar do rodapé */
+}
+
