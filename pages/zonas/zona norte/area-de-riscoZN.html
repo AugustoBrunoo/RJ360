@@ -78,7 +78,7 @@
         <!-- Texto inicial já está pronto -->
 
         <!-- Seção do Mapa com Legenda -->
-        <div class="container-mapa container mt-5 text-center">
+        <!--<div class="container-mapa container mt-5 text-center">
             <h2 class="textoGlobalNegrito">Mapa da Zona Norte</h2>
             <img src="../../../assets/imagens/Zona-norte/img_mapa_ZN.png" alt="Mapa da Zona Norte com Legenda"
                 class="img-fluid" />
@@ -86,7 +86,24 @@
                 Legenda: Áreas em vermelho representam zonas com maior índice de criminalidade. Áreas em azul
                 indicam regiões propensas a desastres naturais como enchentes ou deslizamentos.
             </p>
+        </div> -->
+
+        <!-- Seção do Mapa com Legenda -->
+        <div class="container-mapa container mt-5 text-center">
+            <h2 class="textoGlobalNegrito">Mapa da Zona Norte</h2>
+
+            <!-- Aqui entra o iframe -->
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d235263.22099623716!2d-43.45670344573434!3d-22.876908033923137!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997b54e2922f5f%3A0x38af4eb8674ecd6a!2sZona%20Norte%2C%20Rio%20de%20Janeiro%20-%20RJ!5e0!3m2!1spt-BR!2sbr!4v1752300555437!5m2!1spt-BR!2sbr"
+                width="100%" height="450" style="border:0; border-radius: 10px;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+
+            <p class="mt-2 textoGlobalNormal">
+                 Este mapa oferece uma visão panorâmica da área, integrando recursos do Google Maps. Recomendamos atenção redobrada aos locais destacados abaixo, pois exigem maior cautela durante a visitação.
+            </p>
         </div>
+
 
         <!-- Seção dos Possíveis Perigos -->
         <div class="container-perigos container mt-5">
@@ -111,7 +128,7 @@
                     </ul>
                 </div>
                 <div class="col-md-4">
-                    <h4>Os principais bairros mais perigosos:</h4>
+                    <h4>Áreas que exigem mais atenção:</h4>
                     <ul>
                         <li>Complexo do Alemão</li>
                         <li>Complexo da Maré</li>
@@ -185,7 +202,7 @@
             </div>
 
             <!-- Offcanvas para Adicionar Comentário -->
-            <div class="offcanvas custom-offcanvas" tabindex="-1" id="offcanvasComentario"
+            <div class="offcanvas offcanvas-bottom custom-offcanvas" tabindex="-1" id="offcanvasComentario"
                 aria-labelledby="offcanvasComentarioLabel">
 
                 <div class="offcanvas-header">
@@ -213,10 +230,10 @@
                     </h2>
                     <div id="flush-collapseOne" class="accordion-collapse collapse"
                         data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">“Moro no Jacarezinho há anos e cada operação policial aqui é um
+                        <div class="accordion-body">Moro no Jacarezinho há anos e cada operação policial aqui é um
                             terror. A gente não tem paz, é tiro pra todo lado, criança chorando, gente se
                             escondendo.
-                            Parece que nossa vida não vale nada. Só quero viver sem medo.”
+                            Parece que nossa vida não vale nada. Só quero viver sem medo.
                         </div>
                     </div>
                 </div>
