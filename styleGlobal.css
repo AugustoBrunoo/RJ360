@@ -41,6 +41,7 @@
 
 .btn-global {
     background-color: var(--noturno-verde-claro);
+    color: white;
     border: none;
     width: 120px;
     padding: 10px;

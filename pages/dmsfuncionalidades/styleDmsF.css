@@ -6,6 +6,26 @@
     margin-top: 70px;
 }
 
-.teste {
-    height: 250px;
+
+.mt-card {
+    margin-top: 70px;
+}
+
+.containerTexto-dmsf p{
+    padding: 30px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    background-color: #E4EFE7;
+    font-size: 18px;
+    width: 40%;
+}
+
+[data-bs-theme="dark"] {
+    .containerTexto-dmsf p{
+        background-color: #E4EFE7;
+        color: #FAF1E6;
+        background-color: #859F3D;
+    
+    }
 }
