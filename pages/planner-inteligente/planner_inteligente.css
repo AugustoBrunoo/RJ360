@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Notable&display=swap');
+/* ---------------------------------------------
+   PLANNER INTELIGENTE - ESTILO RJ360
+   --------------------------------------------- */
+
+main h1 {
+  font-family: "Special Gothic Expanded One", sans-serif;
+  font-weight: 400;
+  color: var(--noturno-verde);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+#plannerForm {
+  background-color: var(--azul-claro);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+#plannerForm label {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  color: var(--noturno-preto);
+}
+
+#plannerForm select {
+  border: 2px solid var(--verde-claro);
+  border-radius: 8px;
+}
+
+#plannerForm select:focus {
+  border-color: var(--noturno-verde);
+  box-shadow: 0 0 0 0.25rem rgba(133, 159, 61, 0.25);
+}
+
+#plannerForm button {
+  background-color: var(--noturno-verde);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  padding: 10px 30px;
+  transition: background-color 0.3s ease;
+}
+
+#plannerForm button:hover {
+  background-color: var(--noturno-verde-claro);
+}
+
+#resultadoPlanner {
+  background-color: var(--creme);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+#resultadoPlanner h2 {
+  font-family: "Special Gothic Expanded One", sans-serif;
+  color: var(--noturno-verde);
+  margin-bottom: 1.5rem;
+}
+
+#plannerGerado p {
+  font-family: "Montserrat", sans-serif;
+  color: var(--noturno-preto);
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+#resultadoPlanner .btn-success {
+  background-color: var(--noturno-verde);
+  border: none;
+}
+
+#resultadoPlanner .btn-success:hover {
+  background-color: var(--noturno-verde-claro);
+}
+
+#resultadoPlanner .btn-secondary {
+  background-color: var(--noturno-preto);
+  color: white;
+  border: none;
+}
+
+#resultadoPlanner .btn-secondary:hover {
+  background-color: var(--noturno-verde);
+}
+
+.btn {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  #plannerForm, #resultadoPlanner {
+    padding: 20px;
+  }
+}
