@@ -1,0 +1,30 @@
+.img-perfil img{
+    border-radius: 50%;
+    width: 170px;
+}
+
+.fs-custom-icon {
+    font-size: 35px;
+}
+
+.fs-custom {
+    font-size: 20px;
+}
+
+.icones-perfil {
+    border: 2px solid rgba(201, 201, 201, 0.823);
+    padding: 8px;
+    border-radius: 10px;
+    background-color: #E4EFE7;
+}
+
+.biografia-info {
+    font-size: 20px
+}
+
+.identidade-1 {
+    background-color: #E4EFE7;
+    width: fit-content;
+    padding: 30px;
+    border-radius: 20px;
+}
