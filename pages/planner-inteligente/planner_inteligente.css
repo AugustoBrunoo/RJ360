@@ -1,10 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Notable&display=swap');
+
 /* ---------------------------------------------
    PLANNER INTELIGENTE - ESTILO RJ360
    --------------------------------------------- */
+* {
+  --verde-escuro: rgb(54, 98, 62);
+  --verde-claro: #99BC85;
+  --azul-claro: #E4EFE7;
+  --off-white: #FAF1E6;
+  --creme: #FDFAF6;
+
+  --noturno-preto: #1A1A19;
+  --noturno-verde: #31511E;
+  --noturno-verde-claro: #859F3D;
+  --noturno-verde-off: #F6FCDF;
+}
 
 main h1 {
-  font-family: "Special Gothic Expanded One", sans-serif;
+  font-family:"Special Gothic Expanded One", sans-serif;
   font-weight: 400;
   color: var(--noturno-verde);
   text-align: center;
@@ -15,7 +28,7 @@ main h1 {
   background-color: var(--azul-claro);
   padding: 40px;
   border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 #plannerForm label {
@@ -53,7 +66,7 @@ main h1 {
   background-color: var(--creme);
   padding: 40px;
   border-radius: 15px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 #resultadoPlanner h2 {
@@ -95,7 +108,9 @@ main h1 {
 
 /* Responsividade */
 @media (max-width: 768px) {
-  #plannerForm, #resultadoPlanner {
+
+  #plannerForm,
+  #resultadoPlanner {
     padding: 20px;
   }
 }

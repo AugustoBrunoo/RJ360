@@ -1,4 +1,16 @@
 /* Bloco de aviso inicial */
+* {
+    --verde-escuro: rgb(54, 98, 62);
+    --verde-claro: #99BC85;
+    --azul-claro: #E4EFE7;
+    --off-white: #FAF1E6;
+    --creme: #FDFAF6;
+
+    --noturno-preto: #1A1A19;
+    --noturno-verde: #31511E;
+    --noturno-verde-claro: #859F3D;
+    --noturno-verde-off: #F6FCDF;
+}
 .container-inicial-informativo {
     background-color: rgba(255, 0, 0, 0.593);
     padding: 15px;
@@ -125,6 +137,13 @@
     padding-bottom: 30px;
 }
 
+#offcanvasComentario {
+  height: 50vh;
+  min-height: 50vh;
+  max-height: 50vh;
+  overflow-y: auto;
+}
+
 /* Reserva espaço no body para não encostar */
 body {
     padding-bottom: 80px;
@@ -136,18 +155,6 @@ body {
 }
 
 /* Offcanvas central customizado */
-.custom-offcanvas {
-    height: auto;
-    /* Altura automática */
-    max-height: 50vh;
-    /* No máximo 50% da tela */
-    margin-bottom: 50px;
-    /* Distância do rodapé */
-    border-radius: 15px 15px 0 0;
-    /* Bordas arredondadas em cima */
-    overflow-y: auto;
-    /* Scroll interno se precisar */
-}
 
 .custom-offcanvas .offcanvas-body {
     overflow-y: auto;
@@ -159,3 +166,28 @@ body {
     margin-bottom: 80px;
     /* Já ajuda a afastar do rodapé */
 }
+.link-area {
+    color: rgb(0, 189, 0);          /* Verde */
+    text-decoration: none; /* Tira sublinhado azul */
+    font-weight: 600;      /* Um bold médio */
+    font-size: 18px;       /* Maior */
+}
+
+.link-area:hover {
+    transition: 0.3s;
+    color: black;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1; /* Ocupa tudo que der, empurra o rodapé para o final */
+}
+
