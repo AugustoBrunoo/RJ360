@@ -11,6 +11,27 @@
     <link rel="stylesheet" href="../../../styles/zona-sul.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="../../../style.css">
+    <style>
+        .card-custom {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card-img-top {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .region-header {
+            background-color: #f8f9fa;
+            padding: 2rem 0;
+            margin-bottom: 2rem;
+            border-radius: 10px;
+        }
+    </style>
     <title>Zona Sul</title>
 
 <body data-bs-theme="light">
@@ -224,7 +245,8 @@
                             Hospedagens para todos os estilos, com conforto,
                             praticidade e as melhores localizações.
                         </p>
-                        <input type="button" class="btn btn-custom-1 btn-hospedagem" value="Ver opções">
+                        <a type="button" href="./hospedagens-zs.html" class="btn btn-custom-1 btn-hospedagem">Ver
+                            opções</a>
                     </div>
                 </div>
 
@@ -254,64 +276,54 @@
 
             <div class="card-zonas row p-5 g-5 text-center d-flex justify-content-center">
 
-                <div class="col-12 col-sm-8 col-md-6 col-lg-4 d-flex justify-content-center">
-                    <div class="card card-custom">
-                        <svg aria-label="Placeholder: Image cap" class="bd-placeholder-img card-img-top" height="180"
-                            preserveAspectRatio="xMidYMid slice" role="img" width="100%"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <title>Placeholder</title>
-                            <rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6"
-                                dy=".3em">Image cap</text>
-                        </svg>
-                        <div class="card-body">
-                            <h5 class="card-title">Zona Oeste</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of
-                                the card’s content.</p>
-                            <a href="../zona oeste/zona-oeste.html" class="btn btn-custom">Explorar</a>
+                <!-- Cards de outras regiões -->
+                <div class="row g-4">
+                    <!-- Zona Oeste -->
+                    <div class="col-12 col-sm-8 col-md-6 col-lg-4 d-flex justify-content-center">
+                        <div class="card card-custom">
+                            <img src="../../../assets/regioes-card/zona-oeste.png" class="card-img-top"
+                                alt="Panorama da Zona Oeste mostrando áreas residenciais e comerciais">
+                            <div class="card-body">
+                                <h5 class="card-title">Zona Oeste</h5>
+                                <p class="card-text">Conheça os principais pontos turísticos e atrações da Zona Oeste da
+                                    cidade.</p>
+                                <a href="#" class="btn btn-custom">Explorar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Zona Norte -->
+                    <div class="col-12 col-sm-8 col-md-6 col-lg-4 d-flex justify-content-center">
+                        <div class="card card-custom">
+                            <img src="../../../assets/regioes-card/zona-norte1.png" class="card-img-top"
+                                alt="Vista aérea da Zona Norte com parques e áreas urbanas">
+                            <div class="card-body">
+                                <h5 class="card-title">Zona Norte</h5>
+                                <p class="card-text">Explore as características únicas e cultura vibrante da Zona Norte.
+                                </p>
+                                <a href="#" class="btn btn-custom">Explorar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Centro -->
+                    <div class="col-12 col-sm-8 col-md-6 col-lg-4 d-flex justify-content-center">
+                        <div class="card card-custom">
+                            <img src="../../../assets/regioes-card/centro1.jpg" class="card-img-top"
+                                alt="Vista do centro da cidade com edifícios históricos e modernos">
+                            <div class="card-body">
+                                <h5 class="card-title">Centro</h5>
+                                <p class="card-text">Descubra o coração da cidade com sua arquitetura e pontos
+                                    culturais.</p>
+                                <a href="#" class="btn btn-custom">Explorar</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="col-12 col-sm-8 col-md-6 col-lg-4 d-flex justify-content-center">
-                    <div class="card card-custom">
-                        <svg aria-label="Placeholder: Image cap" class="bd-placeholder-img card-img-top" height="180"
-                            preserveAspectRatio="xMidYMid slice" role="img" width="100%"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <title>Placeholder</title>
-                            <rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6"
-                                dy=".3em">Image cap</text>
-                        </svg>
-                        <div class="card-body">
-                            <h5 class="card-title">Zona Norte</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of
-                                the card’s content.</p>
-                            <a href="../zona norte/zona-norte.html" class="btn btn-custom">Explorar</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-8 col-md-6 col-lg-4 d-flex justify-content-center">
-                    <div class="card card-custom">
-                        <svg aria-label="Placeholder: Image cap" class="bd-placeholder-img card-img-top" height="180"
-                            preserveAspectRatio="xMidYMid slice" role="img" width="100%"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <title>Placeholder</title>
-                            <rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6"
-                                dy=".3em">Image cap</text>
-                        </svg>
-                        <div class="card-body">
-                            <h5 class="card-title">Centro</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of
-                                the card’s content.</p>
-                            <a href="../centro/centro.html" class="btn btn-custom">Explorar</a>
-                        </div>
-                    </div>
-                </div>
-
             </div>
+
+
+        </div>
         </div>
     </main>
 
@@ -381,34 +393,16 @@
                         <div id="carouselExampleFade" class="carousel slide carousel-fade">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <svg aria-label="Placeholder: First slide"
-                                        class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" height="400"
-                                        preserveAspectRatio="xMidYMid slice" role="img" width="800"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <title>Placeholder</title>
-                                        <rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%"
-                                            fill="#555" dy=".3em">First slide</text>
-                                    </svg>
+                                    <img src="../../../assets/imagens/zona-sul/zona-sul-3.jpg" class="d-block w-100"
+                                        alt="Descrição da primeira imagem" height="400">
                                 </div>
                                 <div class="carousel-item">
-                                    <svg aria-label="Placeholder: Second slide"
-                                        class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" height="400"
-                                        preserveAspectRatio="xMidYMid slice" role="img" width="800"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <title>Placeholder</title>
-                                        <rect width="100%" height="100%" fill="#666"></rect><text x="50%" y="50%"
-                                            fill="#444" dy=".3em">Second slide</text>
-                                    </svg>
+                                    <img src="../../../assets/imagens/zona-sul/zona-sul-2.jpg" class="d-block w-100"
+                                        alt="Descrição da segunda imagem" height="400">
                                 </div>
                                 <div class="carousel-item">
-                                    <svg aria-label="Placeholder: Third slide"
-                                        class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" height="400"
-                                        preserveAspectRatio="xMidYMid slice" role="img" width="800"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <title>Placeholder</title>
-                                        <rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%"
-                                            fill="#333" dy=".3em">Third slide</text>
-                                    </svg>
+                                    <img src="../../../assets/imagens/zona-sul/zona-sul-1.jpg" class="d-block w-100"
+                                        alt="Descrição da terceira imagem" height="400">
                                 </div>
                             </div>
                             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
@@ -423,6 +417,7 @@
                             </button>
                         </div>
                     </div>
+
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-custom-1" data-bs-dismiss="modal">Fechar</button>
