@@ -116,8 +116,9 @@ body {
 /* Card de Zonas */
 
 .imagem-zona {
-    height: 240px;
+    height: 280px;
     width: 100%;
+    object-fit: cover;
 }
 
 .card-bg-zonas {
@@ -351,6 +352,18 @@ body {
 
 [data-bs-theme="light"] {
     transition: 0.5s;
+}
+
+/* Estilo para Imagens de Hospedagem */
+.imagem-hospedagem {
+    height: 200px; /* Ajuste a altura conforme sua preferência */
+    object-fit: cover; /* Garante que a imagem preenche o espaço sem distorcer, cortando o excesso */
+    width: 100%; /* Garante que a imagem ocupe a largura total do card */
+}
+
+/* Ajuste do rodapé para ter margem superior quando não há conteúdo */
+footer {
+    margin-top: 50px; /* Adiciona uma margem superior ao rodapé, se necessário */
 }
 
 /* Media queries globais (Ajuste de responsividade em telas) */
