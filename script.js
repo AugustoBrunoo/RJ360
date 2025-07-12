@@ -37,4 +37,47 @@ window.addEventListener("load", () => {
         const valor = localStorage.getItem("modoNoturno");
         tagBody.setAttribute('data-bs-theme', valor);
     }
-})
+});
+
+function adicionarComentario() {
+  const nome = document.getElementById('nomeComentario').value.trim();
+  const texto = document.getElementById('textoComentario').value.trim();
+
+  if (!nome || !texto) {
+    alert("Digite seu nome e o comentário!");
+    return;
+  }
+
+  const accordion = document.querySelector('#accordionFlushExample');
+
+  const novoIndex = accordion.querySelectorAll('.accordion-item').length + 1;
+
+  const novoItem = document.createElement('div');
+  novoItem.className = 'accordion-item';
+  novoItem.innerHTML = `
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+        data-bs-target="#flush-collapse${novoIndex}" aria-expanded="false"
+        aria-controls="flush-collapse${novoIndex}">
+        Comentário: ${nome}
+      </button>
+    </h2>
+    <div id="flush-collapse${novoIndex}" class="accordion-collapse collapse"
+      data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">${texto}</div>
+    </div>
+  `;
+
+  accordion.appendChild(novoItem);
+
+  // Fecha o Offcanvas usando Bootstrap
+  const offcanvasElement = document.getElementById('offcanvasComentario');
+  const offcanvas = bootstrap.Offcanvas.getInstance(offcanvasElement);
+  offcanvas.hide();
+
+  // Limpa os campos
+  document.getElementById('nomeComentario').value = '';
+  document.getElementById('textoComentario').value = '';
+}
+
+

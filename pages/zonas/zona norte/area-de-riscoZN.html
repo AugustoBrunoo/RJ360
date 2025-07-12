@@ -163,138 +163,131 @@
             </p>
         </div>
 
-        <!-- Início de comentarios -->
-        <section class="container-avaliacoes">
-            <h3 class="text-center texto-avaliacoes">comentários</h3>
-            <!-- data-bs-ride="carousel" -->
-            <div id="carouselExampleRide" class="carousel slide carrousel-custom p-2">
-                <div class="carousel-inner">
-                    <div class="carousel-item active bg-fundo-avaliacao">
+        <!-- Seção de Comentários -->
+        <div class="container-comentarios container mt-5">
+            <h2 class="textoGlobalNegrito text-center">Comentários</h2>
+            <p class="text-center textoGlobalNormal">
+                Veja o que as pessoas dessas áreas estão falando:
+            </p>
 
-                        <div class="card card-avalicao d-block mx-auto" style="max-width: 510px;">
-                            <div class="row g-0 container-card-geral">
-                                <div
-                                    class="bg-fundo-card col-4 d-flex flex-column align-items-center justify-content-center">
-                                    <img src="./assets/avaliacoes/nicolas.jpeg" class="img-avaliacao" alt="">
-                                </div>
-                                <div class="col-8">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Nicolas Lima</h5>
-                                        <p class="card-text">
-                                            O RJ360 foi essencial para planejar minha viagem.
-                                            Descobri lugares incríveis que nem sabia que existiam e
-                                            aproveitei muito mais cada passeio.
-                                        </p>
-                                        <div class="estrelas-avaliacao mb-2 d-flex">
-                                            <i class="bi bi-star-fill estrela-icon-avaliacao"></i>
-                                            <i class="bi bi-star-fill estrela-icon-avaliacao"></i>
-                                            <i class="bi bi-star-fill estrela-icon-avaliacao"></i>
-                                            <i class="bi bi-star-fill estrela-icon-avaliacao"></i>
-                                            <i class="bi bi-star-fill estrela-icon-avaliacao"></i>
-                                        </div>
-                                        <p class="card-text-custom"><small class="text-body-custom">Postado há 8
-                                                dias
-                                                atrás</small>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
+            <!-- Botões e input para comentários -->
+            <div class="text-center d-flex flex-column flex-md-row justify-content-center gap-2 mb-3">
+                <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#accordionFlushExample" aria-expanded="false" aria-controls="accordionFlushExample">
+                    Veja mais
+                </button>
+
+                <!-- Botão para abrir o Offcanvas -->
+                <button class="btn btn-success" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasComentario" aria-controls="offcanvasComentario">
+                    Adicionar Comentário
+                </button>
+            </div>
+
+            <!-- Offcanvas para Adicionar Comentário -->
+            <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasComentario"
+                aria-labelledby="offcanvasComentarioLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasComentarioLabel">Adicionar Comentário</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <p>Conte sua experiência ou relato:</p>
+                    <input type="text" id="nomeComentario" class="form-control mb-2" placeholder="Seu nome">
+                    <textarea id="textoComentario" class="form-control mb-2" rows="3"
+                        placeholder="Seu comentário"></textarea>
+                    <button class="btn btn-success" onclick="adicionarComentario()">Enviar Comentário</button>
+                </div>
+            </div>
+
+
+            <!-- Acordeão flush -->
+            <div class="accordion accordion-flush collapse" id="accordionFlushExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            Comentário: Nilton Junio
+                        </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">“Moro no Jacarezinho há anos e cada operação policial aqui é um
+                            terror. A gente não tem paz, é tiro pra todo lado, criança chorando, gente se
+                            escondendo.
+                            Parece que nossa vida não vale nada. Só quero viver sem medo.”
                         </div>
                     </div>
-
-                    <div class="carousel-item p-3 bg-fundo-avaliacao">
-                        <div class="card card-avalicao d-block mx-auto" style="max-width: 510px;">
-                            <div class="row g-0 container-card-geral">
-                                <div
-                                    class="bg-fundo-card col-4 d-flex flex-column align-items-center justify-content-center">
-                                    <!-- <svg class="bd-placeholder-img img-fluid rounded-start" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image" preserveAspectRatio="xMidYMid slice"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image</text></svg> -->
-                                    <img src="./assets/avaliacoes/pedro_dusek.png" class="img-avaliacao" alt="">
-                                </div>
-                                <div class="col-8">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Pedro Dusek</h5>
-                                        <p class="card-text mb-0">
-                                            Com o RJ360 consegui organizar meu roteiro de forma prática.
-                                            As dicas de transporte e segurança foram muito úteis durante toda minha
-                                            estadia.
-                                        </p>
-                                        <div class="estrelas-avaliacao mb-2 d-flex">
-                                            <i class="bi bi-star-fill estrela-icon-avaliacao"></i>
-                                            <i class="bi bi-star-fill estrela-icon-avaliacao"></i>
-                                            <i class="bi bi-star-fill estrela-icon-avaliacao"></i>
-                                            <i class="bi bi-star-fill estrela-icon-avaliacao"></i>
-                                            <i class="bi bi-star-fill estrela-icon-avaliacao"></i>
-                                        </div>
-                                        <p class="card-text-custom"><small class="text-body-custom">Postado há 7
-                                                dias
-                                                atrás</small>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            Comentário: Cléber Machado
+                        </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Sou morador da Vila da Penha e sempre foi um bairro ótimo pra
+                            viver,
+                            tranquilo e bem localizado. Mas de uns tempos pra cá a criminalidade aumentou muito. A
+                            gente
+                            vive com medo de assalto a qualquer hora. É triste ver um lugar tão bom ficar assim.
+                            Quero
+                            segurança de volta.
                         </div>
                     </div>
-
-                    <div class="carousel-item p-3 bg-fundo-avaliacao">
-                        <div class="card card-avalicao d-block mx-auto" style="max-width: 510px;">
-                            <div class="row g-0 container-card-geral">
-                                <div
-                                    class="bg-fundo-card col-4 d-flex flex-column align-items-center justify-content-center">
-                                    <img src="./assets/avaliacoes/hugo.jpeg" class="img-avaliacao" alt="">
-                                </div>
-                                <div class="col-8">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Hugo Giffoni</h5>
-                                        <p class="card-text mb-0">
-                                            Nunca pensei que explorar o Rio fosse tão fácil! O site me deu sugestões
-                                            incríveis e me senti mais confiante para andar pela cidade.
-                                        </p>
-                                        <div class="estrelas-avaliacao mb-2 d-flex">
-                                            <i class="bi bi-star-fill estrela-icon-avaliacao"></i>
-                                            <i class="bi bi-star-fill estrela-icon-avaliacao"></i>
-                                            <i class="bi bi-star-fill estrela-icon-avaliacao"></i>
-                                            <i class="bi bi-star-fill estrela-icon-avaliacao"></i>
-                                            <i class="bi bi-star-fill estrela-icon-avaliacao"></i>
-                                        </div>
-                                        <p class="card-text-custom"><small class="text-body-custom">Postado há 2
-                                                semanas
-                                                atrás</small>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseThree" aria-expanded="false"
+                            aria-controls="flush-collapseThree">
+                            Comentário: Ana Zuvanov
+                        </button>
+                    </h2>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Sou moradora da Tijuca e todo ano sofro com os alagamentos.
+                            Quando
+                            chove forte, não consigo sair de casa pra trabalhar, as ruas viram rios. Já fiquei presa
+                            dentro do ônibus por horas porque tudo ficou parado. É um medo constante toda vez que o
+                            tempo fecha. Tome cuidado com isso.
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
 
-                    <div class="carousel-item p-3 bg-fundo-avaliacao">
-                        <div class="card card-avalicao d-block mx-auto" style="max-width: 510px;">
-                            <div class="row g-0 container-card-geral">
-                                <div
-                                    class="bg-fundo-card col-4 d-flex flex-column align-items-center justify-content-center">
-                                    <img src="./assets/avaliacoes/nilton_junior.png" class="img-avaliacao" alt="">
-                                </div>
-                                <div class="col-8">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Nilton Junio</h5>
-                                        <p class="card-text mb-0">
-                                            Nunca pensei que explorar o Rio fosse tão fácil! O site me deu sugestões
-                                            incríveis e me senti mais confiante para andar pela cidade.
-                                        </p>
-                                        <div class="estrelas-avaliacao mb-2 d-flex">
-                                            <i class="bi bi-star-fill estrela-icon-avaliacao"></i>
-                                            <i class="bi bi-star-fill estrela-icon-avaliacao"></i>
-                                            <i class="bi bi-star-fill estrela-icon-avaliacao"></i>
-                                            <i class="bi bi-star-fill estrela-icon-avaliacao"></i>
-                                            <i class="bi bi-star-fill estrela-icon-avaliacao"></i>
-                                        </div>
-                                        <p class="card-text"><small class="text-body-custom">Postado há 5 dias
-                                                atrás</small>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        <!-- Início do Rodapé -->
+        <footer class="container-rodape container-fluid d-flex justify-content-around align-items-center py-2">
+
+            <div class="rodapeLinks">
+                <div class="rodape--texto">
+                    <p>Siga a gente nas Redes Sociais:</p>
+                </div>
+                <div class="rodape--redes-sociais d-flex justify-content-evenly">
+                    <a href="#"><i class="icones-rodape bi bi-instagram"></i></a>
+                    <a href="#"><i class="icones-rodape bi bi-twitter-x"></i></a>
+                    <a href="#"><i class="icones-rodape bi bi-facebook"></i></a>
+                </div>
+            </div>
+
+            <div class="rodape-copywrite">
+                <p id="anoAtual" class="text-custom-footer pt-2"></p>
+            </div>
+
+            <div class="rodapeLogo">
+                <a class="navbar-brand" href="#">
+                    <img class="img-logo" src="../../../assets/logos/logo-rj360-removebg-preview.png" alt="">
+                    <span class="span-logo-rodape">RJ</span><span class="span-logo2-rodape">360</span>
+                </a>
+            </div>
+        </footer>
+        <!-- Fim do Rodapé -->
+
+
+
 
     </main>
 

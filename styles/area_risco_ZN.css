@@ -74,3 +74,43 @@
 .container-perigos ul li {
     margin-bottom: 5px;
 }
+
+/* ===== NOVO BLOCO: Comentários ===== */
+.container-comentarios {
+    background-color: rgba(40, 167, 69, 0.1); /* verde clarinho para destacar positividade */
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 40px;
+}
+
+.container-comentarios h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.container-comentarios p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.container-comentarios button {
+    font-size: 16px;
+    padding: 10px 20px;
+}
+
+.accordion-button {
+    font-size: 16px;
+}
+
+.accordion-body {
+    font-size: 14px;
+}
+
+.container-comentarios input {
+  max-width: 300px;
+}
+
+#adicionarComentario {
+  font-size: 16px;
+}
+
