@@ -34,47 +34,56 @@
                 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
                     aria-labelledby="offcanvasNavbarLabel">
                     <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+                        <h5 class="offcanvas-title fs-2" id="offcanvasNavbarLabel">Menu</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
 
-                    <div class="offcanvas-body">
-                        <!-- Tema -->
-                        <a class="nav-link offcanvas-link active" id="modo-noturno" href="#">
-                            <i class="bi bi-circle-half me-2"></i> Tema do Site
-                        </a>
-
-                        <!-- Página Inicial -->
-                        <a class="nav-link offcanvas-link active" href="#">
-                            <i class="bi bi-house-door-fill me-2"></i> Página Inicial
-                        </a>
-
-                        <!-- Regiões com Dropdown -->
-                        <div class="dropdown">
-                            <a class="nav-link offcanvas-link dropdown-toggle text-center" href="#" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                Regiões
+                    <div class="offcanvas-body d-flex flex-column justify-content-between">
+                        <!-- Bloco das opções -->
+                        <div class="container-opcao">
+                            <!-- Tema -->
+                            <a class="nav-link offcanvas-link active" id="modo-noturno" href="#">
+                                <i class="bi bi-circle-half me-2"></i> Tema do Site
                             </a>
-                            <ul class="dropdown-menu text-center w-100">
-                                <li><a class="dropdown-item" href="./pages/zonas/zona sul/zona-sul.html">Zona Sul</a>
-                                </li>
-                                <li><a class="dropdown-item" href="#">Zona Norte</a></li>
-                                <li><a class="dropdown-item" href="./pages/zonas/zona oeste/zona-oeste.html">Zona
-                                        Oeste</a></li>
-                                <li><a class="dropdown-item" href="#">Centro</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">Destaques</a></li>
-                            </ul>
+
+                            <!-- Página Inicial -->
+                            <a class="nav-link offcanvas-link active" href="#">
+                                <i class="bi bi-house-door-fill me-2"></i> Página Inicial
+                            </a>
+
+                            <!-- Dropdown Regiões -->
+                            <div class="dropdown">
+                                <a class="nav-link offcanvas-link dropdown-toggle text-center" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Regiões
+                                </a>
+                                <ul class="dropdown-menu text-center w-100">
+                                    <li><a class="dropdown-item" href="./pages/zonas/zona sul/zona-sul.html">Zona
+                                            Sul</a></li>
+                                    <li><a class="dropdown-item" href="#">Zona Norte</a></li>
+                                    <li><a class="dropdown-item" href="./pages/zonas/zona oeste/zona-oeste.html">Zona
+                                            Oeste</a></li>
+                                    <li><a class="dropdown-item" href="#">Centro</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Destaques</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- Sobre Nós -->
+                            <a class="nav-link offcanvas-link fs-5" href="./pages/sobreNos/sobreNos.html">Sobre Nós</a>
                         </div>
 
-                        <!-- Sobre Nós -->
-                        <a class="nav-link offcanvas-link fs-5" href="./pages/sobreNos/sobreNos.html">Sobre Nós</a>
+                        <!-- Bloco do perfil (fixado embaixo) -->
+                        <div class="container-perfil text-center mb-5">
+                            <h2 class="mb-4">Faça seu Login!</h2>
+                            <a href="#" class="btn btn-dark d-none">Entrar</a>
+                            <a class="nav-link offcanvas-link fs-5" href="./pages/login/login.html">Usuário_teste</a>
+                        </div>
                     </div>
 
                 </div>
-            </div>
             </div>
         </nav>
     </header>
