@@ -1,218 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Notable&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-/* Variáveis de cores */
+/* ============================
+   VARIÁVEIS GERAIS
+   ============================ */
 :root {
-    --verde-escuro: rgb(54, 98, 62);
-    --verde-claro: #99BC85;
-    --azul-claro: #E4EFE7;
-    --off-white: #FAF1E6;
-    --creme: #FDFAF6;
+  --verde-escuro: rgb(54, 98, 62);
+  --verde-claro: #99BC85;
+  --azul-claro: #E4EFE7;
+  --off-white: #FAF1E6;
+  --creme: #FDFAF6;
 
-    --noturno-preto: #1A1A19;
-    --noturno-verde: #31511E;
-    --noturno-verde-claro: #859F3D;
-    --noturno-verde-off: #F6FCDF;
-
-    --primary-color: #31511E; /* Exemplo para botão primário */
+  --noturno-preto: #1A1A19;
+  --noturno-verde: #31511E;
+  --noturno-verde-claro: #859F3D;
+  --noturno-verde-off: #F6FCDF;
 }
 
-/* Fontes base */
+/* ============================
+   RESET BASE
+   ============================ */
 body {
-    background-color: var(--off-white);
-    font-family: 'Montserrat', sans-serif;
-    color: var(--noturno-preto);
-    margin: 0;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--creme);
+  color: var(--noturno-preto);
 }
 
-/* Navbar e logo */
+h1, h2, h3, h4, h5 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ============================
+   CABEÇALHO & LOGO
+   ============================ */
 .navbar-brand {
-    font-family: 'Special Gothic Expanded One', sans-serif;
-    font-weight: 400;
+  font-family: "Special Gothic Expanded One", sans-serif;
+  font-weight: 400;
+}
+
+.img-logo {
+  width: 95px;
+  margin-right: 15px;
 }
 
 .span-logo {
-    color: var(--verde-claro);
+  color: var(--verde-claro);
 }
 
 .span-logo2 {
-    color: var(--verde-escuro);
+  color: var(--verde-escuro);
 }
 
 .bg-body-custom {
-    background-color: var(--azul-claro);
+  background-color: var(--azul-claro);
 }
 
-/* Ícones */
-.icon-home, .icon-aparencia {
-    font-size: 25px;
-    cursor: pointer;
-    transition: color 0.2s ease-in;
-}
-.icon-home:hover, .icon-aparencia:hover {
-    color: var(--verde-claro);
+.icon-home,
+.icon-aparencia {
+  font-size: 25px;
+  cursor: pointer;
+  transition: color 0.2s ease;
 }
 
-/* Logo imagem */
-.img-logo {
-    width: 95px;
-    margin-right: 15px;
+.icon-home:hover,
+.icon-aparencia:hover {
+  color: var(--verde-claro);
 }
 
-/* Card principal */
+/* ============================
+   TÍTULO PRINCIPAL
+   ============================ */
+.titulo-dicionario {
+  font-family: "Special Gothic Expanded One", sans-serif;
+  font-size: 2.5rem;
+  color: var(--verde-escuro);
+}
+
+/* ============================
+   CARD DO QUIZ
+   ============================ */
 .card {
-    background-color: var(--creme);
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  background-color: var(--azul-claro);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* Feedback do quiz */
 #feedback {
-    font-weight: bold;
-    font-size: 1.1rem;
-    margin-top: 1rem;
-    min-height: 2em;
+  font-weight: bold;
+  font-size: 1.1rem;
+  min-height: 2em;
 }
 
-/* Lista de opções do quiz */
 .list-group-item {
-    border: 1px solid var(--verde-claro);
-    border-radius: 8px;
-    margin-bottom: 0.6rem;
-    padding: 0;
+  border: 1px solid var(--verde-claro);
+  border-radius: 8px;
+  margin-bottom: 0.6rem;
+  padding: 0;
 }
 
-/* Botão dentro da lista de opções */
 .list-group-item button {
-    width: 100%;
-    text-align: left;
-    padding: 12px 20px;
-    background-color: white;
-    border: none;
-    font-size: 1rem;
-    font-weight: 500;
-    color: var(--noturno-preto);
-    cursor: pointer;
-    border-radius: 8px;
-    transition: background-color 0.3s ease;
+  width: 100%;
+  text-align: left;
+  padding: 12px 20px;
+  background: white;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--noturno-preto);
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
 }
 
 .list-group-item button:hover {
-    background-color: var(--verde-claro);
-    color: white;
+  background-color: var(--verde-claro);
+  color: white;
 }
 
-/* Botão principal do quiz */
 .btn-primary {
-    background-color: var(--verde-escuro);
-    border: none;
-    padding: 10px 25px;
-    font-weight: 600;
-    font-size: 1.1rem;
-    border-radius: 8px;
-    transition: background-color 0.3s ease;
+  background-color: var(--verde-escuro);
+  border: none;
+  padding: 10px 25px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
 }
 
 .btn-primary:hover {
-    background-color: var(--verde-claro);
-    color: white;
+  background-color: var(--verde-claro);
+  color: white;
 }
 
-/* Rodapé */
-.container-rodape {
-    background-color: var(--azul-claro);
-    padding: 15px 0;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.rodapeLinks {
-    color: var(--noturno-preto);
-    padding: 10px;
-    border-radius: 20px;
-    cursor: pointer;
-    text-align: center;
-}
-
-.rodape--redes-sociais a {
-    margin: 0 8px;
-    font-size: 30px;
-    color: var(--noturno-preto);
-    transition: color 0.3s ease;
-}
-
-.rodape--redes-sociais a:hover {
-    color: var(--noturno-verde);
-}
-
-.rodape-copywrite p {
-    font-weight: bold;
-    color: var(--noturno-preto);
-}
-
-.rodapeLogo {
-    background-color: var(--noturno-verde-claro);
-    border-radius: 10px;
-    padding: 5px 15px;
-}
-
-.span-logo-rodape {
-    color: var(--noturno-verde);
-}
-
-.span-logo2-rodape {
-    color: var(--noturno-preto);
-}
-
-[data-bs-theme="dark"] {
-    body {
-        background-color: var(--noturno-preto);
-        color: var(--off-white);
-    }
-
-    .card {
-        background-color: var(--noturno-verde);
-        color: var(--noturno-verde-off);
-    }
-
-    .btn-custom, .btn-primary {
-        background-color: var(--noturno-verde-claro);
-        color: white;
-    }
-
-    .btn-custom:hover, .btn-primary:hover {
-        background-color: gray;
-    }
-
-    .list-group-item button {
-        background-color: var(--noturno-verde-off);
-        color: var(--noturno-verde);
-    }
-
-    .list-group-item button:hover {
-        background-color: var(--noturno-verde-claro);
-        color: white;
-    }
-}
-
-
-/* Responsividade */
-@media (max-width: 900px) {
-    .container-rodape {
-        flex-direction: column;
-        gap: 1rem;
-    }
-}
-
-.titulo-dicionario {
-  font-family: 'Special Gothic Expanded One', sans-serif;
-  color: var(--verde-escuro);
-  font-size: 2.5rem;
-}
-
-/* Botão de feedback final */
 #botaoFeedbackFinal {
   background-color: #28a745;
   font-weight: 600;
@@ -223,43 +149,101 @@ body {
   color: white;
 }
 
-/* Modo claro */
-body {
-  background-color: var(--creme);
-  color: #000;
+/* ============================
+   RODAPÉ
+   ============================ */
+.container-rodape {
+  background-color: var(--azul-claro) !important;
+  padding: 15px 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-/* Modo escuro */
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: #000; /* Fundo preto */
-    color: #fff;
-  }
-
-  .card {
-    background-color: #111;
-    color: #fff;
-    border-color: #333;
-  }
-
-  .btn {
-    background-color: #333;
-    color: #fff;
-    border-color: #444;
-  }
-
-  .btn:hover {
-    background-color: #444;
-  }
-
-  .titulo-dicionario {
-    color: var(--creme);
-  }
-
-  footer {
-    background-color: var(--noturno-verde);
-    color: #ccc;
-    border-top: 1px solid #444;
-  }
+.rodapeLinks {
+  color: var(--noturno-preto);
+  padding: 10px;
+  text-align: center;
 }
 
+.rodape--redes-sociais a {
+  margin: 0 8px;
+  font-size: 30px;
+  color: var(--noturno-preto);
+  transition: color 0.3s ease;
+}
+
+.rodape--redes-sociais a:hover {
+  color: var(--noturno-verde);
+}
+
+.rodape-copywrite p {
+  font-weight: bold;
+  color: var(--noturno-preto);
+}
+
+.rodapeLogo {
+  background-color: var(--noturno-verde-claro);
+  border-radius: 10px;
+  padding: 5px 15px;
+}
+
+.span-logo-rodape,
+.span-logo2-rodape {
+  color: var(--noturno-verde);
+}
+
+/* ============================
+   DARK THEME (Bootstrap toggle)
+   ============================ */
+
+[data-bs-theme="dark"] body {
+  background-color: var(--noturno-preto);
+  color: var(--off-white);
+}
+
+/* Garante que o MAIN também siga o fundo preto */
+[data-bs-theme="dark"] main {
+  background-color: var(--noturno-preto) !important;
+}
+
+[data-bs-theme="dark"] .card {
+  background-color: var(--noturno-verde);
+  color: var(--noturno-verde-off);
+}
+
+[data-bs-theme="dark"] .list-group-item button {
+  background-color: var(--noturno-verde-off);
+  color: var(--noturno-verde);
+}
+
+[data-bs-theme="dark"] .list-group-item button:hover {
+  background-color: var(--noturno-verde-claro);
+  color: white;
+}
+
+[data-bs-theme="dark"] .btn-primary,
+[data-bs-theme="dark"] .btn-custom {
+  background-color: var(--noturno-verde-claro);
+  color: white;
+}
+
+[data-bs-theme="dark"] .btn-primary:hover,
+[data-bs-theme="dark"] .btn-custom:hover {
+  background-color: gray;
+}
+
+[data-bs-theme="dark"] .container-rodape {
+  background-color: var(--noturno-verde-claro)!important;
+}
+
+/* ============================
+   RESPONSIVO
+   ============================ */
+@media (max-width: 900px) {
+  .container-rodape {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
