@@ -14,7 +14,7 @@
     --noturno-verde-off: #F6FCDF;
 }
 
-.mt-custom{
+.mt-custom {
     margin-top: 100px;
     padding-top: 20px;
 }
@@ -51,6 +51,34 @@
     background-color: var(--noturno-verde);
     color: white;
 }
+
+.offcanvas-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.offcanvas-link {
+    display: inline-block;
+    padding: 12px 24px;
+    border: 2px solid var(--verde-claro);
+    border-radius: 10px;
+    text-align: center;
+    width: 100%;
+    max-width: 300px;
+    color: black;
+    font-size: 18px;
+    background-color: transparent;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.offcanvas-link:hover {
+    background-color: black;
+    color: white;
+}
+
 
 [data-bs-theme="dark"] {
     .btn-global:hover {

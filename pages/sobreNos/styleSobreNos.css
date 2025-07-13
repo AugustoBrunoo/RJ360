@@ -1,30 +1,118 @@
-.img-perfil img{
+.img-perfil img {
     border-radius: 50%;
-    width: 170px;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
 }
 
 .fs-custom-icon {
-    font-size: 35px;
+    font-size: 30px;
 }
 
 .fs-custom {
     font-size: 20px;
 }
 
-.icones-perfil {
-    border: 2px solid rgba(201, 201, 201, 0.823);
-    padding: 8px;
-    border-radius: 10px;
-    background-color: #E4EFE7;
-}
-
 .biografia-info {
-    font-size: 20px
+    font-size: 20px;
 }
 
 .identidade-1 {
     background-color: #E4EFE7;
-    width: fit-content;
+    align-items: stretch;
     padding: 30px;
     border-radius: 20px;
+    display: flex;
+    gap: 40px;
+}
+
+.teste {
+    width: 73%;
+}
+
+/* Faz a divisória acompanhar a altura dos blocos ao lado */
+.divisoria {
+    width: 3px;
+    height: 290px;
+    background-color: black;
+}
+
+/* Força altura mínima padronizada para alinhar divisória e contato */
+.textos-biografia, .contato-perfil {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Alinha o texto e ícones sempre centralizados no bloco */
+.contato-perfil {
+    gap: 15px;
+}
+
+
+.icones-perfil {
+    position: relative;
+    border: 2px solid rgba(201, 201, 201, 0.823);
+    padding: 2%;
+    border-radius: 10px;
+    background-color: #E4EFE7;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 1;
+    transition: color 0.4s ease;
+}
+
+.icones-perfil * {
+    position: relative;
+    z-index: 2;
+    /* garante que ícone e texto fiquem acima do ::before */
+}
+
+.icones-perfil::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.5s ease;
+    z-index: 0;
+}
+
+.icones-perfil:hover::before {
+    transform: translate(-50%, -50%) scale(14);
+}
+
+.icones-perfil:hover {
+    color: white;
+
+    .bi-linkedin {
+        color: rgb(2, 106, 172);
+    }
+
+    .bi-whatsapp {
+        color: rgb(72, 206, 77);
+    }
+}
+
+.bi-linkedin:hover {
+    color: red;
+}
+
+
+[data-bs-theme="dark"] {
+    .identidade-1 {
+        background-color: #FAF1E6;
+        color: black;
+    }
+
+    .icones-perfil {
+        background-color: #FDFAF6;
+    }
 }
