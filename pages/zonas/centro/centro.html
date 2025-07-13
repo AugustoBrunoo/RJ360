@@ -1,11 +1,400 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
+    <link rel="shortcut icon" href="../../assets/logos/logo-favicon.png" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Centro</title>
+    <title>Rio360: Zona Oeste</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../../../style.css">
+    <link rel="stylesheet" href="../../../styles/zona-oeste.css">
 </head>
-<body>
-    <h1>Centro</h1>
+
+<body data-bs-theme="light">
+    <!-- Início do Cabeçalho -->
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-custom">
+            <div class="container-fluid">
+                <div class="d-flex align-items-center">
+                    <a class="navbar-brand" href="../../../index.html">
+                        <img class="img-logo" src="../../../assets/logos/logo-rj360-removebg-preview.png" alt="">
+                        <span class="span-logo">RJ</span><span class="span-logo2">360</span>
+                    </a>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 px-4 d-flex align-items-center">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">
+                                <i class="bi bi-circle-half icon-aparencia" id="modo-noturno"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">
+                                <i class="icon-home bi bi-house-door-fill"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Regiões
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Zona Sul</a></li>
+                                <li><a class="dropdown-item" href="#">Zona Norte</a></li>
+                                <li><a class="dropdown-item" href="#">Zona Oeste</a></li>
+                                <li><a class="dropdown-item" href="#">Centro</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Destaques</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Sobre Nós</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Fim do Cabeçalho-->
+
+    <main>
+        <!-- Início do Banner -->
+        <div class="banners texto-zona-container d-flex flex-column">
+            <div class="banners-titulo bg-body-none w-100 py-5">
+                <h1 class="nome-zona">Centro</h1>
+            </div>
+        </div>
+        <!-- Fim do Banner -->
+        <!-- <div class="container-master row">
+            <div>
+                <div class="row">
+                    <div class="col-4">
+                      <div id="list-example" class="list-group">
+                        <a class="list-group-item list-group-item-action" href="#list-item-1">Item 1</a>
+                        <a class="list-group-item list-group-item-action" href="#list-item-2">Item 2</a>
+                        <a class="list-group-item list-group-item-action" href="#list-item-3">Item 3</a>
+                        <a class="list-group-item list-group-item-action" href="#list-item-4">Item 4</a>
+                      </div>
+                    </div>
+                    <div class="col-8">
+                      <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
+                        <h4 id="list-item-1">Item 1</h4>
+                        <p>...</p>
+                        <h4 id="list-item-2">Item 2</h4>
+                        <p>...</p>
+                        <h4 id="list-item-3">Item 3</h4>
+                        <p>...</p>
+                        <h4 id="list-item-4">Item 4</h4>
+                        <p>...</p>
+                      </div>
+                    </div>
+                  </div>
+            </div> -->
+
+        <div class="textos-principais-zona-container container my-4">
+            <!-- Pequeno texto falando da ZO -->
+            <div class="row container-geral-de-textos">
+                <div class="col-12 col-xl-4">
+                    <div class="bloco bloco1">
+                        <h5 class="textoHist mb-3">Contexto Histórico</h5>
+                        <p class="texto-principal2">
+                        O Centro do Rio de Janeiro é o berço histórico da cidade, com origem no período colonial,
+                        quando foi fundado pelos portugueses em 1565. A região se consolidou como núcleo administrativo 
+                        e comercial durante os séculos seguintes, abrigando prédios governamentais, igrejas e portos que 
+                        impulsionaram o desenvolvimento urbano. No período imperial, o Centro ganhou destaque como sede 
+                        do poder político e cultural do país. Com a chegada da República e a modernização do início do 
+                        século XX, foram construídas avenidas, praças e edifícios que marcaram a paisagem urbana. Hoje, 
+                        o Centro mescla construções históricas, áreas comerciais e instituições públicas, mantendo-se como 
+                        um polo essencial para a vida política, econômica e cultural do Rio de Janeiro.
+                        </p>
+                        <p>Veja no botão abaixo, as imagens do Centro antigamente!</p>
+
+                        <button type="button" class="btn btn-custom-1" data-bs-toggle="modal"
+                            data-bs-target="#modalImagens">
+                            Ver Imagens
+                        </button>
+
+                    </div>
+                </div>
+
+                <div class="col-12 col-xl-4">
+                    <!-- Principais bairros em destaque -->
+                    <div class="bloco bloco2">
+                        <h5 class="textoHist mb-3">Destaques do Centro</h5>
+                        <p class="texto-principal">
+                            O Centro do Rio é o coração histórico e cultural da cidade, onde construções coloniais convivem com 
+                            a vida urbana moderna. Repleto de marcos importantes, como o Theatro Municipal, o Paço Imperial e o 
+                            Real Gabinete Português de Leitura, a região oferece uma verdadeira imersão na história do Brasil.
+                        </p>
+                        <p class="texto-principal">
+                            A região encanta por Além do patrimônio arquitetônico, o Centro abriga museus, igrejas, centros culturais e o revitalizado 
+                            <a href="https://www.google.com/maps/search/Boulevard%20sOlímpico/@-22.8940173,-43.1897737,15z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI1MDcwOS4wIKXMDSoASAFQAw%3D%3D"
+                            class="bairrosDestaques">Boulevard Olímpico</a>, 
+                            com atrações como o 
+                            <a href="https://www.google.com/maps/search/Museu%20do%20Amanhã/@-22.8940173,-43.1897737,15z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI1MDcwOS4wIKXMDSoASAFQAw%3D%3D"
+                            class="bairrosDestaques">Museu do amanhã</a> e o e <a
+                            href="https://www.google.com/maps/search/AquaRio/@-22.8940173,-43.1897737,15z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI1MDcwOS4wIKXMDSoASAFQAw%3D%3D"
+                            class="bairrosDestaques">AquaRio</a>. É uma área vibrante, onde tradição, 
+                            arte e diversidade se encontram, tornando-se parada obrigatória para quem quer entender a essência do Rio de Janeiro.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-12 col-xl-4 d-flex flex-column align-items-center">
+                    <!-- Principais bairros em destaque -->
+                    <h5 class="text-center mt-3">Principais bairros:</h5>
+
+                    <ul class="d-flex flex-column g-3">
+                        <li><a class="bairros-link" href="#">Barra da Tijuca</a></li>
+                        <li><a class="bairros-link" href="#">Recreio dos Bandeirantes</a></li>
+                        <li><a class="bairros-link" href="#">Vargem Grande</a></li>
+                        <li><a class="bairros-link" href="#">Jacarepaguá</a></li>
+                        <li><a class="bairros-link" href="#">Barra de Guaratiba</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="container-texto-h5 d-flex justify-content-center mb-3">
+                <h5>Veja o que mais te espera por aqui</h5>
+            </div>
+
+            <div class="row bloco-acoes bg-body-focus p-3 d-flex flex-column flex-lg-row align-items-stretch g-5">
+                <div class="col-12 col-md-4">
+                    <div class="blocoContainer bloco3 d-flex justify-content-center flex-column align-items-center">
+                        <h5 class="textoHist mb-3">O que fazer pela Zona Oeste?</h5>
+                        <p>Descubra o que a Zona Oeste reserva para você!</p>
+                        <p class="textos-atencao">
+                            Explore os contrastes e encantos dessa região única do Rio!
+                        </p>
+                        <p></p>
+                        <a href="./o-que-fzer-zo.html" class="btn btn-custom-1">Comece a explorar</a>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <div class="blocoContainer bloco4 d-flex justify-content-center flex-column align-items-center">
+                        <h5 class="textoHist mt-md-2">Onde se hospedar?</h5>
+                        <p class="mt-md-3">Encontre o lugar ideal para descansar na Zona Oeste</p>
+                        <p class="textos-atencao">
+                            Hospedagens para todos os estilos, com conforto,
+                            praticidade e as melhores localizações.
+                        </p>
+                        <input type="button" class="btn btn-custom-1 btn-hospedagem" value="Ver opções">
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <div class="blocoContainer bloco5 d-flex justify-content-center flex-column align-items-center">
+                        <h5>Viaje com tranquilidade e informação!</h5>
+                        <p class="textos-atencao">
+                            Conhecer o Rio é uma experiência incrível — e estar bem informado sobre as áreas com maior
+                            atenção ajuda a aproveitar tudo com mais segurança e tranquilidade.
+                        </p>
+
+                        <a type="button" href="./area-de-risco-zo.html" class="btn btn-danger"><i class="bi bi-exclamation-circle-fill"></i> Ver
+                            áreas
+                            que exigem atenção
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container d-flex justify-content-center flex-column">
+            <div class="container-texto-h5-cards">
+                <h5 class="text-center">Curioso por mais? Veja outras regiões</h5>
+            </div>
+
+            <div class="card-zonas row p-5 g-5 text-center d-flex justify-content-center">
+
+                <div class="col-12 col-sm-8 col-md-6 col-lg-4 d-flex justify-content-center">
+                    <div class="card card-custom">
+                        <svg aria-label="Placeholder: Image cap" class="bd-placeholder-img card-img-top" height="180"
+                            preserveAspectRatio="xMidYMid slice" role="img" width="100%"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <title>Placeholder</title>
+                            <rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6"
+                                dy=".3em">Image cap</text>
+                        </svg>
+                        <div class="card-body">
+                            <h5 class="card-title">Zona Sul</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of
+                                the card’s content.</p>
+                            <a href="../zona sul/zona-sul.html" class="btn btn-custom">Explorar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-8 col-md-6 col-lg-4 d-flex justify-content-center">
+                    <div class="card card-custom">
+                        <svg aria-label="Placeholder: Image cap" class="bd-placeholder-img card-img-top" height="180"
+                            preserveAspectRatio="xMidYMid slice" role="img" width="100%"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <title>Placeholder</title>
+                            <rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6"
+                                dy=".3em">Image cap</text>
+                        </svg>
+                        <div class="card-body">
+                            <h5 class="card-title">Zona Norte</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of
+                                the card’s content.</p>
+                            <a href="../zona norte/zona-norte.html" class="btn btn-custom">Explorar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-8 col-md-6 col-lg-4 d-flex justify-content-center">
+                    <div class="card card-custom">
+                        <svg aria-label="Placeholder: Image cap" class="bd-placeholder-img card-img-top" height="180"
+                            preserveAspectRatio="xMidYMid slice" role="img" width="100%"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <title>Placeholder</title>
+                            <rect width="100%" height="100%" fill="#868e96"></rect><text x="50%" y="50%" fill="#dee2e6"
+                                dy=".3em">Image cap</text>
+                        </svg>
+                        <div class="card-body">
+                            <h5 class="card-title">Centro</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of
+                                the card’s content.</p>
+                            <a href="../centro/centro.html" class="btn btn-custom">Explorar</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Início do Rodapé -->
+    <footer class="container-rodape container-fluid d-flex justify-content-around align-items-center py-2">
+
+        <div class="rodapeLinks">
+            <div class="rodape--texto">
+                <p>Siga a gente nas Redes Sociais:</p>
+            </div>
+            <div class="rodape--redes-sociais d-flex justify-content-evenly">
+                <a href="#"><i class="icones-rodape bi bi-instagram"></i></a>
+                <a href="#"><i class="icones-rodape bi bi-twitter-x"></i></a>
+                <a href="#"><i class="icones-rodape bi bi-facebook"></i></a>
+            </div>
+        </div>
+
+        <div class="rodape-copywrite">
+            <p id="anoAtual" class="text-custom-footer pt-2"></p>
+        </div>
+
+        <div class="rodapeLogo">
+            <a class="navbar-brand" href="#">
+                <img class="img-logo" src="../../../assets/logos/logo-rj360-removebg-preview.png" alt="">
+                <span class="span-logo-rodape">RJ</span><span class="span-logo2-rodape">360</span>
+            </a>
+        </div>
+    </footer>
+    <!-- Fim do Rodapé -->
+
+    <!-- Modais -->
+    <!-- Modal de Imagens -->
+    <div class="modal fade" id="modalImagens" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Imagens da Zona Oeste antigamente</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body container">
+                    <div class="historia-modal-container">
+                        <p>
+                            A Zona Oeste do Rio de Janeiro, antigamente vista como uma área periférica e rural, passou
+                            por uma grande transformação ao longo dos anos.
+                            Até a década de 1970, regiões como a Barra da Tijuca eram predominantemente rurais, com
+                            grandes chácaras e áreas de lazer. Com o crescimento urbano,
+                            a região começou a se urbanizar, especialmente após a construção de novas vias e melhorias
+                            no transporte.
+
+                        <p>
+                            Hoje, a Zona Oeste é uma das áreas mais diversificadas da cidade, com bairros de alto
+                            padrão,
+                            como a Barra e o Recreio, ao lado de áreas mais periféricas, como Campo Grande e Santa Cruz.
+                            Embora tenha se desenvolvido, ainda enfrenta desafios em infraestrutura e segurança, mas se
+                            consolidou como um importante polo de crescimento no Rio de Janeiro.
+                        </p>
+                    </div>
+
+                    <div class="carrosselImagensAntigas">
+                        <div id="carouselExampleFade" class="carousel slide carousel-fade">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <svg aria-label="Placeholder: First slide"
+                                        class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" height="400"
+                                        preserveAspectRatio="xMidYMid slice" role="img" width="800"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <title>Placeholder</title>
+                                        <rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%"
+                                            fill="#555" dy=".3em">First slide</text>
+                                    </svg>
+                                </div>
+                                <div class="carousel-item">
+                                    <svg aria-label="Placeholder: Second slide"
+                                        class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" height="400"
+                                        preserveAspectRatio="xMidYMid slice" role="img" width="800"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <title>Placeholder</title>
+                                        <rect width="100%" height="100%" fill="#666"></rect><text x="50%" y="50%"
+                                            fill="#444" dy=".3em">Second slide</text>
+                                    </svg>
+                                </div>
+                                <div class="carousel-item">
+                                    <svg aria-label="Placeholder: Third slide"
+                                        class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" height="400"
+                                        preserveAspectRatio="xMidYMid slice" role="img" width="800"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <title>Placeholder</title>
+                                        <rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%"
+                                            fill="#333" dy=".3em">Third slide</text>
+                                    </svg>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-custom-1" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous">
+    </script>
+
+    <script src="../../../script.js"></script>
 </body>
+
 </html>
