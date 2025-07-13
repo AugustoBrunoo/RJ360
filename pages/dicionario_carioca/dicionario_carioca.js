@@ -170,6 +170,9 @@ const quizData = [
 ];
 
 let current = 0;
+let acertos = 0;
+let respostas = [];
+
 
 function shuffle(array) {
     for (let i = array.length - 1; i > 0; i--) {
@@ -203,8 +206,10 @@ function loadQuestion() {
 
 function checkAnswer(botao, respostaCerta) {
     const userAnswer = botao.innerText;
+    const correta = userAnswer === respostaCerta;
 
-    if (userAnswer === respostaCerta) {
+    if (correta) {
+        acertos++;
         document.getElementById("feedback").innerText = "✅ Resposta certa!";
         document.getElementById("feedback").style.color = "green";
     } else {
@@ -212,10 +217,17 @@ function checkAnswer(botao, respostaCerta) {
         document.getElementById("feedback").style.color = "red";
     }
 
-    // Desabilita os botões após responder
+    respostas.push({
+        pergunta: quizData[current].giria,
+        respostaUsuario: userAnswer,
+        correta: respostaCerta,
+        acertou: correta
+    });
+
     const botoes = document.querySelectorAll("#options button");
     botoes.forEach(btn => btn.disabled = true);
 }
+
 
 function nextQuestion() {
     current++;
@@ -224,10 +236,38 @@ function nextQuestion() {
         document.getElementById("exemplo").innerText = "";
         document.getElementById("options").innerHTML = "";
         document.getElementById("feedback").innerText = "";
+
+        // Mostra botão de ver resultado final
+        document.getElementById("botaoFeedbackFinal").classList.remove("d-none");
         return;
     }
     loadQuestion();
 }
+
+function mostrarResultado() {
+    let resultado = `Você acertou ${acertos} de ${quizData.length} perguntas.\n\n`;
+    resultado += `🏅 Sua nota: ${Math.round((acertos / quizData.length) * 10)}/10 — `;
+
+    if (acertos === quizData.length) {
+        resultado += "Você é cria raiz! 🔥";
+    } else if (acertos >= 8) {
+        resultado += "Cria respeitável! 💪";
+    } else if (acertos >= 5) {
+        resultado += "Tem potencial de cria... 😉";
+    } else {
+        resultado += "Ih... tem que estudar sobre Rio, hein! 🤔";
+    }
+
+    resultado += "\n\nDetalhes:\n";
+
+    respostas.forEach((r, i) => {
+        resultado += `${i + 1}. "${r.pergunta}" — ${r.acertou ? "✅ Acertou" : `❌ Errou (Correta: ${r.correta})`}\n`;
+    });
+
+    alert(resultado);
+}
+
+
 
 window.onload = loadQuestion;
 

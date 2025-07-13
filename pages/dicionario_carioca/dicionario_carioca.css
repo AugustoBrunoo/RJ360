@@ -205,3 +205,61 @@ body {
         gap: 1rem;
     }
 }
+
+.titulo-dicionario {
+  font-family: 'Special Gothic Expanded One', sans-serif;
+  color: var(--verde-escuro);
+  font-size: 2.5rem;
+}
+
+/* Botão de feedback final */
+#botaoFeedbackFinal {
+  background-color: #28a745;
+  font-weight: 600;
+}
+
+#botaoFeedbackFinal:hover {
+  background-color: #218838;
+  color: white;
+}
+
+/* Modo claro */
+body {
+  background-color: var(--creme);
+  color: #000;
+}
+
+/* Modo escuro */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #000; /* Fundo preto */
+    color: #fff;
+  }
+
+  .card {
+    background-color: #111;
+    color: #fff;
+    border-color: #333;
+  }
+
+  .btn {
+    background-color: #333;
+    color: #fff;
+    border-color: #444;
+  }
+
+  .btn:hover {
+    background-color: #444;
+  }
+
+  .titulo-dicionario {
+    color: var(--creme);
+  }
+
+  footer {
+    background-color: var(--noturno-verde);
+    color: #ccc;
+    border-top: 1px solid #444;
+  }
+}
+
