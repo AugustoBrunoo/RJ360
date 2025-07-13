@@ -1,0 +1,53 @@
+main h1 {
+  font-family: "Special Gothic Expanded One", sans-serif;
+  font-weight: 400;
+  color: var(--noturno-verde);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Botão parceiro */
+.btn-parceiro {
+  background-color: var(--noturno-verde-claro);
+  color: var(--off-white);
+  font-weight: 600;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-parceiro:hover {
+  background-color: var(--verde-claro);
+  color: var(--off-white);
+  text-decoration: none;
+}
+
+.imagem-zona-card {
+  height: 200px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.btn-ver-mais {
+  background-color: var(--noturno-verde-claro);
+  color: var(--off-white);
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-ver-mais:hover {
+  background-color: var(--verde-claro);
+  color: var(--off-white);
+}
+
+/* Ajuste modo dark para botões */
+[data-bs-theme="dark"] .btn-parceiro,
+[data-bs-theme="dark"] .btn-ver-mais {
+  background-color: var(--noturno-verde-off);
+  color: var(--noturno-preto);
+}
+
+[data-bs-theme="dark"] .btn-parceiro:hover,
+[data-bs-theme="dark"] .btn-ver-mais:hover {
+  background-color: var(--noturno-verde-claro);
+  color: var(--noturno-preto);
+}
