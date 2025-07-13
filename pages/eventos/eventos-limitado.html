@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../assets/logos/Logo-removebg-preview.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="../../styleGlobal.css">
+    <title>RJ360 - Eventos por Tempo Limitado</title>
+    <style>
+        .card {
+            height: 400px; /* Ajuste a altura do card */
+        }
+
+        .card-img-top {
+            width: 100%; /* A imagem ocupa toda a largura do card */
+            height: 200px; /* Defina uma altura fixa para a imagem */
+            object-fit: cover; /* A imagem se ajusta ao espaço, cortando o que não se encaixa */
+        }
+    </style>
+</head>
+
+<body data-bs-theme="light">
+    <!-- Cabeçalho da Página - Consistente com index.html -->
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-custom fixed-top">
+            <div class="container-fluid">
+                <div class="d-flex align-items-center">
+                    <a class="navbar-brand" href="../../index.html">
+                        <img class="img-logo" src="../../assets/logos/logo-rj360-removebg-preview.png" alt="Logo RJ360">
+                        <span class="span-logo">RJ</span><span class="span-logo2">360</span>
+                    </a>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 px-4 d-flex align-items-center">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">
+                                <i class="bi bi-circle-half icon-aparencia" id="modo-noturno" title="Alternar Modo Noturno"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="./index.html">
+                                <i class="icon-home bi bi-house-door-fill" title="Página Inicial"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Regiões
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="./pages/zonas/zona sul/zona-sul.html">Zona Sul</a></li>
+                                <li><a class="dropdown-item" href="./pages/zonas/zona norte/zona-norte.html">Zona Norte</a></li>
+                                <li><a class="dropdown-item" href="./pages/zonas/zona oeste/zona-oeste.html">Zona Oeste</a></li>
+                                <li><a class="dropdown-item" href="./pages/zonas/centro/centro.html">Centro</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Destaques</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Sobre Nós</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="./hospedagens.html"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Conteúdo Principal da Página -->
+    <main class="container mt-custom">
+        <h1 class="text-center text-destaque mb-5">Eventos por Tempo Limitado no Rio de Janeiro</h1>
+
+        <!-- Seção de Filtros e Busca (Conceitual) -->
+        <section class="bg-body-custom mb-5 p-4 rounded shadow-sm">
+            <h3 class="text-destaque mb-4">Refine sua Busca</h3>
+            <form id="searchForm" class="row g-3 align-items-end">
+                <div class="col-md-4">
+                    <label for="destino" class="form-label textoGlobalNormal">Destino/Região</label>
+                    <input type="text" class="form-control" id="destino" placeholder="Ex: Copacabana, Lapa, Centro">
+                </div>
+                <div class="col-md-3">
+                    <label for="tipoEvento" class="form-label textoGlobalNormal">Tipo de Evento</label>
+                    <select id="tipoEvento" class="form-select" data-filter="type">
+                        <option selected>Qualquer tipo...</option>
+                        <option>Show</option>
+                        <option>Festival</option>
+                        <option>Teatro</option>
+                        <option>Exposição</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <label for="precoMax" class="form-label textoGlobalNormal">Preço Máximo (R$)</label>
+                    <input type="number" class="form-control" id="precoMax" placeholder="Ex: 500">
+                </div>
+                <div class="col-md-2">
+                    <button type="submit" class="btn btn-search w-100">Buscar</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Seção de Listagem de Eventos -->
+        <section class="row g-4" id="eventList">
+
+            <!-- Evento 1: Rio Gastronomia 2025 -->
+            <article class="col-md-6 card-hover-zonas" data-type="festival" data-price="200" data-region="centro">
+                <div class="card h-100 shadow-sm">
+                    <img src="../../assets/eventos/rio-gastronomia.jpg" class="card-img-top imagem-hospedagem" alt="Rio Gastronomia 2025">
+                    <div class="card-body card-bg-zonas">
+                        <h5 class="card-title text-destaque">Rio Gastronomia 2025</h5>
+                        <p class="card-text textoGlobalNormal">A 15ª edição do festival de gastronomia com restaurantes e shows imperdíveis.</p>
+                        <ul class="list-unstyled">
+                            <li class="textoGlobalNormal"><i class="bi bi-geo-alt-fill"></i> Centro</li>
+                            <li class="textoGlobalNormal"><i class="bi bi-currency-dollar"></i> A partir de R$ 200</li>
+                            <li class="textoGlobalNormal">
+                                <i class="bi bi-calendar-fill"></i> 10 a 20 de Novembro
+                            </li>
+                        </ul>
+                        <a href="#" class="btn btn-primary btn-global mt-3">Ver Detalhes</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Evento 2: CIRCUITO RJ 2025 - 1ª ETAPA -->
+            <article class="col-md-6 card-hover-zonas" data-type="corrida" data-price="100" data-region="zona-norte">
+                <div class="card h-100 shadow-sm">
+                    <img src="../../assets/eventos/circuito-rj.jpg" class="card-img-top imagem-hospedagem" alt="CIRCUITO RJ 2025">
+                    <div class="card-body card-bg-zonas">
+                        <h5 class="card-title text-destaque">CIRCUITO RJ 2025 - 1ª ETAPA</h5>
+                        <p class="card-text textoGlobalNormal">Uma corrida e caminhada com distâncias de 3K, ideal para toda a família.</p>
+                        <ul class="list-unstyled">
+                            <li class="textoGlobalNormal"><i class="bi bi-geo-alt-fill"></i> Zona Norte</li>
+                            <li class="textoGlobalNormal"><i class="bi bi-currency-dollar"></i> A partir de R$ 100</li>
+                            <li class="textoGlobalNormal">
+                                <i class="bi bi-calendar-fill"></i> 5 de Dezembro
+                            </li>
+                        </ul>
+                        <a href="#" class="btn btn-primary btn-global mt-3">Ver Detalhes</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Evento 3: Show da Lady Gaga 2025 -->
+            <article class="col-md-6 card-hover-zonas" data-type="show" data-price="350" data-region="maracanã">
+                <div class="card h-100 shadow-sm">
+                    <img src="../../assets/eventos/show-lady-gaga.jpg" class="card-img-top imagem-hospedagem" alt="Show da Lady Gaga 2025">
+                    <div class="card-body card-bg-zonas">
+                        <h5 class="card-title text-destaque">Show da Lady Gaga 2025</h5>
+                        <p class="card-text textoGlobalNormal">Uma apresentação imperdível da icônica artista no Maracanã.</p>
+                        <ul class="list-unstyled">
+                            <li class="textoGlobalNormal"><i class="bi bi-geo-alt-fill"></i> Maracanã</li>
+                            <li class="textoGlobalNormal"><i class="bi bi-currency-dollar"></i> A partir de R$ 350</li>
+                            <li class="textoGlobalNormal">
+                                <i class="bi bi-calendar-fill"></i> 15 de Janeiro
+                            </li>
+                        </ul>
+                        <a href="#" class="btn btn-primary btn-global mt-3">Ver Detalhes</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Evento 4: Bienal do Livro 2025 -->
+            <article class="col-md-6 card-hover-zonas" data-type="Exposição" data-price="50" data-region="centro">
+                <div class="card h-100 shadow-sm">
+                    <img src="../../assets/eventos/bienal-livro.jpg" class="card-img-top imagem-hospedagem" alt="Bienal do Livro 2025">
+                    <div class="card-body card-bg-zonas">
+                        <h5 class="card-title text-destaque">Bienal do Livro 2025</h5>
+                        <p class="card-text textoGlobalNormal">A maior feira de livros do Brasil, com autores, palestras e muito mais.</p>
+                        <ul class="list-unstyled">
+                            <li class="textoGlobalNormal"><i class="bi bi-geo-alt-fill"></i> Centro</li>
+                            <li class="textoGlobalNormal"><i class="bi bi-currency-dollar"></i> A partir de R$ 50</li>
+                            <li class="textoGlobalNormal">
+                                <i class="bi bi-calendar-fill"></i> 1 a 10 de Setembro
+                            </li>
+                        </ul>
+                        <a href="#" class="btn btn-primary btn-global mt-3">Ver Detalhes</a>
+                    </div>
+                </div>
+            </article>
+
+        </section>
+    </main>
+
+    <!-- Rodapé da Página - Consistente com index.html -->
+    <footer class="container-rodape container-fluid d-flex justify-content-around align-items-center py-2">
+        <div class="rodapeLinks">
+            <div class="rodape--texto">
+                <p>Siga a gente nas Redes Sociais:</p>
+            </div>
+            <div class="rodape--redes-sociais d-flex justify-content-evenly">
+                <a href="#" aria-label="Instagram"><i class="icones-rodape bi bi-instagram"></i></a>
+                <a href="#" aria-label="Twitter"><i class="icones-rodape bi bi-twitter-x"></i></a>
+                <a href="#" aria-label="Facebook"><i class="icones-rodape bi bi-facebook"></i></a>
+            </div>
+        </div>
+
+        <div class="rodape-copywrite">
+            <p id="anoAtual" class="text-custom-footer pt-2"></p>
+        </div>
+
+        <div class="rodapeLogo">
+            <a class="navbar-brand" href="../../index.html">
+                <img class="img-logo" src="../../assets/logos/logo-rj360-removebg-preview.png" alt="Logo RJ360">
+                <span class="span-logo-rodape">RJ</span><span class="span-logo2-rodape">360</span>
+            </a>
+        </div>
+    </footer>
+
+    <!-- Scripts Bootstrap e Customizados -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous">
+    </script>
+    <script src="../../script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"></script>
+    <script>
+        document.getElementById('searchForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const destination = document.getElementById('destino').value.toLowerCase();
+            const type = document.getElementById('tipoEvento').value;
+            const price = parseFloat(document.getElementById('precoMax').value) || Infinity;
+
+            const cards = document.querySelectorAll('.card-hover-zonas');
+            
+            cards.forEach(card => {
+                const cardText = card.textContent.toLowerCase();
+                const cardPrice = parseFloat(card.querySelector('li:nth-child(2)').textContent.match(/\d+/)[0]);
+                
+                const matchesDestination = destination ? cardText.includes(destination) : true;
+                const matchesType = type === 'Qualquer tipo...' || cardText.includes(type.toLowerCase());
+                const matchesPrice = cardPrice <= price;
+
+                const article = card.closest('article');
+                article.style.display = matchesDestination && matchesType && matchesPrice ? 'block' : 'none';
+            });
+
+            // Reorganiza os cards após o filtro
+            const articles = document.querySelectorAll('article');
+            const visibleArticles = Array.from(articles).filter(article => article.style.display !== 'none');
+            const row = document.querySelector('.row.g-4');
+            row.innerHTML = ''; // Limpa a linha antes de adicionar os cards filtrados
+
+            visibleArticles.forEach(article => {
+                row.appendChild(article); // Adiciona os cards filtrados de volta à linha
+            });
+        });
+    </script>
+</body>
+
+</html>
