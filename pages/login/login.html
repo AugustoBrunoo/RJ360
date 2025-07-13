@@ -2,27 +2,27 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./assets/logos/Logo-removebg-preview.png" type="image/x-icon">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="./assets/logos/Logo-removebg-preview.png" type="image/x-icon" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="styleGlobal.css">
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="../../style.css" />
+    <link rel="stylesheet" href="../../styleGlobal.css" />
+    <link rel="stylesheet" href="./login.css"/>
     <title>RJ360</title>
 </head>
 
 <body data-bs-theme="light">
-    <!-- Inicio do Rodapé -->
-
-    <!-- Inicio do Rodapé -->
+    <!-- Header fixed-top -->
     <header>
         <nav class="navbar navbar-expand-lg bg-body-custom fixed-top">
             <div class="container-fluid">
                 <div class="d-flex align-items-center">
-                    <a class="navbar-brand" href="#">
-                        <img class="img-logo" src="./assets/logos/logo-rj360-removebg-preview.png" alt="">
+                    <a class="navbar-brand" href="../../index.html">
+                        <img class="img-logo" src="../../assets/logos/logo-rj360-removebg-preview.png"
+                            alt="Logo RJ360"/>
                         <span class="span-logo">RJ</span><span class="span-logo2">360</span>
                     </a>
                 </div>
@@ -49,14 +49,17 @@
                                 Regiões
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="./pages/zonas/zona sul/zona-sul.html">Zona Sul</a>
+                                <li>
+                                    <a class="dropdown-item" href="./pages/zonas/zona sul/zona-sul.html">Zona Sul</a>
                                 </li>
                                 <li><a class="dropdown-item" href="#">Zona Norte</a></li>
-                                <li><a class="dropdown-item" href="./pages/zonas/zona oeste/zona-oeste.html">Zona
-                                        Oeste</a></li>
+                                <li>
+                                    <a class="dropdown-item" href="./pages/zonas/zona oeste/zona-oeste.html">Zona
+                                        Oeste</a>
+                                </li>
                                 <li><a class="dropdown-item" href="#">Centro</a></li>
                                 <li>
-                                    <hr class="dropdown-divider">
+                                    <hr class="dropdown-divider" />
                                 </li>
                                 <li><a class="dropdown-item" href="#">Destaques</a></li>
                             </ul>
@@ -70,8 +73,67 @@
         </nav>
     </header>
 
-    <footer class="container-rodape container-fluid d-flex justify-content-around align-items-center py-2">
+    <!-- Espaço para o header fixed-top -->
+    <div class="header-space"></div>
 
+    <!-- Container principal do login -->
+    <div class="container-login">
+        <!-- Formulário de login -->
+        <div class="login-left">
+            <h1 class="mb-4 fs-2 text-center texto-login">Acesse sua conta!</h1>
+            <form>
+                <div class="mb-3">
+                    <label for="email" class="form-label fs-custom">E-mail</label>
+                    <input type="email" class="form-control" id="email" placeholder="exemplo@email.com" required />
+                </div>
+                <div class="mb-3">
+                    <label for="senha" class="form-label fs-custom">Senha</label>
+                    <input type="password" class="form-control" id="senha" placeholder="Digite sua senha" required />
+                </div>
+                <div class="d-grid mb-3">
+                    <button type="submit" class="btn btn-primary fs-4">Entrar</button>
+                </div>
+                <div class="text-center">
+                    <a href="#" class="btn btn-esqueci-senha">Esqueci minha senha</a>
+                </div>
+            </form>
+
+            <hr class="my-4" />
+
+            <div class="text-center">
+                <h3 class="texto-login">Não tem uma conta?</h3>
+                <a href="../criar-conta/criar.html" class="btn btn-outline-dark">Criar Conta</a>
+            </div>
+        </div>
+
+        <!-- Texto sobre benefícios -->
+        <div class="login-texto">
+            <h4 class="mb-3">Por que criar uma conta?</h4>
+            <ul>
+                <li>
+                    <h5>Acesse conteúdos exclusivos das regiões do RJ</h5>
+                </li>
+                <li>
+                    <h5>Receba recomendações personalizadas de eventos e passeios</h5>
+                </li>
+                <li>
+                    <h5>Salve seus lugares favoritos para visitar depois</h5>
+                </li>
+                <li>
+                    <h5>Participe da comunidade RJ360</h5>
+                </li>
+            </ul>
+
+            <p class="mt-3">
+                Texto adicional aqui para explicar mais detalhes sobre os benefícios de
+                ter uma conta no site. Você pode editar esse parágrafo com
+                informações personalizadas.
+            </p>
+        </div>
+    </div>
+
+    <!-- Fim do rodapé -->
+    <footer class="container-rodape container-fluid d-flex justify-content-around align-items-center py-2">
         <div class="rodapeLinks">
             <div class="rodape--texto">
                 <p>Siga a gente nas Redes Sociais:</p>
@@ -88,17 +150,17 @@
         </div>
 
         <div class="rodapeLogo">
-            <a class="navbar-brand" href="#">
-                <img class="img-logo" src="./assets/logos/logo-rj360-removebg-preview.png" alt="">
+            <a class="navbar-brand" href="../../index.html">
+                <img class="img-logo" src="../../assets/logos/logo-rj360-removebg-preview.png" alt="Logo RJ360" />
                 <span class="span-logo-rodape">RJ</span><span class="span-logo2-rodape">360</span>
             </a>
         </div>
     </footer>
-    <!-- Fim do Rodapé -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous">
-        </script>
 
-    <script src="./script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+    <script src="../../script.js"></script>
+</body>
 
 </html>
