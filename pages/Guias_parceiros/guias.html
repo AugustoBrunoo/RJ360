@@ -114,12 +114,17 @@
         <div class="row" id="cards-container">
             <div class="col-md-4 mb-4 card-item" data-name="Trilha Pedra Bonita" data-type="Trilha" data-price="low">
                 <div class="card card-bg-zonas card-hover-zonas">
-                    <img src="./assets/pedra-bonita.jpg" class="card-img-top imagem-zona-card"
-                        alt="Trilha Pedra Bonita" />
+                    <img src="../../assets/imagens/outras_fotos/Trilha_pedra_bonita - Copia.jpg"
+                        class="card-img-top imagem-zona-card" alt="Trilha Pedra Bonita" />
                     <div class="card-body">
                         <h5 class="card-title">Trilha Pedra Bonita</h5>
                         <p class="card-text">Uma trilha incrível com vista para o Rio.</p>
-                        <a href="#" class="btn btn-ver-mais">Ver mais</a>
+                        <a href="#" class="btn btn-ver-mais" data-bs-toggle="modal" data-bs-target="#modalPasseio"
+                            data-nome="Trilha Pedra Bonita" data-desc="Uma trilha incrível com vista para o Rio."
+                            data-img="./assets/pedra-bonita.jpg">
+                            Ver mais
+                        </a>
+
                     </div>
                 </div>
             </div>
@@ -127,23 +132,33 @@
             <div class="col-md-4 mb-4 card-item" data-name="Tour Histórico Centro" data-type="Cultural"
                 data-price="medium">
                 <div class="card card-bg-zonas card-hover-zonas">
-                    <img src="./assets/tour-centro.jpg" class="card-img-top imagem-zona-card"
-                        alt="Tour Histórico Centro" />
+                    <img src="../../assets/imagens/outras_fotos/imagem_tour_centro.jpg"
+                        class="card-img-top imagem-zona-card" alt="Tour Histórico Centro" />
                     <div class="card-body">
                         <h5 class="card-title">Tour Histórico Centro</h5>
                         <p class="card-text">Explore o centro do Rio com um guia especializado.</p>
-                        <a href="#" class="btn btn-ver-mais">Ver mais</a>
+                        <a href="#" class="btn btn-ver-mais" data-bs-toggle="modal" data-bs-target="#modalPasseio"
+                            data-nome="Tour Histórico Centro"
+                            data-desc="Explore o centro do Rio com um guia especializado."
+                            data-img="./assets/tour-centro.jpg">
+                            Ver mais
+                        </a>
                     </div>
                 </div>
             </div>
 
             <div class="col-md-4 mb-4 card-item" data-name="Praia Secreta" data-type="Praia" data-price="high">
                 <div class="card card-bg-zonas card-hover-zonas">
-                    <img src="./assets/praia-secreta.jpg" class="card-img-top imagem-zona-card" alt="Praia Secreta" />
+                    <img src="../../assets/imagens/outras_fotos/Praia-do-Secreto_img.jpg.webp"
+                        class="card-img-top imagem-zona-card" alt="Praia Secreta" />
                     <div class="card-body">
-                        <h5 class="card-title">Praia Secreta</h5>
+                        <h5 class="card-title">Praia do Secreto</h5>
                         <p class="card-text">Passeio exclusivo em praias escondidas.</p>
-                        <a href="#" class="btn btn-ver-mais">Ver mais</a>
+                        <a href="#" class="btn btn-ver-mais" data-bs-toggle="modal" data-bs-target="#modalPasseio"
+                            data-nome="Praia Secreta" data-desc="Passeio exclusivo em praias escondidas."
+                            data-img="./assets/praia-secreta.jpg">
+                            Ver mais
+                        </a>
                     </div>
                 </div>
             </div>
@@ -175,6 +190,51 @@
             </a>
         </div>
     </footer>
+
+    <!-- Modal Passeio -->
+    <div class="modal fade" id="modalPasseio" tabindex="-1" aria-labelledby="modalPasseioLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content modal-custom">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title" id="modalPasseioLabel"></h5>
+                    <button type="button" class="btn-close ms-2" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <img id="modalImagem" src="" alt="Imagem Passeio" class="img-fluid rounded">
+                            <div class="guia-info-box mt-3 p-3">
+                                <p id="modalGuiaInfo" class="m-0">Informações do Guia</p>
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="descricao-box p-4 rounded">
+                                <h2 class="descricao-subtitulo">Descrição do passeio:</h2>
+                                <p id="modalDescricao"></p>
+                                <div class="descricao-acoes">
+                                    <button id="btnFavoritar" class="btn-acao">
+                                        <i class="bi bi-heart-fill"></i>
+                                    </button>
+                                    <button id="btnCompartilhar" class="btn-acao">
+                                        <i class="bi bi-share-fill"></i>
+                                    </button>
+                                    <button id="btnDenunciar" class="btn-acao">
+                                        <i class="bi bi-exclamation-triangle-fill"></i>
+                                    </button>
+                                    <button id="btnComentar" class="btn-acao">
+                                        <i class="bi bi-chat-dots-fill"></i>
+                                    </button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../../script.js"></script>
