@@ -37,6 +37,10 @@
     }
 }
 
+.fs-vp {
+    font-size: 19px;
+}
+
 .img-logo {
     width: 95px;
     margin-right: 15px;
@@ -88,10 +92,10 @@ body {
 
 /* Texto Inicial e Textos de Cards Zonas*/
 
-.textoInicial, 
+.textoInicial,
 .card-text,
 .text-body-custom,
-.rodape--texto{
+.rodape--texto {
     text-align: justify;
     word-break: break-word;
     overflow-wrap: break-word;
@@ -102,7 +106,7 @@ body {
     font-style: normal;
 }
 
-.text-destaque, 
+.text-destaque,
 .card-title,
 .textoZona,
 .texto-avaliacoes {
@@ -136,7 +140,7 @@ body {
 
 /* Section de Planner Inteligente */
 
-.container-textoInformativo-planner p{
+.container-textoInformativo-planner p {
     width: 50%;
 }
 
@@ -156,7 +160,7 @@ body {
     margin-top: 7%;
 }
 
-.texto-locomocao, 
+.texto-locomocao,
 .btn-locomocao {
     width: fit-content;
 }
@@ -356,15 +360,21 @@ body {
 
 /* Estilo para Imagens de Hospedagem */
 .imagem-hospedagem {
-    height: 200px; /* Ajuste a altura conforme sua preferência */
-    object-fit: cover; /* Garante que a imagem preenche o espaço sem distorcer, cortando o excesso */
-    width: 100%; /* Garante que a imagem ocupe a largura total do card */
+    height: 200px;
+    /* Ajuste a altura conforme sua preferência */
+    object-fit: cover;
+    /* Garante que a imagem preenche o espaço sem distorcer, cortando o excesso */
+    width: 100%;
+    /* Garante que a imagem ocupe a largura total do card */
 }
 
 /* Ajuste do rodapé para ter margem superior quando não há conteúdo */
 footer {
-    margin-top: 50px; /* Adiciona uma margem superior ao rodapé, se necessário */
+    margin-top: 50px;
+    /* Adiciona uma margem superior ao rodapé, se necessário */
 }
+
+
 
 /* Media queries globais (Ajuste de responsividade em telas) */
 
@@ -374,31 +384,39 @@ footer {
         gap: 1rem;
     }
 }
-   :root {
-       --cor-fundo-claro: #f8f9fa; /* Cor de fundo claro */
-       --cor-fundo-escuro: #343a40; /* Cor de fundo escuro */
-       --cor-borda-clara: #ced4da; /* Cor de borda clara */
-       --cor-borda-escura: #495057; /* Cor de borda escura */
-       --noturno-verde-claro: #859F3D;
-       --azul-claro: #E4EFE7;
-   }
+
+:root {
+    --cor-fundo-claro: #f8f9fa;
+    /* Cor de fundo claro */
+    --cor-fundo-escuro: #343a40;
+    /* Cor de fundo escuro */
+    --cor-borda-clara: #ced4da;
+    /* Cor de borda clara */
+    --cor-borda-escura: #495057;
+    /* Cor de borda escura */
+    --noturno-verde-claro: #859F3D;
+    --azul-claro: #E4EFE7;
+}
 
 
 
-   /* Estilo para o modo escuro */
-   [data-bs-theme="dark"] .bg-body-custom {
-       background-color: var(--noturno-verde-claro);
-   }
+/* Estilo para o modo escuro */
+[data-bs-theme="dark"] .bg-body-custom {
+    background-color: var(--noturno-verde-claro);
+}
 
-   /* Estilo para a seção de busca */
-   .refine-search {
-       background-color: var(--azul-claro); /* Cor padrão */
-   }
+/* Estilo para a seção de busca */
+.refine-search {
+    background-color: var(--azul-claro);
+    /* Cor padrão */
+}
 
-   /* Estilo para a seção de busca no modo escuro */
-   [data-bs-theme="dark"] .refine-search {
-       background-color: var(--noturno-verde-claro); /* Cor de fundo escuro */
-   }
+/* Estilo para a seção de busca no modo escuro */
+.refine-search {
+    background-color: var(--noturno-verde-claro);
+    /* Cor de fundo escuro */
+}
+
 .btn-primary {
     background-color: var(--primary-color);
     color: white;
@@ -406,15 +424,20 @@ footer {
 
 /* Custom search button */
 :root {
-       --cor-fundo-claro: #f8f9fa; /* Cor de fundo claro */
-       --cor-fundo-escuro: #343a40; /* Cor de fundo escuro */
-       --cor-borda-clara: #ced4da; /* Cor de borda clara */
-       --cor-borda-escura: #495057; /* Cor de borda escura */
-       --noturno-verde-claro: #859F3D;
-       --azul-claro: #E4EFE7;
-       --black: black;
-       --noturno-preto: #1A1A19;
-   }
+    --cor-fundo-claro: #f8f9fa;
+    /* Cor de fundo claro */
+    --cor-fundo-escuro: #343a40;
+    /* Cor de fundo escuro */
+    --cor-borda-clara: #ced4da;
+    /* Cor de borda clara */
+    --cor-borda-escura: #495057;
+    /* Cor de borda escura */
+    --noturno-verde-claro: #859F3D;
+    --azul-claro: #E4EFE7;
+    --black: black;
+    --noturno-preto: #1A1A19;
+}
+
 .btn-search {
     background-color: var(--cor-fundo-claro);
     border: none;
@@ -432,23 +455,33 @@ footer {
 [data-bs-theme="dark"] .btn-search {
     background-color: var(--cor-borda-clara);
 }
-.imagem-zona { /* Esta classe já existe e pode ser usada para outras imagens de zona se desejar */
+
+.imagem-zona {
+    /* Esta classe já existe e pode ser usada para outras imagens de zona se desejar */
     height: 280px;
     width: 100%;
     object-fit: cover;
 }
-.imagem-zona-card { /* Nova classe para as imagens dos cards de outras regiões */
-    height: 180px; /* Altura que estava no SVG placeholder */
+
+.imagem-zona-card {
+    /* Nova classe para as imagens dos cards de outras regiões */
+    height: 180px;
+    /* Altura que estava no SVG placeholder */
     width: 100%;
-    object-fit: cover; /* Garante que a imagem preenche o espaço sem distorcer */
+    object-fit: cover;
+    /* Garante que a imagem preenche o espaço sem distorcer */
 }
+
 .row {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between; /* Alinha os cards */
+    justify-content: space-between;
+    /* Alinha os cards */
 }
+
 .card {
-    margin-bottom: 20px; /* Espaçamento entre os cards */
+    margin-bottom: 20px;
+    /* Espaçamento entre os cards */
 }
 
 /* @media (max-width: 2560px) {
@@ -492,8 +525,8 @@ footer {
     }
 } */
 
-    /* Ajustar card de avaliação! esta ficando ruim */
-    /* .bg-fundo-avaliacao {} */
+/* Ajustar card de avaliação! esta ficando ruim */
+/* .bg-fundo-avaliacao {} */
 
 /* @media (max-width: 375px) {
     
