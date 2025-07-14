@@ -10,28 +10,18 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="../../style.css">
     <link rel="stylesheet" href="../../styleGlobal.css">
+    <link rel="stylesheet" href="stylelocomocao.css">
     <title>RJ360 - Locomoção pelo Rio de Janeiro</title>
-    <style>
-        .card {
-            height: 400px; /* Ajuste a altura do card */
-        }
-
-        .card-img-top {
-            width: 100%; /* A imagem ocupa toda a largura do card */
-            height: 200px; /* Defina uma altura fixa para a imagem */
-            object-fit: cover; /* A imagem se ajusta ao espaço, cortando o que não se encaixa */
-        }
-    </style>
 </head>
 
 <body data-bs-theme="light">
     <!-- Cabeçalho da Página -->
     <header>
-        <nav class="navbar navbar-expand-lg bg-body-custom fixed-top">
+        <nav class="navbar navbar-expand-lg bg-body-custom">
             <div class="container-fluid">
                 <div class="d-flex align-items-center">
                     <a class="navbar-brand" href="../../index.html">
-                        <img class="img-logo" src="../../assets/logos/logo-rj360-removebg-preview.png" alt="Logo RJ360">
+                        <img class="img-logo" src="../../assets/logos/logo-rj360-removebg-preview.png" alt="">
                         <span class="span-logo">RJ</span><span class="span-logo2">360</span>
                     </a>
                 </div>
@@ -44,16 +34,30 @@
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0 px-4 d-flex align-items-center">
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="#">
-                                <i class="bi bi-circle-half icon-aparencia" id="modo-noturno" title="Alternar Modo Noturno"></i>
+                                <i class="bi bi-circle-half icon-aparencia" id="modo-noturno"></i>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="./index.html">
+                            <a class="nav-link active" aria-current="page" href="../../index.html">
                                 <i class="icon-home bi bi-house-door-fill" title="Página Inicial"></i>
                             </a>
                         </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Regiões
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="../zonas/zona sul/zona-sul.html">Zona Sul</a></li>
+                                <li><a class="dropdown-item" href="../zonas/zona norte/zona-norte.html">Zona Norte</a></li>
+                                <li><a class="dropdown-item" href="../zonas/zona oeste/zona-oeste.html">Zona Oeste</a></li>
+                                <li><a class="dropdown-item" href="../zonas/centro/centro.html">Centro</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Destaques</a></li>
+                            </ul>
+                        </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Sobre Nós</a>
+                            <a class="nav-link" href="../sobreNos/sobreNos.html">Sobre Nós</a>
                         </li>
                     </ul>
                 </div>
@@ -64,60 +68,173 @@
     
     <!-- Conteúdo Principal da Página -->
     <main class="container mt-custom">
-        <h1 class="text-center text-destaque mb-5">Deseja ver a locomoção do Rio?</h1>
+        <h1 class="text-center text-destaque mb-5" style="margin-top: -64px !important;">
+        Deseja ver a locomoção do Rio?
+        </h1>
 
         <section class="bg-body-custom mb-5 p-4 rounded shadow-sm">
             <h3 class="text-destaque mb-4">Informações de Locomoção</h3>
             <p class="textoGlobalNormal">Nesta seção, você encontrará tudo o que precisa para se locomover com praticidade e segurança pelo Rio de Janeiro. Reunimos informações completas sobre os principais meios de transporte público da cidade, como metrô, ônibus, VLT, barcas e trem. Além disso, indicamos os melhores aplicativos de mobilidade para planejar rotas, consultar horários, comprar passagens e até pedir corridas por aplicativo. Seja turista ou morador, aqui você vai descobrir as melhores formas de circular pelo Rio com eficiência e economia.</p>
         </section>
 
+        <section class="row justify-content-center mb-5 g-4">
+            <h2 class="main-title text-center text-destaque">Escolha o tipo de transporte</h2>
+
+            <!-- Card: Transportes Públicos -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm card-hover-zonas text-center">
+                    <div class="card-body">
+                        <i class="bi bi-bus-front-fill fs-1 text-primary mb-3"></i>
+                        <h5 class="card-title text-destaque">Transportes Públicos</h5>
+                        <p class="card-text textoGlobalNormal"> Conheça todas as opções públicas disponíveis, como metrô, ônibus, VLT e barcas, para circular com economia.</p>
+                        <a href="#transportPublic" class="btn btn-outline-primary btn-global mt-2">Explorar Públicos</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card: Transportes Privados -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm card-hover-zonas text-center">
+                    <div class="card-body">
+                        <i class="bi bi-car-front-fill fs-1 text-success mb-3"></i>
+                        <h5 class="card-title text-destaque">Transportes Privados</h5>
+                        <p class="card-text textoGlobalNormal">Veja as melhores opções privadas de mobilidade, como Uber e 99 Táxi, para conforto e agilidade no deslocamento.</p>
+                        <a href="#transportPrivate" class="btn btn-outline-success btn-global mt-2">Explorar Privados</a>
+                    </div>
+                </div>
+            </div>
+        </section>
         <!-- Seção de Listagem de Transportes -->
-        <section class="row g-4" id="transportList">
+        <section class="row justify-content-center mb-5 gx-5 gy-4" id="transportPublic">
+            <h2 class="main-title text-center text-destaque">Transportes Públicos</h2>
 
             <!-- Transporte 1: Metrô do Rio -->
-            <article class="col-md-6 card-hover-zonas">
-                <div class="card h-100 shadow-sm">
-                    <img src="../../assets/transportes/metro.jpg" class="card-img-top" alt="Metrô do Rio">
+            <article class="article col-md-6 card-espaco">
+                <div class="card h-100 shadow-sm card-hover-zonas">
+                    <img src="../../assets/LocomocaoRIO/foto-metro.jpg" class="card-img-top" alt="Metrô do Rio">
                     <div class="card-body">
                         <h5 class="card-title text-destaque">Metrô do Rio</h5>
                         <p class="card-text textoGlobalNormal">O metrô é uma das formas mais rápidas e seguras de se locomover pela cidade, conectando as principais regiões.</p>
-                        <a href="#" class="btn btn-primary btn-global mt-3">Ver Detalhes</a>
+                        <a href="#" class="btn btn-primary btn-global mt-3"
+                            data-bs-toggle="modal"
+                            data-bs-target="#modalDetalhes"
+                            data-title="Metrô"
+                            data-img="../../assets/LocomocaoRIO/metro-linhas.png"
+                            data-icon="../../assets/LocomocaoRIO/metrorio-logo.png"
+                            data-link="https://www.metrorio.com.br/"
+                            data-desc="O metrô do Rio é rápido, seguro e liga as zonas Norte, Sul e Oeste. Conta com 3 linhas (1, 2 e 4), integração com ônibus, VLT e trem, além de acessibilidade e ar-condicionado. Ideal para se locomover com conforto pela cidade.">
+                            Ver Detalhes
+                        </a>
                     </div>
                 </div>
             </article>
 
             <!-- Transporte 2: Ônibus do Rio -->
-            <article class="col-md-6 card-hover-zonas">
-                <div class="card h-100 shadow-sm">
-                    <img src="../../assets/transportes/onibus.jpg" class="card-img-top" alt="Ônibus do Rio">
+            <article class="article col-md-6 card-espaco">
+                <div class="card h-100 shadow-sm card-hover-zonas">
+                    <img src="../../assets/LocomocaoRIO/foto-onibus.jpeg" class="card-img-top" alt="Ônibus do Rio">
                     <div class="card-body">
                         <h5 class="card-title text-destaque">Ônibus do Rio</h5>
                         <p class="card-text textoGlobalNormal">Os ônibus cobrem toda a cidade e são uma opção econômica para se locomover.</p>
-                        <a href="#" class="btn btn-primary btn-global mt-3">Ver Detalhes</a>
+                        <a href="#" class="btn btn-primary btn-global mt-3"
+                            data-bs-toggle="modal"
+                            data-bs-target="#modalDetalhes"
+                            data-title="Ônibus"
+                            data-img="../../assets/LocomocaoRIO/moovit-exemplo.png"
+                            data-icon="../../assets/LocomocaoRIO/moovit-icon.png"
+                            data-link="https://moovitapp.com/pt-br"
+                            data-desc="Os ônibus cobrem toda a cidade e são uma opção acessível para se locomover. Com o app Moovit, é fácil planejar rotas, consultar horários em tempo real e integrar com metrô, VLT e outros modais.">
+                            Ver Detalhes
+                        </a>
                     </div>
                 </div>
             </article>
 
             <!-- Transporte 3: VLT -->
-            <article class="col-md-6 card-hover-zonas">
-                <div class="card h-100 shadow-sm">
-                    <img src="../../assets/transportes/vlt.jpg" class="card-img-top" alt="VLT do Rio">
+            <article class="article col-md-6 card-espaco">
+                <div class="card h-100 shadow-sm card-hover-zonas">
+                    <img src="../../assets/LocomocaoRIO/foto-vlt.jpg" class="card-img-top" alt="VLT do Rio">
                     <div class="card-body">
                         <h5 class="card-title text-destaque">VLT do Rio</h5>
                         <p class="card-text textoGlobalNormal">O VLT é uma opção moderna e eficiente para se locomover pelo centro da cidade.</p>
-                        <a href="#" class="btn btn-primary btn-global mt-3">Ver Detalhes</a>
+                        <a href="#" class="btn btn-primary btn-global mt-3"
+                            data-bs-toggle="modal"
+                            data-bs-target="#modalDetalhes"
+                            data-title="VLT"
+                            data-img="../../assets/LocomocaoRIO/mapa-vlt.jpg"
+                            data-icon="../../assets/LocomocaoRIO/logo-metro.svg"
+                            data-link="https://mobilidade.grupoccr.com.br/vltrio/"
+                            data-desc="O VLT liga pontos estratégicos do centro do Rio, como Aeroporto Santos Dumont, Rodoviária, Praça XV e Central. É moderno, silencioso e ideal para deslocamentos curtos com conforto e integração com BRT, metrô e barcas.">
+                            Ver Detalhes
+                        </a>
                     </div>
                 </div>
             </article>
 
             <!-- Transporte 4: Barcas -->
-            <article class="col-md-6 card-hover-zonas">
-                <div class="card h-100 shadow-sm">
-                    <img src="../../assets/transportes/barcas.jpg" class="card-img-top" alt="Barcas do Rio">
+            <article class="article col-md-6 card-espaco">
+                <div class="card h-100 shadow-sm card-hover-zonas">
+                    <img src="../../assets/LocomocaoRIO/foto-barcas.jpg" class="card-img-top" alt="Barcas do Rio">
                     <div class="card-body">
                         <h5 class="card-title text-destaque">Barcas do Rio</h5>
                         <p class="card-text textoGlobalNormal">As barcas oferecem uma bela vista da cidade enquanto conectam diferentes regiões.</p>
-                        <a href="#" class="btn btn-primary btn-global mt-3">Ver Detalhes</a>
+                        <a href="#" class="btn btn-primary btn-global mt-3"
+                            data-bs-toggle="modal"
+                            data-bs-target="#modalDetalhes"
+                            data-title="Barcas"
+                            data-img="../../assets/LocomocaoRIO/barcas-modal.jpeg"
+                            data-icon="../../assets/LocomocaoRIO/barcasrio-icon.png"
+                            data-link="https://barcasrio.com.br"
+                            data-desc="As barcas fazem a ligação entre o Rio de Janeiro e cidades como Niterói, Paquetá e Ilha do Governador. São ideais para quem busca uma travessia rápida, confortável e com belas paisagens, além de integração com VLT, metrô e ônibus. No site da BarcasRio, você encontra horários, tarifas e tudo o que precisa para planejar sua viagem.">
+                            Ver Detalhes
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+        </section>
+
+        <section class="row justify-content-center mb-5 gx-5 gy-4" id="transportPrivate">
+            <h2 class="main-title text-center text-destaque">Transportes Privados</h2>
+
+            <!-- Transporte 1: Metrô do Rio -->
+            <article class="article col-md-6 card-espaco">
+                <div class="card h-100 shadow-sm card-hover-zonas">
+                    <img src="../../assets/LocomocaoRIO/foto-99.jpeg" class="card-img-top" alt="Metrô do Rio">
+                    <div class="card-body">
+                        <h5 class="card-title text-destaque">99 Táxi</h5>
+                        <p class="card-text textoGlobalNormal">O metrô é uma das formas mais rápidas e seguras de se locomover pela cidade, conectando as principais regiões.</p>
+                        <a href="#" class="btn btn-primary btn-global mt-3"
+                            data-bs-toggle="modal"
+                            data-bs-target="#modalDetalhes"
+                            data-title="99"
+                            data-img="../../assets/LocomocaoRIO/99-exemplo2.jpg"
+                            data-icon="../../assets/LocomocaoRIO/99-icon.png"
+                            data-link="https://play.google.com/store/apps/details?id=com.taxis99&hl=pt_BR"
+                            data-desc="O 99 é um dos principais apps de mobilidade urbana do Rio. Permite solicitar corridas de forma rápida e segura, com diferentes categorias de serviço e pagamento pelo app. Ideal para deslocamentos porta a porta, com praticidade e integração ao transporte público. Disponível na Google Play.">
+                            Ver Detalhes
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Transporte 2: Ônibus do Rio -->
+            <article class="article col-md-6 card-espaco">
+                <div class="card h-100 shadow-sm card-hover-zonas">
+                    <img src="../../assets/LocomocaoRIO/foto-uber.jpg" class="card-img-top" alt="Ônibus do Rio">
+                    <div class="card-body">
+                        <h5 class="card-title text-destaque">Uber</h5>
+                        <p class="card-text textoGlobalNormal">Os ônibus cobrem toda a cidade e são uma opção econômica para se locomover.</p>
+                        <a href="#" class="btn btn-primary btn-global mt-3"
+                            data-bs-toggle="modal"
+                            data-bs-target="#modalDetalhes"
+                            data-title="Uber"
+                            data-img="../../assets/LocomocaoRIO/uber-exemplo.png"
+                            data-icon="../../assets/LocomocaoRIO/uber-icon.png"
+                            data-link="https://play.google.com/store/apps/details?id=com.ubercab&hl=pt_BR"
+                            data-desc="O Uber é uma plataforma de mobilidade que conecta passageiros a motoristas particulares de forma rápida e segura. Oferece diferentes categorias de serviço, estimativa de preço e pagamento direto pelo app. Uma opção prática para se locomover pela cidade com conforto e segurança.">
+                            Ver Detalhes
+                        </a>
                     </div>
                 </div>
             </article>
@@ -150,13 +267,59 @@
             </a>
         </div>
     </footer>
+<!-- Modal de Detalhes -->
+    <div class="modal fade" id="modalDetalhes" tabindex="-1" aria-labelledby="modalDetalhesLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content p-3">
+                <div class="modal-header">
+                    <h5 class="modal-title text-destaque" id="modalDetalhesLabel">Título do Transporte</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row g-3">
+                        <!-- Imagem grande -->
+                        <div class="col-md-8">
+                            <img id="modalImagem" src="" alt="" class="img-fluid rounded shadow-sm w-100 h-100 object-fit-cover">
+                        </div>
 
-    
+                        <!-- Imagem pequena + link -->
+                        <div class="col-md-4 text-center d-flex flex-column align-items-center justify-content-start">
+                            <img id="modalIcone" src="" alt="Ícone" class="img-fluid rounded mb-2" style="max-width: 100px;">
+                            <a id="modalLink" href="#" class="btn btn-outline-primary btn-sm mt-2" target="_blank">Acessar site</a>
+                        </div>
+                    </div>
+
+                    <!-- Descrição -->
+                    <div class="mt-4">
+                        <p id="modalDescricao" class="textoGlobalNormal">Descrição detalhada do transporte.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Scripts Bootstrap e Customizados -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous">
     </script>
     <script src="../../script.js"></script>
+    <script>
+        const modal = document.getElementById('modalDetalhes');
+        modal.addEventListener('show.bs.modal', function (event) {
+            const button = event.relatedTarget;
+            const title = button.getAttribute('data-title');
+            const img = button.getAttribute('data-img');
+            const desc = button.getAttribute('data-desc');
+            const icon = button.getAttribute('data-icon');
+            const link = button.getAttribute('data-link');
+
+            modal.querySelector('#modalDetalhesLabel').textContent = title;
+            modal.querySelector('#modalImagem').src = img;
+            modal.querySelector('#modalDescricao').textContent = desc;
+            modal.querySelector('#modalIcone').src = icon;
+            modal.querySelector('#modalLink').href = link
+            modal.querySelector('#modalLink').textContent = link
+        })
+    </script>
 </body>
 
 </html>

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../../assets/logos/Logo-removebg-preview.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../../../style.css">
+    <link rel="stylesheet" href="../../../styleGlobal.css">
+    <title>RJ360 - O que fazer pela Zona Sul?</title>
+    <style>
+        .hero {
+            background-image: url('../../../assets/imagens/zona-sul.jpg'); /* Imagem de fundo */
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            margin-bottom: -20px; /* Reduzir a distância do cabeçalho */
+        }
+
+        .carousel-item {
+            height: 400px; /* Altura do carrossel */
+            background-size: cover;
+            background-position: center;
+        }
+
+        .carousel-caption {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .activity-card {
+            transition: transform 0.2s;
+        }
+
+        .activity-card:hover {
+            transform: scale(1.05);
+        }
+
+        .tips-section {
+            background-color: #E4EFE7; /* Cor de fundo alterada */
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+
+        .hero h1 {
+            background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-align: center;
+            margin-bottom: 10px; /* Reduzir a distância do título para o carrossel */
+        }
+
+        .blockquote-footer {
+            margin-top: 15px; /* Aumentar o espaço entre o comentário e o nome */
+            font-weight: bold; /* Destacar o nome do autor */
+        }
+    </style>
+</head>
+
+<body data-bs-theme="light">
+    <!-- Cabeçalho da Página -->
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-custom fixed-top">
+            <div class="container-fluid">
+                <div class="d-flex align-items-center">
+                    <a class="navbar-brand" href="../../../index.html">
+                        <img class="img-logo" src="../../../assets/logos/logo-rj360-removebg-preview.png" alt="Logo RJ360">
+                        <span class="span-logo">RJ</span><span class="span-logo2">360</span>
+                    </a>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 px-4 d-flex align-items-center">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">
+                                <i class="bi bi-circle-half icon-aparencia" id="modo-noturno" title="Alternar Modo Noturno"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="../../../index.html">
+                                <i class="icon-home bi bi-house-door-fill" title="Página Inicial"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Regiões
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="../zona sul/zona-sul.html">Zona Sul</a></li>
+                                <li><a class="dropdown-item" href="../zona norte/zona-norte.html">Zona Norte</a></li>
+                                <li><a class="dropdown-item" href="../zona oeste/zona-oeste.html">Zona Oeste</a></li>
+                                <li><a class="dropdown-item" href="../centro/centro.html">Centro</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Destaques</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../sobreNos/sobreNos.html">Sobre Nós</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="./hospedagens.html"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Conteúdo Principal da Página -->
+    <main class="container mt-custom">
+        <!-- Carrossel de Imagens -->
+        <div id="carouselExample" class="carousel slide mt-0" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active" style="background-image: url('../../../assets/imagens/zona-sul/zona-sul-atividade1.jpg');">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h2 class="text-destaque">Descubra o que a Zona Sul reserva para você!</h2>
+                        <p>Explore os contrastes e encantos dessa região monumental do Rio!</p>
+                    </div>
+                </div>
+                <div class="carousel-item" style="background-image: url('../../../assets/imagens/zona-sul/zona-sul-atividade2.jpg');">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h2 class="text-destaque">Praias e Cultura</h2>
+                        <p>Viva a experiência única que a Zona Sul tem a oferecer!</p>
+                    </div>
+                </div>
+                <div class="carousel-item" style="background-image: url('../../../assets/imagens/zona-sul/zona-sul-atividade3.jpg');">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h2 class="text-destaque">Natureza e Aventura</h2>
+                        <p>Descubra trilhas e belezas naturais na Zona Sul!</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <!-- Seção de Atividades -->
+        <section class="row g-4 mt-5">
+            <article class="col-md-6">
+                <div class="card h-100 shadow-sm activity-card">
+                    <img src="../../../assets/eventos/praia-copacabana.jpg" class="card-img-top" alt="Praia de Copacabana">
+                    <div class="card-body">
+                        <h5 class="card-title">Praia de Copacabana</h5>
+                        <p class="card-text">Desfrute de um dia ensolarado na famosa Praia de Copacabana, com suas areias brancas e calçadão icônico.</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="col-md-6">
+                <div class="card h-100 shadow-sm activity-card">
+                    <img src="../../../assets/eventos/pao-de-acucar.jpg" class="card-img-top" alt="Pão de Açúcar">
+                    <div class="card-body">
+                        <h5 class="card-title">Pão de Açúcar</h5>
+                        <p class="card-text">Suba ao Pão de Açúcar e aprecie uma das vistas mais deslumbrantes do Rio de Janeiro.</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="col-md-6">
+                <div class="card h-100 shadow-sm activity-card">
+                    <img src="../../../assets/eventos/jardim-botânico.jpg" class="card-img-top" alt="Jardim Botânico">
+                    <div class="card-body">
+                        <h5 class="card-title">Jardim Botânico</h5>
+                        <p class="card-text">Explore a rica flora brasileira e internacional no Jardim Botânico do Rio de Janeiro.</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="col-md-6">
+                <div class="card h-100 shadow-sm activity-card">
+                    <img src="../../../assets/eventos/lapa.jpg" class="card-img-top" alt="Lapa">
+                    <div class="card-body">
+                        <h5 class="card-title">Lapa</h5>
+                        <p class="card-text">Viva a noite carioca na Lapa, famosa por sua vida noturna vibrante e arquitetura histórica.</p>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!-- Seção de Dicas -->
+        <section class="tips-section mt-5 bg-body-custom">
+            <h3 class="text-center text-destaque mb-4">Dicas para Aproveitar a Zona Sul</h3>
+            <ul class="list-group">
+                <li class="list-group-item">Experimente a culinária local em um dos muitos restaurantes à beira-mar.</li>
+                <li class="list-group-item">Visite o Forte de Copacabana para uma vista panorâmica incrível.</li>
+                <li class="list-group-item">Não perca o pôr do sol na Praia do Leme.</li>
+                <li class="list-group-item">Use transporte público ou aplicativos de carona para se locomover com facilidade.</li>
+            </ul>
+        </section>
+
+        <!-- Seção de Depoimentos -->
+        <section class="mt-5">
+            <h3 class="text-center text-destaque mb-4">O que dizem os visitantes</h3>
+            <div class="row">
+                <div class="col-md-4">
+                    <blockquote class="blockquote text-center">
+                        <p class="mb-0">"A Praia de Copacabana é simplesmente maravilhosa! Um lugar que todos devem visitar."</p>
+                        <footer class="blockquote-footer">Maria Silva</footer>
+                    </blockquote>
+                </div>
+                <div class="col-md-4">
+                    <blockquote class="blockquote text-center">
+                        <p class="mb-0">"O Pão de Açúcar oferece uma vista de tirar o fôlego. Uma experiência inesquecível!"</p>
+                        <footer class="blockquote-footer">João Pereira</footer>
+                    </blockquote>
+                </div>
+                <div class="col-md-4">
+                    <blockquote class="blockquote text-center">
+                        <p class="mb-0">"A Lapa é o coração da vida noturna do Rio. Adorei cada momento!"</p>
+                        <footer class="blockquote-footer">Ana Costa</footer>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé da Página -->
+    <footer class="container-rodape container-fluid d-flex justify-content-around align-items-center py-2">
+        <div class="rodapeLinks">
+            <div class="rodape--texto">
+                <p>Siga a gente nas Redes Sociais:</p>
+            </div>
+            <div class="rodape--redes-sociais d-flex justify-content-evenly">
+                <a href="#" aria-label="Instagram"><i class="icones-rodape bi bi-instagram"></i></a>
+                <a href="#" aria-label="Twitter"><i class="icones-rodape bi bi-twitter-x"></i></a>
+                <a href="#" aria-label="Facebook"><i class="icones-rodape bi bi-facebook"></i></a>
+            </div>
+        </div>
+
+        <div class="rodape-copywrite">
+            <p id="anoAtual" class="text-custom-footer pt-2"></p>
+        </div>
+
+        <div class="rodapeLogo">
+            <a class="navbar-brand" href="../../../index.html">
+                <img class="img-logo" src="../../../assets/logos/logo-rj360-removebg-preview.png" alt="Logo RJ360">
+                <span class="span-logo-rodape">RJ</span><span class="span-logo2-rodape">360</span>
+            </a>
+        </div>
+    </footer>
+
+    <!-- Scripts Bootstrap e Customizados -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous">
+    </script>
+    <script src="../../../script.js"></script>
+</body>
+
+</html>
