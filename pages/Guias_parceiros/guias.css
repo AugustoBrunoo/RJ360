@@ -157,35 +157,40 @@ main h1 {
     display: flex;
     justify-content: space-around;
     padding: 1rem 0;
+    border-radius: 5px;
     
 }
 
 .btn-acao {
-    background: transparent;
-    border: 2px solid white;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: inline-flex; /* permite centralizar conteúdo */
+  align-items: center;  /* eixo vertical */
+  justify-content: center; /* eixo horizontal */
+  width: 50px;  /* tamanho do botão (ajuste se quiser) */
+  height: 50px; /* tamanho do botão */
+  border-radius: 50%; /* deixa redondo */
+  border: 2px solid white;
+  background-color: #f1f1f1; /* fundo do círculo */
+  cursor: pointer; /* cursor bonitinho */
+  transition: background-color 0.3s; /* animação suave */
+  background: transparent;
+
+}
+
+.btn-acao:hover {
+  background-color: #ddd; /* muda cor no hover, opcional */
 }
 
 .btn-acao i {
-    color: white;
-    font-size: 1.5rem;
+  font-size: 20px; /* tamanho do ícone */
+  color: white; /* cor normal */
+}
+
+.btn-acao i:hover {
+  color: black;
+}
+
+.btn-acao.favorito i {
+  color: red; /* cor vermelha quando for favorito */
 }
 
 
-.btn-acao:hover {
-    background: var(--off-white);
-}
-
-.btn-acao:hover i {
-    color: var(--noturno-preto);
-}
-
-#btnFavoritar.favorito i {
-    color: red;
-    /* quando favorito */
-}
