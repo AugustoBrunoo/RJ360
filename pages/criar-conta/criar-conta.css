@@ -1,0 +1,53 @@
+* {
+    --verde-escuro: rgb(54, 98, 62);
+    --verde-claro: #99BC85;
+    --azul-claro: #E4EFE7;
+    --off-white: #FAF1E6;
+    --creme: #FDFAF6;
+
+    --noturno-preto: #1A1A19;
+    --noturno-verde: #31511E;
+    --noturno-verde-claro: #859F3D;
+    --noturno-verde-off: #F6FCDF;
+}
+
+.btn-voltar {
+    font-size: 22px;
+    text-decoration: none;
+    width: 25%;
+    color: white;
+    border-radius: 10px;
+    background-color: var(--noturno-verde-claro);
+}
+
+.btn-voltar:hover {
+    background-color: gray;
+    color: black;
+}
+
+
+.checkbox-wrapper input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    accent-color: #007bff; /* Cor do checkbox (opcional) */
+    cursor: pointer;
+}
+
+.checkbox-wrapper label {
+    margin: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+.btn-termos {
+    border: none;
+    background: none;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    color: var(--noturno-verde-claro);
+    font-weight: 500;
+    cursor: pointer;
+}

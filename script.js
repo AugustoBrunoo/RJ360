@@ -6,6 +6,23 @@ const inputCheck = document.querySelector("#modo-noturno");
 const tagBody = document.querySelector("body");
 
 
+document.addEventListener('DOMContentLoaded', function () {
+    const mostrarPerfil = localStorage.getItem('mostrarPerfil');
+
+    const containerLogin = document.querySelector('.container-fazer-login');
+    const perfil = document.querySelector('.perfil-offcanvas');
+
+    if (mostrarPerfil === 'true') {
+        if (containerLogin) containerLogin.classList.add('d-none');
+        if (perfil) perfil.classList.remove('d-none');
+    } else {
+        if (containerLogin) containerLogin.classList.remove('d-none');
+        if (perfil) perfil.classList.add('d-none');
+    }
+});
+
+
+
 inputCheck.addEventListener("click", () => {
     const atual = tagBody.getAttribute("data-bs-theme");
     const novoTema = atual === 'light' ? 'dark' : 'light';
@@ -135,5 +152,10 @@ document.getElementById('baixarPDF').addEventListener('click', () => {
     const elemento = document.getElementById('resultadoPlanner');
     html2pdf().from(elemento).save('planner-rj360.pdf');
 });
+
+
+
+
+
 
 
