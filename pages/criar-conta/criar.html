@@ -15,7 +15,7 @@
 
 <body data-bs-theme="light">
     <header>
-        <nav class="navbar bg-body-custom fixed-top">
+        <nav class="navbar bg-body-custom">
             <div class="container-fluid">
                 <a class="navbar-brand d-flex align-items-center" href="#">
                     <img class="img-logo" src="../../assets/logos/logo-rj360-removebg-preview.png" alt="Logo RJ360" />
@@ -73,68 +73,74 @@
     </header>
 
     <!-- Conteúdo principal -->
-    <main class="main-criar-conta">
+    <main class="main-criar-conta mt-custom">
         <div class="container-login d-flex justify-content-center">
             <div class="login-container row g-5">
+
                 <!-- Formulário -->
                 <div class="login-left col-md-6 d-flex flex-column">
-                    <button type="button" class="btn btn-link btn-voltar mb-3 align-self-start" aria-label="Voltar"
-                        id="btn-voltar">
+                    <a href="../login/login.html" class="btn btn-link btn-voltar mb-3 align-self-start"
+                        aria-label="Voltar" id="btn-voltar">
                         <i class="bi bi-arrow-left"></i> Voltar
-                    </button>
+                    </a>
 
-                    <h1 class="mb-4">Crie sua conta</h1>
+                    <h1 class="mb-4 textoGlobalNegrito">Crie sua conta</h1>
 
                     <form>
                         <div class="mb-3">
-                            <label for="nome" class="form-label">Nome Completo</label>
+                            <label for="nome" class="form-label textoGlobalNormal">Nome Completo</label>
                             <input type="text" class="form-control" id="nome" placeholder="Digite seu nome completo"
                                 required />
                         </div>
                         <div class="mb-3">
-                            <label for="email" class="form-label">E-mail</label>
+                            <label for="email" class="form-label textoGlobalNormal">E-mail</label>
                             <input type="email" class="form-control" id="email" placeholder="exemplo@email.com"
                                 required />
                         </div>
                         <div class="mb-3">
-                            <label for="senha" class="form-label">Senha</label>
+                            <label for="senha" class="form-label textoGlobalNormal">Senha</label>
                             <input type="password" class="form-control" id="senha" placeholder="Digite sua senha"
                                 required />
                         </div>
                         <div class="mb-3">
-                            <label for="confirmaSenha" class="form-label">Confirmar Senha</label>
+                            <label for="confirmaSenha" class="form-label textoGlobalNormal">Confirmar Senha</label>
                             <input type="password" class="form-control" id="confirmaSenha"
                                 placeholder="Confirme sua senha" required />
                         </div>
 
-                        <div class="d-grid mb-3">
-                            <button type="submit" class="btn btn-primary">Criar Conta</button>
+                        <div class="mb-3 d-flex align-items-center gap-2 checkbox-wrapper">
+                            <input type="checkbox" name="checkTermos" id="checkTermos" class="checkTermos">
+                            <p class="m-0 align-middle">
+                                Li e concordo com os
+                                <button type="button" class="btn-termos" data-bs-toggle="modal"
+                                    data-bs-target="#termosModal">
+                                    Termos de Uso e a Política de Privacidade da plataforma
+                                </button>.
+                            </p>
                         </div>
 
-                        <div class="mb-3 text-center">
-                            <button type="button" class="btn btn-link" data-bs-toggle="modal"
-                                data-bs-target="#termosModal">
-                                Termos de Uso
-                            </button>
+                        <div class="d-grid mb-3">
+                            <button type="submit" class="btn btn-global">Criar Conta</button>
                         </div>
+
                     </form>
                 </div>
 
                 <!-- Texto explicativo -->
                 <div class="login-texto col-md-6 d-flex flex-column justify-content-center">
-                    <h4 class="mb-3">Por que criar uma conta?</h4>
+                    <h4 class="mb-3 textoGlobalNegrito">Por que criar uma conta?</h4>
                     <ul>
                         <li>
-                            <h5>Acesse conteúdos exclusivos das regiões do RJ</h5>
+                            <h5 class="textoGlobalNormal">Acesse conteúdos exclusivos das regiões do RJ</h5>
                         </li>
                         <li>
-                            <h5>Receba recomendações personalizadas de eventos e passeios</h5>
+                            <h5 class="textoGlobalNormal">Receba recomendações personalizadas de eventos e passeios</h5>
                         </li>
                         <li>
-                            <h5>Salve seus lugares favoritos para visitar depois</h5>
+                            <h5 class="textoGlobalNormal">Salve seus lugares favoritos para visitar depois</h5>
                         </li>
                         <li>
-                            <h5>Participe da comunidade RJ360</h5>
+                            <h5 class="textoGlobalNormal">Participe da comunidade RJ360</h5>
                         </li>
                     </ul>
 
@@ -153,26 +159,43 @@
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="termosModalLabel">Termos de Uso</h5>
+                    <h5 class="modal-title" id="termosModalLabel">Termos de Uso e Política de Privacidade</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
                 </div>
-                <div class="modal-body">
-                    <p>
-                        adicionar os termos de uso do site.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-                        posuere erat a ante.
-                    </p>
+                <div class="modal-body" style="max-height: 60vh; overflow-y: auto;">
+                    <h6 class="fw-bold">1. Aceitação dos Termos</h6>
+                    <p>Ao criar uma conta ou utilizar nossos serviços, você concorda com estes Termos de Uso e com nossa
+                        Política de Privacidade.</p>
+
+                    <h6 class="fw-bold">2. Coleta e Uso de Dados</h6>
+                    <p>Coletamos informações como nome, e-mail e localização com o objetivo de oferecer uma experiência
+                        personalizada. Seus dados não serão compartilhados com terceiros sem sua autorização.</p>
+
+                    <h6 class="fw-bold">3. Conta do Usuário</h6>
+                    <p>Você é responsável por manter a confidencialidade da sua senha e informações de login.
+                        Reservamo-nos o direito de suspender contas que violem os termos aqui descritos.</p>
+
+                    <h6 class="fw-bold">4. Responsabilidades</h6>
+                    <p>Não nos responsabilizamos por danos decorrentes do uso indevido da plataforma. As informações
+                        disponibilizadas são fornecidas de boa fé, mas podem estar sujeitas a alterações sem aviso
+                        prévio.</p>
+
+                    <h6 class="fw-bold">5. Modificações</h6>
+                    <p>Podemos alterar estes Termos de Uso a qualquer momento. As atualizações entrarão em vigor
+                        imediatamente após sua publicação.</p>
+
+                    <h6 class="fw-bold">6. Contato</h6>
+                    <p>Em caso de dúvidas, entre em contato conosco através do e-mail suporte@rj360.com.br.</p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                    <button type="button" class="btn btn-global" data-bs-dismiss="modal">
                         Fechar
                     </button>
                 </div>
             </div>
         </div>
     </div>
+
 
     <!-- Footer -->
     <footer class="container-rodape container-fluid d-flex justify-content-around align-items-center py-2">
@@ -199,7 +222,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
         crossorigin="anonymous"></script>
-    <script src="./script.js"></script>
+    <script src="../../script.js"></script>
 </body>
 
 </html>

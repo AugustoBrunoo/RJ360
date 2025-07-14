@@ -1,0 +1,132 @@
+* {
+    --verde-escuro: rgb(54, 98, 62);
+    --verde-claro: #99BC85;
+    --azul-claro: #E4EFE7;
+    --off-white: #FAF1E6;
+    --creme: #FDFAF6;
+
+    --noturno-preto: #1A1A19;
+    --noturno-verde: #31511E;
+    --noturno-verde-claro: #859F3D;
+    --noturno-verde-off: #F6FCDF;
+}
+
+.perfil-usuario {
+    max-width: 900px;
+    margin: 0 auto;
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+}
+
+.img-perfil-usuario {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #ddd;
+}
+
+.nome-usuario-span {
+    color: var(--noturno-verde-claro);
+}
+
+.nome-perfil {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.email-perfil {
+    color: #6c757d;
+    font-size: 0.95rem;
+}
+
+
+.nome-perfil {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.email-perfil {
+    color: #777;
+    font-size: 0.95rem;
+}
+
+.card-curtido {
+    border-radius: 12px;
+    transition: transform 0.2s ease;
+}
+
+.card-curtido:hover {
+    transform: translateY(-2px);
+}
+
+.btn-custom-vp {
+    border: 1px solid var(--noturno-verde-claro);
+    color: var(--noturno-verde-claro);
+}
+
+.btn-custom-vp:hover {
+    background-color: var(--noturno-verde-claro);
+    color: white;
+}
+
+.curtida-data {
+    font-size: 0.9rem;
+    color: #666;
+    text-shadow: 0.3px 0.3px 0.5px rgba(0, 0, 0, 0.08);
+}
+
+.fs-custom {
+    font-size: 18px;
+}
+
+
+.secao-titulo {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    border-left: 4px solid var(--noturno-verde-claro);
+    padding-left: 0.75rem;
+}
+
+.estrelas-avaliacao i {
+    font-size: 1.1rem;
+    margin-right: 4px;
+}
+
+.avaliacao-data {
+    color: #666;
+    font-size: 0.9rem;
+    text-shadow: 0.3px 0.3px 0.5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 0.5rem;
+}
+
+.planners .list-group-item {
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+}
+
+.planners .btn-group a {
+    min-width: 110px;
+    text-align: center;
+}
+
+[data-bs-theme="dark"] {
+    .perfil-usuario {
+        color: var(--creme);
+    }
+
+    .img-perfil-usuario {
+        border-color: var(--creme);
+    }
+
+    .email-perfil {
+        color: var(--creme);
+    }
+
+    .avaliacao-data {
+        color: #E4EFE7;
+    }
+
+
+}
