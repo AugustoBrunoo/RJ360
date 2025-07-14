@@ -193,4 +193,77 @@ main h1 {
   color: red; /* cor vermelha quando for favorito */
 }
 
+/* Estilos do Formulário de Guia */
+#formGuia h4 {
+  margin-top: 30px;
+  color: var(--verde-escuro);
+}
+
+#feedbackCadastro {
+  font-size: 18px;
+}
+
+#formPasseio label {
+    font-weight: 600;
+}
+
+#formPasseio button {
+    background-color: var(--noturno-verde-claro);
+    border: none;
+    color: white;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+#formPasseio button:hover {
+    background-color: var(--verde-claro);
+    color: white;
+}
+
+#listaPasseios .card {
+    border-radius: 1rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: transform 0.2s ease;
+}
+
+#listaPasseios .card:hover {
+    transform: scale(1.05);
+}
+
+#listaPasseios .card-img-top {
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    object-fit: cover;
+    height: 180px;
+}
+
+#listaPasseios .card-body {
+    background-color: var(--off-white);
+    color: var(--noturno-preto);
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+#listaPasseios .card-title {
+    font-family: "Special Gothic Expanded One", sans-serif;
+    font-weight: 700;
+    color: var(--noturno-verde);
+}
+
+#listaPasseios .card-text {
+    font-size: 0.9rem;
+    margin-bottom: 0.8rem;
+}
+
+.card-valor {
+    font-weight: 700;
+    color: var(--verde-escuro);
+}
+
+.card-descricao-guia {
+    font-style: italic;
+    font-size: 0.85rem;
+    color: var(--noturno-verde-claro);
+}
+
 

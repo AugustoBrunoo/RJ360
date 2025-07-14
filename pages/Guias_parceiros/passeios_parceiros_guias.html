@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RJ360 - Cadastro de Passeios do Guia</title>
+  <link rel="shortcut icon" href="../../assets/logos/logo-rj360-removebg-preview.png" type="image/x-icon" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="../../styleGlobal.css" />
+  <link rel="stylesheet" href="../Guias_parceiros/guias.css" />
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="cadastro-passeios.css" />
+</head>
+
+<body data-bs-theme="light">
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar navbar-expand-lg bg-body-custom">
+      <div class="container-fluid">
+        <div class="d-flex align-items-center">
+          <a class="navbar-brand" href="../../index.html">
+            <img class="img-logo" src="../../assets/logos/logo-rj360-removebg-preview.png" alt="RJ360 Logo" />
+            <span class="span-logo">RJ</span><span class="span-logo2">360</span>
+          </a>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 px-4 d-flex align-items-center">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">
+                <i class="bi bi-circle-half icon-aparencia" id="modo-noturno"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="../../index.html">
+                <i class="icon-home bi bi-house-door-fill"></i>
+              </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Regiões
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="../../pages/zonas/zona sul/zona-sul.html">Zona Sul</a></li>
+                <li><a class="dropdown-item" href="../../pages/zonas/zona norte/zona-norte.html">Zona Norte</a></li>
+                <li><a class="dropdown-item" href="../../pages/zonas/zona oeste/zona-oeste.html">Zona Oeste</a></li>
+                <li><a class="dropdown-item" href="../../pages/zonas/centro/centro.html">Centro</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#">Destaques</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">Sobre Nós</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container py-5 mt-5">
+    <h1 class="mb-4">RJ360: Cadastro de Passeios</h1>
+    <p class="mb-4">Cadastre os passeios que você oferece como guia parceiro.</p>
+
+    <!-- ✅ Feedback -->
+    <div id="feedbackSucesso" class="alert alert-success d-none">
+      🎉 Passeio cadastrado com sucesso!
+    </div>
+
+    <form id="formPasseio" novalidate>
+      <div class="mb-3">
+        <label for="nomePasseio" class="form-label">Nome do passeio</label>
+        <input type="text" id="nomePasseio" class="form-control" required />
+      </div>
+
+      <div class="mb-3">
+        <label for="tipoPasseio" class="form-label">Tipo do passeio</label>
+        <select id="tipoPasseio" class="form-select" required>
+          <option value="">Selecione</option>
+          <option value="Trilha">Trilha</option>
+          <option value="Cultural">Cultural</option>
+          <option value="Praia">Praia</option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label for="valorPasseio" class="form-label">Valor (R$)</label>
+        <input type="number" id="valorPasseio" class="form-control" min="0" step="0.01" required />
+      </div>
+
+      <div class="mb-3">
+        <label for="descricaoPasseio" class="form-label">Descrição do passeio</label>
+        <textarea id="descricaoPasseio" class="form-control" rows="3" required></textarea>
+      </div>
+
+      <div class="mb-3">
+        <label for="descricaoGuia" class="form-label">Descrição do guia</label>
+        <textarea id="descricaoGuia" class="form-control" rows="3" required></textarea>
+      </div>
+
+      <div class="mb-3">
+        <label for="fotoPasseio" class="form-label">Foto do passeio (PDF)</label>
+        <input type="file" id="fotoPasseio" class="form-control" accept=".pdf" required />
+      </div>
+
+      <button type="submit" class="btn btn-primary">Cadastrar Passeio</button>
+    </form>
+
+    <hr class="my-5" />
+
+    <h3>Passeios cadastrados</h3>
+    <div id="listaPasseios" class="row row-cols-1 row-cols-md-2 g-4 mt-3">
+      <!-- Passeios cadastrados aparecem aqui -->
+    </div>
+  </main>
+
+  <footer class="container-rodape container-fluid d-flex justify-content-around align-items-center py-2">
+    <div class="rodapeLinks">
+      <div class="rodape--texto">
+        <p>Siga a gente nas Redes Sociais:</p>
+      </div>
+      <div class="rodape--redes-sociais d-flex justify-content-evenly">
+        <a href="#"><i class="icones-rodape bi bi-instagram"></i></a>
+        <a href="#"><i class="icones-rodape bi bi-twitter-x"></i></a>
+        <a href="#"><i class="icones-rodape bi bi-facebook"></i></a>
+      </div>
+    </div>
+    <div class="rodape-copywrite">
+      <p id="anoAtual" class="text-custom-footer pt-2"></p>
+    </div>
+    <div class="rodapeLogo">
+      <a class="navbar-brand" href="#">
+        <img class="img-logo" src="../../assets/logos/logo-rj360-removebg-preview.png" alt="RJ360 Logo" />
+        <span class="span-logo-rodape">RJ</span><span class="span-logo2-rodape">360</span>
+      </a>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../script.js"></script>
+  <script src="../Guias_parceiros/guias.js"></script>
+  
+</body>
+
+</html>
