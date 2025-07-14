@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../assets/logos/Logo-removebg-preview.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="../../styleGlobal.css">
+    <link rel="stylesheet" href="./deluxe.css">
+    <title>RJ360</title>
+</head>
+
+<body data-bs-theme="light">
+    <!-- Inicio do Rodapé -->
+    <header>
+        <nav class="navbar bg-body-custom fixed-top">
+            <div class="container-fluid">
+                <!-- Logo -->
+                <a class="navbar-brand d-flex align-items-center" href="../../index.html">
+                    <img class="img-logo" src="../../assets/logos/logo-rj360-removebg-preview.png" alt="">
+                    <span class="span-logo">RJ</span><span class="span-logo2">360</span>
+                </a>
+
+                <!-- Botão que ativa o offcanvas -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Offcanvas -->
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+
+                    <div class="offcanvas-body">
+                        <!-- Itens do menu -->
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 d-flex align-items-start gap-2">
+                            <!-- Modo noturno -->
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#">
+                                    <i class="bi bi-circle-half icon-aparencia" id="modo-noturno"></i>
+                                </a>
+                            </li>
+
+                            <!-- Home -->
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#">
+                                    <i class="icon-home bi bi-house-door-fill"></i>
+                                </a>
+                            </li>
+
+                            <!-- Regiões -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle fs-5" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Regiões
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="../../pages/zonas/zona sul/zona-sul.html">Zona
+                                            Sul</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Zona Norte</a></li>
+                                    <li><a class="dropdown-item"
+                                            href="../../pages/zonas/zona oeste/zona-oeste.html">Zona
+                                            Oeste</a></li>
+                                    <li><a class="dropdown-item" href="#">Centro</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Destaques</a></li>
+                                </ul>
+                            </li>
+
+                            <!-- Sobre Nós -->
+                            <li class="nav-item">
+                                <a class="nav-link fs-5" href="./pages/sobreNos/sobreNos.html">Sobre Nós</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="header-space"></div>
+
+    <main class="rj360-deluxe container-deluxe py-5">
+
+        <section id="rj360-deluxe-intro" class="secao-deluxe px-5 mb-5">
+            <h1 class="titulo-secao-inicio">RJ360 <span class="span-deluxe">Deluxe</span></h1>
+            <p class="descricao-secao-inicio">
+                Explore o lado mais exclusivo do Rio de Janeiro com experiências selecionadas a dedo para quem busca o
+                extraordinário.
+                Do alto luxo à imersão cultural com conforto e privacidade, o <strong>RJ360: Deluxe</strong> é seu guia
+                para vivenciar o Rio de forma sofisticada e autêntica.
+            </p>
+        </section>
+
+        <!-- Navegação -->
+        <nav class="nav-deluxe sticky-top bg-white py-2 mb-4 shadow-sm rounded">
+            <div class="d-flex justify-content-center gap-5">
+                <a href="#" data-target="gastronomia-deluxe"
+                    class="nav-link nav-deluxe-link text-dark fw-semibold fs-4">
+                    Gastronomia</a>
+                <a href="#" data-target="hospedagens-deluxe"
+                    class="nav-link nav-deluxe-link text-dark fw-semibold fs-4">
+                    Hospedagens</a>
+                <a href="#" data-target="experiencias-deluxe"
+                    class="nav-link nav-deluxe-link text-dark fw-semibold fs-4">
+                    Experiências</a>
+            </div>
+        </nav>
+
+        <!-- Seção Gastronomia -->
+        <section id="gastronomia-deluxe" class="secao-deluxe px-5">
+            <h1 class="titulo-secao">Gastronomia de Alto Nível</h1>
+            <p class="descricao-secao mb-4">Sabores únicos em ambientes sofisticados: descubra os melhores restaurantes
+                do Rio com experiências premium e memoráveis.
+            </p>
+            <div class="cards-scroll-wrapper">
+                <!-- Card 1 - Oteque -->
+                <div class="card card-deluxe">
+                    <img src="https://images.squarespace-cdn.com/content/v1/67329e304d98ce34497dcd18/243aa4b0-66e0-42f9-a352-9c20a39d280d/Oteque_header_hero.jpg"
+                        class="card-img-top" alt="Restaurante Oteque">
+                    <div class="card-body">
+                        <h5 class="card-title">Menu Degustação no Oteque</h5>
+                        <p class="card-text">Sabores refinados em um dos únicos restaurantes cariocas com estrela
+                            Michelin, assinado pelo chef Alberto Landgraf.</p>
+                        <div class="d-flex flex-column gap-2 mt-3">
+                            <a href="#" class="btn btn-outline-primary btn-sm">Ver detalhes</a>
+                            <a href="#" class="btn btn-outline-success btn-sm">Adicionar ao planner Deluxe</a>
+                        </div>
+                        <p class="text-muted fst-italic mt-3">Duração: 2h30 | R$ 720 por pessoa</p>
+                    </div>
+                </div>
+
+
+                <!-- Card 2 - Oro Restaurante -->
+                <div class="card card-deluxe">
+                    <img src="https://s2-oglobo.glbimg.com/riiCYSYODnh8KYyw5V-bWQbllm8=/1200x/smart/filters:cover():strip_icc()/i.s3.glbimg.com/v1/AUTH_da025474c0c44edd99332dddb09cabe8/internal_photos/bs/2023/b/Y/sdXF3hTxe5XhJhIRqwBQ/52427552-el-rio-de-janeiro-rj-16-03-2016-novo-restaurante-de-felipe-bronze-o-oro.-foto-manica-imbuz.jpg"
+                        class="card-img-top" alt="Restaurante Oro">
+                    <div class="card-body">
+                        <h5 class="card-title">Experiência Gastronômica no Oro</h5>
+                        <p class="card-text">Duas estrelas Michelin e pratos surpreendentes criados por Felipe Bronze,
+                            com uma sequência dinâmica e inovadora.</p>
+                        <div class="d-flex flex-column gap-2 mt-3">
+                            <a href="#" class="btn btn-outline-primary btn-sm">Ver detalhes</a>
+                            <a href="#" class="btn btn-outline-success btn-sm">Adicionar ao planner Deluxe</a>
+                        </div>
+                        <p class="text-muted fst-italic mt-3">Duração: 3h | R$ 890 por pessoa</p>
+                    </div>
+                </div>
+
+
+                <!-- Card 3 - Mee (Copacabana Palace) -->
+                <div class="card card-deluxe">
+                    <img src="https://www.brasiltravelnews.com.br/wp-content/uploads/2018/05/MEE-Restaurante.jpg"
+                        class="card-img-top" alt="Restaurante Mee">
+                    <div class="card-body">
+                        <h5 class="card-title">Menu Asiático no Mee</h5>
+                        <p class="card-text">Restaurante asiático premiado com estrela Michelin, dentro do Copacabana
+                            Palace. Combinação de sabores orientais e ambiente sofisticado.</p>
+                        <div class="d-flex flex-column gap-2 mt-3">
+                            <a href="#" class="btn btn-outline-primary btn-sm">Ver detalhes</a>
+                            <a href="#" class="btn btn-outline-success btn-sm">Adicionar ao planner Deluxe</a>
+                        </div>
+                        <p class="text-muted fst-italic mt-3">Duração: 2h | R$ 670 por pessoa</p>
+                    </div>
+                </div>
+
+
+                <!-- Card 4 - Lasai -->
+                <div class="card card-deluxe">
+                    <img src="https://viagem.cnnbrasil.com.br/wp-content/uploads/sites/5/2022/04/CHEF-RAFAEL-COSTA-E-SILVA-EM-ACAO-NO-NOVO-LASAI.jpg"
+                        class="card-img-top" alt="Restaurante Lasai">
+                    <div class="card-body">
+                        <h5 class="card-title">Jantar no Restaurante Lasai</h5>
+                        <p class="card-text">Gastronomia autoral com ingredientes locais, menu sazonal e vista para o
+                            Pão de Açúcar. Um dos mais conceituados do Brasil.</p>
+                        <div class="d-flex flex-column gap-2 mt-3">
+                            <a href="#" class="btn btn-outline-primary btn-sm">Ver detalhes</a>
+                            <a href="#" class="btn btn-outline-success btn-sm">Adicionar ao planner Deluxe</a>
+                        </div>
+                        <p class="text-muted fst-italic mt-3">Duração: 2h30 | R$ 740 por pessoa</p>
+                    </div>
+                </div>
+
+
+                <!-- Card 5 - Eleven Rio -->
+                <div class="card card-deluxe">
+                    <img src="https://www.jetsetreport.com/admin2/photos/rotaterestaurants934/Eleven_Rio.jpg"
+                        class="card-img-top" alt="Restaurante Eleven Rio">
+                    <div class="card-body">
+                        <h5 class="card-title">Experiência Contemporânea no Eleven Rio</h5>
+                        <p class="card-text">Alta gastronomia portuguesa contemporânea com ambiente sofisticado e menu
+                            criativo sob o comando da chef Joia Bérard.</p>
+                        <div class="d-flex flex-column gap-2 mt-3">
+                            <a href="#" class="btn btn-outline-primary btn-sm">Ver detalhes</a>
+                            <a href="#" class="btn btn-outline-success btn-sm">Adicionar ao planner Deluxe</a>
+                        </div>
+                        <p class="text-muted fst-italic mt-3">Duração: 2h | R$ 620 por pessoa</p>
+                    </div>
+                </div>
+
+                <!-- Card 6 - Aprazível (Santa Teresa) -->
+                <div class="card card-deluxe">
+                    <img src="https://images.prismic.io/incriveisexperiencias/7e36e220-ed8d-4c10-baca-995194ac2870_253c3681becc7e5cb0b8cbff169ad1f9.jpeg?auto=format%2Ccompress&max-w=900&max-h=585&fit=crop&crop=faces&ar=1.54&trim=auto&ixlib=react-9.0.2"
+                        class="card-img-top" alt="Restaurante Aprazível">
+                    <div class="card-body">
+                        <h5 class="card-title">Jantar Panorâmico no Aprazível</h5>
+                        <p class="card-text">Sabores brasileiros reinventados, com ambiente ao ar livre, vista
+                            deslumbrante e atendimento impecável no alto de Santa Teresa.</p>
+                        <div class="d-flex flex-column gap-2 mt-3">
+                            <a href="#" class="btn btn-outline-primary btn-sm">Ver detalhes</a>
+                            <a href="#" class="btn btn-outline-success btn-sm">Adicionar ao planner Deluxe</a>
+                        </div>
+                        <p class="text-muted fst-italic mt-3">Duração: 2h | R$ 480 por pessoa</p>
+                    </div>
+                </div>
+
+
+        </section>
+
+        <!-- Seção Hospedagens -->
+        <section id="hospedagens-deluxe" class="secao-deluxe px-5 d-none">
+            <h1 class="titulo-secao">Hospedagens Luxuosas</h1>
+            <p class="descricao-secao mb-4">Conforto elevado ao extremo. Explore hotéis e acomodações de alto padrão com
+                serviços exclusivos no coração do Rio.
+            </p>
+            <div class="cards-scroll-wrapper">
+                <!-- Card 1 - Copacabana Palace -->
+                <div class="card card-deluxe">
+                    <img src="https://mundoviajar.com.br/wp-content/uploads/2023/08/7683_High-resolution.jpg"
+                        class="card-img-top" alt="Copacabana Palace">
+                    <div class="card-body">
+                        <h5 class="card-title">Copacabana Palace</h5>
+                        <p class="card-text">Ícone da hotelaria brasileira com serviço impecável, piscina lendária e
+                            localização privilegiada em frente à praia.</p>
+                        <div class="d-flex flex-column gap-2 mt-3">
+                            <a href="#" class="btn btn-outline-primary btn-sm">Ver detalhes</a>
+                            <a href="#" class="btn btn-outline-success btn-sm">Adicionar ao planner Deluxe</a>
+                        </div>
+                        <p class="text-muted fst-italic mt-3">Diárias a partir de R$ 2.500</p>
+                    </div>
+                </div>
+
+                <!-- Card 2 - Emiliano Rio -->
+                <div class="card card-deluxe">
+                    <img src="https://litoral-verde.s3.sa-east-1.amazonaws.com/wp-content/uploads/2023/02/09142842/AnyConv.com__Vista-Rooftop.webp"
+                        class="card-img-top" alt="Emiliano Rio">
+                    <div class="card-body">
+                        <h5 class="card-title">Emiliano Rio</h5>
+                        <p class="card-text">Conforto absoluto em suítes com vista para o mar e spa exclusivo na
+                            cobertura.</p>
+                        <div class="d-flex flex-column gap-2 mt-4">
+                            <a href="#" class="btn btn-outline-primary btn-sm">Ver detalhes</a>
+                            <a href="#" class="btn btn-outline-success btn-sm">Adicionar ao planner Deluxe</a>
+                        </div>
+                        <p class="text-muted fst-italic mt-3">Diárias a partir de R$ 1.900</p>
+                    </div>
+                </div>
+
+                <!-- Card 3 - Hotel Fasano Rio -->
+                <div class="card card-deluxe">
+                    <img src="https://fasano.com.br/wp-content/uploads/2024/02/PISCINA_Alta_CredTomasRange-3-scaled.jpg"
+                        class="card-img-top" alt="Fasano Rio">
+                    <div class="card-body">
+                        <h5 class="card-title">Hotel Fasano Rio</h5>
+                        <p class="card-text">Design sofisticado assinado por Philippe Starck, rooftop com vista
+                            deslumbrante para o mar de Ipanema.</p>
+                        <div class="d-flex flex-column gap-2 mt-3">
+                            <a href="#" class="btn btn-outline-primary btn-sm">Ver detalhes</a>
+                            <a href="#" class="btn btn-outline-success btn-sm">Adicionar ao planner Deluxe</a>
+                        </div>
+                        <p class="text-muted fst-italic mt-3">Diárias a partir de R$ 2.800</p>
+                    </div>
+                </div>
+
+                <!-- Card 4 - Arena Leme Hotel -->
+                <div class="card card-deluxe">
+                    <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/481567436.jpg?k=d231c48cf3886f96c622a2444f78f17bcc22caaeb95b5f5cd25d4b26aabfd033&o=&hp=1"
+                        class="card-img-top" alt="Arena Leme Hotel">
+                    <div class="card-body">
+                        <h5 class="card-title">Arena Leme Hotel</h5>
+                        <p class="card-text">Ambiente elegante e tranquilo com vista privilegiada, rooftop com piscina e
+                            proximidade ao Forte do Leme.</p>
+                        <div class="d-flex flex-column gap-2 mt-3">
+                            <a href="#" class="btn btn-outline-primary btn-sm">Ver detalhes</a>
+                            <a href="#" class="btn btn-outline-success btn-sm">Adicionar ao planner Deluxe</a>
+                        </div>
+                        <p class="text-muted fst-italic mt-3">Diárias a partir de R$ 850</p>
+                    </div>
+                </div>
+
+
+                <!-- Card 5 - Santa Teresa MGallery -->
+                <div class="card card-deluxe">
+                    <img src="https://s3.amazonaws.com/static-webstudio-accorhotels-usa-1.wp-ha.fastbooking.com/wp-content/uploads/sites/2/2016/11/07142720/Santa-Teresal-gallery-Pool-1-1200x690.jpg"
+                        class="card-img-top" alt="Santa Teresa MGallery">
+                    <div class="card-body">
+                        <h5 class="card-title">Santa Teresa MGallery</h5>
+                        <p class="card-text">Hotel boutique de luxo com charme colonial, jardim tropical e spa completo
+                            em meio à arte e cultura local.</p>
+                        <div class="d-flex flex-column gap-2 mt-3">
+                            <a href="#" class="btn btn-outline-primary btn-sm">Ver detalhes</a>
+                            <a href="#" class="btn btn-outline-success btn-sm">Adicionar ao planner Deluxe</a>
+                        </div>
+                        <p class="text-muted fst-italic mt-3">Diárias a partir de R$ 1.400</p>
+                    </div>
+                </div>
+
+                <!-- Card 6 - Yoo2 Rio by Intercity -->
+                <div class="card card-deluxe">
+                    <img src="https://cdn.panrotas.com.br/portal-panrotas-statics/media-files-cache/172756/51d027fedde08843b9d137eb5cecfb97barrooftop/22,0,1131,675/670,400,0.60/0/default.jpg"
+                        class="card-img-top" alt="Yoo2 Rio">
+                    <div class="card-body">
+                        <h5 class="card-title">Yoo2 Rio by Intercity</h5>
+                        <p class="card-text">Estilo moderno com vista icônica para o Pão de Açúcar, rooftop animado e
+                            design exclusivo com alma carioca.</p>
+                        <div class="d-flex flex-column gap-2 mt-3">
+                            <a href="#" class="btn btn-outline-primary btn-sm">Ver detalhes</a>
+                            <a href="#" class="btn btn-outline-success btn-sm">Adicionar ao planner Deluxe</a>
+                        </div>
+                        <p class="text-muted fst-italic mt-3">Diárias a partir de R$ 1.100</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- Seção Experiências -->
+        <section id="experiencias-deluxe" class="secao-deluxe px-5 d-none">
+            <h1 class="titulo-secao">Experiências Exclusivas</h1>
+            <p class="descricao-secao mb-4">Vivencie o extraordinário: passeios de helicóptero, jantares privados e
+                aventuras de luxo selecionadas para você.</p>
+
+            <div class="cards-scroll-wrapper">
+                <!-- Card 1 -->
+                <div class="card card-deluxe">
+                    <img src="https://riohelicoptertours.com/wp-content/uploads/2022/03/foto-produto-tour.jpg"
+                        class="card-img-top" alt="Helicóptero RJ">
+                    <div class="card-body">
+                        <h5 class="card-title">Helipasseio Privado</h5>
+                        <p class="card-text">Veja o Rio do alto em um voo panorâmico com espumante e fotos
+                            profissionais.</p>
+                        <div class="d-flex flex-column gap-2 mt-3">
+                            <a href="#" class="btn btn-outline-primary btn-sm">Ver detalhes</a>
+                            <a href="#" class="btn btn-outline-success btn-sm">Adicionar ao planner Deluxe</a>
+                        </div>
+                        <p class="text-muted fst-italic mt-3">Duração: 30 min | R$ 1.500 por pessoa</p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card card-deluxe">
+                    <img src="https://viagemegastronomia.cnnbrasil.com.br/wp-content/uploads/sites/5/2021/07/Fairmont-Copacabana_Marine-Resto_Cred-Romulo-Fialdini.jpg?w=1024"
+                        class="card-img-top" alt="Jantar">
+                    <div class="card-body">
+                        <h5 class="card-title">Jantar Privado à Beira-mar</h5>
+                        <p class="card-text">Uma experiência gourmet exclusiva ao pôr do sol em um cenário paradisíaco.
+                        </p>
+                        <div class="d-flex flex-column gap-2 mt-3">
+                            <a href="#" class="btn btn-outline-primary btn-sm">Ver detalhes</a>
+                            <a href="#" class="btn btn-outline-success btn-sm">Adicionar ao planner Deluxe</a>
+                        </div>
+                        <p class="text-muted fst-italic mt-3">Duração: 2h | R$ 980 por casal</p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="card card-deluxe">
+                    <img src="https://naveguetemporada.com/wp-content/uploads/2023/10/Yacht-Catamara-de-Luxo-120-Pes-Barco-Iate-Lancha-no-Rio-de-Janeiro-e-Angra-dos-Reis-28-1000x800.jpg"
+                        class="card-img-top" alt="Iate RJ">
+                    <div class="card-body">
+                        <h5 class="card-title">Passeio de Iate Premium</h5>
+                        <p class="card-text">Navegue pelas praias cariocas com todo o luxo e atendimento VIP a bordo.
+                        </p>
+                        <div class="d-flex flex-column gap-2 mt-3">
+                            <a href="#" class="btn btn-outline-primary btn-sm">Ver detalhes</a>
+                            <a href="#" class="btn btn-outline-success btn-sm">Adicionar ao planner Deluxe</a>
+                        </div>
+                        <p class="text-muted fst-italic mt-3">3h | R$ 3.200 até 4 pessoas</p>
+                    </div>
+                </div>
+
+                <div class="card card-deluxe">
+                    <img src="https://media.notransito.com/wp-content/uploads/2014/03/Supercarros-no-Rio-de-Janeiro-2014-006.jpg"
+                        class="card-img-top" alt="Carro Luxo RJ">
+                    <div class="card-body">
+                        <h5 class="card-title">Experiência Drive de Luxo</h5>
+                        <p class="card-text">Dirija um superesportivo pelas avenidas do Rio, com rota guiada e paradas
+                            para fotos icônicas.</p>
+                        <div class="d-flex flex-column gap-2 mt-3">
+                            <a href="#" class="btn btn-outline-primary btn-sm">Ver detalhes</a>
+                            <a href="#" class="btn btn-outline-success btn-sm">Adicionar ao planner Deluxe</a>
+                        </div>
+                        <p class="text-muted fst-italic mt-3">1h | R$ 1.800 por carro</p>
+                    </div>
+                </div>
+
+                <div class="card card-deluxe">
+                    <img src="https://voerima.com.br/wp-content/uploads/2024/01/taxi-aereo-rio-o-futuro-dos-voos-em-2024.jpg"
+                        class="card-img-top" alt="Jato Privado RJ">
+                    <div class="card-body">
+                        <h5 class="card-title">Voo Privativo ao Pôr do Sol</h5>
+                        <p class="card-text">Viva o Rio de Janeiro do alto em um jato executivo, com taças de espumante
+                            e vista do Cristo Redentor ao entardecer.</p>
+                        <div class="d-flex flex-column gap-2 mt-3">
+                            <a href="#" class="btn btn-outline-primary btn-sm">Ver detalhes</a>
+                            <a href="#" class="btn btn-outline-success btn-sm">Adicionar ao planner Deluxe</a>
+                        </div>
+                        <p class="text-muted fst-italic mt-3">1h | R$ 8.900 até 6 pessoas</p>
+                    </div>
+                </div>
+
+
+                <!-- Card 20 -->
+                <div class="card card-deluxe">
+                    <img src="https://prefiroviajar.com.br/wp-content/uploads/voo-parapente-rio-de-janeiro-1500x500.jpg"
+                        class="card-img-top" alt="Parapente RJ">
+                    <div class="card-body">
+                        <h5 class="card-title">Voo de Parapente com Instrutor</h5>
+                        <p class="card-text">Deslize pelas montanhas com segurança, contemplando o Rio em voo duplo com
+                            piloto certificado.</p>
+                        <div class="d-flex flex-column gap-2 mt-3">
+                            <a href="#" class="btn btn-outline-primary btn-sm">Ver detalhes</a>
+                            <a href="#" class="btn btn-outline-success btn-sm">Adicionar ao planner Deluxe</a>
+                        </div>
+                        <p class="text-muted fst-italic mt-3">30min | R$ 1.900 por pessoa</p>
+                    </div>
+                </div>
+        </section>
+
+
+
+
+    </main>
+
+
+
+
+
+    <footer class="container-rodape container-fluid d-flex justify-content-around align-items-center py-2">
+
+        <div class="rodapeLinks">
+            <div class="rodape--texto">
+                <p>Siga a gente nas Redes Sociais:</p>
+            </div>
+            <div class="rodape--redes-sociais d-flex justify-content-evenly">
+                <a href="#"><i class="icones-rodape bi bi-instagram"></i></a>
+                <a href="#"><i class="icones-rodape bi bi-twitter-x"></i></a>
+                <a href="#"><i class="icones-rodape bi bi-facebook"></i></a>
+            </div>
+        </div>
+
+        <div class="rodape-copywrite">
+            <p id="anoAtual" class="text-custom-footer pt-2"></p>
+        </div>
+
+        <div class="rodapeLogo">
+            <a class="navbar-brand" href="#">
+                <img class="img-logo" src="../../assets/logos/logo-rj360-removebg-preview.png" alt="">
+                <span class="span-logo-rodape">RJ</span><span class="span-logo2-rodape">360</span>
+            </a>
+        </div>
+    </footer>
+    <!-- Fim do Rodapé -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous">
+        </script>
+
+    <script src="../../script.js"></script>
+    <script src="./deluxe.js"></script>
+
+</html>
