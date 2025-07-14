@@ -93,10 +93,10 @@ document.querySelectorAll('.btn-ver-mais').forEach((btn, index) => {
   });
 });
 
-const btnFavoritarModal = document.querySelector('.btn-favoritar');
-const btnCompartilhar = document.querySelector('.btn-compartilhar');
-const btnDenunciar = document.querySelector('.btn-denunciar');
-const btnComentar = document.querySelector('.btn-comentar');
+const btnFavoritarModal = document.getElementById('btnFavoritar');
+const btnCompartilhar = document.getElementById('btnCompartilhar');
+const btnDenunciar = document.getElementById('btnDenunciar');
+const btnComentar = document.getElementById('btnComentar');
 
 btnFavoritarModal.addEventListener('click', () => {
   const nome = document.getElementById('modalPasseioLabel').textContent;
@@ -125,11 +125,31 @@ btnDenunciar.addEventListener('click', () => {
   // Aqui você pode enviar para backend no futuro.
 });
 
+// Abrir a nova modal de comentário
 btnComentar.addEventListener('click', () => {
-  const comentario = prompt('Deixe seu comentário:');
-  if (comentario) {
-    alert('Comentário enviado! Obrigado pelo feedback.');
-    // Aqui você pode salvar no backend ou localStorage.
+  const modalComentario = new bootstrap.Modal(document.getElementById('modalComentario'));
+  modalComentario.show();
+});
+
+// Lidar com envio do comentário
+const formComentario = document.getElementById('formComentario');
+
+formComentario.addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  const nome = document.getElementById('nomeUsuario').value.trim();
+  const comentario = document.getElementById('comentarioUsuario').value.trim();
+
+  if (nome && comentario) {
+    alert(`Obrigado pelo comentário, ${nome}!`);
+    // Aqui você pode salvar no backend ou localStorage se quiser
+    formComentario.reset();
+
+    const modalComentario = bootstrap.Modal.getInstance(document.getElementById('modalComentario'));
+    modalComentario.hide();
+  } else {
+    alert('Por favor, preencha todos os campos!');
   }
 });
+
 
