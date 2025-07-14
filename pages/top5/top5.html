@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../assets/logos/Logo-removebg-preview.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="../../styleGlobal.css">
+    <title>Top 5 por Cariocas</title>
+    <style>
+        .destination-card {
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .destination-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-img-top {
+            width: 100%;
+            height: 200px; /* Altura fixa para as imagens */
+            object-fit: cover; /* Faz com que a imagem cubra todo o espaço do card */
+        }
+    </style>
+</head>
+
+<body data-bs-theme="light">
+    <!-- Cabeçalho -->
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-custom">
+            <div class="container-fluid">
+                <div class="d-flex align-items-center">
+                    <a class="navbar-brand" href="../../index.html">
+                        <img class="img-logo" src="../../assets/logos/logo-rj360-removebg-preview.png" alt="">
+                        <span class="span-logo">RJ</span><span class="span-logo2">360</span>
+                    </a>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 px-4 d-flex align-items-center">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">
+                                <i class="bi bi-circle-half icon-aparencia" id="modo-noturno"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="../../index.html">
+                                <i class="icon-home bi bi-house-door-fill"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Regiões
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="../../pages/zonas/zona sul/zona-sul.html">Zona
+                                        Sul</a>
+                                </li>
+                                <li><a class="dropdown-item" href="../../pages/zonas/zona norte/zona-norte.html">Zona
+                                        Norte</a></li>
+                                <li><a class="dropdown-item" href="../../pages/zonas/zona oeste/zona-oeste.html">Zona
+                                        Oeste</a></li>
+                                <li><a class="dropdown-item" href="../../pages/zonas/centro/centro.html">Centro</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Destaques</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Sobre Nós</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container mt-5">
+        <h1 class="text-center">Top 5 por Cariocas</h1>
+        <p class="text-center">Dicas de quem vive o Rio: lugares autênticos escolhidos por moradores, do boteco raiz ao pôr do sol inesquecível.</p>
+        <div class="row justify-content-center gx-5 gy-5 mt-4">
+            <!-- Card 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 destination-card" data-bs-toggle="modal" data-bs-target="#modal1">
+                    <img src="../../assets/top5/bar.jpg" class="card-img-top" alt="Bar do Mineiro">
+                    <div class="card-body">
+                        <h5 class="card-title">Bar do Mineiro</h5>
+                        <p class="card-text">Um famoso boteco em Santa Teresa, conhecido por sua comida caseira e ambiente acolhedor.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 destination-card" data-bs-toggle="modal" data-bs-target="#modal2">
+                    <img src="../../assets/top5/mirante.jpg" class="card-img-top" alt="Mirante do Leblon">
+                    <div class="card-body">
+                        <h5 class="card-title">Mirante do Leblon</h5>
+                        <p class="card-text">Um dos melhores pontos para assistir ao pôr do sol, com uma vista deslumbrante da praia e da cidade.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 destination-card" data-bs-toggle="modal" data-bs-target="#modal3">
+                    <img src="../../assets/top5/feira.jpg" class="card-img-top" alt="Feira de São Cristóvão">
+                    <div class="card-body">
+                        <h5 class="card-title">Feira de São Cristóvão</h5>
+                        <p class="card-text">Um mercado vibrante que celebra a cultura nordestina, com comidas típicas e música ao vivo.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 destination-card" data-bs-toggle="modal" data-bs-target="#modal4">
+                    <img src="../../assets/top5/leme.jpg" class="card-img-top" alt="Praia do Leme">
+                    <div class="card-body">
+                        <h5 class="card-title">Praia do Leme</h5>
+                        <p class="card-text">Uma praia menos conhecida, ideal para quem busca tranquilidade e beleza natural.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 destination-card" data-bs-toggle="modal" data-bs-target="#modal5">
+                    <img src="../../assets/top5/lapa.jpg" class="card-img-top" alt="Lapa">
+                    <div class="card-body">
+                        <h5 class="card-title">Lapa</h5>
+                        <p class="card-text">Famosa por sua vida noturna, com muitos bares e música ao vivo.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modais para cada destino -->
+    <div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="modalLabel1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLabel1">Bar do Mineiro</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="../../assets/top5/bar.jpg" alt="Bar do Mineiro" class="img-fluid">
+                    <p>Um famoso boteco em Santa Teresa, conhecido por sua comida caseira e ambiente acolhedor. É o lugar perfeito para relaxar com amigos e aproveitar a cultura carioca.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="modalLabel2" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLabel2">Mirante do Leblon</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="../../assets/top5/mirante.jpg" alt="Mirante do Leblon" class="img-fluid">
+                    <p>Um dos melhores pontos para assistir ao pôr do sol, com uma vista deslumbrante da praia e da cidade. É um momento mágico que atrai tanto moradores quanto turistas.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal3" tabindex="-1" aria-labelledby="modalLabel3" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLabel3">Feira de São Cristóvão</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="../../assets/top5/feira.jpg" alt="Feira de São Cristóvão" class="img-fluid">
+                    <p>Um mercado vibrante que celebra a cultura nordestina, com comidas típicas e música ao vivo. É o lugar ideal para experimentar pratos autênticos e aproveitar a música ao vivo.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal4" tabindex="-1" aria-labelledby="modalLabel4" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLabel4">Praia do Leme</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="../../assets/top5/leme.jpg" alt="Praia do Leme" class="img-fluid">
+                    <p>Uma praia menos conhecida, ideal para quem busca tranquilidade e beleza natural. É um ótimo lugar para relaxar e aproveitar o sol.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal5" tabindex="-1" aria-labelledby="modalLabel5" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLabel5">Lapa</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="../../assets/top5/lapa.jpg" alt="Lapa" class="img-fluid">
+                    <p>Famosa por sua vida noturna, com muitos bares e música ao vivo. A Lapa é um dos pontos mais icônicos do Rio, onde a cultura e a diversão se encontram.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer class="container-rodape container-fluid d-flex justify-content-around align-items-center py-2">
+        <div class="rodapeLinks">
+            <div class="rodape--texto">
+                <p>Siga a gente nas Redes Sociais:</p>
+            </div>
+            <div class="rodape--redes-sociais d-flex justify-content-evenly">
+                <a href="#"><i class="icones-rodape bi bi-instagram"></i></a>
+                <a href="#"><i class="icones-rodape bi bi-twitter-x"></i></a>
+                <a href="#"><i class="icones-rodape bi bi-facebook"></i></a>
+            </div>
+        </div>
+
+        <div class="rodape-copywrite">
+            <p id="anoAtual" class="text-custom-footer pt-2"></p>
+        </div>
+
+        <div class="rodapeLogo">
+            <a class="navbar-brand" href="#">
+                <img class="img-logo" src="../../assets/logos/logo-rj360-removebg-preview.png" alt="">
+                <span class="span-logo-rodape">RJ</span><span class="span-logo2-rodape">360</span>
+            </a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous">
+    </script>
+    <script src="../../script.js"></script>
+
+</body>
+
+</html>
