@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../assets/logos/Logo-removebg-preview.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="../../styleGlobal.css">
+    <link rel="stylesheet" href="styleDmsF.css">
+    <title>Além do Rio: Top 10</title>
+    <style>
+        .destination-card {
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .destination-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-img-top {
+            width: 100%;
+            height: 200px; /* Altura fixa para as imagens */
+            object-fit: cover; /* Faz com que a imagem cubra todo o espaço do card */
+            transition: transform 0.3s;
+        }
+
+        .destination-card:hover .card-img-top {
+            transform: scale(1.1);
+        }
+
+        .modal-body img {
+            width: 100%;
+            height: auto;
+        }
+
+        .card-title {
+            transition: color 0.3s;
+        }
+
+        .destination-card:hover .card-title {
+            color: #007bff; /* Muda a cor do título ao passar o mouse */
+        }
+    </style>
+</head>
+
+<body data-bs-theme="light">
+    <!-- Cabeçalho -->
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-custom">
+            <div class="container-fluid">
+                <div class="d-flex align-items-center">
+                    <a class="navbar-brand" href="../../index.html">
+                        <img class="img-logo" src="../../assets/logos/logo-rj360-removebg-preview.png" alt="">
+                        <span class="span-logo">RJ</span><span class="span-logo2">360</span>
+                    </a>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 px-4 d-flex align-items-center">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">
+                                <i class="bi bi-circle-half icon-aparencia" id="modo-noturno"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="../../index.html">
+                                <i class="icon-home bi bi-house-door-fill"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Regiões
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="../../pages/zonas/zona sul/zona-sul.html">Zona
+                                        Sul</a>
+                                </li>
+                                <li><a class="dropdown-item" href="../../pages/zonas/zona norte/zona-norte.html">Zona
+                                        Norte</a></li>
+                                <li><a class="dropdown-item" href="../../pages/zonas/zona oeste/zona-oeste.html">Zona
+                                        Oeste</a></li>
+                                <li><a class="dropdown-item" href="../../pages/zonas/centro/centro.html">Centro</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Destaques</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Sobre Nós</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container mt-5">
+        <h1 class="text-center">Além do Rio: Top 10</h1>
+        <p class="text-center">Os destinos imperdíveis do Estado do Rio: praias paradisíacas, serras históricas e cidades encantadoras além da capital.</p>
+        <div class="row justify-content-center gx-5 gy-5 mt-4">
+            <!-- Card 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 destination-card" data-bs-toggle="modal" data-bs-target="#modal1">
+                    <img src="../../assets/top10/imagem1.jpg" class="card-img-top" alt="Praia de Copacabana">
+                    <div class="card-body">
+                        <h5 class="card-title">Praia de Copacabana</h5>
+                        <p class="card-text">Uma das praias mais famosas do mundo, conhecida por sua beleza e vida noturna vibrante.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 destination-card" data-bs-toggle="modal" data-bs-target="#modal2">
+                    <img src="../../assets/top10/imagem2.jpg" class="card-img-top" alt="Petrópolis">
+                    <div class="card-body">
+                        <h5 class="card-title">Petrópolis</h5>
+                        <p class="card-text">Conhecida como a Cidade Imperial, é famosa por sua arquitetura histórica e clima ameno.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 destination-card" data-bs-toggle="modal" data-bs-target="#modal3">
+                    <img src="../../assets/top10/imagem3.jpg" class="card-img-top" alt="Búzios">
+                    <div class="card-body">
+                        <h5 class="card-title">Búzios</h5>
+                        <p class="card-text">Um destino de praia famoso, conhecido por suas águas cristalinas e vida noturna animada.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 destination-card" data-bs-toggle="modal" data-bs-target="#modal4">
+                    <img src="../../assets/top10/imagem4.jpg" class="card-img-top" alt="Teresópolis">
+                    <div class="card-body">
+                        <h5 class="card-title">Teresópolis</h5>
+                        <p class="card-text">Famosa por suas montanhas e o Parque Nacional da Serra dos Órgãos, ideal para trilhas.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 destination-card" data-bs-toggle="modal" data-bs-target="#modal5">
+                    <img src="../../assets/top10/imagem5.jpg" class="card-img-top" alt="Ilha Grande">
+                    <div class="card-body">
+                        <h5 class="card-title">Ilha Grande</h5>
+                        <p class="card-text">Um paraíso tropical com praias deslumbrantes e trilhas na mata atlântica.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 destination-card" data-bs-toggle="modal" data-bs-target="#modal6">
+                    <img src="../../assets/top10/imagem6.jpg" class="card-img-top" alt="Cabo Frio">
+                    <div class="card-body">
+                        <h5 class="card-title">Cabo Frio</h5>
+                        <p class="card-text">Famosa por suas praias de areia branca e águas cristalinas, ideal para relaxar.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 7 -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 destination-card" data-bs-toggle="modal" data-bs-target="#modal7">
+                    <img src="../../assets/top10/imagem7.jpg" class="card-img-top" alt="Arraial do Cabo">
+                    <div class="card-body">
+                        <h5 class="card-title">Arraial do Cabo</h5>
+                        <p class="card-text">Conhecida como o "Caribe Brasileiro", com suas águas azuis e paisagens deslumbrantes.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 8 -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 destination-card" data-bs-toggle="modal" data-bs-target="#modal8">
+                    <img src="../../assets/top10/imagem8.jpg" class="card-img-top" alt="Nova Friburgo">
+                    <div class="card-body">
+                        <h5 class="card-title">Nova Friburgo</h5>
+                        <p class="card-text">Famosa por suas montanhas e clima europeu, ideal para quem busca tranquilidade.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 9 -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 destination-card" data-bs-toggle="modal" data-bs-target="#modal9">
+                    <img src="../../assets/top10/imagem9.jpg" class="card-img-top" alt="São João Nepomuceno">
+                    <div class="card-body">
+                        <h5 class="card-title">Floresta da</h5>
+                        <p class="card-text">Famosa por sua exuberante natureza tropical e cachoeiras refrescantes</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 10 -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 destination-card" data-bs-toggle="modal" data-bs-target="#modal10">
+                    <img src="../../assets/top10/imagem10.jpg" class="card-img-top" alt="Visconde de Mauá">
+                    <div class="card-body">
+                        <h5 class="card-title">Visconde de Mauá</h5>
+                        <p class="card-text">Um destino de montanha com cachoeiras e trilhas, perfeito para os amantes da natureza.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modais para cada destino -->
+    <div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="modalLabel1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLabel1">Praia de Copacabana</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="../../assets/top10/imagem1.jpg" alt="Praia de Copacabana">
+                    <p>A Praia de Copacabana é uma das mais famosas do mundo, conhecida por sua beleza e vida noturna vibrante. É um ótimo lugar para relaxar, praticar esportes e aproveitar a cultura carioca.</p>
+                    <h6>Atividades:</h6>
+                    <ul>
+                        <li>Praticar esportes na areia, como vôlei e futevôlei.</li>
+                        <li>Visitar o Forte de Copacabana.</li>
+                        <li>Desfrutar de um passeio à beira-mar.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="modalLabel2" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLabel2">Petrópolis</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="../../assets/top10/imagem2.jpg" alt="Petrópolis">
+                    <p>Petrópolis, conhecida como a Cidade Imperial, é famosa por sua arquitetura histórica e clima ameno. É um destino perfeito para quem busca cultura e história.</p>
+                    <h6>Atividades:</h6>
+                    <ul>
+                        <li>Visitar o Museu Imperial.</li>
+                        <li>Explorar o Palácio de Cristal.</li>
+                        <li>Fazer trilhas na Serra dos Órgãos.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal3" tabindex="-1" aria-labelledby="modalLabel3" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLabel3">Búzios</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="../../assets/top10/imagem3.jpg" alt="Búzios">
+                    <p>Búzios é um destino de praia famoso, conhecido por suas águas cristalinas e vida noturna animada. É ideal para quem busca diversão e relaxamento.</p>
+                    <h6>Atividades:</h6>
+                    <ul>
+                        <li>Fazer passeios de barco pelas praias.</li>
+                        <li>Praticar mergulho e snorkeling.</li>
+                        <li>Desfrutar da vida noturna nos bares e restaurantes.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal4" tabindex="-1" aria-labelledby="modalLabel4" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLabel4">Teresópolis</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="../../assets/top10/imagem4.jpg" alt="Teresópolis">
+                    <p>Teresópolis é famosa por suas montanhas e o Parque Nacional da Serra dos Órgãos, ideal para trilhas e contato com a natureza.</p>
+                    <h6>Atividades:</h6>
+                    <ul>
+                        <li>Fazer trilhas no Parque Nacional da Serra dos Órgãos.</li>
+                        <li>Visitar o Mirante do Soberbo.</li>
+                        <li>Explorar as cachoeiras da região.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal5" tabindex="-1" aria-labelledby="modalLabel5" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLabel5">Ilha Grande</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="../../assets/top10/imagem5.jpg" alt="Ilha Grande">
+                    <p>Ilha Grande é um paraíso tropical com praias deslumbrantes e trilhas na mata atlântica, perfeita para os amantes da natureza.</p>
+                    <h6>Atividades:</h6>
+                    <ul>
+                        <li>Fazer trilhas até a Praia de Lopes Mendes.</li>
+                        <li>Praticar mergulho nas águas cristalinas.</li>
+                        <li>Explorar as cachoeiras da ilha.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal6" tabindex="-1" aria-labelledby="modalLabel6" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLabel6">Cabo Frio</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="../../assets/top10/imagem6.jpg" alt="Cabo Frio">
+                    <p>Cabo Frio é famosa por suas praias de areia branca e águas cristalinas, ideal para relaxar e aproveitar o sol.</p>
+                    <h6>Atividades:</h6>
+                    <ul>
+                        <li>Visitar a Praia do Forte.</li>
+                        <li>Fazer passeios de barco pela região.</li>
+                        <li>Explorar a Ilha do Japonês.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal7" tabindex="-1" aria-labelledby="modalLabel7" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLabel7">Arraial do Cabo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="../../assets/top10/imagem7.jpg" alt="Arraial do Cabo">
+                    <p>Arraial do Cabo é conhecida como o "Caribe Brasileiro", com suas águas azuis e paisagens deslumbrantes.</p>
+                    <h6>Atividades:</h6>
+                    <ul>
+                        <li>Fazer passeios de barco para as praias.</li>
+                        <li>Praticar mergulho em locais como a Praia do Forno.</li>
+                        <li>Visitar a Praia da Ilha do Farol.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal8" tabindex="-1" aria-labelledby="modalLabel8" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLabel8">Nova Friburgo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="../../assets/top10/imagem8.jpg" alt="Nova Friburgo">
+                    <p>Nova Friburgo é famosa por suas montanhas e clima europeu, ideal para quem busca tranquilidade e natureza.</p>
+                    <h6>Atividades:</h6>
+                    <ul>
+                        <li>Visitar o Parque Estadual dos Três Picos.</li>
+                        <li>Explorar o centro histórico e suas construções.</li>
+                        <li>Fazer trilhas e passeios de bicicleta.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal9" tabindex="-1" aria-labelledby="modalLabel9" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLabel9">Floresta da tijuca</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="../../assets/top10/imagem9.jpg" alt="Floresta da Tijuca">
+                    <p>A Floresta da Tijuca é a maior floresta urbana replantada do mundo, um verdadeiro oásis verde em meio à agitação do Rio de Janeiro. Com sua exuberante vegetação tropical, cachoeiras e mirantes deslumbrantes, ela oferece uma experiência única de contato com a natureza.</p>
+                    <h6>Atividades:</h6>
+                    <ul>
+                        <li>Fazer trilhas para diversos níveis de dificuldade.</li>
+                        <li>Visitar cachoeiras.</li>
+                        <li>Explorar o Centro de Visitantes e o Museu do Açude, com seu belo jardim.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal10" tabindex="-1" aria-labelledby="modalLabel10" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLabel10">Visconde de Mauá</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="../../assets/top10/imagem10.jpg" alt="Visconde de Mauá">
+                    <p>Visconde de Mauá é um destino de montanha com cachoeiras e trilhas, perfeito para os amantes da natureza e do ecoturismo.</p>
+                    <h6>Atividades:</h6>
+                    <ul>
+                        <li>Fazer trilhas até as cachoeiras.</li>
+                        <li>Visitar o Parque Nacional de Itatiaia.</li>
+                        <li>Desfrutar de um passeio a cavalo pela região.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer class="container-rodape container-fluid d-flex justify-content-around align-items-center py-2">
+        <div class="rodapeLinks">
+            <div class="rodape--texto">
+                <p>Siga a gente nas Redes Sociais:</p>
+            </div>
+            <div class="rodape--redes-sociais d-flex justify-content-evenly">
+                <a href="#"><i class="icones-rodape bi bi-instagram"></i></a>
+                <a href="#"><i class="icones-rodape bi bi-twitter-x"></i></a>
+                <a href="#"><i class="icones-rodape bi bi-facebook"></i></a>
+            </div>
+        </div>
+
+        <div class="rodape-copywrite">
+            <p id="anoAtual" class="text-custom-footer pt-2"></p>
+        </div>
+
+        <div class="rodapeLogo">
+            <a class="navbar-brand" href="#">
+                <img class="img-logo" src="../../assets/logos/logo-rj360-removebg-preview.png" alt="">
+                <span class="span-logo-rodape">RJ</span><span class="span-logo2-rodape">360</span>
+            </a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous">
+    </script>
+
+    <script src="../../script.js"></script>
+
+</body>
+
+</html>
+
+                
