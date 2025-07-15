@@ -1,31 +1,78 @@
-.texto-inicial-dms {
-    width: 30%;
-}
-
+/* Espaçamento vertical superior da section */
 .mt-custom-card {
     margin-top: 70px;
 }
 
-
-.mt-card {
-    margin-top: 70px;
-}
-
-.containerTexto-dmsf p{
-    padding: 30px;
-    border: 1px solid gray;
+/* Estilo base e alinhamento completo dos cards */
+.card-custom {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 280px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    background-color: #E4EFE7;
-    font-size: 18px;
-    width: 40%;
+    overflow: hidden;
 }
 
+/* Linha interna ocupa altura completa */
+.card-custom .row {
+    flex: 1;
+    height: 100%;
+}
+
+/* Coluna da imagem */
+.card-custom .col-md-4 {
+    padding: 0;
+    height: 100%;
+}
+
+/* Imagem padronizada para ocupar todo espaço e sem deformar */
+.card-img-custom {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+/* Conteúdo ocupa todo o espaço restante */
+.card-custom .col-md-8 {
+    padding: 1rem;
+}
+
+/* Área de conteúdo com flex column + botão no final */
+.card-body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Garante que o botão fique no rodapé */
+.card-body .mt-auto {
+    margin-top: auto;
+}
+
+/* Responsividade geral */
+@media (max-width: 767.98px) {
+    .card-custom .row {
+        flex-direction: column;
+    }
+
+    .card-img-custom {
+        border-radius: 10px 10px 0 0;
+        height: 200px;
+    }
+
+    .card-custom .col-md-4,
+    .card-custom .col-md-8 {
+        height: auto;
+    }
+}
+
+/* Tema escuro (caso esteja usando data-bs-theme) */
 [data-bs-theme="dark"] {
-    .containerTexto-dmsf p{
-        background-color: #E4EFE7;
-        color: #FAF1E6;
+    .containerTexto-dmsf p {
         background-color: #859F3D;
-    
+        color: #FAF1E6;
     }
 }

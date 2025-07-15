@@ -18,47 +18,91 @@
 
   <!-- Cabeçalho -->
   <header>
-    <nav class="navbar navbar-expand-lg bg-body-custom">
+    <nav class="navbar bg-body-custom fixed-top">
       <div class="container-fluid">
-        <a class="navbar-brand" href="../../../index.html">
+        <!-- Logo -->
+        <a class="navbar-brand d-flex align-items-center" href="../../../index.html">
           <img class="img-logo" src="../../../assets/logos/logo-rj360-removebg-preview.png" alt="">
           <span class="span-logo">RJ</span><span class="span-logo2">360</span>
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-          aria-label="Toggle navigation">
+
+        <!-- Botão que ativa o offcanvas -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 px-4 d-flex align-items-center">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#"><i class="bi bi-circle-half icon-aparencia"
-                  id="modo-noturno"></i></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#"><i class="icon-home bi bi-house-door-fill"></i></a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">Regiões</a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Zona Sul</a></li>
-                <li><a class="dropdown-item" href="#">Zona Norte</a></li>
-                <li><a class="dropdown-item" href="#">Zona Oeste</a></li>
-                <li><a class="dropdown-item" href="#">Centro</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Destaques</a></li>
-              </ul>
-            </li>
-            <li class="nav-item"><a class="nav-link" href="#">Sobre Nós</a></li>
-          </ul>
+
+        <!-- Offcanvas -->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title fs-2" id="offcanvasNavbarLabel">Menu</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+
+          <div class="offcanvas-body d-flex flex-column justify-content-between">
+            <!-- Bloco das opções -->
+            <div class="container-opcao">
+              <!-- Tema -->
+              <a class="nav-link offcanvas-link active botoes-offcanvas" id="modo-noturno" href="#">
+                <i class="bi bi-circle-half me-2"></i> Tema do Site
+              </a>
+
+              <!-- Página Inicial -->
+              <a class="nav-link offcanvas-link active botoes-offcanvas" href="#">
+                <i class="bi bi-house-door-fill me-2"></i> Página Inicial
+              </a>
+
+              <!-- Dropdown Regiões -->
+              <div class="dropdown">
+                <a class="nav-link offcanvas-link dropdown-toggle text-center botoes-offcanvas" href="#" role="button"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+                  Regiões
+                </a>
+                <ul class="dropdown-menu text-center w-100">
+                  <li><a class="dropdown-item" href="../zona sul/zona-sul.html">Zona
+                      Sul</a></li>
+                  <li><a class="dropdown-item" href="../zona norte/zona-norte.html">Zona Norte</a>
+                  </li>
+                  <li><a class="dropdown-item" href="../zona oeste/zona-oeste.html">Zona
+                      Oeste</a></li>
+                  <li><a class="dropdown-item" href="../centro/centro.html">Centro</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="../../dmsfuncionalidades/dmsf.html">Explorar</a>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Sobre Nós -->
+              <a class="nav-link offcanvas-link fs-5 botoes-offcanvas" href="../../sobreNos/sobreNos.html">Sobre Nós</a>
+            </div>
+
+            <!-- Bloco do perfil (fixado embaixo) -->
+            <!-- Bloco do perfil (fixado embaixo) -->
+            <div class="container-perfil text-center mb-5">
+              <div class="container-fazer-login">
+                <h2 class="mb-4">Faça seu Login!</h2>
+                <a href="../../login/login.html" class="btn btn-global fs-5">Entrar</a>
+              </div>
+
+              <div class="perfil-offcanvas fs-5 d-none">
+                <div class="img-perfil">
+                  <img src="https://avatars.githubusercontent.com/u/174916340?v=4" alt="">
+                </div>
+                <p class="mt-2 fs-5 textoGlobalNormal-basic">Olá, <span class="nome-usuario">Usuário</span>!</p>
+                <a href="../../perfil/perfil.html" class="btn btn-textoGlobalNormal btn-sm fs-vp mt-2">Ver
+                  perfil</a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </nav>
   </header>
   <!-- Fim do Cabeçalho -->
 
-  <main>
+  <main class="space-mt-card-2">
     <div class="container-inicial-informativo container d-flex justify-content-center mt-5">
       <h1 class="container-inicial-informativo--h1 textoGlobalNegrito">
         <i class="bi bi-exclamation-triangle-fill"></i> Áreas do Centro que exigem atenção
@@ -84,60 +128,76 @@
       <h2 class="textoGlobalNegrito text-center">Possíveis Perigos</h2>
       <div class="row mt-4">
         <div class="col-md-4">
-            <h4>Criminalidade no Centro:</h4>
-            <ul>
-            <li><strong>Furtos recorrentes</strong> nas regiões da Saara, Cinelândia e Rodoviária Novo Rio, especialmente em horários de pico.</li>
-            <li><strong>Assaltos a pedestres</strong> e motoristas na Av. Presidente Vargas, Rua Uruguaiana e entorno da Central do Brasil.</li>
-            <li><strong>Abordagens agressivas a turistas</strong>, principalmente em áreas movimentadas e próximas a pontos turísticos.</li>
-            <li><strong>Golpes com troca de cartões</strong> e máquinas adulteradas em bares e lanchonetes da Lapa e Largo da Carioca.</li>
-            <li><strong>Presença constante de usuários de drogas</strong> e atividades ilícitas em torno da Praça da República e Central.</li>
-            </ul>
+          <h4>Criminalidade no Centro:</h4>
+          <ul>
+            <li><strong>Furtos recorrentes</strong> nas regiões da Saara, Cinelândia e Rodoviária Novo Rio,
+              especialmente em horários de pico.</li>
+            <li><strong>Assaltos a pedestres</strong> e motoristas na Av. Presidente Vargas, Rua Uruguaiana e entorno da
+              Central do Brasil.</li>
+            <li><strong>Abordagens agressivas a turistas</strong>, principalmente em áreas movimentadas e próximas a
+              pontos turísticos.</li>
+            <li><strong>Golpes com troca de cartões</strong> e máquinas adulteradas em bares e lanchonetes da Lapa e
+              Largo da Carioca.</li>
+            <li><strong>Presença constante de usuários de drogas</strong> e atividades ilícitas em torno da Praça da
+              República e Central.</li>
+          </ul>
 
         </div>
         <div class="col-md-4">
-            <h4>Desastres Naturais no Centro:</h4>
-            <ul>
-            <li><strong>Enchentes frequentes</strong> em ruas como Uruguaiana, Primeiro de Março e Buenos Aires após chuvas intensas.</li>
-            <li><strong>Bolsões d'água</strong> recorrentes na Av. Rio Branco, Praça XV, Rua da Carioca e entorno da Candelária.</li>
-            <li><strong>Alagamentos nos túneis</strong>, como o Túnel Marcello Alencar, causando interrupções no trânsito e no VLT.</li>
-            <li><strong>Acúmulo de lixo em bueiros</strong> e sistema de escoamento deficiente, agravando os alagamentos rápidos.</li>
-            <li><strong>Deslizamentos pontuais</strong> nos morros do entorno, como o Morro da Providência, durante tempestades fortes.</li>
-            </ul>
+          <h4>Desastres Naturais no Centro:</h4>
+          <ul>
+            <li><strong>Enchentes frequentes</strong> em ruas como Uruguaiana, Primeiro de Março e Buenos Aires após
+              chuvas intensas.</li>
+            <li><strong>Bolsões d'água</strong> recorrentes na Av. Rio Branco, Praça XV, Rua da Carioca e entorno da
+              Candelária.</li>
+            <li><strong>Alagamentos nos túneis</strong>, como o Túnel Marcello Alencar, causando interrupções no
+              trânsito e no VLT.</li>
+            <li><strong>Acúmulo de lixo em bueiros</strong> e sistema de escoamento deficiente, agravando os alagamentos
+              rápidos.</li>
+            <li><strong>Deslizamentos pontuais</strong> nos morros do entorno, como o Morro da Providência, durante
+              tempestades fortes.</li>
+          </ul>
         </div>
-<div class="col-md-4">
-  <h4>Áreas que exigem mais atenção (Centro):</h4>
-  <ul>
-    <li>
-      <a href="https://www.google.com/maps/place/Saara/@-22.9058685,-43.1899662,17z/data=!3m1!4b1!4m6!3m5!1s0x997f690f981241:0xca04a15ca2eeb693!8m2!3d-22.9058685!4d-43.1873859!16s%2Fg%2F1hhjxkkxn!5m1!1e4?entry=ttu&g_ep=EgoyMDI1MDcwOS4wIKXMDSoASAFQAw%3D%3D" class="link-area" target="_blank">
-        Saara(Rua Uruguaiana e arredores)
-      </a>
-      – Região comercial popular, com muitos casos de furtos e pequenos roubos, principalmente em períodos de grande movimento.
-    </li>
-    <li>
-      <a href="https://www.google.com/maps/place/Central+do+Brasil+%2F+Centro/@-22.9058685,-43.1899662,17z/data=!4m6!3m5!1s0x997f6bbb0498f3:0x6b14a3a7230b80f9!8m2!3d-22.9049227!4d-43.1908422!16zL20vMDRrZnBx!5m1!1e4?entry=ttu&g_ep=EgoyMDI1MDcwOS4wIKXMDSoASAFQAw%3D%3D" class="link-area" target="_blank">
-        Central do Brasil
-      </a>
-      – Área com alta circulação de pessoas, conhecida por furtos, assaltos a pedestres e usuários de drogas.
-    </li>
-    <li>
-      <a href="https://www.google.com/maps/place/Central+do+Brasil+%2F+Centro/@-22.9058685,-43.1899662,17z/data=!4m6!3m5!1s0x997f6bbb0498f3:0x6b14a3a7230b80f9!8m2!3d-22.9049227!4d-43.1908422!16zL20vMDRrZnBx!5m1!1e4?entry=ttu&g_ep=EgoyMDI1MDcwOS4wIKXMDSoASAFQAw%3D%3D" class="link-area" target="_blank">
-        Av. Presidente Vargas
-      </a>
-      – Local de assaltos a pé e em veículos, com risco elevado após o anoitecer.
-    <li>
-      <a href="https://www.google.com/maps/place/Lapa,+Rio+de+Janeiro+-+State+of+Rio+de+Janeiro/@-22.9140092,-43.186338,16z/data=!3m1!4b1!4m6!3m5!1s0x997f64dc03b62f:0x2ff8d3e000f0638e!8m2!3d-22.9143817!4d-43.1780898!16s%2Fm%2F02z8z71!5m1!1e4?entry=ttu&g_ep=EgoyMDI1MDcwOS4wIKXMDSoASAFQAw%3D%3D" class="link-area" target="_blank">
-        Lapa
-      </a>
-      – Bares e vida noturna atraem golpistas e furtos com violência.
-    </li>
-    <li>
-      <a href="https://www.google.com/maps/place/Cinelândia+-+Centro,+Rio+de+Janeiro+-+RJ/@-22.9107487,-43.1776128,18z/data=!3m1!4b1!4m6!3m5!1s0x997f619104e481:0xe00599133fcb778b!8m2!3d-22.9106898!4d-43.1762297!16s%2Fm%2F02z9d_z!5m1!1e4?entry=ttu&g_ep=EgoyMDI1MDcwOS4wIKXMDSoASAFQAw%3D%3D" class="link-area" target="_blank">
-        Cinelândia  
-      </a>
-      – Furtos constantes, principalmente em horários de pico e fim de ano.
-    </li>
-  </ul>
-</div>
+        <div class="col-md-4">
+          <h4>Áreas que exigem mais atenção (Centro):</h4>
+          <ul>
+            <li>
+              <a href="https://www.google.com/maps/place/Saara/@-22.9058685,-43.1899662,17z/data=!3m1!4b1!4m6!3m5!1s0x997f690f981241:0xca04a15ca2eeb693!8m2!3d-22.9058685!4d-43.1873859!16s%2Fg%2F1hhjxkkxn!5m1!1e4?entry=ttu&g_ep=EgoyMDI1MDcwOS4wIKXMDSoASAFQAw%3D%3D"
+                class="link-area" target="_blank">
+                Saara(Rua Uruguaiana e arredores)
+              </a>
+              – Região comercial popular, com muitos casos de furtos e pequenos roubos, principalmente em períodos de
+              grande movimento.
+            </li>
+            <li>
+              <a href="https://www.google.com/maps/place/Central+do+Brasil+%2F+Centro/@-22.9058685,-43.1899662,17z/data=!4m6!3m5!1s0x997f6bbb0498f3:0x6b14a3a7230b80f9!8m2!3d-22.9049227!4d-43.1908422!16zL20vMDRrZnBx!5m1!1e4?entry=ttu&g_ep=EgoyMDI1MDcwOS4wIKXMDSoASAFQAw%3D%3D"
+                class="link-area" target="_blank">
+                Central do Brasil
+              </a>
+              – Área com alta circulação de pessoas, conhecida por furtos, assaltos a pedestres e usuários de drogas.
+            </li>
+            <li>
+              <a href="https://www.google.com/maps/place/Central+do+Brasil+%2F+Centro/@-22.9058685,-43.1899662,17z/data=!4m6!3m5!1s0x997f6bbb0498f3:0x6b14a3a7230b80f9!8m2!3d-22.9049227!4d-43.1908422!16zL20vMDRrZnBx!5m1!1e4?entry=ttu&g_ep=EgoyMDI1MDcwOS4wIKXMDSoASAFQAw%3D%3D"
+                class="link-area" target="_blank">
+                Av. Presidente Vargas
+              </a>
+              – Local de assaltos a pé e em veículos, com risco elevado após o anoitecer.
+            <li>
+              <a href="https://www.google.com/maps/place/Lapa,+Rio+de+Janeiro+-+State+of+Rio+de+Janeiro/@-22.9140092,-43.186338,16z/data=!3m1!4b1!4m6!3m5!1s0x997f64dc03b62f:0x2ff8d3e000f0638e!8m2!3d-22.9143817!4d-43.1780898!16s%2Fm%2F02z8z71!5m1!1e4?entry=ttu&g_ep=EgoyMDI1MDcwOS4wIKXMDSoASAFQAw%3D%3D"
+                class="link-area" target="_blank">
+                Lapa
+              </a>
+              – Bares e vida noturna atraem golpistas e furtos com violência.
+            </li>
+            <li>
+              <a href="https://www.google.com/maps/place/Cinelândia+-+Centro,+Rio+de+Janeiro+-+RJ/@-22.9107487,-43.1776128,18z/data=!3m1!4b1!4m6!3m5!1s0x997f619104e481:0xe00599133fcb778b!8m2!3d-22.9106898!4d-43.1762297!16s%2Fm%2F02z9d_z!5m1!1e4?entry=ttu&g_ep=EgoyMDI1MDcwOS4wIKXMDSoASAFQAw%3D%3D"
+                class="link-area" target="_blank">
+                Cinelândia
+              </a>
+              – Furtos constantes, principalmente em horários de pico e fim de ano.
+            </li>
+          </ul>
+        </div>
 
       </div>
     </div>
@@ -147,13 +207,13 @@
       <div class="row justify-content-center">
         <div class="tp texto-principal col-12 col-md-6">
           <p class="textoGlobalNormal bg-primary">
-            Evite trafegar por essas áreas, tanto de carro quanto a pé, especialmente fora dos horários comerciais. 
+            Evite trafegar por essas áreas, tanto de carro quanto a pé, especialmente fora dos horários comerciais.
             Apps como Waze ou Google Maps podem sugerir caminhos mais rápidos que cruzam zonas de risco.
           </p>
         </div>
         <div class="tp texto-principal2 col-12 col-md-6">
           <p class="textoGlobalNormal bg-primary">
-            Nosso objetivo não é afastar você do Centro, mas tornar sua experiência mais segura. Continue navegando 
+            Nosso objetivo não é afastar você do Centro, mas tornar sua experiência mais segura. Continue navegando
             pelo RJ360 para ver rotas alternativas, alertas ao vivo e regiões seguras para explorar com tranquilidade.
           </p>
         </div>
@@ -173,10 +233,10 @@
       <p class="text-center textoGlobalNormal">Veja o que as pessoas estão falando sobre o Centro:</p>
 
       <div class="text-center d-flex flex-column flex-md-row justify-content-center gap-2 mb-3">
-        <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
-          data-bs-target="#accordionFlushExample" aria-expanded="false" aria-controls="accordionFlushExample">Veja mais</button>
-        <button class="btn btn-success" type="button" data-bs-toggle="offcanvas"
-          data-bs-target="#offcanvasComentario" aria-controls="offcanvasComentario">Adicionar Comentário</button>
+        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#accordionFlushExample"
+          aria-expanded="false" aria-controls="accordionFlushExample">Veja mais</button>
+        <button class="btn btn-success" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasComentario"
+          aria-controls="offcanvasComentario">Adicionar Comentário</button>
       </div>
 
       <div class="offcanvas offcanvas-bottom custom-offcanvas" tabindex="-1" id="offcanvasComentario"
@@ -234,9 +294,9 @@
         <a href="#"><i class="icones-rodape bi bi-facebook"></i></a>
       </div>
     </div>
-        <div class="rodape-copywrite">
-            <p id="anoAtual" class="text-custom-footer pt-2"></p>
-        </div>
+    <div class="rodape-copywrite">
+      <p id="anoAtual" class="text-custom-footer pt-2"></p>
+    </div>
     <div class="rodapeLogo">
       <a class="navbar-brand" href="#">
         <img class="img-logo" src="../../../assets/logos/logo-rj360-removebg-preview.png" alt="">
