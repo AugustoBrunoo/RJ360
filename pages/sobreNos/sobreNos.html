@@ -17,61 +17,94 @@
 <body data-bs-theme="light">
     <!-- Inicio do Rodapé -->
     <header>
-        <nav class="navbar navbar-expand-lg bg-body-custom">
+        <nav class="navbar bg-body-custom fixed-top">
             <div class="container-fluid">
-                <div class="d-flex align-items-center">
-                    <a class="navbar-brand" href="../../index.html">
-                        <img class="img-logo" src="../../assets/logos/logo-rj360-removebg-preview.png" alt="">
-                        <span class="span-logo">RJ</span><span class="span-logo2">360</span>
-                    </a>
-                </div>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
+                <!-- Logo -->
+                <a class="navbar-brand d-flex align-items-center" href="../../index.html">
+                    <img class="img-logo" src="../../../assets/logos/logo-rj360-removebg-preview.png" alt="">
+                    <span class="span-logo">RJ</span><span class="span-logo2">360</span>
+                </a>
+
+                <!-- Botão que ativa o offcanvas -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 px-4 d-flex align-items-center">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">
-                                <i class="bi bi-circle-half icon-aparencia" id="modo-noturno"></i>
+
+                <!-- Offcanvas -->
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title fs-2" id="offcanvasNavbarLabel">Menu</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+
+                    <div class="offcanvas-body d-flex flex-column justify-content-between">
+                        <!-- Bloco das opções -->
+                        <div class="container-opcao">
+                            <!-- Tema -->
+                            <a class="nav-link offcanvas-link active botoes-offcanvas" id="modo-noturno" href="#">
+                                <i class="bi bi-circle-half me-2"></i> Tema do Site
                             </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">
-                                <i class="icon-home bi bi-house-door-fill"></i>
+
+                            <!-- Página Inicial -->
+                            <a class="nav-link offcanvas-link active botoes-offcanvas" href="#">
+                                <i class="bi bi-house-door-fill me-2"></i> Página Inicial
                             </a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle fs-5" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Regiões
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="../../pages/zonas/zona sul/zona-sul.html">Zona
-                                        Sul</a>
-                                </li>
-                                <li><a class="dropdown-item" href="../../pages/zonas/zona norte/zona-norte.html">Zona
-                                        Norte</a></li>
-                                <li><a class="dropdown-item" href="../../pages/zonas/zona oeste/zona-oeste.html">Zona
-                                        Oeste</a></li>
-                                <li><a class="dropdown-item" href="../../pages/zonas/centro/centro.html">Centro</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">Destaques</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active fs-5" href="#">Sobre Nós</a>
-                        </li>
-                    </ul>
+
+                            <!-- Dropdown Regiões -->
+                            <div class="dropdown">
+                                <a class="nav-link offcanvas-link dropdown-toggle text-center botoes-offcanvas" href="#"
+                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Regiões
+                                </a>
+                                <ul class="dropdown-menu text-center w-100">
+                                    <li><a class="dropdown-item" href="../zonas/zona sul/zona-sul.html">Zona
+                                            Sul</a></li>
+                                    <li><a class="dropdown-item" href="../zonas/zona norte/zona-norte.html">Zona
+                                            Norte</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="../zonas/zona oeste/zona-oeste.html">Zona
+                                            Oeste</a></li>
+                                    <li><a class="dropdown-item" href="../zonas/centro/centro.html">Centro</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="../dmsfuncionalidades/dmsf.html">Explorar</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- Sobre Nós -->
+                            <a class="nav-link offcanvas-link fs-5 botoes-offcanvas"
+                                href="../sobreNos/sobreNos.html">Sobre Nós</a>
+                        </div>
+
+                        <!-- Bloco do perfil (fixado embaixo) -->
+                        <!-- Bloco do perfil (fixado embaixo) -->
+                        <div class="container-perfil text-center mb-5">
+                            <div class="container-fazer-login">
+                                <h2 class="mb-4">Faça seu Login!</h2>
+                                <a href="../login/login.html" class="btn btn-global fs-5">Entrar</a>
+                            </div>
+
+                            <div class="perfil-offcanvas fs-5 d-none">
+                                <div class="img-perfil">
+                                    <img src="https://avatars.githubusercontent.com/u/174916340?v=4" alt="">
+                                </div>
+                                <p class="mt-2 fs-5 textoGlobalNormal-basic">Olá,<span
+                                        class="nome-usuario">Usuário</span>!</p>
+                                <a href="../perfil/perfil.html" class="btn btn-textoGlobalNormal btn-sm fs-vp mt-2">Ver
+                                    perfil</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </nav>
     </header>
 
-    <div class="container-textos-sobreNos mt-5">
+    <div class="container-textos-sobreNos space-mt-card-2">
         <h1 class="textoGlobalNegrito ms-4 text-center">Sobre Nós</h1>
     </div>
 
@@ -107,7 +140,8 @@
                             class="bi bi-github fs-custom-icon"></i>GitHub</p>
                 </a>
 
-                <a href="https://www.linkedin.com/in/augustobrunoo/" class="d-flex justify-content-center gap-3 icones-perfil">
+                <a href="https://www.linkedin.com/in/augustobrunoo/"
+                    class="d-flex justify-content-center gap-3 icones-perfil">
                     <p class="mb-0 fs-custom d-flex align-items-center gap-3"><i
                             class="bi bi-linkedin fs-custom-icon"></i>Linkedin</p>
                 </a>
@@ -129,7 +163,8 @@
                     <li class="list-group-item biografia-info">🎓Estudante de Sistemas de Informação na UNIRIO</li>
                     <li class="list-group-item biografia-info">💻 Desenvolvedor Back-end Junior
                     </li>
-                    <li class="list-group-item biografia-info">🌐 Conhecimento em Java, Python, Java, PHP, JavaScript (Node.js), MySQL</li>
+                    <li class="list-group-item biografia-info">🌐 Conhecimento em Java, Python, Java, PHP, JavaScript
+                        (Node.js), MySQL</li>
                     <li class="list-group-item biografia-info">📈 Sempre em busca de aprendizado contínuo e boas
                         práticas de código
                     </li>
@@ -147,7 +182,8 @@
                             class="bi bi-github fs-custom-icon"></i>GitHub</p>
                 </a>
 
-                <a href="https://www.linkedin.com/in/willyam-souza-400345366/" class="d-flex justify-content-center gap-3 icones-perfil">
+                <a href="https://www.linkedin.com/in/willyam-souza-400345366/"
+                    class="d-flex justify-content-center gap-3 icones-perfil">
                     <p class="mb-0 fs-custom d-flex align-items-center gap-3"><i
                             class="bi bi-linkedin fs-custom-icon"></i>Linkedin</p>
                 </a>
@@ -186,7 +222,8 @@
                             class="bi bi-github fs-custom-icon"></i>GitHub</p>
                 </a>
 
-                <a href="https://www.linkedin.com/in/daniel-zuvanov-49587735a/" class="d-flex justify-content-center gap-3 icones-perfil">
+                <a href="https://www.linkedin.com/in/daniel-zuvanov-49587735a/"
+                    class="d-flex justify-content-center gap-3 icones-perfil">
                     <p class="mb-0 fs-custom d-flex align-items-center gap-3"><i
                             class="bi bi-linkedin fs-custom-icon"></i>Linkedin</p>
                 </a>
@@ -200,7 +237,8 @@
 
         <div class="identidade-1 d-flex gap-5 align-items-center ms-xx teste justify-content-center">
             <div class="img-perfil">
-                <img src="https://media.licdn.com/dms/image/v2/D4E03AQHNLEIMDJl_Kg/profile-displayphoto-shrink_200_200/B4EZaFB7YRIAAY-/0/1745988597906?e=1758153600&v=beta&t=AS5zTHghXsmiW8vbKa1HtSZQKE4ffgvKtuktpVxAnN0" alt="">
+                <img src="https://media.licdn.com/dms/image/v2/D4E03AQHNLEIMDJl_Kg/profile-displayphoto-shrink_200_200/B4EZaFB7YRIAAY-/0/1745988597906?e=1758153600&v=beta&t=AS5zTHghXsmiW8vbKa1HtSZQKE4ffgvKtuktpVxAnN0"
+                    alt="">
             </div>
             <div class="textos-biografia">
                 <h1>Pierre Chapetta</h1>
@@ -226,7 +264,8 @@
                             class="bi bi-github fs-custom-icon"></i>GitHub</p>
                 </a>
 
-                <a href="https://www.linkedin.com/in/pierre-chapetta/" class="d-flex justify-content-center gap-3 icones-perfil">
+                <a href="https://www.linkedin.com/in/pierre-chapetta/"
+                    class="d-flex justify-content-center gap-3 icones-perfil">
                     <p class="mb-0 fs-custom d-flex align-items-center gap-3"><i
                             class="bi bi-linkedin fs-custom-icon"></i>Linkedin</p>
                 </a>
