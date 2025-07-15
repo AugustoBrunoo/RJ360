@@ -15,57 +15,87 @@
 
 <body data-bs-theme="light">
     <header>
-        <nav class="navbar bg-body-custom">
+        <nav class="navbar bg-body-custom fixed-top">
             <div class="container-fluid">
-                <a class="navbar-brand d-flex align-items-center" href="#">
-                    <img class="img-logo" src="../../assets/logos/logo-rj360-removebg-preview.png" alt="Logo RJ360" />
+                <!-- Logo -->
+                <a class="navbar-brand d-flex align-items-center" href="../../index.html">
+                    <img class="img-logo" src="../../../assets/logos/logo-rj360-removebg-preview.png" alt="">
                     <span class="span-logo">RJ</span><span class="span-logo2">360</span>
                 </a>
+
+                <!-- Botão que ativa o offcanvas -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
+                <!-- Offcanvas -->
                 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
                     aria-labelledby="offcanvasNavbarLabel">
                     <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+                        <h5 class="offcanvas-title fs-2" id="offcanvasNavbarLabel">Menu</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
-                    <div class="offcanvas-body">
-                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 d-flex align-items-start gap-2">
-                            <li class="nav-item">
-                                <a class="nav-link active" href="#">
-                                    <i class="bi bi-circle-half icon-aparencia" id="modo-noturno"></i>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" href="#">
-                                    <i class="icon-home bi bi-house-door-fill"></i>
-                                </a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle fs-5" href="#" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
+
+                    <div class="offcanvas-body d-flex flex-column justify-content-between">
+                        <!-- Bloco das opções -->
+                        <div class="container-opcao">
+                            <!-- Tema -->
+                            <a class="nav-link offcanvas-link active botoes-offcanvas" id="modo-noturno" href="#">
+                                <i class="bi bi-circle-half me-2"></i> Tema do Site
+                            </a>
+
+                            <!-- Página Inicial -->
+                            <a class="nav-link offcanvas-link active botoes-offcanvas" href="#">
+                                <i class="bi bi-house-door-fill me-2"></i> Página Inicial
+                            </a>
+
+                            <!-- Dropdown Regiões -->
+                            <div class="dropdown">
+                                <a class="nav-link offcanvas-link dropdown-toggle text-center botoes-offcanvas" href="#"
+                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Regiões
                                 </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="./pages/zonas/zona sul/zona-sul.html">Zona
+                                <ul class="dropdown-menu text-center w-100">
+                                    <li><a class="dropdown-item" href="../zonas/zona sul/zona-sul.html">Zona
                                             Sul</a></li>
-                                    <li><a class="dropdown-item" href="#">Zona Norte</a></li>
-                                    <li><a class="dropdown-item" href="./pages/zonas/zona oeste/zona-oeste.html">Zona
-                                            Oeste</a></li>
-                                    <li><a class="dropdown-item" href="#">Centro</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider" />
+                                    <li><a class="dropdown-item" href="../zonas/zona norte/zona-norte.html">Zona
+                                            Norte</a>
                                     </li>
-                                    <li><a class="dropdown-item" href="#">Destaques</a></li>
+                                    <li><a class="dropdown-item" href="../zonas/zona oeste/zona-oeste.html">Zona
+                                            Oeste</a></li>
+                                    <li><a class="dropdown-item" href="../zonas/centro/centro.html">Centro</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="../dmsfuncionalidades/dmsf.html">Explorar</a>
+                                    </li>
                                 </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link fs-5" href="./pages/sobreNos/sobreNos.html">Sobre Nós</a>
-                            </li>
-                        </ul>
+                            </div>
+
+                            <!-- Sobre Nós -->
+                            <a class="nav-link offcanvas-link fs-5 botoes-offcanvas"
+                                href="../sobreNos/sobreNos.html">Sobre Nós</a>
+                        </div>
+
+                        <!-- Bloco do perfil (fixado embaixo) -->
+                        <!-- Bloco do perfil (fixado embaixo) -->
+                        <div class="container-perfil text-center mb-5">
+                            <div class="container-fazer-login">
+                                <h2 class="mb-4">Faça seu Login!</h2>
+                                <a href="../login/login.html" class="btn btn-global fs-5">Entrar</a>
+                            </div>
+
+                            <div class="perfil-offcanvas fs-5 d-none">
+                                <div class="img-perfil">
+                                    <img src="https://avatars.githubusercontent.com/u/174916340?v=4" alt="">
+                                </div>
+                                <p class="mt-2 fs-5 textoGlobalNormal-basic">Olá,<span
+                                        class="nome-usuario">Usuário</span>!</p>
+                                <a href="../perfil/perfil.html" class="btn btn-textoGlobalNormal btn-sm fs-vp mt-2">Ver
+                                    perfil</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -73,7 +103,7 @@
     </header>
 
     <!-- Conteúdo principal -->
-    <main class="main-criar-conta mt-custom">
+    <main class="main-criar-conta space-mt-card-2">
         <div class="container-login d-flex justify-content-center">
             <div class="login-container row g-5">
 

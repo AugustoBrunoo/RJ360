@@ -8,262 +8,303 @@
     <link rel="shortcut icon" href="../../assets/logos/logo-rj360-removebg-preview.png" type="image/x-icon" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
-    <link rel="stylesheet" href="../../styleGlobal.css" />
     <link rel="stylesheet" href="../Guias_parceiros/guias.css" />
     <link rel="stylesheet" href="../../style.css" />
+    <link rel="stylesheet" href="../../styleGlobal.css" />
 </head>
 
 <body data-bs-theme="light">
 
     <!-- Navbar -->
     <header>
-        <nav class="navbar navbar-expand-lg bg-body-custom">
-            <div class="container-fluid">
-                <div class="d-flex align-items-center">
-                    <a class="navbar-brand" href="../../index.html">
-                        <img class="img-logo" src="../../assets/logos/logo-rj360-removebg-preview.png" alt="">
+        <header>
+            <nav class="navbar bg-body-custom fixed-top">
+                <div class="container-fluid">
+                    <!-- Logo -->
+                    <a class="navbar-brand d-flex align-items-center" href="../../index.html">
+                        <img class="img-logo" src="../../../assets/logos/logo-rj360-removebg-preview.png" alt="">
                         <span class="span-logo">RJ</span><span class="span-logo2">360</span>
                     </a>
-                </div>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 px-4 d-flex align-items-center">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">
-                                <i class="bi bi-circle-half icon-aparencia" id="modo-noturno"></i>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="../../index.html">
-                                <i class="icon-home bi bi-house-door-fill"></i>
-                            </a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Regiões
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="../../pages/zonas/zona sul/zona-sul.html">Zona
-                                        Sul</a>
-                                </li>
-                                <li><a class="dropdown-item" href="../../pages/zonas/zona norte/zona-norte.html">Zona
-                                        Norte</a></li>
-                                <li><a class="dropdown-item" href="../../pages/zonas/zona oeste/zona-oeste.html">Zona
-                                        Oeste</a></li>
-                                <li><a class="dropdown-item" href="../../pages/zonas/centro/centro.html">Centro</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">Destaques</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Sobre Nós</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
 
-    <!-- Conteúdo -->
-    <main class="container pt-5 mt-5">
-        <div class="d-flex justify-content-between align-items-center my-4">
-            <h1 class="titulo-Guias">RJ360: Guias</h1>
-            <a href="../Guias_parceiros/parceiro_guia.html" class="btn btn-parceiro">Seja um Guia parceiro</a>
-        </div>
+                    <!-- Botão que ativa o offcanvas -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
 
-        <p>Conheça nossos guias parceiros! Esta página é dedicada a divulgar guias confiáveis, para garantir passeios
-            seguros
-            e inesquecíveis no Rio de Janeiro.</p>
-
-        <!-- Filtros -->
-        <div class="row my-4 g-2">
-            <div class="col-md-4">
-                <input type="text" id="search-name" class="form-control" placeholder="Buscar pelo nome do passeio" />
-            </div>
-            <div class="col-md-4">
-                <select id="search-type" class="form-select">
-                    <option value="">Todos os tipos</option>
-                    <option value="Trilha">Trilha</option>
-                    <option value="Cultural">Cultural</option>
-                    <option value="Praia">Praia</option>
-                </select>
-            </div>
-            <div class="col-md-4">
-                <select id="search-price" class="form-select">
-                    <option value="">Todos os valores</option>
-                    <option value="low">Até R$100</option>
-                    <option value="medium">R$101 - R$300</option>
-                    <option value="high">Acima de R$300</option>
-                </select>
-            </div>
-        </div>
-
-        <!-- Mensagem de nada encontrado -->
-        <div id="not-found" class="text-center my-4 fw-bold" style="display:none;">
-            Hmm... que pena, nenhum passeio foi encontrado.
-        </div>
-
-        <!-- Cards de passeios -->
-        <div class="row" id="cards-container">
-            <div class="col-md-4 mb-4 card-item" data-name="Trilha Pedra Bonita" data-type="Trilha" data-price="low">
-                <div class="card card-bg-zonas card-hover-zonas">
-                    <img src="../../assets/imagens/outras_fotos/Trilha_pedra_bonita - Copia.jpg"
-                        class="card-img-top imagem-zona-card" alt="Trilha Pedra Bonita" />
-                    <div class="card-body">
-                        <h5 class="card-title">Trilha Pedra Bonita</h5>
-                        <p class="card-text">Uma trilha incrível com vista para o Rio.</p>
-                        <a href="#" class="btn btn-ver-mais" data-bs-toggle="modal" data-bs-target="#modalPasseio"
-                            data-nome="Trilha Pedra Bonita" data-desc="Uma trilha incrível com vista para o Rio."
-                            data-img="./assets/pedra-bonita.jpg">
-                            Ver mais
-                        </a>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 mb-4 card-item" data-name="Tour Histórico Centro" data-type="Cultural"
-                data-price="medium">
-                <div class="card card-bg-zonas card-hover-zonas">
-                    <img src="../../assets/imagens/outras_fotos/imagem_tour_centro.jpg"
-                        class="card-img-top imagem-zona-card" alt="Tour Histórico Centro" />
-                    <div class="card-body">
-                        <h5 class="card-title">Tour Histórico Centro</h5>
-                        <p class="card-text">Explore o centro do Rio com um guia especializado.</p>
-                        <a href="#" class="btn btn-ver-mais" data-bs-toggle="modal" data-bs-target="#modalPasseio"
-                            data-nome="Tour Histórico Centro"
-                            data-desc="Explore o centro do Rio com um guia especializado."
-                            data-img="./assets/tour-centro.jpg">
-                            Ver mais
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 mb-4 card-item" data-name="Praia Secreta" data-type="Praia" data-price="high">
-                <div class="card card-bg-zonas card-hover-zonas">
-                    <img src="../../assets/imagens/outras_fotos/Praia-do-Secreto_img.jpg.webp"
-                        class="card-img-top imagem-zona-card" alt="Praia Secreta" />
-                    <div class="card-body">
-                        <h5 class="card-title">Praia do Secreto</h5>
-                        <p class="card-text">Passeio exclusivo em praias escondidas.</p>
-                        <a href="#" class="btn btn-ver-mais" data-bs-toggle="modal" data-bs-target="#modalPasseio"
-                            data-nome="Praia Secreta" data-desc="Passeio exclusivo em praias escondidas."
-                            data-img="./assets/praia-secreta.jpg">
-                            Ver mais
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
-
-    <!-- Rodapé -->
-    <footer class="container-rodape container-fluid d-flex justify-content-around align-items-center py-2">
-
-        <div class="rodapeLinks">
-            <div class="rodape--texto">
-                <p>Siga a gente nas Redes Sociais:</p>
-            </div>
-            <div class="rodape--redes-sociais d-flex justify-content-evenly">
-                <a href="#"><i class="icones-rodape bi bi-instagram"></i></a>
-                <a href="#"><i class="icones-rodape bi bi-twitter-x"></i></a>
-                <a href="#"><i class="icones-rodape bi bi-facebook"></i></a>
-            </div>
-        </div>
-
-        <div class="rodape-copywrite">
-            <p id="anoAtual" class="text-custom-footer pt-2"></p>
-        </div>
-
-        <div class="rodapeLogo">
-            <a class="navbar-brand" href="#">
-                <img class="img-logo" src="../../assets/logos/logo-rj360-removebg-preview.png" alt="">
-                <span class="span-logo-rodape">RJ</span><span class="span-logo2-rodape">360</span>
-            </a>
-        </div>
-    </footer>
-
-    <!-- Modal Passeio -->
-    <div class="modal fade" id="modalPasseio" tabindex="-1" aria-labelledby="modalPasseioLabel" aria-hidden="true">
-        <div class="modal-dialog modal-xl modal-dialog-centered">
-            <div class="modal-content modal-custom">
-                <div class="modal-header border-0">
-                    <h5 class="modal-title" id="modalPasseioLabel"></h5>
-                    <button type="button" class="btn-close ms-2" data-bs-dismiss="modal" aria-label="Fechar"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="row g-4">
-                        <div class="col-md-4">
-                            <img id="modalImagem" src="" alt="Imagem Passeio" class="img-fluid rounded">
-                            <div class="guia-info-box mt-3 p-3">
-                                <p id="modalGuiaInfo" class="m-0">Informações do Guia</p>
-                            </div>
+                    <!-- Offcanvas -->
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                        aria-labelledby="offcanvasNavbarLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title fs-2" id="offcanvasNavbarLabel">Menu</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
                         </div>
-                        <div class="col-md-8">
-                            <div class="descricao-box p-4 rounded">
-                                <h2 class="descricao-subtitulo">Descrição do passeio:</h2>
-                                <p id="modalDescricao"></p>
-                                <div class="descricao-acoes">
-                                    <button id="btnFavoritar" class="btn-acao" title="Favoritar">
-                                        <i class="bi bi-heart-fill"></i>
-                                    </button>
-                                    <button id="btnCompartilhar" class="btn-acao" title="Compartilhar">
-                                        <i class="bi bi-share-fill"></i>
-                                    </button>
-                                    <button id="btnDenunciar" class="btn-acao" title="Denunciar">
-                                        <i class="bi bi-exclamation-triangle-fill"></i>
-                                    </button>
-                                    <button id="btnComentar" class="btn-acao" title="Comentar">
-                                        <i class="bi bi-chat-dots-fill"></i>
-                                    </button>
+
+                        <div class="offcanvas-body d-flex flex-column justify-content-between">
+                            <!-- Bloco das opções -->
+                            <div class="container-opcao">
+                                <!-- Tema -->
+                                <a class="nav-link offcanvas-link active botoes-offcanvas" id="modo-noturno" href="#">
+                                    <i class="bi bi-circle-half me-2"></i> Tema do Site
+                                </a>
+
+                                <!-- Página Inicial -->
+                                <a class="nav-link offcanvas-link active botoes-offcanvas" href="#">
+                                    <i class="bi bi-house-door-fill me-2"></i> Página Inicial
+                                </a>
+
+                                <!-- Dropdown Regiões -->
+                                <div class="dropdown">
+                                    <a class="nav-link offcanvas-link dropdown-toggle text-center botoes-offcanvas"
+                                        href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Regiões
+                                    </a>
+                                    <ul class="dropdown-menu text-center w-100">
+                                        <li><a class="dropdown-item" href="../zonas/zona sul/zona-sul.html">Zona
+                                                Sul</a></li>
+                                        <li><a class="dropdown-item" href="../zonas/zona norte/zona-norte.html">Zona
+                                                Norte</a>
+                                        </li>
+                                        <li><a class="dropdown-item" href="../zonas/zona oeste/zona-oeste.html">Zona
+                                                Oeste</a></li>
+                                        <li><a class="dropdown-item" href="../zonas/centro/centro.html">Centro</a></li>
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+                                        <li><a class="dropdown-item" href="../dmsfuncionalidades/dmsf.html">Explorar</a>
+                                        </li>
+                                    </ul>
                                 </div>
 
+                                <!-- Sobre Nós -->
+                                <a class="nav-link offcanvas-link fs-5 botoes-offcanvas"
+                                    href="../sobreNos/sobreNos.html">Sobre Nós</a>
+                            </div>
+
+                            <!-- Bloco do perfil (fixado embaixo) -->
+                            <!-- Bloco do perfil (fixado embaixo) -->
+                            <div class="container-perfil text-center mb-5">
+                                <div class="container-fazer-login">
+                                    <h2 class="mb-4">Faça seu Login!</h2>
+                                    <a href="../login/login.html" class="btn btn-global fs-5">Entrar</a>
+                                </div>
+
+                                <div class="perfil-offcanvas fs-5 d-none">
+                                    <div class="img-perfil">
+                                        <img src="https://avatars.githubusercontent.com/u/174916340?v=4" alt="">
+                                    </div>
+                                    <p class="mt-2 fs-5 textoGlobalNormal-basic">Olá,<span
+                                            class="nome-usuario">Usuário</span>!</p>
+                                    <a href="../perfil/perfil.html"
+                                        class="btn btn-textoGlobalNormal btn-sm fs-vp mt-2">Ver
+                                        perfil</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Conteúdo -->
+        <main class="container pt-5 space-mt-card-2">
+            <div class="d-flex justify-content-between align-items-center my-4">
+                <h1 class="titulo-Guias">RJ360: Guias</h1>
+                <a href="../Guias_parceiros/parceiro_guia.html" class="btn btn-parceiro">Seja um Guia parceiro</a>
+            </div>
+
+            <p>Conheça nossos guias parceiros! Esta página é dedicada a divulgar guias confiáveis, para garantir
+                passeios
+                seguros
+                e inesquecíveis no Rio de Janeiro.</p>
+
+            <!-- Filtros -->
+            <div class="row my-4 g-2">
+                <div class="col-md-4">
+                    <input type="text" id="search-name" class="form-control"
+                        placeholder="Buscar pelo nome do passeio" />
+                </div>
+                <div class="col-md-4">
+                    <select id="search-type" class="form-select">
+                        <option value="">Todos os tipos</option>
+                        <option value="Trilha">Trilha</option>
+                        <option value="Cultural">Cultural</option>
+                        <option value="Praia">Praia</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <select id="search-price" class="form-select">
+                        <option value="">Todos os valores</option>
+                        <option value="low">Até R$100</option>
+                        <option value="medium">R$101 - R$300</option>
+                        <option value="high">Acima de R$300</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Mensagem de nada encontrado -->
+            <div id="not-found" class="text-center my-4 fw-bold" style="display:none;">
+                Hmm... que pena, nenhum passeio foi encontrado.
+            </div>
+
+            <!-- Cards de passeios -->
+            <div class="row" id="cards-container">
+                <div class="col-md-4 mb-4 card-item" data-name="Trilha Pedra Bonita" data-type="Trilha"
+                    data-price="low">
+                    <div class="card card-bg-zonas card-hover-zonas">
+                        <img src="../../assets/imagens/outras_fotos/Trilha_pedra_bonita - Copia.jpg"
+                            class="card-img-top imagem-zona-card" alt="Trilha Pedra Bonita" />
+                        <div class="card-body">
+                            <h5 class="card-title">Trilha Pedra Bonita</h5>
+                            <p class="card-text">Uma trilha incrível com vista para o Rio.</p>
+                            <a href="#" class="btn btn-ver-mais" data-bs-toggle="modal" data-bs-target="#modalPasseio"
+                                data-nome="Trilha Pedra Bonita" data-desc="Uma trilha incrível com vista para o Rio."
+                                data-img="./assets/pedra-bonita.jpg">
+                                Ver mais
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4 card-item" data-name="Tour Histórico Centro" data-type="Cultural"
+                    data-price="medium">
+                    <div class="card card-bg-zonas card-hover-zonas">
+                        <img src="../../assets/imagens/outras_fotos/imagem_tour_centro.jpg"
+                            class="card-img-top imagem-zona-card" alt="Tour Histórico Centro" />
+                        <div class="card-body">
+                            <h5 class="card-title">Tour Histórico Centro</h5>
+                            <p class="card-text">Explore o centro do Rio com um guia especializado.</p>
+                            <a href="#" class="btn btn-ver-mais" data-bs-toggle="modal" data-bs-target="#modalPasseio"
+                                data-nome="Tour Histórico Centro"
+                                data-desc="Explore o centro do Rio com um guia especializado."
+                                data-img="./assets/tour-centro.jpg">
+                                Ver mais
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4 card-item" data-name="Praia Secreta" data-type="Praia" data-price="high">
+                    <div class="card card-bg-zonas card-hover-zonas">
+                        <img src="../../assets/imagens/outras_fotos/Praia-do-Secreto_img.jpg.webp"
+                            class="card-img-top imagem-zona-card" alt="Praia Secreta" />
+                        <div class="card-body">
+                            <h5 class="card-title">Praia do Secreto</h5>
+                            <p class="card-text">Passeio exclusivo em praias escondidas.</p>
+                            <a href="#" class="btn btn-ver-mais" data-bs-toggle="modal" data-bs-target="#modalPasseio"
+                                data-nome="Praia Secreta" data-desc="Passeio exclusivo em praias escondidas."
+                                data-img="./assets/praia-secreta.jpg">
+                                Ver mais
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Rodapé -->
+        <footer class="container-rodape container-fluid d-flex justify-content-around align-items-center py-2">
+
+            <div class="rodapeLinks">
+                <div class="rodape--texto">
+                    <p>Siga a gente nas Redes Sociais:</p>
+                </div>
+                <div class="rodape--redes-sociais d-flex justify-content-evenly">
+                    <a href="#"><i class="icones-rodape bi bi-instagram"></i></a>
+                    <a href="#"><i class="icones-rodape bi bi-twitter-x"></i></a>
+                    <a href="#"><i class="icones-rodape bi bi-facebook"></i></a>
+                </div>
+            </div>
+
+            <div class="rodape-copywrite">
+                <p id="anoAtual" class="text-custom-footer pt-2"></p>
+            </div>
+
+            <div class="rodapeLogo">
+                <a class="navbar-brand" href="#">
+                    <img class="img-logo" src="../../assets/logos/logo-rj360-removebg-preview.png" alt="">
+                    <span class="span-logo-rodape">RJ</span><span class="span-logo2-rodape">360</span>
+                </a>
+            </div>
+        </footer>
+
+        <!-- Modal Passeio -->
+        <div class="modal fade" id="modalPasseio" tabindex="-1" aria-labelledby="modalPasseioLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+                <div class="modal-content modal-custom">
+                    <div class="modal-header border-0">
+                        <h5 class="modal-title" id="modalPasseioLabel"></h5>
+                        <button type="button" class="btn-close ms-2" data-bs-dismiss="modal"
+                            aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row g-4">
+                            <div class="col-md-4">
+                                <img id="modalImagem" src="" alt="Imagem Passeio" class="img-fluid rounded">
+                                <div class="guia-info-box mt-3 p-3">
+                                    <p id="modalGuiaInfo" class="m-0">Informações do Guia</p>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="descricao-box p-4 rounded">
+                                    <h2 class="descricao-subtitulo">Descrição do passeio:</h2>
+                                    <p id="modalDescricao"></p>
+                                    <div class="descricao-acoes">
+                                        <button id="btnFavoritar" class="btn-acao" title="Favoritar">
+                                            <i class="bi bi-heart-fill"></i>
+                                        </button>
+                                        <button id="btnCompartilhar" class="btn-acao" title="Compartilhar">
+                                            <i class="bi bi-share-fill"></i>
+                                        </button>
+                                        <button id="btnDenunciar" class="btn-acao" title="Denunciar">
+                                            <i class="bi bi-exclamation-triangle-fill"></i>
+                                        </button>
+                                        <button id="btnComentar" class="btn-acao" title="Comentar">
+                                            <i class="bi bi-chat-dots-fill"></i>
+                                        </button>
+                                    </div>
+
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- Modal Comentário -->
-    <div class="modal fade" id="modalComentario" tabindex="-1" aria-labelledby="modalComentarioLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modalComentarioLabel">Deixe seu comentário</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
-                </div>
-                <div class="modal-body">
-                    <form id="formComentario">
-                        <div class="mb-3">
-                            <label for="nomeUsuario" class="form-label">Seu Nome</label>
-                            <input type="text" class="form-control" id="nomeUsuario" required />
-                        </div>
-                        <div class="mb-3">
-                            <label for="comentarioUsuario" class="form-label">Comentário</label>
-                            <textarea class="form-control" id="comentarioUsuario" rows="3" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Enviar Comentário</button>
-                    </form>
+        <!-- Modal Comentário -->
+        <div class="modal fade" id="modalComentario" tabindex="-1" aria-labelledby="modalComentarioLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalComentarioLabel">Deixe seu comentário</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="formComentario">
+                            <div class="mb-3">
+                                <label for="nomeUsuario" class="form-label">Seu Nome</label>
+                                <input type="text" class="form-control" id="nomeUsuario" required />
+                            </div>
+                            <div class="mb-3">
+                                <label for="comentarioUsuario" class="form-label">Comentário</label>
+                                <textarea class="form-control" id="comentarioUsuario" rows="3" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Enviar Comentário</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../../script.js"></script>
-    <script src="../Guias_parceiros/guias.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="../../script.js"></script>
+        <script src="../Guias_parceiros/guias.js"></script>
 </body>
 
 </html>
