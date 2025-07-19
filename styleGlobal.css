@@ -86,8 +86,10 @@
 }
 
 .btn-global:hover {
-    background-color: var(--noturno-verde);
-    color: white;
+    background-color: #6C812F;
+    /* tom mais escuro para o hover */
+    transform: scale(1.03);
+    /* leve aumento ao passar o mouse */
 }
 
 .container-opcao {
@@ -183,14 +185,9 @@
     background-color: var(--azul-claro);
 }
 
+
 [data-bs-theme="dark"] {
     
-
-    .btn-global:hover {
-        background-color: var(--off-white);
-        color: black;
-    }
-
     .btn-textoGlobalNormal:hover {
         transition: 0.5s;
         background-color: var(--noturno-verde-off);
@@ -205,10 +202,13 @@
 
     /*Botões offcanvas do cabeçalho*/
     .botoes-offcanvas {
-        background-color: var(--creme);
+        transition: 0.5s;
+        background-color: white;
+        border: none;
+        color: #1A1A19;
     }
 
     .botoes-offcanvas:hover {
-        background-color: #343a40;
+        background-color: #6C812F;
     }
 }
