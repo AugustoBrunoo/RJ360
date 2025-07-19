@@ -117,6 +117,14 @@ body {
     font-style: normal;
 }
 
+/* Ajustes visuais complementares para melhor equilíbrio */
+
+.t-home {
+    font-size: 20px;
+}
+
+
+
 /* Card de Zonas */
 
 .imagem-zona {
@@ -138,27 +146,35 @@ body {
     animation: bordaColoridaRJ360 3s infinite;
 }
 
+
+
 /* Section de Planner Inteligente */
 
 .container-textoInformativo-planner p {
     width: 50%;
 }
 
+.text-planner {
+    width: 430px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
 .container-planner {
-    background-color: var(--noturno-verde-claro);
+    background-color: #fafafa;
     padding: 30px;
     border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .img-planner {
     width: 400px;
     border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 /*Seção Locomoção + Demais funcionalidades*/
-.secao-final {
-    margin-top: 7%;
-}
+
 
 .texto-locomocao,
 .btn-locomocao {
@@ -176,49 +192,181 @@ body {
 } */
 
 .text-custom-funcionalidade {
-    font-size: 26px;
+    font-size: 24px;
 }
+
+.btn-planner {
+    width: 45%;
+    height: 40px;
+    background-color: var(--noturno-verde-claro);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-planner:hover {
+    background-color: #6C812F;
+    /* tom mais escuro para o hover */
+    transform: scale(1.03);
+    /* leve aumento ao passar o mouse */
+}
+
+.container-eventosLimitados {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 12px;
+    padding: 2rem;
+    /* espaço interno */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    /* sombra leve */
+}
+
+
+.card-info {
+    background-color: #f8f9fa;
+    /* fundo leve */
+    border: 1px solid #dee2e6;
+    /* borda sutil */
+    border-radius: 12px;
+    /* cantos arredondados */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    /* sombra leve */
+    padding: 2rem;
+    /* espaço interno */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    /* garante altura uniforme */
+    transition: transform 0.2s ease;
+}
+
+.card-info:hover {
+    transform: translateY(-4px);
+    /* leve elevação ao passar o mouse */
+}
+
 
 
 /* Carrosel de Avaliações + Card Avaliações */
 
-/*Altura do card container*/
-.carrousel-custom {
-    /* background-color: var(--verde-claro); */
-    /* background-color: red; */
-    height: max-content;
+.container-avaliacoes {
+    min-height: 400px;
+    position: relative;
 }
 
+.carousel-inner {
+    position: relative;
+    min-height: 390px;
+    /* ou altura do maior card */
+}
+
+/* Carrossel Container */
+.carrousel-custom {
+    height: max-content;
+    padding: 2rem 1rem;
+    /* background-color: var(--azul-claro); */
+    /* ou outro tom pastel sutil */
+    border-radius: 16px;
+}
+
+/* Título da Seção */
 .texto-avaliacoes {
     margin-top: 20px;
     margin-bottom: 30px;
+    text-align: center;
+    font-size: 1.8rem;
 }
 
+/* Imagem circular */
 .img-avaliacao {
-    width: 110px;
+    width: 170px;
+    height: 170px;
+    object-fit: cover;
     border-radius: 50%;
     border: 2px solid var(--verde-claro);
 }
 
+/* Card principal */
 .card-avalicao {
-    background-color: var(--azul-claro);
-    height: fit-content;
+    background-color: #fff;
+    height: 100%;
+    border-radius: 15px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
 }
 
+.card-avalicao:hover {
+    transform: translateY(-5px);
+}
+
+/* Container da estrutura interna */
 .container-card-geral {
-    height: 256px;
+    height: auto;
+    min-height: 260px;
 }
 
-
-.btn-avaliacoes {
-    color: black;
-    /* background-color: red; */
-    font-size: 30px;
-}
-
+/* Ícones das estrelas */
 .estrela-icon-avaliacao {
     color: #859F3D;
+    font-size: 1.1rem;
+    margin-right: 4px;
 }
+
+/* Navegação do carrossel */
+.btn-avaliacoes {
+    color: #859F3D;
+    font-size: 32px;
+    transition: color 0.3s ease;
+}
+
+.btn-avaliacoes:hover {
+    color: #6f852e;
+}
+
+/* Texto dentro do card */
+.card-title {
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.card-text {
+    font-size: 0.95rem;
+    color: #333;
+}
+
+.card-title-avaliacao {
+    font-size: 22px;
+}
+
+.card-text-avaliacao {
+    font-size: 20px;
+}
+
+.text-body-custom {
+    color: #666;
+    font-size: 0.85rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .img-avaliacao {
+        width: 90px;
+        height: 90px;
+    }
+
+    .card-avalicao {
+        max-width: 100%;
+    }
+
+    .carrousel-custom {
+        padding: 1rem;
+    }
+}
+
 
 /*Rodapé*/
 
@@ -286,8 +434,17 @@ body {
 
 [data-bs-theme="dark"] {
     transform: 0.5s;
-    color: var(--off-white);
+    /* color: var(--off-white); */
     background-color: var(--noturno-preto);
+
+    .container-textos-planner {
+        color: black;
+    }
+
+    .img-planner {
+        transition: 0.5s;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
 
     .bg-body-custom {
         transition: 0.5s;
@@ -325,9 +482,9 @@ body {
         background-color: var(--noturno-verde-claro);
     }
 
-    .carrousel-custom {
+    /* .carrousel-custom {
         background-color: red
-    }
+    } */
 
     .text-custom-footer {
         color: var(--off-white);
@@ -343,6 +500,13 @@ body {
 
     .span-logo2-rodape {
         color: var(--noturno-preto);
+    }
+
+    .container-eventosLimitados,
+    .card-info {
+        background-color: #1e1e1e;
+        border: 1px solid #333;
+        box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
     }
 
     @media (max-width: 900px) {
@@ -419,10 +583,7 @@ footer {
     /* Cor de fundo escuro */
 }
 
-.btn-primary {
-    background-color: var(--primary-color);
-    color: white;
-}
+
 
 /* Custom search button */
 :root {
