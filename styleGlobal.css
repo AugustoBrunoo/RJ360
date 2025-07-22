@@ -92,6 +92,55 @@
     /* leve aumento ao passar o mouse */
 }
 
+.btn-global-zonas {
+    background-color: var(--noturno-verde-claro);
+    color: white;
+    border: none;
+    width: 120px;
+    padding: 10px;
+}
+
+.btn-global-zonas:hover {
+    background-color: #6C812F;
+    /* tom mais escuro para o hover */
+    transform: scale(1.03);
+    /* leve aumento ao passar o mouse */
+    transition: 0.5s;
+
+}
+
+.btn-custom {
+    background: var(--noturno-verde-claro);
+    border: none;
+    color: white;
+    width: 65%;
+}
+
+.btn-custom:hover {
+    background-color: #6C812F;
+    /* tom mais escuro para o hover */
+    transform: scale(1.03);
+    /* leve aumento ao passar o mouse */
+    transition: 0.5s;
+}
+
+.btn-global-area-risco {
+    background-color: var(--noturno-verde-claro);
+    color: white;
+    border: none;
+    width: 120px;
+    padding: 10px;
+}
+
+.btn-global-area-risco:hover {
+    background-color: red;
+    /* tom mais escuro para o hover */
+    transform: scale(1.03);
+    /* leve aumento ao passar o mouse */
+    transition: 0.5s;
+
+}
+
 .container-opcao {
     display: flex;
     flex-direction: column;
@@ -99,6 +148,25 @@
     gap: 20px;
 }
 
+.card-custom {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.region-header {
+    background-color: #f8f9fa;
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+}
 
 .offcanvas-link {
     display: inline-block;
@@ -187,7 +255,7 @@
 
 
 [data-bs-theme="dark"] {
-    
+
     .btn-textoGlobalNormal:hover {
         transition: 0.5s;
         background-color: var(--noturno-verde-off);

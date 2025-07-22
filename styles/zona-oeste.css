@@ -84,8 +84,23 @@
 }
 
 .blocoContainer {
-    /* width: fit-content; */
     height: 100%;
+    /* padding: 1.5rem; */
+    /* background-color: #fff; */
+    border-radius: 1rem;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* distribui espaço entre texto e botão */
+}
+
+/* Ajusta o botão para colar no final */
+.blocoContainer a.btn,
+.blocoContainer input.btn {
+    margin-top: auto;
+    width: 90%;
+    text-align: center;
 }
 
 .bg-body-focus {
@@ -108,21 +123,17 @@
     text-align: center;
 }
 
-.card-custom {
+/* .card-custom {
     width: 90%;
-}
+} */
+
+
 
 .btn-custom-1 {
     background-color: var(--noturno-verde-claro);
     color: white;
 }
 
-.btn-custom {
-    background: var(--noturno-verde-claro);
-    border: none;
-    color: white;
-    width: 65%;
-}
 
 .bairros-link {
     text-decoration: none;
@@ -137,10 +148,7 @@
     color: black;
 }
 
-.btn-custom-1:hover,
-.btn-custom:hover {
-    background-color: gray;
-}
+
 
 .carrosselImagensAntigas .carousel-inner {
     width: 100%;
