@@ -10,10 +10,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="../../../style.css">
     <link rel="stylesheet" href="../../../styleGlobal.css">
+    <link rel="stylesheet" href="./o-que-fazer-zs.css">
     <title>RJ360 - O que fazer pela Zona Sul?</title>
     <style>
         .hero {
-            background-image: url('../../../assets/imagens/zona-sul.jpg'); /* Imagem de fundo */
+            background-image: url('../../../assets/imagens/zona-sul.jpg');
+            /* Imagem de fundo */
             background-size: cover;
             background-position: center;
             height: 300px;
@@ -22,11 +24,13 @@
             justify-content: center;
             color: white;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-            margin-bottom: -20px; /* Reduzir a distância do cabeçalho */
+            margin-bottom: -20px;
+            /* Reduzir a distância do cabeçalho */
         }
 
         .carousel-item {
-            height: 400px; /* Altura do carrossel */
+            height: 400px;
+            /* Altura do carrossel */
             background-size: cover;
             background-position: center;
         }
@@ -50,23 +54,28 @@
         }
 
         .tips-section {
-            background-color: #E4EFE7; /* Cor de fundo alterada */
+            background-color: #E4EFE7;
+            /* Cor de fundo alterada */
             padding: 20px;
             border-radius: 8px;
             margin-top: 30px;
         }
 
         .hero h1 {
-            background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+            background-color: rgba(0, 0, 0, 0.5);
+            /* Fundo semi-transparente */
             padding: 10px 20px;
             border-radius: 5px;
             text-align: center;
-            margin-bottom: 10px; /* Reduzir a distância do título para o carrossel */
+            margin-bottom: 10px;
+            /* Reduzir a distância do título para o carrossel */
         }
 
         .blockquote-footer {
-            margin-top: 15px; /* Aumentar o espaço entre o comentário e o nome */
-            font-weight: bold; /* Destacar o nome do autor */
+            margin-top: 15px;
+            /* Aumentar o espaço entre o comentário e o nome */
+            font-weight: bold;
+            /* Destacar o nome do autor */
         }
     </style>
 </head>
@@ -74,75 +83,118 @@
 <body data-bs-theme="light">
     <!-- Cabeçalho da Página -->
     <header>
-        <nav class="navbar navbar-expand-lg bg-body-custom fixed-top">
+        <nav class="navbar bg-body-custom fixed-top">
             <div class="container-fluid">
-                <div class="d-flex align-items-center">
-                    <a class="navbar-brand" href="../../../index.html">
-                        <img class="img-logo" src="../../../assets/logos/logo-rj360-removebg-preview.png" alt="Logo RJ360">
-                        <span class="span-logo">RJ</span><span class="span-logo2">360</span>
-                    </a>
-                </div>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
+                <!-- Logo -->
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <img class="img-logo" src="../../../assets/logos/logo-rj360.2.png" alt="">
+                    <span class="span-logo">RJ</span><span class="span-logo2">360</span>
+                </a>
+
+                <!-- Botão que ativa o offcanvas -->
+                <button class="navbar-toggler me-4" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 px-4 d-flex align-items-center">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">
-                                <i class="bi bi-circle-half icon-aparencia" id="modo-noturno" title="Alternar Modo Noturno"></i>
+
+                <!-- Offcanvas -->
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title fs-2" id="offcanvasNavbarLabel">Menu</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+
+                    <div class="offcanvas-body d-flex flex-column justify-content-between">
+                        <!-- Bloco das opções -->
+                        <div class="container-opcao">
+                            <!-- Tema -->
+                            <a class="nav-link offcanvas-link active botoes-offcanvas" id="modo-noturno" href="#">
+                                <i class="bi bi-circle-half me-2"></i> Tema do Site
                             </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="./index.html">
-                                <i class="icon-home bi bi-house-door-fill" title="Página Inicial"></i>
+
+                            <!-- Página Inicial -->
+                            <a class="nav-link offcanvas-link active botoes-offcanvas" href="#">
+                                <i class="bi bi-house-door-fill me-2"></i> Página Inicial
                             </a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Regiões
+
+                            <!-- Dropdown Regiões -->
+                            <div class="dropdown">
+                                <a class="nav-link offcanvas-link dropdown-toggle text-center botoes-offcanvas" href="#"
+                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Regiões
+                                </a>
+                                <ul class="dropdown-menu text-center w-100">
+                                    <li><a class="dropdown-item" href="./pages/zonas/zona sul/zona-sul.html">Zona
+                                            Sul</a></li>
+                                    <li><a class="dropdown-item" href="./pages/zonas/zona norte/zona-norte.html">Zona
+                                            Norte</a></li>
+                                    <li><a class="dropdown-item" href="./pages/zonas/zona oeste/zona-oeste.html">Zona
+                                            Oeste</a></li>
+                                    <li><a class="dropdown-item" href="#">Centro</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item"
+                                            href="./pages/dmsfuncionalidades/dmsf.html">Explorar</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- Sobre Nós -->
+                            <a class="nav-link offcanvas-link fs-5 botoes-offcanvas"
+                                href="../../sobreNos/sobreNos.html">Sobre Nós
                             </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="./pages/zonas/zona sul/zona-sul.html">Zona Sul</a></li>
-                                <li><a class="dropdown-item" href="./pages/zonas/zona norte/zona-norte.html">Zona Norte</a></li>
-                                <li><a class="dropdown-item" href="./pages/zonas/zona oeste/zona-oeste.html">Zona Oeste</a></li>
-                                <li><a class="dropdown-item" href="./pages/zonas/centro/centro.html">Centro</a></li>
-                                <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="#">Destaques</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Sobre Nós</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="./hospedagens.html"></a>
-                        </li>
-                    </ul>
+                        </div>
+
+                        <!-- Bloco do perfil (fixado embaixo) -->
+                        <!-- Bloco do perfil (fixado embaixo) -->
+                        <div class="container-perfil text-center mb-5">
+                            <div class="container-fazer-login">
+                                <h2 class="mb-4">Faça seu Login!</h2>
+                                <a href="../../login/login.html" class="btn btn-global fs-5">Entrar</a>
+                            </div>
+
+                            <div class="perfil-offcanvas fs-5 d-none">
+                                <div class="img-perfil">
+                                    <img src="../../../assets/perfil/Joana.png" alt="">
+                                </div>
+                                <p class="mt-2 fs-5 textoGlobalNormal-basic">Olá,<span class="nome-usuario">
+                                        Joana</span>!</p>
+                                <a href="../../perfil/perfil.html"
+                                    class="btn btn-textoGlobalNormal btn-sm fs-vp mt-2">Ver
+                                    perfil
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </nav>
     </header>
+
+    <!-- <div class="mt-4"></div> -->
 
     <!-- Conteúdo Principal da Página -->
     <main class="container mt-custom">
         <!-- Carrossel de Imagens -->
         <div id="carouselExample" class="carousel slide mt-0" data-bs-ride="carousel">
             <div class="carousel-inner">
-                <div class="carousel-item active" style="background-image: url('../../../assets/imagens/zona-sul/zona-sul-atividade1.jpg');">
+                <div class="carousel-item active"
+                    style="background-image: url('../../../assets/imagens/zona-sul/zona-sul-atividade1.jpg');">
                     <div class="carousel-caption d-none d-md-block">
-                        <h2 class="text-destaque">Descubra o que a Zona Sul reserva para você!</h2>
-                        <p>Explore os contrastes e encantos dessa região monumental do Rio!</p>
+                        <h2 class="text-destaque fs-2">Descubra o que a Zona Sul reserva para você!</h2>
+                        <p class="fs-5">Explore os contrastes e encantos dessa região monumental do Rio!</p>
                     </div>
                 </div>
-                <div class="carousel-item" style="background-image: url('../../../assets/imagens/zona-sul/zona-sul-atividade2.jpg');">
+                <div class="carousel-item"
+                    style="background-image: url('../../../assets/imagens/zona-sul/zona-sul-atividade2.jpg');">
                     <div class="carousel-caption d-none d-md-block">
-                        <h2 class="text-destaque">Praias e Cultura</h2>
+                        <h2 class="text-destaque fs-2">Praias e Cultura</h2>
                         <p>Viva a experiência única que a Zona Sul tem a oferecer!</p>
                     </div>
                 </div>
-                <div class="carousel-item" style="background-image: url('../../../assets/imagens/zona-sul/zona-sul-atividade3.jpg');">
+                <div class="carousel-item"
+                    style="background-image: url('../../../assets/imagens/zona-sul/zona-sul-atividade3.jpg');">
                     <div class="carousel-caption d-none d-md-block">
                         <h2 class="text-destaque">Natureza e Aventura</h2>
                         <p>Descubra trilhas e belezas naturais na Zona Sul!</p>
@@ -160,56 +212,66 @@
         </div>
 
         <!-- Seção de Atividades -->
+        <!-- Cards clicáveis -->
         <section class="row g-4 mt-5">
             <article class="col-md-6">
-                <div class="card h-100 shadow-sm activity-card">
-                    <img src="../../../assets/eventos/praia-copacabana.jpg" class="card-img-top" alt="Praia de Copacabana">
+                <div class="card h-100 shadow-sm activity-card" data-bs-toggle="modal"
+                    data-bs-target="#modalCopacabana">
+                    <img src="../../../assets/eventos/praia-copacabana.jpg" class="card-img-top"
+                        alt="Praia de Copacabana">
                     <div class="card-body">
                         <h5 class="card-title">Praia de Copacabana</h5>
-                        <p class="card-text">Desfrute de um dia ensolarado na famosa Praia de Copacabana, com suas areias brancas e calçadão icônico.</p>
+                        <p class="card-text">Desfrute de um dia ensolarado na famosa Praia de Copacabana, com suas
+                            areias brancas e calçadão icônico.</p>
                     </div>
                 </div>
             </article>
 
             <article class="col-md-6">
-                <div class="card h-100 shadow-sm activity-card">
+                <div class="card h-100 shadow-sm activity-card" data-bs-toggle="modal" data-bs-target="#modalInfo">
                     <img src="../../../assets/eventos/pao-de-acucar.jpg" class="card-img-top" alt="Pão de Açúcar">
                     <div class="card-body">
                         <h5 class="card-title">Pão de Açúcar</h5>
-                        <p class="card-text">Suba ao Pão de Açúcar e aprecie uma das vistas mais deslumbrantes do Rio de Janeiro.</p>
+                        <p class="card-text">Suba ao Pão de Açúcar e aprecie uma das vistas mais deslumbrantes do Rio de
+                            Janeiro.</p>
                     </div>
                 </div>
             </article>
 
             <article class="col-md-6">
-                <div class="card h-100 shadow-sm activity-card">
+                <div class="card h-100 shadow-sm activity-card" data-bs-toggle="modal" data-bs-target="#modalInfo">
                     <img src="../../../assets/eventos/jardim-botânico.jpg" class="card-img-top" alt="Jardim Botânico">
                     <div class="card-body">
                         <h5 class="card-title">Jardim Botânico</h5>
-                        <p class="card-text">Explore a rica flora brasileira e internacional no Jardim Botânico do Rio de Janeiro.</p>
+                        <p class="card-text">Explore a rica flora brasileira e internacional no Jardim Botânico do Rio
+                            de Janeiro.</p>
                     </div>
                 </div>
             </article>
 
             <article class="col-md-6">
-                <div class="card h-100 shadow-sm activity-card">
+                <div class="card h-100 shadow-sm activity-card" data-bs-toggle="modal" data-bs-target="#modalInfo">
                     <img src="../../../assets/eventos/lapa.jpg" class="card-img-top" alt="Lapa">
                     <div class="card-body">
                         <h5 class="card-title">Lapa</h5>
-                        <p class="card-text">Viva a noite carioca na Lapa, famosa por sua vida noturna vibrante e arquitetura histórica.</p>
+                        <p class="card-text">Viva a noite carioca na Lapa, famosa por sua vida noturna vibrante e
+                            arquitetura histórica.</p>
                     </div>
                 </div>
             </article>
         </section>
 
+
         <!-- Seção de Dicas -->
         <section class="tips-section mt-5 bg-body-custom">
             <h3 class="text-center text-destaque mb-4">Dicas para Aproveitar a Zona Sul</h3>
             <ul class="list-group">
-                <li class="list-group-item">Experimente a culinária local em um dos muitos restaurantes à beira-mar.</li>
+                <li class="list-group-item">Experimente a culinária local em um dos muitos restaurantes à beira-mar.
+                </li>
                 <li class="list-group-item">Visite o Forte de Copacabana para uma vista panorâmica incrível.</li>
                 <li class="list-group-item">Não perca o pôr do sol na Praia do Leme.</li>
-                <li class="list-group-item">Use transporte público ou aplicativos de carona para se locomover com facilidade.</li>
+                <li class="list-group-item">Use transporte público ou aplicativos de carona para se locomover com
+                    facilidade.</li>
             </ul>
         </section>
 
@@ -219,13 +281,15 @@
             <div class="row">
                 <div class="col-md-4">
                     <blockquote class="blockquote text-center">
-                        <p class="mb-0">"A Praia de Copacabana é simplesmente maravilhosa! Um lugar que todos devem visitar."</p>
+                        <p class="mb-0">"A Praia de Copacabana é simplesmente maravilhosa! Um lugar que todos devem
+                            visitar."</p>
                         <footer class="blockquote-footer">Maria Silva</footer>
                     </blockquote>
                 </div>
                 <div class="col-md-4">
                     <blockquote class="blockquote text-center">
-                        <p class="mb-0">"O Pão de Açúcar oferece uma vista de tirar o fôlego. Uma experiência inesquecível!"</p>
+                        <p class="mb-0">"O Pão de Açúcar oferece uma vista de tirar o fôlego. Uma experiência
+                            inesquecível!"</p>
                         <footer class="blockquote-footer">João Pereira</footer>
                     </blockquote>
                 </div>
@@ -237,6 +301,142 @@
                 </div>
             </div>
         </section>
+
+        <!-- Modais dos cards -->
+        <div class="modal fade" id="modalCopacabana" tabindex="-1" aria-labelledby="modalCopacabanaLabel"
+            aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content p-3 rounded-4">
+                    <div class="modal-body">
+                        <div class="d-flex flex-column align-items-end mb-2">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Fechar"></button>
+                        </div>
+                        <img src="../../../assets/eventos/praia-copacabana.jpg" class="card-img-top rounded-4 mb-3"
+                            alt="Praia de Copacabana">
+
+                        <h5 class="card-title">Praia de Copacabana</h5>
+                        <p class="card-text">Famosa mundialmente, esta praia oferece calçadões charmosos, mar vibrante e
+                            cenário icônico do Rio de Janeiro.</p>
+
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <!-- Avaliação total -->
+                            <div class="d-flex align-items-center">
+                                <i class="bi bi-star-fill text-warning me-1 fs-5"></i>
+                                <strong class="me-2 fs-5">4.79</strong>
+                                <span class="text-muted">(256 avaliações)</span>
+                            </div>
+
+                            <!-- Botão Curtir -->
+                            <button id="btnCurtir"
+                                class="btn-like btn d-flex align-items-center border-0 bg-transparent">
+                                <i class="bi bi-hand-thumbs-up-fill me-2 fs-4"></i>
+                                <span class="fs-5">Curtir</span>
+                            </button>
+                        </div>
+
+
+
+
+                        <hr>
+
+                        <!-- Comentários -->
+                        <h6 class="mb-3">Principais avaliações:</h6>
+
+                        <div class="mb-3" id="comentariosContainer">
+                            <!-- Comentário 1 -->
+                            <div class="d-flex mb-3">
+                                <img src="https://randomuser.me/api/portraits/women/65.jpg" class="rounded-circle me-3"
+                                    width="50" height="50">
+                                <div>
+                                    <strong>Ana Ribeiro</strong> <small class="text-muted"> - 15/07/2025</small>
+                                    <div class="text-warning mb-1">★★★★★</div>
+                                    <p class="mb-0">Simplesmente maravilhosa! A energia da praia é contagiante.</p>
+                                </div>
+                            </div>
+
+                            <!-- Comentário 2 -->
+                            <div class="d-flex mb-3">
+                                <img src="https://randomuser.me/api/portraits/men/23.jpg" class="rounded-circle me-3"
+                                    width="50" height="50">
+                                <div>
+                                    <strong>Lucas Freitas</strong> <small class="text-muted"> - 11/07/2025</small>
+                                    <div class="text-warning mb-1">★★★★☆</div>
+                                    <p class="mb-0">Lugar incrível, mas estava um pouco lotado quando fui.</p>
+                                </div>
+                            </div>
+
+                            <!-- Comentário 3 -->
+                            <div class="d-flex mb-3">
+                                <img src="https://randomuser.me/api/portraits/women/32.jpg" class="rounded-circle me-3"
+                                    width="50" height="50">
+                                <div>
+                                    <strong>Maria Souza</strong> <small class="text-muted"> - 06/07/2025</small>
+                                    <div class="text-warning mb-1">★★★★★</div>
+                                    <p class="mb-0">Amo caminhar no calçadão! Super recomendo ao entardecer.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Novo comentário -->
+                        <div class="mb-3">
+                            <label for="comentarioUsuario" class="form-label"><strong>Coloque sua opinião sobre o
+                                    lugar:</strong></label>
+                            <textarea class="form-control mb-2" id="comentarioUsuario" rows="3"
+                                placeholder="Digite seu comentário..." required></textarea>
+
+                            <!-- Avaliação por estrelas -->
+                            <div class="mb-3">
+                                <label class="form-label"><strong>Sua Avaliação:</strong></label>
+                                <div class="star-rating">
+                                    <input type="radio" name="stars" id="star5" value="5">
+                                    <label for="star5">&#9733;</label>
+                                    <input type="radio" name="stars" id="star4" value="4">
+                                    <label for="star4">&#9733;</label>
+                                    <input type="radio" name="stars" id="star3" value="3">
+                                    <label for="star3">&#9733;</label>
+                                    <input type="radio" name="stars" id="star2" value="2">
+                                    <label for="star2">&#9733;</label>
+                                    <input type="radio" name="stars" id="star1" value="1">
+                                    <label for="star1">&#9733;</label>
+                                </div>
+                            </div>
+
+
+                            <!-- Botão enviar -->
+                            <button id="btnEnviarComentario" class="btn btn-primary w-100 mb-3"><i class="bi bi-send-fill me-1"></i> Enviar
+                                comentário
+                            </button>
+
+                            <!-- Mensagem de status -->
+                            <div id="mensagemStatus" style="display:none;" class="p-2 rounded"></div>
+                        </div>
+
+                        <!-- Ações adicionais -->
+                        <div class="d-flex justify-content-between mb-3">
+                            <button class="btn btn-outline-danger w-50 me-2">
+                                <i class="bi bi-flag-fill me-1"></i> Denunciar o card
+                            </button>
+                            <button class="btn btn-outline-success w-50">
+                                <i class="bi bi-bookmark-heart-fill me-1"></i> Salvar no Planner
+                            </button>
+                        </div>
+
+                        <!-- Ver mais -->
+                        <p class="text-muted mb-2">
+                            Quer saber mais sobre este lugar, como eventos na região ou atrações próximas? Clique no
+                            botão abaixo para explorar!
+                        </p>
+                        <div class="text-center">
+                            <button class="btn btn-outline-primary">
+                                <i class="bi bi-box-arrow-up-right me-1"></i> Ver mais
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </main>
 
     <!-- Rodapé da Página -->
@@ -267,8 +467,9 @@
     <!-- Scripts Bootstrap e Customizados -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous">
-    </script>
+        </script>
     <script src="../../../script.js"></script>
+    <script src="./o-que-fazer-zs.js"></script>
 </body>
 
 </html>

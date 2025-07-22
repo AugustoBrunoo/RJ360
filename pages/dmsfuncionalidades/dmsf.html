@@ -25,6 +25,19 @@
             height: 250px;
             /* Define a altura do corpo do card */
         }
+        
+        .card {
+            border: 1px solid #dee2e6; /* Cor padrão da borda */
+            transition: border-color 0.3s; /* Transição suave para a cor da borda */
+        }
+
+        [data-bs-theme="dark"] .card {
+            border-color: #343a40; /* Cor da borda no modo escuro */
+            background-color: #FAF1E6; /* Cor de fundo do card no modo escuro */
+        }
+
+        
+    
     </style>
 </head>
 
@@ -35,7 +48,7 @@
             <div class="container-fluid">
                 <!-- Logo -->
                 <a class="navbar-brand d-flex align-items-center" href="../../index.html">
-                    <img class="img-logo" src="../../../assets/logos/logo-rj360-removebg-preview.png" alt="">
+                    <img class="img-logo" src="../../assets/logos/logo-rj360-removebg-preview.png" alt="">
                     <span class="span-logo">RJ</span><span class="span-logo2">360</span>
                 </a>
 
@@ -104,10 +117,10 @@
 
                             <div class="perfil-offcanvas fs-5 d-none">
                                 <div class="img-perfil">
-                                    <img src="https://avatars.githubusercontent.com/u/174916340?v=4" alt="">
+                                    <img src="../../assets/perfil/Joana.png" alt="">
                                 </div>
-                                <p class="mt-2 fs-5 textoGlobalNormal-basic">Olá,<span
-                                        class="nome-usuario">Usuário</span>!</p>
+                                <p class="mt-2 fs-5 textoGlobalNormal-basic">Olá,<span class="nome-usuario"></span>
+                                        Joana</span>!</p>
                                 <a href="../perfil/perfil.html" class="btn btn-textoGlobalNormal btn-sm fs-vp mt-2">Ver
                                     perfil</a>
                             </div>
@@ -120,7 +133,7 @@
 
     <div class="container-textos-dmsf space-mt-card-2">
         <h1 class="textoGlobalNegrito ms-4 text-center">Mais experiências para descobrir o Rio do seu jeito!</h1>
-        <div class="containerTexto-dmsf ms-4 mt-5 d-flex justify-content-center align-items-center">
+        <div class=" ms-4 mt-5 d-flex justify-content-center align-items-center">
             <p class="textoGlobalNormal texto-inicial-dms w-75 fs-5">
                 Nesta página, reunimos tudo o que preparamos além da nossa página inicial. Aqui, você encontra
                 funcionalidades pensadas para diferentes estilos de viagem e interesses, com conteúdos especiais,
@@ -138,8 +151,8 @@
                 <div class="card card-custom">
                     <div class="row g-0 h-100">
                         <div class="col-md-4">
-                            <img src="https://s2-oglobo.glbimg.com/dm4Z_NI_27Hc1Pj1ZbWQ8JAcwoI=/0x0:4528x3016/888x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_da025474c0c44edd99332dddb09cabe8/internal_photos/bs/2024/C/F/zJMKOLRpWc5vgqfdmfrA/sna-arena-trampolim-1-1-.jpg" class="card-img-custom"
-                                alt="RJ360: Com crianças!">
+                            <img src="https://s2-oglobo.glbimg.com/dm4Z_NI_27Hc1Pj1ZbWQ8JAcwoI=/0x0:4528x3016/888x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_da025474c0c44edd99332dddb09cabe8/internal_photos/bs/2024/C/F/zJMKOLRpWc5vgqfdmfrA/sna-arena-trampolim-1-1-.jpg"
+                                class="card-img-custom" alt="RJ360: Com crianças!">
                         </div>
                         <div class="col-md-8 d-flex flex-column justify-content-between">
                             <div class="card-body d-flex flex-column">
@@ -181,7 +194,8 @@
                 <div class="card card-custom">
                     <div class="row g-0 h-100">
                         <div class="col-md-4">
-                            <img src="https://judicearaujo.com.br/blog/wp-content/uploads/2021/03/imoveis-de-luxo-na-zona-sul-do-rj.jpg" class="card-img-custom" alt="RJ360: Deluxe">
+                            <img src="https://judicearaujo.com.br/blog/wp-content/uploads/2021/03/imoveis-de-luxo-na-zona-sul-do-rj.jpg"
+                                class="card-img-custom" alt="RJ360: Deluxe">
                         </div>
                         <div class="col-md-8 d-flex flex-column justify-content-between">
                             <div class="card-body d-flex flex-column">
@@ -224,7 +238,8 @@
                 <div class="card card-custom">
                     <div class="row g-0 h-100">
                         <div class="col-md-4">
-                            <img src="https://s2-gshow.glbimg.com/PtT4xRVN9t0KPY9io2XUmroGJ6Y=/0x0:1350x1639/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2025/D/w/0JCRZwSGG3l1ARDtkuAA/lady-gaga-no-rio.jpeg" class="card-img-custom" alt="Rumores do Rio">
+                            <img src="https://s2-gshow.glbimg.com/PtT4xRVN9t0KPY9io2XUmroGJ6Y=/0x0:1350x1639/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2025/D/w/0JCRZwSGG3l1ARDtkuAA/lady-gaga-no-rio.jpeg"
+                                class="card-img-custom" alt="Rumores do Rio">
                         </div>
                         <div class="col-md-8 d-flex flex-column justify-content-between">
                             <div class="card-body d-flex flex-column">
@@ -232,7 +247,7 @@
                                 <p class="card-text">Fique por dentro dos burburinhos da cidade: festas, eventos e tudo
                                     o que pode agitar o Rio nos próximos dias.</p>
                                 <div class="mt-auto d-flex justify-content-end">
-                                    <a class="btn btn-global">Ver mais</a>
+                                    <a class="btn btn-global" href="../rumores/rumores.html">Ver mais</a>
                                 </div>
                             </div>
                         </div>
@@ -269,7 +284,8 @@
                 <div class="card card-custom">
                     <div class="row g-0 h-100">
                         <div class="col-md-4">
-                            <img src="https://www.kmonadventure.com.br/wp-content/uploads/2018/11/20191027_131652.jpg" class="card-img-custom" alt="Guias parceiros">
+                            <img src="https://www.kmonadventure.com.br/wp-content/uploads/2018/11/20191027_131652.jpg"
+                                class="card-img-custom" alt="Guias parceiros">
                         </div>
                         <div class="col-md-8 d-flex flex-column justify-content-between">
                             <div class="card-body d-flex flex-column">
@@ -290,8 +306,8 @@
                 <div class="card card-custom">
                     <div class="row g-0 h-100">
                         <div class="col-md-4">
-                            <img src="https://imagens.usp.br/wp-content/uploads/04062012dicionarioportugues_fotoMarcosSantos010.jpg" class="card-img-custom"
-                                alt="Dicionário Carioca">
+                            <img src="https://imagens.usp.br/wp-content/uploads/04062012dicionarioportugues_fotoMarcosSantos010.jpg"
+                                class="card-img-custom" alt="Dicionário Carioca">
                         </div>
                         <div class="col-md-8 d-flex flex-column justify-content-between">
                             <div class="card-body d-flex flex-column">
