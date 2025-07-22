@@ -173,6 +173,11 @@
         color: var(--noturno-verde-claro);
     }
 
+    .blocobloco2{
+        padding-left: 85px;
+        width: 100%;
+    }
+
     .blocoContainer {
         background-color: white;
     }
