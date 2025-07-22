@@ -651,6 +651,20 @@ footer {
         height: 300px; /* Altura fixa para as imagens dos modais */
         object-fit: cover; /* Faz com que a imagem cubra todo o espaço do modal */
     }
+    .card {
+    border: 1px solid #dee2e6; /* Cor padrão da borda */
+    transition: border-color 0.3s; /* Transição suave para a cor da borda */
+}
+
+[data-bs-theme="dark"] .card {
+    border-color: #343a40; /* Cor da borda no modo escuro */
+    background-color: #ffffff; /* Cor de fundo do card no modo escuro */
+}
+
+.card-custom {
+    background-color: #ffffff; /* Cor de fundo padrão dos cards */
+}
+
 
 /* @media (max-width: 2560px) {
     

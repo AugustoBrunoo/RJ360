@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../assets/logos/Logo-removebg-preview.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="../../styleGlobal.css">
+    <title>Rumores do Rio</title>
+    <style>
+        .hero {
+            background-image: url('./assets/hero-image.jpg'); /* Imagem de fundo */
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: black; /* Cor do texto */
+            text-shadow: none; /* Removendo a sombra do texto */
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+
+        .card-img-top {
+            height: 200px; /* Altura fixa para as imagens dos cards */
+            object-fit: cover; /* Faz com que a imagem cubra todo o espaço do card */
+        }
+        [data-bs-theme="dark"]{
+            .texto{
+                color: white;
+            }
+            .text-center{
+                color: white;
+            }
+
+
+        }
+    </style>
+</head>
+
+<body data-bs-theme="light">
+    <!-- Cabeçalho -->
+    <header>
+        <nav class="navbar bg-body-custom fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand d-flex align-items-center" href="../../index.html">
+                    <img class="img-logo" src="../../assets/logos/logo-rj360-removebg-preview.png" alt="">
+                    <span class="span-logo">RJ</span><span class="span-logo2">360</span>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title fs-2" id="offcanvasNavbarLabel">Menu</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+
+                    <div class="offcanvas-body d-flex flex-column justify-content-between">
+                        <div class="container-opcao">
+                            <a class="nav-link offcanvas-link active botoes-offcanvas" id="modo-noturno" href="#">
+                                <i class="bi bi-circle-half me-2"></i> Tema do Site
+                            </a>
+                            <a class="nav-link offcanvas-link active botoes-offcanvas" href="#">
+                                <i class="bi bi-house-door-fill me-2"></i> Página Inicial
+                            </a>
+                            <div class="dropdown">
+                                <a class="nav-link offcanvas-link dropdown-toggle botoes-offcanvas" href="#"
+                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Regiões
+                                </a>
+                                <ul class="dropdown-menu text-center w-100">
+                                    <li><a class="dropdown-item" href="../zonas/zona sul/zona-sul.html">Zona
+                                            Sul</a></li>
+                                    <li><a class="dropdown-item" href="../zonas/zona norte/zona-norte.html">Zona
+                                            Norte</a></li>
+                                    <li><a class="dropdown-item" href="../zonas/zona oeste/zona-oeste.html">Zona
+                                            Oeste</a></li>
+                                    <li><a class="dropdown-item" href="../zonas/centro/centro.html">Centro</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="../dmsfuncionalidades/dmsf.html">Explorar</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <a class="nav-link offcanvas-link fs-5 botoes-offcanvas"
+                                href="../sobreNos/sobreNos.html">Sobre Nós</a>
+                        </div>
+
+                        <div class="container-perfil text-center mb-5">
+                            <div class="container-fazer-login">
+                                <h2 class="mb-4">Faça seu Login!</h2>
+                                <a href="../login/login.html" class="btn btn-global fs-5">Entrar</a>
+                            </div>
+
+                            <div class="perfil-offcanvas fs-5 d-none">
+                                <div class="img-perfil">
+                                    <img src="https://avatars.githubusercontent.com/u/174916340?v=4" alt="">
+                                </div>
+                                <p class="mt-2 fs-5 textoGlobalNormal-basic">Olá,<span
+                                        class="nome-usuario">Usuário</span>!</p>
+                                <a href="../perfil/perfil.html" class="btn btn-textoGlobalNormal btn-sm fs-vp mt-2">Ver
+                                    perfil</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="hero texto">
+        <h1>Rumores do Rio</h1>
+    </div>
+
+    <div class="container mt-4">
+        <h2 class="text-center">Fique por dentro dos burburinhos da cidade!</h2>
+        <p class="text-center">Festas, eventos e tudo o que pode agitar o Rio nos próximos dias.</p>
+
+        <!-- Seção de Cards para Eventos -->
+        <div class="row justify-content-center gx-5 gy-5">
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="../../assets/eventos/evento1.jpg" class="card-img-top" alt="Evento 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Dj Alok em copacabana?</h5>
+                        <p class="card-text">Uma festa exclusiva na Zona Sul com DJs famosos.</p>
+                        <button class="btn btn-global" onclick="verMais('Evento 1', 'Uma festa exclusiva na Zona Sul com DJs famosos. Não perca!')">Ver mais</button>
+                    </div>
+                </div>
+                <div class="comentarios mt-2">
+                    <h6>Comentários:</h6>
+                    <p>👤 Ana: "Esse evento vai ser incrível!"</p>
+                    <p>👤 João: "Mal posso esperar para ir!"</p>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="../../assets/eventos/evento2.jpg" class="card-img-top" alt="Evento 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Beyonce ta vindo ai?</h5>
+                        <p class="card-text">Um show ao ar livre com artistas internacionais.</p>
+                        <button class="btn btn-global" onclick="verMais('Evento 2', 'Um show ao ar livre com artistas locais e internacionais. Imperdível!')">Ver mais</button>
+                    </div>
+                </div>
+                <div class="comentarios mt-2">
+                    <h6>Comentários:</h6>
+                    <p>👤 Maria: "Estou muito animada para isso!"</p>
+                    <p>👤 Carlos: "Espero que tenha ingressos disponíveis!"</p>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="../../assets/eventos/evento3.jpg" class="card-img-top" alt="Evento 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Lollapalooza no rio?</h5>
+                        <p class="card-text">Uma festa temática na Lapa, que vem ao rio pela primeira vez!</p>
+                        <button class="btn btn-global" onclick="verMais('Evento 3', 'Uma festa temática na Lapa com muita música e dança. Venha se divertir!')">Ver mais</button>
+                    </div>
+                </div>
+                <div class="comentarios mt-2">
+                    <h6>Comentários:</h6>
+                    <p>👤 Lucas: "Esse evento é imperdível!"</p>
+                    <p>👤 Sofia: "Vou levar meus amigos!"</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="container-rodape container-fluid d-flex justify-content-around align-items-center py-2">
+        <div class="rodapeLinks">
+            <div class="rodape--texto">
+                <p>Siga a gente nas Redes Sociais:</p>
+            </div>
+            <div class="rodape--redes-sociais d-flex justify-content-evenly">
+                <a href="#"><i class="icones-rodape bi bi-instagram"></i></a>
+                <a href="#"><i class="icones-rodape bi bi-twitter-x"></i></a>
+                <a href="#"><i class="icones-rodape bi bi-facebook"></i></a>
+            </div>
+        </div>
+
+        <div class="rodape-copywrite">
+            <p id="anoAtual" class="text-custom-footer pt-2"></p>
+        </div>
+
+        <div class="rodapeLogo">
+            <a class="navbar-brand" href="#">
+                <img class="img-logo" src="../../assets/logos/logo-rj360-removebg-preview.png" alt="">
+                <span class="span-logo-rodape">RJ</span><span class="span-logo2-rodape">360</span>
+            </a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous">
+    </script>
+    <script>
+        // Função para mostrar mais informações sobre o evento
+        function verMais(titulo, descricao) {
+            alert(titulo + ": " + descricao);
+        }
+
+        // Atualiza ano no rodapé
+        
+    </script>
+    <script src="../../script.js"></script>
+</body>
+
+</html>
