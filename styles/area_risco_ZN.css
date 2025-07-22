@@ -11,6 +11,7 @@
     --noturno-verde-claro: #859F3D;
     --noturno-verde-off: #F6FCDF;
 }
+
 .container-inicial-informativo {
     background-color: rgba(255, 0, 0, 0.593);
     padding: 15px;
@@ -63,7 +64,7 @@
 
 /* ===== NOVO BLOCO: Possíveis Perigos ===== */
 .container-perigos {
-    background-color: rgba(255, 193, 7, 0.1);
+
     /* amarelo clarinho, destaque sutil */
     padding: 20px;
     border-radius: 10px;
@@ -138,10 +139,10 @@
 }
 
 #offcanvasComentario {
-  height: 50vh;
-  min-height: 50vh;
-  max-height: 50vh;
-  overflow-y: auto;
+    height: 50vh;
+    min-height: 50vh;
+    max-height: 50vh;
+    overflow-y: auto;
 }
 
 /* Reserva espaço no body para não encostar */
@@ -166,11 +167,17 @@ body {
     margin-bottom: 80px;
     /* Já ajuda a afastar do rodapé */
 }
+
 .link-area {
-    color: rgb(0, 189, 0);          /* Verde */
-    text-decoration: none; /* Tira sublinhado azul */
-    font-weight: 600;      /* Um bold médio */
-    font-size: 18px;       /* Maior */
+    text-decoration: none;
+    /* Tira sublinhado azul */
+    font-weight: 600;
+    /* Um bold médio */
+    font-size: 18px;
+    /* Maior */
+    color: var(--noturno-verde-claro);
+    list-style: var(--noturno-verde-claro);
+
 }
 
 .link-area:hover {
@@ -178,16 +185,23 @@ body {
     color: black;
 }
 
-html, body {
-  height: 100%;
+.bg-aviso-personalizado {
+    background-color: var(--noturno-verde-claro);
+    /* ou qualquer cor que quiser */
+}
+
+
+html,
+body {
+    height: 100%;
 }
 
 body {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 main {
-  flex: 1; /* Ocupa tudo que der, empurra o rodapé para o final */
+    flex: 1;
+    /* Ocupa tudo que der, empurra o rodapé para o final */
 }
-

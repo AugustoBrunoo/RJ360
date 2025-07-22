@@ -4,120 +4,327 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RJ360 - Áreas de Risco: ZO</title>
+    <title>RJ360 - Áreas de Risco: Zona Sul</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="../../../style.css">
-    <link rel="stylesheet" href="../../../styles/areariscoZO.css">
+    <link rel="stylesheet" href="../../../styles/area_risco_ZN.css">
     <link rel="shortcut icon" href="../../../assets/logos/logo-favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="../../../styleGlobal.css">
 </head>
 
 <body data-bs-theme="light">
+
     <!-- Cabeçalho -->
     <header>
-        <nav class="navbar navbar-expand-lg bg-body-custom">
+        <nav class="navbar bg-body-custom fixed-top">
             <div class="container-fluid">
-                <div class="d-flex align-items-center">
-                    <a class="navbar-brand" href="../../../index.html">
-                        <img class="img-logo" src="../../../assets/logos/logo-rj360-removebg-preview.png" alt="">
-                        <span class="span-logo">RJ</span><span class="span-logo2">360</span>
-                    </a>
-                </div>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
+                <!-- Logo -->
+                <a class="navbar-brand d-flex align-items-center" href="../../../index.html">
+                    <img class="img-logo" src="../../../assets/logos/logo-rj360-removebg-preview.png" alt="">
+                    <span class="span-logo">RJ</span><span class="span-logo2">360</span>
+                </a>
+
+                <!-- Botão que ativa o offcanvas -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 px-4 d-flex align-items-center">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">
-                                <i class="bi bi-circle-half icon-aparencia" id="modo-noturno"></i>
+
+                <!-- Offcanvas -->
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title fs-2" id="offcanvasNavbarLabel">Menu</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+
+                    <div class="offcanvas-body d-flex flex-column justify-content-between">
+                        <!-- Bloco das opções -->
+                        <div class="container-opcao">
+                            <!-- Tema -->
+                            <a class="nav-link offcanvas-link active botoes-offcanvas" id="modo-noturno" href="#">
+                                <i class="bi bi-circle-half me-2"></i> Tema do Site
                             </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">
-                                <i class="icon-home bi bi-house-door-fill"></i>
+
+                            <!-- Página Inicial -->
+                            <a class="nav-link offcanvas-link active botoes-offcanvas" href="#">
+                                <i class="bi bi-house-door-fill me-2"></i> Página Inicial
                             </a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Regiões
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Zona Sul</a></li>
-                                <li><a class="dropdown-item" href="#">Zona Norte</a></li>
-                                <li><a class="dropdown-item" href="#">Zona Oeste</a></li>
-                                <li><a class="dropdown-item" href="#">Centro</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">Destaques</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Sobre Nós</a>
-                        </li>
-                    </ul>
+
+                            <!-- Dropdown Regiões -->
+                            <div class="dropdown">
+                                <a class="nav-link offcanvas-link dropdown-toggle text-center botoes-offcanvas" href="#"
+                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Regiões
+                                </a>
+                                <ul class="dropdown-menu text-center w-100">
+                                    <li><a class="dropdown-item" href="../zona sul/zona-sul.html">Zona
+                                            Sul</a></li>
+                                    <li><a class="dropdown-item" href="../zona norte/zona-norte.html">Zona Norte</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="../zona oeste/zona-oeste.html">Zona
+                                            Oeste</a></li>
+                                    <li><a class="dropdown-item" href="../centro/centro.html">Centro</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="../../dmsfuncionalidades/dmsf.html">Explorar</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- Sobre Nós -->
+                            <a class="nav-link offcanvas-link fs-5 botoes-offcanvas"
+                                href="../../sobreNos/sobreNos.html">Sobre Nós</a>
+                        </div>
+
+                        <!-- Bloco do perfil (fixado embaixo) -->
+                        <!-- Bloco do perfil (fixado embaixo) -->
+                        <div class="container-perfil text-center mb-5">
+                            <div class="container-fazer-login">
+                                <h2 class="mb-4">Faça seu Login!</h2>
+                                <a href="../../login/login.html" class="btn btn-global fs-5">Entrar</a>
+                            </div>
+
+                            <div class="perfil-offcanvas fs-5 d-none">
+                                <div class="img-perfil">
+                                    <img src="../../../assets/perfil/Joana.png" alt="">
+                                </div>
+                                <p class="mt-2 fs-5 textoGlobalNormal-basic">Olá,<span class="nome-usuario">
+                                        Joana</span>!</p>
+                                <a href="../perfil/perfil.html" class="btn btn-textoGlobalNormal btn-sm fs-vp mt-2">Ver
+                                    perfil</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </nav>
     </header>
     <!-- Fim do Cabeçalho -->
-    <main>
+
+    <main class="space-mt-card-2">
         <div class="container-inicial-informativo container d-flex justify-content-center mt-5">
-            <h1 class="container-inicial-informativo--h1 textoGlobalNegrito"><i class="bi bi-exclamation-triangle-fill"></i> Áreas da zona
-                sul que exigem atenção</h1>
+            <h1 class="container-inicial-informativo--h1 textoGlobalNegrito">
+                <i class="bi bi-exclamation-triangle-fill"></i> Áreas da Zona Sul que exigem atenção
+            </h1>
         </div>
 
-        <div class="container-textos container mt-3">
-            <div class="row justify-content-center">
-                <!-- Nao esqueca de retirar o background -->
-                <div class="tp texto-principal col-12 col-md-6">
-                    <p class="textoGlobalNormal bg-primary">
-                        Evite trafegar por essas áreas, tanto de carro quanto a pé, especialmente fora dos horários
-                        comerciais
-                        ou em dias com pouco movimento. Aplicativos de navegação, como Waze ou Google Maps, podem
-                        sugerir
-                        caminhos
-                        mais rápidos, mas que cruzam bairros com grande risco de ocorrência de crimes. Sempre prefira
-                        vias
-                        principais
-                        e bairros com estrutura turística consolidada.
-                    </p>
-                </div>
-                <!-- Nao esqueca de retirar o background -->
-                <div class="tp texto-principal2 col-12 col-md-6">
-                    <p class="textoGlobalNormal bg-primary">
-                        Nosso objetivo não é afastar você do Rio, mas permitir que sua experiência seja rica,
-                        prazerosa e, acima de tudo, segura. Continue navegando pela plataforma para ver rotas
-                        recomendadas, alertas em tempo real e alternativas mais seguras para conhecer o melhor
-                        da cidade maravilhosa.
-                    </p>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="tp texto-principal3 textoGlobalNegrito d-flex justify-content-center mt-3">
-            <p>
-                Todas essas recomendações são baseadas em dados reais, fornecidos por fontes como o portal ISP Dados,
-                o ISPGeo e levantamentos de segurança divulgados por veículos confiáveis da imprensa.
+        <!-- Mapa com Iframe -->
+        <div class="container-mapa container mt-5 text-center">
+            <h2 class="textoGlobalNegrito">Mapa da Zona Sul</h2>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117527.92784236862!2d-43.29571370783377!3d-22.996301760412496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9bd574fa5a6cf9%3A0xcb4161d593d6f0dc!2sZona%20Sul%2C%20Rio%20de%20Janeiro%20-%20RJ!5e0!3m2!1spt-BR!2sbr!4v1753183973362!5m2!1spt-BR!2sbr"
+                width="100%" height="450" style="border:0; border-radius: 10px;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+            <p class="mt-2 textoGlobalNormal">
+                Este mapa oferece uma visão panorâmica da área, integrando recursos do Google Maps. Recomendamos atenção
+                redobrada aos locais destacados abaixo, pois exigem maior cautela durante a visitação.
             </p>
         </div>
 
+        <!-- Perigos -->
+        <div class="container-perigos container mt-5">
+            <h2 class="textoGlobalNegrito text-center">Possíveis Perigos</h2>
+            <div class="row mt-4">
+                <div class="col-md-4">
+                    <h4>Criminalidade na Zona Sul:</h4>
+                    <ul>
+                        <li><strong>Furtos recorrentes</strong> nas regiões de Copacabana, Ipanema e Leblon,
+                            especialmente em praias e estações de metrô.</li>
+                        <li><strong>Assaltos a pedestres</strong> e turistas na Avenida Atlântica, Rua Visconde de
+                            Pirajá e arredores do Jardim Botânico.</li>
+                        <li><strong>Abordagens agressivas</strong> em áreas movimentadas como a Praia do Arpoador e
+                            Posto 9.</li>
+                        <li><strong>Golpes com cartões e distração</strong> em bares e quiosques de Ipanema e Leblon.
+                        </li>
+                        <li><strong>Presença de usuários de drogas</strong> e pequenos delitos em áreas menos
+                            movimentadas, como a Lagoa Rodrigo de Freitas e Morro Dona Marta.</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4">
+                    <h4>Desastres Naturais na Zona Sul:</h4>
+                    <ul>
+                        <li><strong>Enchentes pontuais</strong> em áreas baixas de Copacabana e Botafogo após chuvas
+                            intensas.</li>
+                        <li><strong>Bolsões d'água</strong> na Rua Barata Ribeiro, Rua Dias Ferreira e na região do
+                            Leblon.</li>
+                        <li><strong>Alagamentos em túneis</strong>, como o Túnel Rebouças, causando transtornos no
+                            trânsito.</li>
+                        <li><strong>Acúmulo de lixo em bueiros</strong> agravando alagamentos rápidos em avenidas como a
+                            Borges de Medeiros.</li>
+                        <li><strong>Deslizamentos pontuais</strong> em morros como o Morro Dona Marta, especialmente em
+                            épocas de tempestade.</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4">
+                    <h4>Áreas que exigem mais atenção (Zona Sul):</h4>
+                    <ul>
+                        <li>
+                            <a href="https://www.google.com/maps/place/Copacabana,+Rio+de+Janeiro" class="link-area"
+                                target="_blank">
+                                Copacabana (Avenida Atlântica e arredores)
+                            </a>
+                            – Região turística e comercial, com muitos casos de furtos e pequenos roubos, especialmente
+                            durante eventos e alta temporada.
+                        </li>
+                        <li>
+                            <a href="https://www.google.com/maps/place/Ipanema,+Rio+de+Janeiro" class="link-area"
+                                target="_blank">
+                                Ipanema (Rua Visconde de Pirajá e praias)
+                            </a>
+                            – Área com grande movimentação de pessoas, conhecida por furtos e golpes a turistas.
+                        </li>
+                        <li>
+                            <a href="https://www.google.com/maps/place/Leblon,+Rio+de+Janeiro" class="link-area"
+                                target="_blank">
+                                Leblon
+                            </a>
+                            – Local com assaltos a pedestres e golpistas em bares e restaurantes.
+                        </li>
+                        <li>
+                            <a href="https://www.google.com/maps/place/Morro+Dona+Marta,+Rio+de+Janeiro"
+                                class="link-area" target="_blank">
+                                Morro Dona Marta
+                            </a>
+                            – Área com risco de pequenos delitos e deslizamentos pontuais.
+                        </li>
+                        <li>
+                            <a href="https://www.google.com/maps/place/Botafogo,+Rio+de+Janeiro" class="link-area"
+                                target="_blank">
+                                Botafogo
+                            </a>
+                            – Furtos frequentes e áreas com movimentação de usuários de drogas.
+                        </li>
+                    </ul>
+                </div>
+
+
+                <!-- Dicas -->
+                <div class="container-textos container mt-3">
+                    <div class="row justify-content-center">
+                        <div class="tp texto-principal col-12 col-md-6">
+                            <p class="textoGlobalNormal bg-aviso-personalizado">
+                                Evite trafegar por essas áreas, tanto de carro quanto a pé, especialmente fora dos
+                                horários comerciais.
+                                Apps como Waze ou Google Maps podem sugerir caminhos mais rápidos que cruzam zonas de
+                                risco.
+                            </p>
+                        </div>
+                        <div class="tp texto-principal2 col-12 col-md-6">
+                            <p class="textoGlobalNormal bg-aviso-personalizado">
+                                Nosso objetivo não é afastar você do Centro, mas tornar sua experiência mais segura.
+                                Continue navegando
+                                pelo RJ360 para ver rotas alternativas, alertas ao vivo e regiões seguras para explorar
+                                com tranquilidade.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tp texto-principal3 textoGlobalNegrito d-flex justify-content-center mt-3">
+                    <p>
+                        Todas essas recomendações são baseadas em dados reais, fornecidos por fontes como o portal ISP
+                        Dados,
+                        o ISPGeo e veículos confiáveis da imprensa.
+                    </p>
+                </div>
+
+                <!-- Comentários -->
+                <div class="container-comentarios container mt-5">
+                    <h2 class="textoGlobalNegrito text-center">Comentários</h2>
+                    <p class="text-center textoGlobalNormal">Veja o que as pessoas estão falando sobre a Zona Sul:</p>
+
+                    <div class="text-center d-flex flex-column flex-md-row justify-content-center gap-2 mb-3">
+                        <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#accordionFlushExample" aria-expanded="false"
+                            aria-controls="accordionFlushExample">Veja mais</button>
+                        <button class="btn btn-success" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasComentario" aria-controls="offcanvasComentario">Adicionar
+                            Comentário</button>
+                    </div>
+
+                    <div class="offcanvas offcanvas-bottom custom-offcanvas" tabindex="-1" id="offcanvasComentario"
+                        aria-labelledby="offcanvasComentarioLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasComentarioLabel">Adicionar Comentário</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <p>Conte sua experiência ou relato:</p>
+                            <input type="text" id="nomeComentario" class="form-control mb-2" placeholder="Seu nome">
+                            <textarea id="textoComentario" class="form-control mb-2" rows="3"
+                                placeholder="Seu comentário"></textarea>
+                            <button class="btn btn-success" onclick="adicionarComentario()">Enviar Comentário</button>
+                        </div>
+                    </div>
+
+                    <div class="accordion accordion-flush collapse" id="accordionFlushExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                    aria-controls="flush-collapseOne">
+                                    Comentário: Juliana Moraes
+                                </button>
+                            </h2>
+                            <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">Fui furtada na saída do metrô Cordeal Arco Verde,em Copacabana. Estava distraída mexendo no celular quando dois rapazes se aproximaram e levaram sem eu perceber. Fiquem atentos, principalmente em horários de pico e em ruas próximas à praia. Evitem usar o celular à vista, guardem bolsas na frente do corpo e fiquem de olho em quem se aproxima.
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                    aria-controls="flush-collapseTwo">
+                                    Comentário: Roberto Tavares
+                                </button>
+                            </h2>
+                            <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">Trabalho em Ipanema e sempre vejo turistas desprevenidos sendo abordados, principalmente nas ruas próximas à praia e nos bares da orla. Recomendo atenção redobrada com bolsas, mochilas e celulares. Evitem andar com objetos de valor à mostra e fiquem atentos quando pararem para tirar fotos ou consultar o mapa.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
     </main>
 
-
+    <!-- Rodapé -->
+    <footer class="container-rodape container-fluid d-flex justify-content-around align-items-center py-2">
+        <div class="rodapeLinks">
+            <p>Siga a gente nas Redes Sociais:</p>
+            <div class="rodape--redes-sociais d-flex justify-content-evenly">
+                <a href="#"><i class="icones-rodape bi bi-instagram"></i></a>
+                <a href="#"><i class="icones-rodape bi bi-twitter-x"></i></a>
+                <a href="#"><i class="icones-rodape bi bi-facebook"></i></a>
+            </div>
+        </div>
+        <div class="rodape-copywrite">
+            <p id="anoAtual" class="text-custom-footer pt-2"></p>
+        </div>
+        <div class="rodapeLogo">
+            <a class="navbar-brand" href="#">
+                <img class="img-logo" src="../../../assets/logos/logo-rj360-removebg-preview.png" alt="">
+                <span class="span-logo-rodape">RJ</span><span class="span-logo2-rodape">360</span>
+            </a>
+        </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous">
-        </script>
-
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
     <script src="../../../script.js"></script>
+
 </body>
 
 </html>

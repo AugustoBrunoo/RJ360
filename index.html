@@ -63,14 +63,16 @@
                                 <ul class="dropdown-menu text-center w-100">
                                     <li><a class="dropdown-item" href="./pages/zonas/zona sul/zona-sul.html">Zona
                                             Sul</a></li>
-                                    <li><a class="dropdown-item" href="./pages/zonas/zona norte/zona-norte.html">Zona Norte</a></li>
+                                    <li><a class="dropdown-item" href="./pages/zonas/zona norte/zona-norte.html">Zona
+                                            Norte</a></li>
                                     <li><a class="dropdown-item" href="./pages/zonas/zona oeste/zona-oeste.html">Zona
                                             Oeste</a></li>
                                     <li><a class="dropdown-item" href="#">Centro</a></li>
                                     <li>
                                         <hr class="dropdown-divider">
                                     </li>
-                                    <li><a class="dropdown-item" href="./pages/dmsfuncionalidades/dmsf.html">Explorar</a></li>
+                                    <li><a class="dropdown-item"
+                                            href="./pages/dmsfuncionalidades/dmsf.html">Explorar</a></li>
                                 </ul>
                             </div>
 
@@ -89,21 +91,23 @@
 
                             <div class="perfil-offcanvas fs-5 d-none">
                                 <div class="img-perfil">
-                                    <img src="https://avatars.githubusercontent.com/u/174916340?v=4" alt="">
+                                    <img src="../../assets/perfil/Joana.png" alt="">
                                 </div>
-                                <p class="mt-2 fs-5 textoGlobalNormal-basic">Olá, <span
-                                        class="nome-usuario">Usuário</span>!</p>
+                                <p class="mt-2 fs-5 textoGlobalNormal-basic">Olá,<span class="nome-usuario">
+                                        Joana</span>!</p>
                                 <a href="./pages/perfil/perfil.html"
                                     class="btn btn-textoGlobalNormal btn-sm fs-vp mt-2">Ver
-                                    perfil</a>
+                                    perfil
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
         </nav>
     </header>
 
-    
+
     <main>
         <!-- Início do Carrossel -->
         <div id="carouselExampleCaptions" class="carousel slide mt-custom" data-bs-ride="carousel"
@@ -196,7 +200,7 @@
                                         carioca
                                         inesquecível.
                                     </p>
-                                    
+
                                 </div>
                             </div>
                         </a>
@@ -257,7 +261,7 @@
 
                 <div class="col-12 col-md-6">
                     <div class="card mb-3 card-hover-zonas" style="max-width: 540px;">
-                        <a href="#" class="row g-0 card-link">
+                        <a href="./pages/zonas/centro/centro.html" class="row g-0 card-link">
                             <div class="col-md-4">
                                 <img src="assets/regioes-card/centro1.jpg" class="img-fluid rounded-start imagem-zona"
                                     alt="Imagem do Centro do Rio de Janeiro">
@@ -393,7 +397,7 @@
         <section class="container-avaliacoes mb-2 mt-5">
             <h1 class="text-center texto-avaliacoes fs-2">Avaliações</h1>
             <div id="carouselExampleRide" class="carousel slide carrousel-custom p-2" data-bs-ride="carousel"
-            data-bs-interval="5000">
+                data-bs-interval="5000">
                 <div class="carousel-inner">
                     <div class="carousel-item active bg-fundo-avaliacao">
 
@@ -527,7 +531,8 @@
                             <div class="row g-0 container-card-geral">
                                 <div class="col-12 px-0"> <!-- Removendo padding horizontal -->
                                     <div class="card-body d-flex flex-column justify-content-center w-100">
-                                        <h5 class="card-title-avaliacao text-center textoGlobalNegrito">Que tal nos contar o que
+                                        <h5 class="card-title-avaliacao text-center textoGlobalNegrito">Que tal nos
+                                            contar o que
                                             achou?</h5>
 
                                         <p class="card-text-avaliacao mt-3 w-100">
@@ -590,6 +595,21 @@
             </a>
         </div>
     </footer>
+
+    <!-- Toast personalizado -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="toastBoasVindas" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <strong class="me-auto">RJ360</strong>
+                <small>Agora</small>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Fechar"></button>
+            </div>
+            <div class="toast-body" id="toastMensagem">
+                <!-- Mensagem será inserida via JS -->
+            </div>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous">
         </script>

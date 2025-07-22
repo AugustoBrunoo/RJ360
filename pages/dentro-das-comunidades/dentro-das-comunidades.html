@@ -2,27 +2,33 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../../assets/logos/Logo-removebg-preview.png" type="image/x-icon">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="../../style.css">
-    <link rel="stylesheet" href="../../styleGlobal.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../../assets/logos/Logo-removebg-preview.png" type="image/x-icon" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="../../style.css" />
+    <link rel="stylesheet" href="../../styleGlobal.css" />
     <title>RJ360 - Vivências Reais e Transformadoras</title>
+
     <style>
         .hero {
             background-image: url('../../assets/imagens/comunidades.jpg');
-            /* Imagem de fundo */
             background-size: cover;
             background-position: center;
             height: 300px;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .highlight {
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: bold;
+            color: var(--bs-body-color);
         }
 
         .activity-card {
@@ -33,49 +39,83 @@
             transform: scale(1.05);
         }
 
-        .tips-section {
-            background-color: #E4EFE7;
-            /* Cor de fundo alterada */
-            padding: 20px;
-            border-radius: 8px;
-            margin-top: 30px;
-        }
-
         .artist-card {
             margin-bottom: 20px;
         }
 
-        .blockquote-footer {
-            margin-top: 15px;
-            /* Aumentar o espaço entre o comentário e o nome */
-            font-weight: bold;
-            /* Destacar o nome do autor */
+        .flip-card {
+            background-color: transparent;
+            perspective: 1000px;
         }
 
-        .highlight {
-            background-color: #d1d3e0;
-            /* Cor de fundo cinza claro para destacar */
-            padding: 10px;
-            border-radius: 5px;
-            text-align: center;
-            font-weight: bold;
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-front,
+        .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .flip-card-front img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .flip-card-back {
+            background-color: #E4EFE7;
+            color: black;
+            transform: rotateY(180deg);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .flip-card-back p {
+            margin-bottom: 10px;
+        }
+
+        .hero h1 {
+            margin-bottom: 20px;
+            /* diminui espaço abaixo do h1 */
+        }
+
+        main section h2 {
+            margin-top: 0;
+            /* remove espaço extra acima do h2 */
         }
     </style>
 </head>
 
 <body data-bs-theme="light">
-    <!-- Cabeçalho da Página -->
+    <!-- Cabeçalho -->
     <header>
         <nav class="navbar bg-body-custom fixed-top">
             <div class="container-fluid">
                 <!-- Logo -->
-                <a class="navbar-brand d-flex align-items-center" href="../../index.html">
-                    <img class="img-logo" src="../../../assets/logos/logo-rj360-removebg-preview.png" alt="">
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <img class="img-logo" src="../../assets/logos/logo-rj360-removebg-preview.png" alt="">
                     <span class="span-logo">RJ</span><span class="span-logo2">360</span>
                 </a>
 
                 <!-- Botão que ativa o offcanvas -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                <button class="navbar-toggler me-4" type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -108,25 +148,24 @@
                                     Regiões
                                 </a>
                                 <ul class="dropdown-menu text-center w-100">
-                                    <li><a class="dropdown-item" href="../zonas/zona sul/zona-sul.html">Zona
+                                    <li><a class="dropdown-item" href="./pages/zonas/zona sul/zona-sul.html">Zona
                                             Sul</a></li>
-                                    <li><a class="dropdown-item" href="../zonas/zona norte/zona-norte.html">Zona
-                                            Norte</a>
-                                    </li>
-                                    <li><a class="dropdown-item" href="../zonas/zona oeste/zona-oeste.html">Zona
+                                    <li><a class="dropdown-item" href="./pages/zonas/zona norte/zona-norte.html">Zona
+                                            Norte</a></li>
+                                    <li><a class="dropdown-item" href="./pages/zonas/zona oeste/zona-oeste.html">Zona
                                             Oeste</a></li>
-                                    <li><a class="dropdown-item" href="../zonas/centro/centro.html">Centro</a></li>
+                                    <li><a class="dropdown-item" href="#">Centro</a></li>
                                     <li>
                                         <hr class="dropdown-divider">
                                     </li>
-                                    <li><a class="dropdown-item" href="../dmsfuncionalidades/dmsf.html">Explorar</a>
-                                    </li>
+                                    <li><a class="dropdown-item"
+                                            href="./pages/dmsfuncionalidades/dmsf.html">Explorar</a></li>
                                 </ul>
                             </div>
 
                             <!-- Sobre Nós -->
                             <a class="nav-link offcanvas-link fs-5 botoes-offcanvas"
-                                href="../sobreNos/sobreNos.html">Sobre Nós</a>
+                                href="./pages/sobreNos/sobreNos.html">Sobre Nós</a>
                         </div>
 
                         <!-- Bloco do perfil (fixado embaixo) -->
@@ -134,26 +173,27 @@
                         <div class="container-perfil text-center mb-5">
                             <div class="container-fazer-login">
                                 <h2 class="mb-4">Faça seu Login!</h2>
-                                <a href="../login/login.html" class="btn btn-global fs-5">Entrar</a>
+                                <a href="./pages/login/login.html" class="btn btn-global fs-5">Entrar</a>
                             </div>
 
                             <div class="perfil-offcanvas fs-5 d-none">
                                 <div class="img-perfil">
-                                    <img src="https://avatars.githubusercontent.com/u/174916340?v=4" alt="">
+                                    <img src="../../assets/perfil/Joana.png" alt="">
                                 </div>
-                                <p class="mt-2 fs-5 textoGlobalNormal-basic">Olá,<span
-                                        class="nome-usuario">Usuário</span>!</p>
+
+                                <p class="mt-2 fs-5 textoGlobalNormal-basic">Olá,<span class="nome-usuario"></span>
+                                        Joana</span>!</p>
                                 <a href="../perfil/perfil.html" class="btn btn-textoGlobalNormal btn-sm fs-vp mt-2">Ver
-                                    perfil</a>
+                                    perfil
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
         </nav>
     </header>
 
-    <!-- Conteúdo Principal da Página -->
+    <!-- Conteúdo -->
     <main class="container mt-custom">
         <div class="hero">
             <h1 class="highlight">Vivências Reais e Transformadoras</h1>
@@ -161,163 +201,185 @@
 
         <section class="mt-4">
             <h2 class="text-center">Conheça o Rio pela voz de quem constrói sua cultura todos os dias</h2>
-            <p class="text-center">Nesta seção, você encontrará histórias e experiências de pessoas que vivem e respiram
-                a cultura carioca. Através de suas vivências, você poderá entender melhor a riqueza e a diversidade que
-                o Rio de Janeiro tem a oferecer.</p>
+            <p class="text-center">Nesta seção, você encontrará histórias e experiências de quem vive e respira a
+                cultura carioca.</p>
         </section>
 
-        <!-- Seção de Atividades Culturais -->
+        <!-- Atividades Culturais -->
         <section class="row g-4 mt-5">
             <article class="col-md-6">
                 <div class="card h-100 shadow-sm activity-card">
                     <img src="../../assets/eventos/atividades-culturais1.jpg" class="card-img-top"
-                        alt="Atividade Cultural 1">
+                        alt="Atividade Cultural 1" />
                     <div class="card-body">
                         <h5 class="card-title">Roda de Samba na Pedra do Sal</h5>
-                        <p class="card-text">Participe de uma animada roda de samba na Pedra do Sal, um dos berços do
-                            samba no Rio. Músicos locais se reúnem para celebrar a cultura carioca em um ambiente
-                            vibrante e acolhedor.</p>
+                        <p class="card-text">Participe de uma animada roda de samba em um dos berços do samba no Rio.
+                        </p>
                     </div>
                 </div>
             </article>
-
             <article class="col-md-6">
                 <div class="card h-100 shadow-sm activity-card">
                     <img src="../../assets/eventos/atividades-culturais2.jpg" class="card-img-top"
-                        alt="Atividade Cultural 2">
+                        alt="Atividade Cultural 2" />
                     <div class="card-body">
                         <h5 class="card-title">Oficina de Capoeira</h5>
-                        <p class="card-text">Aprenda os fundamentos da capoeira com mestres locais. A oficina inclui uma
-                            introdução à história da capoeira e uma aula prática, onde você poderá experimentar essa
-                            arte marcial brasileira.</p>
+                        <p class="card-text">Aprenda os fundamentos da capoeira com mestres locais.</p>
                     </div>
                 </div>
             </article>
         </section>
 
-        <!-- Seção Artística -->
+        <!-- Artistas -->
         <section class="mt-5">
             <h3 class="text-center text-destaque mb-4">Artistas da Comunidade</h3>
             <div class="row">
                 <div class="col-md-4 artist-card">
                     <div class="card h-100 shadow-sm">
-                        <img src="../../assets/artistas/artista1.jpg" class="card-img-top" alt="Artista 1">
+                        <img src="../../assets/artistas/artista1.jpg" class="card-img-top" alt="Artista 1" />
                         <div class="card-body">
                             <h5 class="card-title">Tia Surica</h5>
-                            <p class="card-text">Uma das figuras mais icônicas do samba carioca, Tia Surica é conhecida
-                                por suas performances emocionantes e por seu trabalho na preservação da cultura do
-                                samba.</p>
+                            <p class="card-text">Figura icônica do samba carioca, guardiã da tradição e da cultura.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 artist-card">
                     <div class="card h-100 shadow-sm">
-                        <img src="../../assets/artistas/artista2.jpg" class="card-img-top" alt="Artista 2">
+                        <img src="../../assets/artistas/artista2.jpg" class="card-img-top" alt="Artista 2" />
                         <div class="card-body">
                             <h5 class="card-title">Zeca Pagodinho</h5>
-                            <p class="card-text">Zeca Pagodinho tem suas raízes fincadas na comunidade de Irajá e em
-                                Xerém. Sua música e seu estilo de vida são intrinsecamente ligados à cultura das favelas
-                                e subúrbios cariocas, celebrando o cotidiano, o samba e a amizade.</p>
+                            <p class="card-text">Celebrando o cotidiano, o samba e a amizade nos subúrbios cariocas.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 artist-card">
                     <div class="card h-100 shadow-sm">
-                        <img src="../../assets/artistas/artista3.jpg" class="card-img-top" alt="Artista 3">
+                        <img src="../../assets/artistas/artista3.jpg" class="card-img-top" alt="Artista 3" />
                         <div class="card-body">
                             <h5 class="card-title">Seu Jorge</h5>
-                            <p class="card-text">Sua música mistura samba, funk, soul e MPB, e suas letras
-                                frequentemente retratam o cotidiano, as belezas e os desafios da vida nas periferias
-                                cariocas.</p>
+                            <p class="card-text">Mistura samba, funk e MPB para retratar a vida nas periferias.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Seção de Passeios por Favelas -->
+        <!-- Passeios -->
         <section class="mt-5">
             <h3 class="text-center text-destaque mb-4">Passeios por Favelas do Rio de Janeiro</h3>
-            <p class="text-center">Descubra a cultura vibrante e as histórias inspiradoras das favelas do Rio de
-                Janeiro. Nossos passeios são guiados por moradores locais que compartilham suas experiências e
-                conhecimentos sobre a comunidade.</p>
+            <p class="text-center">Descubra histórias inspiradoras com guias locais.</p>
             <div class="row g-4">
                 <article class="col-md-6">
                     <div class="card h-100 shadow-sm">
-                        <img src="../../assets/passeios/favela1.jpg" class="card-img-top" alt="Passeio na Favela 1">
+                        <img src="https://s2-oglobo.glbimg.com/TFhoR_0Llw7Wff7Mtf3qsoTnnzE=/0x0:1366x910/888x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_da025474c0c44edd99332dddb09cabe8/internal_photos/bs/2024/T/b/sBGSimQASpwYHDzaZ4SA/105282371-ri-rio-de-janeiro-rj-08-12-2023-a-camara-de-vereadores-do-rio-de-janeiro-aprovou-o-novo.jpg"
+                            class="card-img-top" alt="Passeio na Favela 1" />
                         <div class="card-body">
-                            <h5 class="card-title">Passeio na Favela da Rocinha</h5>
-                            <p class="card-text">Explore a maior favela do Brasil com um guia local. Conheça a história,
-                                a cultura e as iniciativas sociais que fazem da Rocinha um lugar único. O passeio inclui
-                                visitas a projetos comunitários e a oportunidade de interagir com os moradores.</p>
+                            <h5 class="card-title">Rocinha</h5>
+                            <p class="card-text">Explore a maior favela do Brasil, visite projetos comunitários e
+                                interaja com moradores.</p>
                         </div>
                     </div>
                 </article>
-
                 <article class="col-md-6">
                     <div class="card h-100 shadow-sm">
-                        <img src="../../assets/passeios/favela2.jpg" class="card-img-top" alt="Passeio na Favela 2">
+                        <img src="https://img.freepik.com/fotos-premium/favela-vidigal-no-rio-de-janeiro-durante-a-foto-aerea-do-por-do-sol_846485-19010.jpg"
+                            class="card-img-top" alt="Passeio na Favela 2" />
                         <div class="card-body">
-                            <h5 class="card-title">Passeio na Favela do Vidigal</h5>
-                            <p class="card-text">Descubra a beleza do Vidigal, com suas vistas deslumbrantes e cultura
-                                vibrante. O passeio inclui visitas a projetos comunitários e eventos culturais, além de
-                                uma parada em um dos mirantes mais bonitos do Rio.</p>
+                            <h5 class="card-title">Vidigal</h5>
+                            <p class="card-text">Vistas deslumbrantes, cultura vibrante e projetos comunitários únicos.
+                            </p>
                         </div>
                     </div>
                 </article>
             </div>
-            <!-- Seção de Contato -->
-            <section class="mt-4">
-                <h4 class="text-center">Entre em Contato para Mais Informações</h4>
-                <form id="contactForm">
-                    <div class="mb-3">
-                        <label for="name" class="form-label">Nome</label>
-                        <input type="text" class="form-control" id="name" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="email" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="message" class="form-label">Mensagem</label>
-                        <textarea class="form-control" id="message" rows="3" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Enviar</button>
-                </form>
-            </section>
         </section>
-    </main>
 
-    <!-- Modal de Feedback -->
-    <div class="modal fade" id="feedbackModal" tabindex="-1" aria-labelledby="feedbackModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="feedbackModalLabel">Feedback de Envio</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <!-- Projetos Sociais -->
+        <section class="mt-5">
+            <h3 class="text-center text-destaque mb-4">Projetos Sociais</h3>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="../../assets/imagens/outras_fotos/Projeto_social1.jpg" alt="Projeto 1" />
+                            </div>
+                            <div class="flip-card-back">
+                                <h5>Favela Verde</h5>
+                                <p>O Favela Verde é um projeto que atua no Vidigal e na Chácara do Céu, trabalhando com
+                                    reflorestamento de áreas de mata atlântica dentro de comunidades cariocas. Além de
+                                    plantar árvores, promove oficinas de educação ambiental, visitas guiadas e mutirões
+                                    comunitários para envolver moradores e visitantes na preservação da natureza local.
+                                </p>
+                                <a href="https://www.instagram.com/favelaverderocinha/" class="btn btn-primary">Saiba
+                                    Mais</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="modal-body">
-                    <p><strong>Nome:</strong> <span id="feedbackName"></span></p>
-                    <p><strong>Email:</strong> <span id="feedbackEmail"></span></p>
-                    <p><strong>Mensagem:</strong> <span id="feedbackMessage"></span></p>
+                <div class="col-md-4">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="../../assets/imagens/outras_fotos/Projeto_social_2.jpg" alt="Projeto 2" />
+                            </div>
+                            <div class="flip-card-back">
+                                <h5>Redes Da Maré</h5>
+                                <p>A Redes da Maré é uma organização comunitária que atua no Complexo da Maré — um dos
+                                    maiores conjuntos de favelas do Rio. Ela oferece reforço escolar, cursos
+                                    profissionalizantes, incentivo à leitura, além de atuar em saúde, cultura e direitos
+                                    humanos. É uma referência em mobilização social e geração de oportunidades.</p>
+                                <a href="https://www.redesdamare.org.br/" class="btn btn-primary">Saiba Mais</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                <div class="col-md-4">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="../../assets/imagens/outras_fotos/Projeto_social3.jpg" alt="Projeto 3" />
+                            </div>
+                            <div class="flip-card-back">
+                                <h5>Bola pra Frente</h5>
+                                <p>Criado pelo ex-jogador Jorginho, o Instituto Bola Pra Frente usa esporte, educação e
+                                    cultura para transformar a vida de jovens na Zona Norte do Rio. São aulas de
+                                    futebol, basquete, vôlei e oficinas que impactam mais de 800 crianças e adolescentes
+                                    todos os anos.</p>
+                                <a href="https://bolaprafrente.org.br/?fbclid=PAZXh0bgNhZW0CMTEAAaejrOn8L7oQg0GOXxL9LROX7KeY87zvSR7sQ7UHR7hTjRezxAYxYyaYOtbLFA_aem_5O4pDUlUwduDlym958aCvQ"
+                                    class="btn btn-primary">Saiba Mais</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal de Imagem -->
+        <div class="modal fade" id="imagemModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-body p-0">
+                        <img id="imagemModalSrc" src="" alt="" class="img-fluid w-100">
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- Rodapé da Página -->
+
+    </main>
+
+    <!-- Rodapé -->
     <footer class="container-rodape container-fluid d-flex justify-content-around align-items-center py-2">
+
         <div class="rodapeLinks">
             <div class="rodape--texto">
                 <p>Siga a gente nas Redes Sociais:</p>
             </div>
             <div class="rodape--redes-sociais d-flex justify-content-evenly">
-                <a href="#" aria-label="Instagram"><i class="icones-rodape bi bi-instagram"></i></a>
-                <a href="#" aria-label="Twitter"><i class="icones-rodape bi bi-twitter-x"></i></a>
-                <a href="#" aria-label="Facebook"><i class="icones-rodape bi bi-facebook"></i></a>
+                <a href="#"><i class="icones-rodape bi bi-instagram"></i></a>
+                <a href="#"><i class="icones-rodape bi bi-twitter-x"></i></a>
+                <a href="#"><i class="icones-rodape bi bi-facebook"></i></a>
             </div>
         </div>
 
@@ -326,17 +388,14 @@
         </div>
 
         <div class="rodapeLogo">
-            <a class="navbar-brand" href="../../index.html">
-                <img class="img-logo" src="../../assets/logos/logo-rj360-removebg-preview.png" alt="Logo RJ360">
+            <a class="navbar-brand" href="#">
+                <img class="img-logo" src="../../assets/logos/logo-rj360-removebg-preview.png" alt="">
                 <span class="span-logo-rodape">RJ</span><span class="span-logo2-rodape">360</span>
             </a>
         </div>
     </footer>
 
-    <!-- Scripts Bootstrap e Customizados -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous">
-        </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../../script.js"></script>
     <script>
         // Script para lidar com o envio do formulário
@@ -361,6 +420,17 @@
             document.getElementById('contactForm').reset();
         });
     </script>
+    <script>
+        document.querySelectorAll('.img-click').forEach(img => {
+            img.addEventListener('click', () => {
+                const modalImg = document.getElementById('imagemModalSrc');
+                modalImg.src = img.getAttribute('data-src') || img.src;
+                const modal = new bootstrap.Modal(document.getElementById('imagemModal'));
+                modal.show();
+            });
+        });
+    </script>
+
 </body>
 
 </html>
