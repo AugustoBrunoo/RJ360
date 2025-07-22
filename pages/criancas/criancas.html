@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/logos/Logo-removebg-preview.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="../../styleGlobal.css">
+    <title>RJ360: Com Crianças!</title>
+    <style>
+        body {
+            background-color: #FAF1E6; /* Cor de fundo suave */
+            color: #333;
+        }
+
+        .hero {
+            background-image: url('./assets/hero-image.jpg'); /* Imagem de fundo */
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: black; /* Mudando a cor do texto para preto */
+            text-shadow: none; /* Removendo a sombra do texto */
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+
+        .activity-card {
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .activity-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .activity-card img {
+            height: 200px; /* Altura padronizada */
+            object-fit: cover; /* Mantém a proporção da imagem */
+        }
+
+        .carousel-item img {
+            height: 400px; /* Altura fixa para o carrossel */
+            object-fit: cover; /* Mantém a proporção da imagem */
+        }
+
+        footer {
+            background-color: #007bff; /* Azul vibrante */
+            color: white;
+            padding: 20px 0;
+        }
+
+        .rodape--redes-sociais a {
+            color: white;
+            transition: color 0.3s;
+        }
+
+        .rodape--redes-sociais a:hover {
+            color: #ffcc00; /* Amarelo ao passar o mouse */
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .back-to-top:hover {
+            background-color: #0056b3;
+        }
+        .textofooter {
+            color: black;
+        }
+
+        [data-bs-theme="dark"]{
+            .texto{
+                color: white;
+            }
+            .text-center{
+                color: white;
+            }
+
+
+        }
+
+    </style>
+</head>
+
+<body data-bs-theme="light">
+    <!-- Cabeçalho -->
+    <header>
+        <nav class="navbar bg-body-custom fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <img class="img-logo" src="../../assets/logos/logo-rj360-removebg-preview.png" alt="">
+                    <span class="span-logo">RJ</span><span class="span-logo2">360</span>
+                </a>
+
+                <button class="navbar-toggler me-4" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title fs-2 texto" id="offcanvasNavbarLabel">Menu</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+
+                    <div class="offcanvas-body d-flex flex-column justify-content-between">
+                        <div class="container-opcao">
+                            <a class="nav-link offcanvas-link active botoes-offcanvas" id="modo-noturno" href="#">
+                                <i class="bi bi-circle-half me-2"></i> Tema do Site
+                            </a>
+                            <a class="nav-link offcanvas-link active botoes-offcanvas" href="#">
+                                <i class="bi bi-house-door-fill me-2"></i> Página Inicial
+                            </a>
+                            <div class="dropdown">
+                                <a class="nav-link offcanvas-link dropdown-toggle text-center botoes-offcanvas" href="#"
+                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Regiões
+                                </a>
+                                <ul class="dropdown-menu text-center w-100">
+                                    <li><a class="dropdown-item" href="../../pages/zonas/zona sul/zona-sul.html">Zona
+                                            Sul</a></li>
+                                    <li><a class="dropdown-item" href="#">Zona Norte</a></li>
+                                    <li><a class="dropdown-item" href="../../pages/zonas/zona oeste/zona-oeste.html">Zona
+                                            Oeste</a></li>
+                                    <li><a class="dropdown-item" href="#">Centro</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="../../pages/dmsfuncionalidades/dmsf.html">Explorar</a></li>
+                                </ul>
+                            </div>
+                            <a class="nav-link offcanvas-link fs-5 botoes-offcanvas"
+                                href="../../pages/sobreNos/sobreNos.html">Sobre Nós</a>
+                        </div>
+
+                        <div class="container-perfil text-center mb-5">
+                            <div class="container-fazer-login">
+                                <h2 class="mb-4">Faça seu Login!</h2>
+                                <a href="../../pages/login/login.html" class="btn btn-global fs-5">Entrar</a>
+                            </div>
+
+                            <div class="perfil-offcanvas fs-5 d-none">
+                                <div class="img-perfil">
+                                    <img src="https://avatars.githubusercontent.com/u/174916340?v=4" alt="">
+                                </div>
+                                <p class="mt-2 fs-5 textoGlobalNormal-basic">Olá, <span
+                                        class="nome-usuario">Usuário</span>!</p>
+                                <a href="../../pages/perfil/perfil.html"
+                                    class="btn btn-textoGlobalNormal btn-sm fs-vp mt-2">Ver
+                                    perfil</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h1 class="texto">RJ360: Com Crianças!</h1>
+    </div>
+
+    <div class="container mt-3"> <!-- Diminuí o espaço entre o título e a seção -->
+        <h2 class="text-center" class="texto">Diversão em Família</h2>
+        <p class="text-center" class="texto">Passeios seguros e cheios de aprendizado para os pequenos no Rio de Janeiro.</p>
+
+        <!-- Seção de Carrossel para Atrações em Destaque -->
+        <div id="carouselExample" class="carousel slide mb-5" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="../../assets/passeios/jardim_botanico1.jpeg" class="d-block w-100" alt="Jardim Botânico">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 class="texto">Jardim Botânico</h5>
+                        <p class="texto">Um lugar incrível para explorar a natureza e aprender sobre plantas.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="../../assets/passeios/museu_imperial1.jpg" class="d-block w-100" alt="Museu Imperial">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 class="texto">Museu Imperial</h5>
+                        <p class="texto">Descubra a história do Brasil de forma divertida.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="../../assets/passeios/aquario_rio1.jpg" class="d-block w-100" alt="AquaRio">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 class="texto">AquaRio</h5>
+                        <p class="texto">Aprenda sobre a vida marinha em um ambiente fascinante.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev texto" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon texto" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next texto" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon texto" aria-hidden="true"></span>
+                <span class="visually-hidden">Próximo</span>
+            </button>
+        </div>
+
+        <!-- Seção de Atividades em Destaque -->
+        <div class="row justify-content-center gx-5 gy-5 mt-4">
+            <div class="col-md-4">
+                <div class="activity-card card h-100" data-bs-toggle="modal" data-bs-target="#modalJardimBotanico">
+                    <img src="../../assets/passeios/jardim_botanico.jpeg" class="card-img-top" alt="Jardim Botânico">
+                    <div class="card-body">
+                        <h5 class="card-title">Jardim Botânico</h5>
+                        <p class="card-text">Explore a natureza e aprenda sobre plantas e ecossistemas.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="activity-card card h-100" data-bs-toggle="modal" data-bs-target="#modalMuseuImperial">
+                    <img src="../../assets/passeios/museu_imperial.jpeg" class="card-img-top" alt="Museu Imperial">
+                    <div class="card-body">
+                        <h5 class="card-title">Museu Imperial</h5>
+                        <p class="card-text">Descubra a história do Brasil de forma divertida.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="activity-card card h-100" data-bs-toggle="modal" data-bs-target="#modalAquaRio">
+                    <img src="../../assets/passeios/aquario_rio.jpeg" class="card-img-top" alt="AquaRio">
+                    <div class="card-body">
+                        <h5 class="card-title">AquaRio</h5>
+                        <p class="card-text">Aprenda sobre a vida marinha em um ambiente fascinante.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Jardim Botânico -->
+        <div class="modal fade" id="modalJardimBotanico" tabindex="-1" aria-labelledby="modalJardimBotanicoLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalJardimBotanicoLabel">Jardim Botânico</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        O Jardim Botânico é um lugar incrível para explorar a natureza e aprender sobre plantas e ecossistemas. É um espaço ideal para passeios em família, com diversas atividades educativas.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Museu Imperial -->
+        <div class="modal fade" id="modalMuseuImperial" tabindex="-1" aria-labelledby="modalMuseuImperialLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalMuseuImperialLabel">Museu Imperial</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        O Museu Imperial oferece uma experiência cultural interativa, onde as crianças podem aprender sobre a história do Brasil de forma divertida e envolvente.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal AquaRio -->
+        <div class="modal fade" id="modalAquaRio" tabindex="-1" aria-labelledby="modalAquaRioLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalAquaRioLabel">AquaRio</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        O AquaRio é o maior aquário marinho da América do Sul, onde as crianças podem aprender sobre a vida marinha em um ambiente fascinante e interativo.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Seção de Dicas de Segurança -->
+        <div class="container mt-5">
+            <h2 class="text-center">Dicas de Segurança</h2>
+            <div class="row">
+                <div class="col-md-4 text-center" data-bs-toggle="tooltip" data-bs-placement="top" title="Mantenha sempre um olho nas crianças.">
+                    <i class="bi bi-shield-lock" style="font-size: 3rem;"></i>
+                    <h5>Fique Atento</h5>
+                    <p>Mantenha sempre um olho nas crianças e evite áreas muito movimentadas.</p>
+                </div>
+                <div class="col-md-4 text-center" data-bs-toggle="tooltip" data-bs-placement="top" title="Identificação é importante.">
+                    <i class="bi bi-person-check" style="font-size: 3rem;"></i>
+                    <h5>Identificação</h5>
+                    <p>Certifique-se de que as crianças tenham identificação visível.</p>
+                </div>
+                <div class="col-md-4 text-center" data-bs-toggle="tooltip" data-bs-placement="top" title="Tenha sempre os números de emergência à mão.">
+                    <i class="bi bi-telephone" style="font-size: 3rem;"></i>
+                    <h5>Contatos de Emergência</h5>
+                    <p>Tenha sempre os números de emergência à mão.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Botão Voltar ao Topo -->
+    <button class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!-- Rodapé -->
+    <footer class="container-rodape container-fluid d-flex justify-content-around align-items-center py-2">
+        <div class="rodapeLinks">
+            <div class="rodape--texto">
+                <p>Siga a gente nas Redes Sociais:</p>
+            </div>
+            <div class="rodape--redes-sociais d-flex justify-content-evenly">
+                <a href="#"><i class="icones-rodape bi bi-instagram"></i></a>
+                <a href="#"><i class="icones-rodape bi bi-twitter-x"></i></a>
+                <a href="#"><i class="icones-rodape bi bi-facebook"></i></a>
+            </div>
+        </div>
+
+        <div class="rodape-copywrite">
+            <p id="anoAtual" class="text-custom-footer pt-2 textofooter"></p>
+        </div>
+
+        <div class="rodapeLogo">
+            <a class="navbar-brand" href="#">
+                <img class="img-logo" src="../../assets/logos/logo-rj360-removebg-preview.png" alt="">
+                <span class="span-logo-rodape">RJ</span><span class="span-logo2-rodape">360</span>
+            </a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous">
+    </script>
+    <script>
+        // Inicializa o tooltip
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+    </script>
+    <script src="../../script.js"></script>
+</body>
+
+</html>
