@@ -40,12 +40,12 @@
     background-image: url("../assets/imagens/zona-sul/cristorio1.jpg");
     background-size: cover;
     /* Cobrirá toda a área, mesmo que corte partes da imagem */
-    background-position: center;
+    background-position: center 30%;
     /* Centraliza o foco da imagem */
     background-repeat: no-repeat;
     /* Evita repetição */
     width: 100%;
-    height: 50vh;
+    height: 70vh;
     /* Altura do banner */
 }
 
@@ -71,7 +71,12 @@
 }
 
 
-.texto-principal,
+.texto-principal {
+    text-align: justify;
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
 .texto-principal2 {
     text-align: justify;
     word-break: break-word;
@@ -102,6 +107,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
     /* distribui espaço entre texto e botão */
 }
 
@@ -196,6 +202,11 @@
     }
 
 }
+
+.bloco5 h5 {
+    text-align: center;
+}
+
 
 /* Ordene os media query por ordem crescente */
 /* Ajustar de maneira desordenada pode causar inconsistências */
