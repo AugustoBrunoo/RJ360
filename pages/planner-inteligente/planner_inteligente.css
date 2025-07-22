@@ -19,11 +19,36 @@
 }
 
 main h1 {
-  font-family:"Special Gothic Expanded One", sans-serif;
+  font-family: "Special Gothic Expanded One", sans-serif;
   font-weight: 400;
-  color: var(--noturno-verde);
+  color: black;
   text-align: center;
   margin-bottom: 2rem;
+}
+
+.btn-global-2 {
+  background-color: var(--noturno-verde-claro);
+  color: white;
+  border: none;
+  width: fit-content;
+  padding: 10px;
+}
+
+.btn-global-2:hover {
+  background-color: #6C812F;
+  /* tom mais escuro para o hover */
+  transform: scale(1.03);
+  /* leve aumento ao passar o mouse */
+}
+
+#explicacaoPlanner .card {
+  border: none;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  background-color: var(--azul-claro);
+  /* cinza claro elegante */
+  transition: all 0.3s ease-in-out;
+  padding: 1.5rem;
 }
 
 #plannerForm {
@@ -106,6 +131,16 @@ main h1 {
 .btn {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
+}
+
+[data-bs-theme="dark"] {
+  main h1 {
+    color: white;
+  }
+
+  .card-body {
+    background-color: white;
+  }
 }
 
 /* Responsividade */
