@@ -16,7 +16,6 @@
             height: 400px;
             /* Ajuste a altura do card */
         }
-
         .card-img-top {
             width: 100%;
             /* A imagem ocupa toda a largura do card */
@@ -24,6 +23,11 @@
             /* Defina uma altura fixa para a imagem */
             object-fit: cover;
             /* A imagem se ajusta ao espaço, cortando o que não se encaixa */
+        }
+        .modal-img {
+            width: 100%;
+            height: 300px; /* Altura fixa para a imagem no modal */
+            object-fit: cover; /* Ajusta a imagem para cobrir o espaço */
         }
     </style>
 </head>
@@ -95,7 +99,6 @@
                         </div>
 
                         <!-- Bloco do perfil (fixado embaixo) -->
-                        <!-- Bloco do perfil (fixado embaixo) -->
                         <div class="container-perfil text-center mb-5">
                             <div class="container-fazer-login">
                                 <h2 class="mb-4">Faça seu Login!</h2>
@@ -122,34 +125,6 @@
     <main class="container space-mt-card-2">
         <h1 class="text-center text-destaque mb-5">Eventos por Tempo Limitado no Rio de Janeiro</h1>
 
-        <!-- Seção de Filtros e Busca (Conceitual) -->
-        <section class="bg-body-custom mb-5 p-4 rounded shadow-sm">
-            <h3 class="text-destaque mb-4">Refine sua Busca</h3>
-            <form id="searchForm" class="row g-3 align-items-end">
-                <div class="col-md-4">
-                    <label for="destino" class="form-label textoGlobalNormal">Destino/Região</label>
-                    <input type="text" class="form-control" id="destino" placeholder="Ex: Copacabana, Lapa, Centro">
-                </div>
-                <div class="col-md-3">
-                    <label for="tipoEvento" class="form-label textoGlobalNormal">Tipo de Evento</label>
-                    <select id="tipoEvento" class="form-select" data-filter="type">
-                        <option selected>Qualquer tipo...</option>
-                        <option>Show</option>
-                        <option>Festival</option>
-                        <option>Teatro</option>
-                        <option>Exposição</option>
-                    </select>
-                </div>
-                <div class="col-md-3">
-                    <label for="precoMax" class="form-label textoGlobalNormal">Preço Máximo (R$)</label>
-                    <input type="number" class="form-control" id="precoMax" placeholder="Ex: 500">
-                </div>
-                <div class="col-md-2">
-                    <button type="submit" class="btn btn-search w-100">Buscar</button>
-                </div>
-            </form>
-        </section>
-
         <!-- Seção de Listagem de Eventos -->
         <section class="row g-4" id="eventList">
 
@@ -169,10 +144,33 @@
                                 <i class="bi bi-calendar-fill"></i> 10 a 20 de Novembro
                             </li>
                         </ul>
-                        <a href="#" class="btn btn-primary btn-global mt-3">Ver Detalhes</a>
+                        <button class="btn btn-primary btn-global mt-3" data-bs-toggle="modal" data-bs-target="#modalEvento1">Ver Detalhes</button>
                     </div>
                 </div>
             </article>
+
+            <!-- Modal para Evento 1 -->
+            <div class="modal fade" id="modalEvento1" tabindex="-1" aria-labelledby="modalEvento1Label" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalEvento1Label">Rio Gastronomia 2025</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="../../assets/eventos/rio-gastronomia.jpg" class="img-fluid" alt="Rio Gastronomia 2025">
+                            <p>A 15ª edição do festival de gastronomia traz os melhores restaurantes do Rio de Janeiro, com
+                                pratos exclusivos e shows ao vivo. Venha experimentar o melhor da culinária carioca!</p>
+                            <p><strong>Data:</strong> 10 a 20 de Novembro</p>
+                            <p><strong>Local:</strong> Centro do Rio de Janeiro</p>
+                            <p><strong>Preço:</strong> A partir de R$ 200</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <!-- Evento 2: CIRCUITO RJ 2025 - 1ª ETAPA -->
             <article class="col-md-6 card-hover-zonas" data-type="corrida" data-price="100" data-region="zona-norte">
@@ -190,31 +188,77 @@
                                 <i class="bi bi-calendar-fill"></i> 5 de Dezembro
                             </li>
                         </ul>
-                        <a href="#" class="btn btn-primary btn-global mt-3">Ver Detalhes</a>
+                        <button class="btn btn-primary btn-global mt-3" data-bs-toggle="modal" data-bs-target="#modalEvento2">Ver Detalhes</button>
                     </div>
                 </div>
             </article>
 
+            <!-- Modal para Evento 2 -->
+            <div class="modal fade" id="modalEvento2" tabindex="-1" aria-labelledby="modalEvento2Label" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalEvento2Label">CIRCUITO RJ 2025 - 1ª ETAPA</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="../../assets/eventos/circuito-rj.jpg" class="img-fluid modal-img" alt="CIRCUITO RJ 2025">
+                            <p>Participe da 1ª etapa do CIRCUITO RJ, uma corrida e caminhada que promove a saúde e o
+                                bem-estar. Com distâncias de 3K, é ideal para toda a família!</p>
+                            <p><strong>Data:</strong> 5 de Dezembro</p>
+                            <p><strong>Local:</strong> Zona Norte do Rio de Janeiro</p>
+                            <p><strong>Preço:</strong> A partir de R$ 100</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <!-- Evento 3: Show da Lady Gaga 2025 -->
-            <article class="col-md-6 card-hover-zonas" data-type="show" data-price="350" data-region="maracanã">
+            <article class="col-md-6 card-hover-zonas" data-type="show" data-price="0" data-region="maracanã">
                 <div class="card h-100 shadow-sm">
                     <img src="../../assets/eventos/show-lady-gaga.jpg" class="card-img-top imagem-hospedagem"
                         alt="Show da Lady Gaga 2025">
                     <div class="card-body card-bg-zonas">
                         <h5 class="card-title text-destaque">Show da Lady Gaga 2025</h5>
                         <p class="card-text textoGlobalNormal">Uma apresentação imperdível da icônica artista no
-                            Maracanã.</p>
+                            Copacabana.</p>
                         <ul class="list-unstyled">
-                            <li class="textoGlobalNormal"><i class="bi bi-geo-alt-fill"></i> Maracanã</li>
-                            <li class="textoGlobalNormal"><i class="bi bi-currency-dollar"></i> A partir de R$ 350</li>
+                            <li class="textoGlobalNormal"><i class="bi bi-geo-alt-fill"></i> Copacabana</li>
+                            <li class="textoGlobalNormal"><i class="bi bi-currency-dollar"></i> A partir de R$ 0</li>
                             <li class="textoGlobalNormal">
                                 <i class="bi bi-calendar-fill"></i> 15 de Janeiro
                             </li>
                         </ul>
-                        <a href="#" class="btn btn-primary btn-global mt-3">Ver Detalhes</a>
+                        <button class="btn btn-primary btn-global mt-3" data-bs-toggle="modal" data-bs-target="#modalEvento3">Ver Detalhes</button>
                     </div>
                 </div>
             </article>
+
+            <!-- Modal para Evento 3 -->
+            <div class="modal fade" id="modalEvento3" tabindex="-1" aria-labelledby="modalEvento3Label" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalEvento3Label">Show da Lady Gaga 2025</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="../../assets/eventos/show-lady-gaga.jpg" class="img-fluid modal-img" alt="Show da Lady Gaga 2025">
+                            <p>Não perca a chance de ver a icônica Lady Gaga ao vivo em copacabana! Uma apresentação
+                                cheia de energia e grandes sucessos.</p>
+                            <p><strong>Data:</strong> 15 de Janeiro</p>
+                            <p><strong>Local:</strong> Copacabana, Rio de Janeiro</p>
+                            <p><strong>Preço:</strong> A partir de R$ 0</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <!-- Evento 4: Bienal do Livro 2025 -->
             <article class="col-md-6 card-hover-zonas" data-type="Exposição" data-price="50" data-region="centro">
@@ -226,16 +270,39 @@
                         <p class="card-text textoGlobalNormal">A maior feira de livros do Brasil, com autores, palestras
                             e muito mais.</p>
                         <ul class="list-unstyled">
-                            <li class="textoGlobalNormal"><i class="bi bi-geo-alt-fill"></i> Centro</li>
+                            <li class="textoGlobalNormal"><i class="bi bi-geo-alt-fill"></i> Barra da tijuca</li>
                             <li class="textoGlobalNormal"><i class="bi bi-currency-dollar"></i> A partir de R$ 50</li>
                             <li class="textoGlobalNormal">
                                 <i class="bi bi-calendar-fill"></i> 1 a 10 de Setembro
                             </li>
                         </ul>
-                        <a href="#" class="btn btn-primary btn-global mt-3">Ver Detalhes</a>
+                        <button class="btn btn-primary btn-global mt-3" data-bs-toggle="modal" data-bs-target="#modalEvento4">Ver Detalhes</button>
                     </div>
                 </div>
             </article>
+
+            <!-- Modal para Evento 4 -->
+            <div class="modal fade" id="modalEvento4" tabindex="-1" aria-labelledby="modalEvento4Label" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalEvento4Label">Bienal do Livro 2025</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="../../assets/eventos/bienal-livro.jpg" class="img-fluid modal-img" alt="Bienal do Livro 2025">
+                            <p>A Bienal do Livro é a maior feira de livros do Brasil, reunindo autores, editoras e
+                                amantes da literatura. Venha participar de palestras, lançamentos e muito mais!</p>
+                            <p><strong>Data:</strong> 1 a 10 de Setembro</p>
+                            <p><strong>Local:</strong> Barra da tijuca</p>
+                            <p><strong>Preço:</strong> A partir de R$ 50</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
         </section>
     </main>
