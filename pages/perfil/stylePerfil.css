@@ -26,6 +26,27 @@
     border: 4px solid #ddd;
 }
 
+.btn-perfil:hover {
+    background-color: #6C812F;
+    /* tom mais escuro para o hover */
+    transform: scale(1.03);
+    /* leve aumento ao passar o mouse */
+}
+
+.modal-content {
+    border-radius: 1rem;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+}
+
+.modal-body img {
+    object-fit: cover;
+    height: 100%;
+}
+
+.accordion-button {
+    font-weight: 600;
+}
+
 .nome-usuario-span {
     color: var(--noturno-verde-claro);
 }

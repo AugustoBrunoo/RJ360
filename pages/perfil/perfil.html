@@ -89,10 +89,10 @@
 
                             <div class="perfil-offcanvas fs-5 d-none">
                                 <div class="img-perfil">
-                                    <img src="https://avatars.githubusercontent.com/u/174916340?v=4" alt="">
+                                    <img src="../../assets/perfil/Joana.png" alt="">
                                 </div>
-                                <p class="mt-2 fs-5 textoGlobalNormal-basic">Olá,<span
-                                        class="nome-usuario">Usuário</span>!</p>
+                                <p class="mt-2 fs-5 textoGlobalNormal-basic">Olá,<span class="nome-usuario"></span>
+                                    Joana</span>!</p>
                                 <a href="../perfil/perfil.html" class="btn btn-textoGlobalNormal btn-sm fs-vp mt-2">Ver
                                     perfil</a>
                             </div>
@@ -109,16 +109,16 @@
         <section class="cabecalho-perfil mb-5">
             <div class="row align-items-center g-4">
                 <div class="col-12 col-md-3 text-center text-md-start">
-                    <img class="img-perfil-usuario" src="https://avatars.githubusercontent.com/u/174916340?v=4"
-                        alt="Foto do usuário">
+                    <img class="img-perfil-usuario" src="../../assets/perfil/Joana.png" alt="Foto do usuário">
                 </div>
                 <div class="col-12 col-md-9 text-center text-md-start">
-                    <h2 class="nome-perfil textoGlobalNegrito">Olá, <span class="nome-usuario-span">Usuário!</span></h2>
-                    <p class="email-perfil textoGlobalNormal fs-5 mb-3">usuario@email.com</p>
-                    <a href="#" class="btn btn-textoGlobalNormal textoGlobalNormal btn-md">
+                    <h2 class="nome-perfil textoGlobalNegrito">Olá, <span class="nome-usuario-span">Joana
+                            Martins!</span></h2>
+                    <p class="email-perfil textoGlobalNormal fs-5 mb-3">joanamartins@gmail.com</p>
+                    <a href="#" class="btn btn-textoGlobalNormal textoGlobalNormal btn-perfil">
                         <i class="bi bi-pencil-fill fs-5 me-1"></i> Editar perfil
                     </a>
-                    <a href="#" class="btn textoGlobalNormal btn-textoGlobalNormal btn-md" id="btn-sair">
+                    <a href="#" class="btn textoGlobalNormal btn-textoGlobalNormal btn-perfil" id="btn-sair">
                         <i class="bi bi-box-arrow-left fs-5 me-1"></i> Sair da Conta
                     </a>
                 </div>
@@ -134,11 +134,12 @@
                     <div class="card card-curtido shadow-sm h-100 p-3 d-flex flex-column justify-content-between">
                         <div>
                             <h5 class="mb-2">Praia de Copacabana</h5>
-                            <p class="curtida-data fst-italic">Curtido em 05/07/2025</p>
+                            <p class="curtida-data fst-italic">Curtido em 22/07/2025</p>
                         </div>
                         <div class="mt-3 d-flex flex-column gap-2">
-                            <a href="#" class="btn btn-textoGlobalNormal btn-sm w-100">Rever lugar</a>
-                            <a href="#" class="btn btn-textoGlobalNormal-azul btn-sm w-100">Adicionar ao planner</a>
+                            <a href="#" class="btn btn-textoGlobalNormal btn-perfil w-100">Rever lugar</a>
+                            <a href="#" id="btnOcultarAvaliacao" class="btn btn-textoGlobalNormal-azul btn btn-primary w-100">Adicionar ao
+                                planner</a>
                         </div>
                     </div>
                 </div>
@@ -150,9 +151,10 @@
                             <p class="curtida-data fst-italic">Curtido em 28/06/2025</p>
                         </div>
                         <div class="mt-3 d-flex flex-column gap-2">
-                            <a href="#" class="btn btn-textoGlobalNormal btn-sm btn-rever w-100">Rever lugar</a>
+                            <a href="#" class="btn btn-textoGlobalNormal btn-perfil btn-rever w-100">Rever lugar</a>
                             <a href="#"
-                                class="btn btn-textoGlobalNormal-azul btn-sm btn-adicionarPlanner w-100">Adicionar ao
+                                class="btn btn-textoGlobalNormal-azul btn-primary btn-adicionarPlanner w-100">Adicionar
+                                ao
                                 planner</a>
                         </div>
                     </div>
@@ -165,8 +167,9 @@
                             <p class="curtida-data fst-italic">Curtido em 20/06/2025</p>
                         </div>
                         <div class="mt-3 d-flex flex-column gap-2">
-                            <a href="#" class="btn btn-textoGlobalNormal btn-sm w-100">Rever lugar</a>
-                            <a href="#" class="btn btn-textoGlobalNormal-azul btn-sm w-100">Adicionar ao planner</a>
+                            <a href="#" class="btn btn-textoGlobalNormal btn-perfil w-100">Rever lugar</a>
+                            <a href="#" class="btn btn-textoGlobalNormal-azul btn-primary w-100">Adicionar ao
+                                planner</a>
                         </div>
                     </div>
                 </div>
@@ -179,12 +182,12 @@
             <h3 class="secao-titulo">Avaliações realizadas</h3>
             <div class="accordion accordion-flush" id="accordionAvaliacoes">
 
-                <!-- Avaliação 1 -->
-                <div class="accordion-item">
+                <!-- Avaliação 1 (d-none)-->
+                <div id="itemAvaliacao1" class="accordion-item d-non">
                     <h2 class="accordion-header">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#avaliacao1" aria-expanded="false" aria-controls="avaliacao1">
-                            Pão de Açúcar
+                            Praia de Copacabana
                         </button>
                     </h2>
                     <div id="avaliacao1" class="accordion-collapse collapse" data-bs-parent="#accordionAvaliacoes">
@@ -194,10 +197,16 @@
                                 <i class="bi bi-star-fill estrela-icon-avaliacao"></i>
                                 <i class="bi bi-star-fill estrela-icon-avaliacao"></i>
                                 <i class="bi bi-star-fill estrela-icon-avaliacao"></i>
-                                <i class="bi bi-star-fill estrela-icon-avaliacao"></i>
+                                <i class="bi bi-star estrela-icon-avaliacao"></i>
                             </div>
-                            <p class="avaliacao-data fst-italic">Publicado em 05/07/2025</p>
-                            <p>Ótima vista! Recomendo ir no final da tarde para ver o pôr do sol.</p>
+                            <p class="avaliacao-data fst-italic">Publicado em 22/07/2025</p>
+                            <p>Muito arrastão! mas é lindo demais!</p>
+
+                            <button class="btn btn-textoGlobalNormal btn-perfil mt-3" data-bs-toggle="modal"
+                                data-bs-target="#modalReverAvaliacao">
+                                <i class="bi bi-pencil-square me-1"></i> Rever avaliação
+                            </button>
+
                         </div>
                     </div>
                 </div>
@@ -221,12 +230,16 @@
                             </div>
                             <p class="avaliacao-data fst-italic">Publicado em 28/06/2025</p>
                             <p>Experiência interativa e moderna, excelente passeio em família.</p>
+
+                            <button class="btn btn-textoGlobalNormal btn-perfil mt-3">
+                                <i class="bi bi-pencil-square me-1"></i> Rever avaliação
+                            </button>
                         </div>
                     </div>
                 </div>
-
             </div>
         </section>
+
 
 
         <section class="planners mb-5">
@@ -236,8 +249,8 @@
                     class="list-group-item d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center gap-3">
                     <span>Roteiro cultural de 3 dias</span>
                     <div class="btn-group">
-                        <a href="#" class="btn btn-sm btn-custom-vp fs-custom">Ver Planner</a>
-                        <a href="#" class="btn btn-sm btn-outline-secondary fs-custom">Baixar PDF</a>
+                        <a href="#" class="btn btn-perfil btn-custom-vp fs-custom">Ver Planner</a>
+                        <a href="#" class="btn btn-perfil btn-outline-secondary fs-custom">Baixar PDF</a>
                     </div>
                 </li>
 
@@ -245,8 +258,8 @@
                     class="list-group-item d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center gap-3">
                     <span>Fim de semana gastronômico no Rio</span>
                     <div class="btn-group">
-                        <a href="#" class="btn btn-sm btn-custom-vp fs-custom">Ver Planner</a>
-                        <a href="#" class="btn btn-sm btn-outline-secondary fs-custom">Baixar PDF</a>
+                        <a href="#" class="btn btn-perfil btn-custom-vp fs-custom">Ver Planner</a>
+                        <a href="#" class="btn btn-perfil btn-outline-secondary fs-custom">Baixar PDF</a>
                     </div>
                 </li>
 
@@ -254,12 +267,105 @@
                     class="list-group-item d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center gap-3">
                     <span>Tour histórico pelo Centro</span>
                     <div class="btn-group">
-                        <a href="#" class="btn btn-sm btn-custom-vp fs-custom">Ver Planner</a>
-                        <a href="#" class="btn btn-sm btn-outline-secondary fs-custom">Baixar PDF</a>
+                        <a href="#" class="btn btn-perfil btn-custom-vp fs-custom">Ver Planner</a>
+                        <a href="#" class="btn btn-perfil btn-outline-secondary fs-custom">Baixar PDF</a>
                     </div>
                 </li>
             </ul>
         </section>
+
+        <!-- Modal: Rever Avaliação -->
+        <div class="modal fade" id="modalReverAvaliacao" tabindex="-1" aria-labelledby="modalReverAvaliacaoLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content p-3">
+                    <div class="modal-header">
+                        <h5 class="modal-title fs-2" id="modalReverAvaliacaoLabel">Rever Avaliação</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+
+                        <!-- Imagem e localização -->
+                        <div class="row mb-3">
+                            <div class="col-md-5">
+                                <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/d7/5c/0d/vista-do-morro-da-urca.jpg?w=900&h=500&s=1"
+                                    alt="Imagem do local" class="img-fluid rounded shadow-sm">
+                            </div>
+                            <div class="col-md-7 d-flex flex-column justify-content-center">
+                                <h4 class="mb-1">Praia de Copacabana</h4>
+                                <p class="text-muted mb-0"><i class="bi bi-geo-alt-fill me-1 text-danger"></i> Copacabana, Rio de Janeiro - RJ
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Accordion com a avaliação -->
+                        <div class="accordion" id="accordionAvaliacaoModal">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#avaliacaoModalContent" aria-expanded="true"
+                                        aria-controls="avaliacaoModalContent">
+                                        Sua Avaliação
+                                    </button>
+                                </h2>
+                                <div id="avaliacaoModalContent" class="accordion-collapse collapse show"
+                                    data-bs-parent="#accordionAvaliacaoModal">
+                                    <div class="accordion-body">
+                                        <div class="estrelas-avaliacao d-flex text-warning mb-2">
+                                            <i class="bi bi-star-fill estrela-icon-avaliacao"></i>
+                                            <i class="bi bi-star-fill estrela-icon-avaliacao"></i>
+                                            <i class="bi bi-star-fill estrela-icon-avaliacao"></i>
+                                            <i class="bi bi-star-fill estrela-icon-avaliacao"></i>
+                                            <i class="bi bi-star estrela-icon-avaliacao"></i>
+                                        </div>
+                                        <p class="avaliacao-data fst-italic">Publicado em 05/07/2025</p>
+                                        <p>Muito arrastão! mas é lindo demais!</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer justify-content-between">
+                        <button type="button" class="btn btn-outline-danger" id="btnRemoverAvaliacao"
+                            data-bs-toggle="modal" data-bs-target="#modalConfirmRemocao">
+                            <i class="bi bi-trash3 me-1"></i> Remover avaliação
+                        </button>
+
+                        <button type="button" class="btn btn-textoGlobalNormal btn-perfil">
+                            <i class="bi bi-pencil-square me-1"></i>  Rever Lugar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal de Confirmação -->
+        <div class="modal fade" id="modalConfirmRemocao" tabindex="-1" aria-labelledby="modalConfirmLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-sm modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body text-center">
+                        <p>Deseja apagar a avaliação?</p>
+                        <button type="button" class="btn btn-danger me-2" id="confirmarRemocao">Sim, apagar</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="toast-container position-fixed top-0 end-0 p-3" style="z-index: 1060;">
+            <div id="toastRemovido" class="toast align-items-center text-white bg-success border-0" role="alert">
+                <div class="d-flex">
+                    <div class="toast-body">
+                        Avaliação removida com sucesso!
+                    </div>
+                    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+                        aria-label="Fechar"></button>
+                </div>
+            </div>
+        </div>
+
 
     </main>
 
@@ -294,5 +400,14 @@
 
     <script src="../../script.js"></script>
     <script src="./perfil.js"></script>
+    <div id="alertaRemocao"
+        class="alert alert-success alert-dismissible fade show position-fixed top-0 start-50 translate-middle-x mt-3 shadow"
+        role="alert" style="z-index: 1055; display: none;">
+        Avaliação removida com sucesso!
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Fechar"></button>
+    </div>
+
+
+</body>
 
 </html>
