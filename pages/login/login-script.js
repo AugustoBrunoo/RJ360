@@ -4,8 +4,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
     botao.addEventListener('click', function (e) {
         e.preventDefault();
-        localStorage.setItem('mostrarPerfil', 'true'); // só isso
-        window.location.href = '../../index.html'; // ajuste o caminho conforme o seu
+
+        // Armazena nome e sinal para o toast
+        localStorage.setItem('usuarioNome', 'Joana');
+        localStorage.setItem('mostrarToast', 'true');
+        localStorage.setItem('mostrarPerfil', 'true'); // se for necessário
+
+        // Redireciona para a home
+        window.location.href = '../../index.html'; // ajuste conforme seu caminho
     });
 });
-
