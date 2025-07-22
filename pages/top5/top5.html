@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="../../styleGlobal.css">
     <link rel="stylesheet" href="../../style.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <title>Top 5 por Cariocas</title>
     <style>
         .destination-card {
@@ -29,11 +30,14 @@
             object-fit: cover;
             /* Faz com que a imagem cubra todo o espaço do card */
         }
+        .bg-body-custom {
+            background-color: #E4EFE7 !important;
+            color: #000 !important;
+        }
     </style>
 </head>
 
-<body data-bs-theme="light">
-    <!-- Cabeçalho -->
+<!-- Início do Cabeçalho -->
     <header>
         <nav class="navbar bg-body-custom fixed-top">
             <div class="container-fluid">
@@ -77,25 +81,24 @@
                                     Regiões
                                 </a>
                                 <ul class="dropdown-menu text-center w-100">
-                                    <li><a class="dropdown-item" href="../zonas/zona sul/zona-sul.html">Zona
+                                    <li><a class="dropdown-item" href="../zona sul/zona-sul.html">Zona
                                             Sul</a></li>
-                                    <li><a class="dropdown-item" href="../zonas/zona norte/zona-norte.html">Zona
-                                            Norte</a>
+                                    <li><a class="dropdown-item" href="../zona norte/zona-norte.html">Zona Norte</a>
                                     </li>
-                                    <li><a class="dropdown-item" href="../zonas/zona oeste/zona-oeste.html">Zona
+                                    <li><a class="dropdown-item" href="../zona oeste/zona-oeste.html">Zona
                                             Oeste</a></li>
-                                    <li><a class="dropdown-item" href="../zonas/centro/centro.html">Centro</a></li>
+                                    <li><a class="dropdown-item" href="../centro/centro.html">Centro</a></li>
                                     <li>
                                         <hr class="dropdown-divider">
                                     </li>
-                                    <li><a class="dropdown-item" href="../dmsfuncionalidades/dmsf.html">Explorar</a>
+                                    <li><a class="dropdown-item" href="../../dmsfuncionalidades/dmsf.html">Explorar</a>
                                     </li>
                                 </ul>
                             </div>
 
                             <!-- Sobre Nós -->
                             <a class="nav-link offcanvas-link fs-5 botoes-offcanvas"
-                                href="../sobreNos/sobreNos.html">Sobre Nós</a>
+                                href="../../sobreNos/sobreNos.html">Sobre Nós</a>
                         </div>
 
                         <!-- Bloco do perfil (fixado embaixo) -->
@@ -103,7 +106,7 @@
                         <div class="container-perfil text-center mb-5">
                             <div class="container-fazer-login">
                                 <h2 class="mb-4">Faça seu Login!</h2>
-                                <a href="../login/login.html" class="btn btn-global fs-5">Entrar</a>
+                                <a href="../../login/login.html" class="btn btn-global fs-5">Entrar</a>
                             </div>
 
                             <div class="perfil-offcanvas fs-5 d-none">
@@ -121,153 +124,77 @@
             </div>
         </nav>
     </header>
+    <!-- Fim do Cabeçalho-->
 
-    <div class="container space-mt-card-2">
-        <h1 class="text-center">Top 5 por Cariocas</h1>
-        <p class="text-center">Dicas de quem vive o Rio: lugares autênticos escolhidos por moradores, do boteco raiz ao
-            pôr do sol inesquecível.</p>
-        <div class="row justify-content-center gx-5 gy-5 mt-4">
-            <!-- Card 1 -->
-            <div class="col-md-4 mb-4">
-                <div class="card h-100 destination-card" data-bs-toggle="modal" data-bs-target="#modal1">
-                    <img src="../../assets/top5/bar.jpg" class="card-img-top" alt="Bar do Mineiro">
-                    <div class="card-body">
-                        <h5 class="card-title">Bar do Mineiro</h5>
-                        <p class="card-text">Um famoso boteco em Santa Teresa, conhecido por sua comida caseira e
-                            ambiente acolhedor.</p>
-                    </div>
-                </div>
+<div class="container space-mt-card-2">
+  <h1 class="text-center">Top 5 por Cariocas</h1>
+  <p class="text-center">Dicas de quem vive o Rio: lugares autênticos escolhidos por moradores, do boteco raiz ao pôr do sol inesquecível.</p>
+  <div class="row justify-content-center gx-5 gy-5 mt-4">
+
+        <!-- Cards -->
+        <div class="row">
+
+        <!-- Bar do Mineiro -->
+        <div class="col-md-4 mb-4" data-aos="fade-up">
+            <div class="card h-100 destination-card" data-bs-toggle="modal" data-bs-target="#modal1">
+            <img src="../../assets/top5/bar.jpg" class="card-img-top" alt="Bar do Mineiro">
+            <div class="card-body">
+                <h5 class="card-title">Bar do Mineiro</h5>
+                <p class="card-text">Famoso boteco em Santa Teresa, com comida caseira e ambiente acolhedor.</p>
             </div>
-
-            <!-- Card 2 -->
-            <div class="col-md-4 mb-4">
-                <div class="card h-100 destination-card" data-bs-toggle="modal" data-bs-target="#modal2">
-                    <img src="../../assets/top5/mirante.jpg" class="card-img-top" alt="Mirante do Leblon">
-                    <div class="card-body">
-                        <h5 class="card-title">Mirante do Leblon</h5>
-                        <p class="card-text">Um dos melhores pontos para assistir ao pôr do sol, com uma vista
-                            deslumbrante da praia e da cidade.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="col-md-4 mb-4">
-                <div class="card h-100 destination-card" data-bs-toggle="modal" data-bs-target="#modal3">
-                    <img src="../../assets/top5/feira.jpg" class="card-img-top" alt="Feira de São Cristóvão">
-                    <div class="card-body">
-                        <h5 class="card-title">Feira de São Cristóvão</h5>
-                        <p class="card-text">Um mercado vibrante que celebra a cultura nordestina, com comidas típicas e
-                            música ao vivo.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 4 -->
-            <div class="col-md-4 mb-4">
-                <div class="card h-100 destination-card" data-bs-toggle="modal" data-bs-target="#modal4">
-                    <img src="../../assets/top5/leme.jpg" class="card-img-top" alt="Praia do Leme">
-                    <div class="card-body">
-                        <h5 class="card-title">Praia do Leme</h5>
-                        <p class="card-text">Uma praia menos conhecida, ideal para quem busca tranquilidade e beleza
-                            natural.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 5 -->
-            <div class="col-md-4 mb-4">
-                <div class="card h-100 destination-card" data-bs-toggle="modal" data-bs-target="#modal5">
-                    <img src="../../assets/top5/lapa.jpg" class="card-img-top" alt="Lapa">
-                    <div class="card-body">
-                        <h5 class="card-title">Lapa</h5>
-                        <p class="card-text">Famosa por sua vida noturna, com muitos bares e música ao vivo.</p>
-                    </div>
-                </div>
             </div>
         </div>
-    </div>
 
-    <!-- Modais para cada destino -->
-    <div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="modalLabel1" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modalLabel1">Bar do Mineiro</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <img src="../../assets/top5/bar.jpg" alt="Bar do Mineiro" class="img-fluid modal-img">
-                    <p>Um famoso boteco em Santa Teresa, conhecido por sua comida caseira e ambiente acolhedor. É o
-                        lugar perfeito para relaxar com amigos e aproveitar a cultura carioca.</p>
-                </div>
+        <!-- Mirante do Leblon -->
+        <div class="col-md-4 mb-4" data-aos="fade-up">
+            <div class="card h-100 destination-card" data-bs-toggle="modal" data-bs-target="#modal2">
+            <img src="../../assets/top5/mirante.jpg" class="card-img-top" alt="Mirante do Leblon">
+            <div class="card-body">
+                <h5 class="card-title">Mirante do Leblon</h5>
+                <p class="card-text">Um dos melhores pontos para ver o pôr do sol na Zona Sul do Rio.</p>
+            </div>
             </div>
         </div>
-    </div>
 
-    <div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="modalLabel2" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modalLabel2">Mirante do Leblon</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <img src="../../assets/top5/mirante.jpg" alt="Mirante do Leblon" class="img-fluid modal-img">
-                    <p>Um dos melhores pontos para assistir ao pôr do sol, com uma vista deslumbrante da praia e da
-                        cidade. É um momento mágico que atrai tanto moradores quanto turistas.</p>
-                </div>
+        <!-- Feira de São Cristóvão -->
+        <div class="col-md-4 mb-4" data-aos="fade-up">
+            <div class="card h-100 destination-card" data-bs-toggle="modal" data-bs-target="#modal3">
+            <img src="../../assets/top5/feira.jpg" class="card-img-top" alt="Feira de São Cristóvão">
+            <div class="card-body">
+                <h5 class="card-title">Feira de São Cristóvão</h5>
+                <p class="card-text">Um pedacinho do Nordeste com comida típica, música e artesanato.</p>
+            </div>
             </div>
         </div>
-    </div>
 
-    <div class="modal fade" id="modal3" tabindex="-1" aria-labelledby="modalLabel3" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modalLabel3">Feira de São Cristóvão</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <img src="../../assets/top5/feira.jpg" alt="Feira de São Cristóvão" class="img-fluid modal-img">
-                    <p>Um mercado vibrante que celebra a cultura nordestina, com comidas típicas e música ao vivo. É o
-                        lugar ideal para experimentar pratos autênticos e aproveitar a música ao vivo.</p>
-                </div>
+        <div class="row">
+        <!-- Ilha da Gigóia -->
+        <div class="col-md-6 mb-4" data-aos="fade-up">
+            <div class="card h-100 destination-card" data-bs-toggle="modal" data-bs-target="#modal4">
+            <img src="../../assets/top5/leme.jpg" class="card-img-top" alt="Ilha da Gigóia">
+            <div class="card-body">
+                <h5 class="card-title">Ilha da Gigóia</h5>
+                <p class="card-text">Um refúgio escondido na Barra da Tijuca, acessível só de barco.</p>
+            </div>
             </div>
         </div>
-    </div>
 
-    <div class="modal fade" id="modal4" tabindex="-1" aria-labelledby="modalLabel4" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modalLabel4">Praia do Leme</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <img src="../../assets/top5/leme.jpg" alt="Praia do Leme" class="img-fluid modal-img">
-                    <p>Uma praia menos conhecida, ideal para quem busca tranquilidade e beleza natural. É um ótimo lugar
-                        para relaxar e aproveitar o sol.</p>
-                </div>
+        <!-- Pedra do Sal -->
+        <div class="col-md-6 mb-4" data-aos="fade-up">
+            <div class="card h-100 destination-card" data-bs-toggle="modal" data-bs-target="#modal5">
+            <img src="../../assets/top5/lapa.jpg" class="card-img-top" alt="Pedra do Sal">
+            <div class="card-body">
+                <h5 class="card-title">Pedra do Sal</h5>
+                <p class="card-text">Berço do samba carioca com rodas animadas e história afro-brasileira.</p>
+            </div>
             </div>
         </div>
-    </div>
-
-    <div class="modal fade" id="modal5" tabindex="-1" aria-labelledby="modalLabel5" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modalLabel5">Lapa</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <img src="../../assets/top5/lapa.jpg" alt="Lapa" class="img-fluid modal-img">
-                    <p>Famosa por sua vida noturna, com muitos bares e música ao vivo. A Lapa é um dos pontos mais
-                        icônicos do Rio, onde a cultura e a diversão se encontram.</p>
-                </div>
-            </div>
         </div>
-    </div>
+        <!-- Container dos modais -->
+        <div id="modais-container"></div>
+
+  </div>
+</div>
 
     <!-- Rodapé -->
     <footer class="container-rodape container-fluid d-flex justify-content-around align-items-center py-2">
@@ -298,7 +225,186 @@
         integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous">
         </script>
     <script src="../../script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
 
+        function curtirLugar(id) {
+            let curtidas = parseInt(localStorage.getItem(id)) || 0;
+            curtidas++;
+            localStorage.setItem(id, curtidas);
+            document.getElementById("curtidas-" + id).innerText = curtidas;
+        }
+
+        function adicionarAoRoteiro(local) {
+            let roteiro = JSON.parse(localStorage.getItem("roteiro")) || [];
+            if (!roteiro.includes(local)) {
+            roteiro.push(local);
+            localStorage.setItem("roteiro", JSON.stringify(roteiro));
+            alert(`${local} adicionado ao seu roteiro!`);
+            } else {
+            alert(`${local} já está no seu roteiro.`);
+            }
+        }
+
+        // Inicializa curtidas ao carregar
+        const ids = ['barMineiro', 'miranteLeblon', 'feiraCristovao', 'praiaLeme', 'lapa'];
+        ids.forEach(id => {
+            const el = document.getElementById("curtidas-" + id);
+            if (el) el.innerText = localStorage.getItem(id) || 0;
+        });
+    </script>
+
+    <script>
+    // Dados dos locais
+    const locais = [
+    {
+        id: "barMineiro",
+        modalId: "modal1",
+        nome: "Bar do Mineiro",
+        descricao: "Famoso boteco em Santa Teresa, com comida caseira e ambiente acolhedor.",
+        imagem: "../../assets/top5/bar.jpg"
+    },
+    {
+        id: "miranteLeblon",
+        modalId: "modal2",
+        nome: "Mirante do Leblon",
+        descricao: "Um dos melhores pontos para ver o pôr do sol na Zona Sul do Rio.",
+        imagem: "../../assets/top5/mirante.jpg"
+    },
+    {
+        id: "feiraSCristovao",
+        modalId: "modal3",
+        nome: "Feira de São Cristóvão",
+        descricao: "Um pedacinho do Nordeste com comida típica, música e artesanato.",
+        imagem: "../../assets/top5/feira.jpg"
+    },
+    {
+        id: "ilhaGigoia",
+        modalId: "modal4",
+        nome: "Ilha da Gigóia",
+        descricao: "Um refúgio escondido na Barra da Tijuca, acessível só de barco.",
+        imagem: "../../assets/top5/ilha.jpg"
+    },
+    {
+        id: "pedraSal",
+        modalId: "modal5",
+        nome: "Pedra do Sal",
+        descricao: "Berço do samba carioca com rodas animadas e história afro-brasileira.",
+        imagem: "../../assets/top5/pedra.jpg"
+    }
+    ];
+
+    // Gerar modais dinamicamente
+    const container = document.getElementById("modais-container");
+    locais.forEach(local => {
+    container.innerHTML += `
+        <div class="modal fade" id="${local.modalId}" tabindex="-1" aria-labelledby="label-${local.id}" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="label-${local.id}">${local.nome}</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+            </div>
+            <div class="modal-body">
+                <img src="${local.imagem}" class="img-fluid mb-3" alt="${local.nome}">
+                <p>${local.descricao}</p>
+
+                <!-- Botões -->
+                <div class="mb-3">
+                <button class="btn btn-outline-danger me-2" onclick="curtirLugar('${local.id}')">
+                    <i class="bi bi-heart"></i> Curtir <span id="curtidas-${local.id}">0</span>
+                </button>
+                <button class="btn btn-outline-success me-2" onclick="adicionarAoRoteiro('${local.nome}')">
+                    <i class="bi bi-plus-circle"></i> Adicionar ao meu roteiro
+                </button>
+                <a class="btn btn-outline-primary" href="https://wa.me/?text=Veja%20esse%20lugar:%20${encodeURIComponent(local.nome)}%20no%20RJ!%20https://rj360.com/top5" target="_blank">
+                    <i class="bi bi-whatsapp"></i> Compartilhar
+                </a>
+                </div>
+
+                <!-- Comentários -->
+                <div class="mt-4">
+                <h5>Comentários</h5>
+                <div class="mb-3">
+                    <input type="text" id="nome-${local.id}" class="form-control mb-2" placeholder="Seu nome">
+                    <textarea id="comentario-${local.id}" class="form-control mb-2" rows="2" placeholder="Escreva seu comentário..."></textarea>
+                    <button class="btn btn-primary" onclick="enviarComentario('${local.id}')">Enviar</button>
+                </div>
+                <ul class="list-group" id="lista-comentarios-${local.id}"></ul>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+    `;
+
+    // Carrega dados ao abrir o modal
+    const modal = document.getElementById(local.modalId);
+    modal.addEventListener("show.bs.modal", () => {
+        carregarCurtidas(local.id);
+        carregarComentarios(local.id);
+    });
+    });
+
+    // Curtidas
+    function curtirLugar(id) {
+    let curtidas = parseInt(localStorage.getItem("curtidas-" + id)) || 0;
+    curtidas++;
+    localStorage.setItem("curtidas-" + id, curtidas);
+    document.getElementById("curtidas-" + id).innerText = curtidas;
+    }
+
+    function carregarCurtidas(id) {
+    const curtidas = localStorage.getItem("curtidas-" + id) || 0;
+    document.getElementById("curtidas-" + id).innerText = curtidas;
+    }
+
+    // Roteiro
+    function adicionarAoRoteiro(local) {
+    let roteiro = JSON.parse(localStorage.getItem("roteiro")) || [];
+    if (!roteiro.includes(local)) {
+        roteiro.push(local);
+        localStorage.setItem("roteiro", JSON.stringify(roteiro));
+        alert(`${local} adicionado ao seu roteiro!`);
+    } else {
+        alert(`${local} já está no seu roteiro.`);
+    }
+    }
+
+    // Comentários
+    function enviarComentario(id) {
+    const nome = document.getElementById("nome-" + id).value.trim();
+    const texto = document.getElementById("comentario-" + id).value.trim();
+
+    if (!nome || !texto) {
+        alert("Preencha o nome e o comentário.");
+        return;
+    }
+
+    const comentario = { nome, texto, data: new Date().toLocaleString() };
+    const lista = JSON.parse(localStorage.getItem("comentarios-" + id)) || [];
+    lista.push(comentario);
+    localStorage.setItem("comentarios-" + id, JSON.stringify(lista));
+
+    document.getElementById("nome-" + id).value = "";
+    document.getElementById("comentario-" + id).value = "";
+    carregarComentarios(id);
+    }
+
+    function carregarComentarios(id) {
+    const lista = JSON.parse(localStorage.getItem("comentarios-" + id)) || [];
+    const ul = document.getElementById("lista-comentarios-" + id);
+    ul.innerHTML = "";
+
+    lista.forEach(c => {
+        const li = document.createElement("li");
+        li.className = "list-group-item";
+        li.innerHTML = `<strong>${c.nome}</strong> <small class="text-muted">(${c.data})</small><br>${c.texto}`;
+        ul.appendChild(li);
+    });
+    }
+    </script>
 </body>
 
 </html>
