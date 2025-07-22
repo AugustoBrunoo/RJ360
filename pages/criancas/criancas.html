@@ -4,29 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./assets/logos/Logo-removebg-preview.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../../assets/logos/Logo-removebg-preview.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="../../style.css">
     <link rel="stylesheet" href="../../styleGlobal.css">
+    <link rel="stylesheet" href="../../style.css">
     <title>RJ360: Com Crianças!</title>
     <style>
-        body {
-            background-color: #FAF1E6; /* Cor de fundo suave */
-            color: #333;
-        }
-
         .hero {
-            background-image: url('./assets/hero-image.jpg'); /* Imagem de fundo */
+            background-image: url('./assets/hero-image.jpg');
+            /* Imagem de fundo */
             background-size: cover;
             background-position: center;
             height: 300px;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: black; /* Mudando a cor do texto para preto */
-            text-shadow: none; /* Removendo a sombra do texto */
+            color: black;
+            /* Mudando a cor do texto para preto */
+            text-shadow: none;
+            /* Removendo a sombra do texto */
         }
 
         .hero h1 {
@@ -45,46 +43,20 @@
         }
 
         .activity-card img {
-            height: 200px; /* Altura padronizada */
-            object-fit: cover; /* Mantém a proporção da imagem */
+            height: 200px;
+            /* Altura padronizada */
+            object-fit: cover;
+            /* Mantém a proporção da imagem */
         }
 
         .carousel-item img {
-            height: 400px; /* Altura fixa para o carrossel */
-            object-fit: cover; /* Mantém a proporção da imagem */
-        }
-
-        footer {
-            background-color: #007bff; /* Azul vibrante */
-            color: white;
-            padding: 20px 0;
-        }
-
-        .rodape--redes-sociais a {
-            color: white;
-            transition: color 0.3s;
-        }
-
-        .rodape--redes-sociais a:hover {
-            color: #ffcc00; /* Amarelo ao passar o mouse */
+            height: 400px;
+            /* Altura fixa para o carrossel */
+            object-fit: cover;
+            /* Mantém a proporção da imagem */
         }
 
         
-        .textofooter {
-            color: black;
-        }
-
-        [data-bs-theme="dark"]{
-            .texto{
-                color: white;
-            }
-            .text-center{
-                color: white;
-            }
-
-
-        }
-
     </style>
 </head>
 
@@ -127,13 +99,15 @@
                                     <li><a class="dropdown-item" href="../../pages/zonas/zona sul/zona-sul.html">Zona
                                             Sul</a></li>
                                     <li><a class="dropdown-item" href="#">Zona Norte</a></li>
-                                    <li><a class="dropdown-item" href="../../pages/zonas/zona oeste/zona-oeste.html">Zona
+                                    <li><a class="dropdown-item"
+                                            href="../../pages/zonas/zona oeste/zona-oeste.html">Zona
                                             Oeste</a></li>
                                     <li><a class="dropdown-item" href="#">Centro</a></li>
                                     <li>
                                         <hr class="dropdown-divider">
                                     </li>
-                                    <li><a class="dropdown-item" href="../../pages/dmsfuncionalidades/dmsf.html">Explorar</a></li>
+                                    <li><a class="dropdown-item"
+                                            href="../../pages/dmsfuncionalidades/dmsf.html">Explorar</a></li>
                                 </ul>
                             </div>
                             <a class="nav-link offcanvas-link fs-5 botoes-offcanvas"
@@ -148,12 +122,11 @@
 
                             <div class="perfil-offcanvas fs-5 d-none">
                                 <div class="img-perfil">
-                                    <img src="https://avatars.githubusercontent.com/u/174916340?v=4" alt="">
+                                    <img src="../../assets/perfil/Joana.png" alt="">
                                 </div>
-                                <p class="mt-2 fs-5 textoGlobalNormal-basic">Olá, <span
-                                        class="nome-usuario">Usuário</span>!</p>
-                                <a href="../../pages/perfil/perfil.html"
-                                    class="btn btn-textoGlobalNormal btn-sm fs-vp mt-2">Ver
+                                <p class="mt-2 fs-5 textoGlobalNormal-basic">Olá,<span class="nome-usuario"></span>
+                                    Joana</span>!</p>
+                                <a href="../perfil/perfil.html" class="btn btn-textoGlobalNormal btn-sm fs-vp mt-2">Ver
                                     perfil</a>
                             </div>
                         </div>
@@ -162,13 +135,15 @@
         </nav>
     </header>
 
+    <div class="header-space"></div>
     <div class="hero">
         <h1 class="texto">RJ360: Com Crianças!</h1>
     </div>
 
     <div class="container mt-3"> <!-- Diminuí o espaço entre o título e a seção -->
         <h2 class="text-center" class="texto">Diversão em Família</h2>
-        <p class="text-center" class="texto">Passeios seguros e cheios de aprendizado para os pequenos no Rio de Janeiro.</p>
+        <p class="text-center" class="texto">Passeios seguros e cheios de aprendizado para os pequenos no Rio de
+            Janeiro.</p>
 
         <!-- Seção de Carrossel para Atrações em Destaque -->
         <div id="carouselExample" class="carousel slide mb-5" data-bs-ride="carousel">
@@ -195,11 +170,13 @@
                     </div>
                 </div>
             </div>
-            <button class="carousel-control-prev texto" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <button class="carousel-control-prev texto" type="button" data-bs-target="#carouselExample"
+                data-bs-slide="prev">
                 <span class="carousel-control-prev-icon texto" aria-hidden="true"></span>
                 <span class="visually-hidden">Anterior</span>
             </button>
-            <button class="carousel-control-next texto" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <button class="carousel-control-next texto" type="button" data-bs-target="#carouselExample"
+                data-bs-slide="next">
                 <span class="carousel-control-next-icon texto" aria-hidden="true"></span>
                 <span class="visually-hidden">Próximo</span>
             </button>
@@ -239,7 +216,8 @@
         </div>
 
         <!-- Modal Jardim Botânico -->
-        <div class="modal fade" id="modalJardimBotanico" tabindex="-1" aria-labelledby="modalJardimBotanicoLabel" aria-hidden="true">
+        <div class="modal fade" id="modalJardimBotanico" tabindex="-1" aria-labelledby="modalJardimBotanicoLabel"
+            aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -247,7 +225,8 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        O Jardim Botânico é um lugar incrível para explorar a natureza e aprender sobre plantas e ecossistemas. É um espaço ideal para passeios em família, com diversas atividades educativas.
+                        O Jardim Botânico é um lugar incrível para explorar a natureza e aprender sobre plantas e
+                        ecossistemas. É um espaço ideal para passeios em família, com diversas atividades educativas.
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
@@ -257,7 +236,8 @@
         </div>
 
         <!-- Modal Museu Imperial -->
-        <div class="modal fade" id="modalMuseuImperial" tabindex="-1" aria-labelledby="modalMuseuImperialLabel" aria-hidden="true">
+        <div class="modal fade" id="modalMuseuImperial" tabindex="-1" aria-labelledby="modalMuseuImperialLabel"
+            aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -265,7 +245,8 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        O Museu Imperial oferece uma experiência cultural interativa, onde as crianças podem aprender sobre a história do Brasil de forma divertida e envolvente.
+                        O Museu Imperial oferece uma experiência cultural interativa, onde as crianças podem aprender
+                        sobre a história do Brasil de forma divertida e envolvente.
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
@@ -283,7 +264,8 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        O AquaRio é o maior aquário marinho da América do Sul, onde as crianças podem aprender sobre a vida marinha em um ambiente fascinante e interativo.
+                        O AquaRio é o maior aquário marinho da América do Sul, onde as crianças podem aprender sobre a
+                        vida marinha em um ambiente fascinante e interativo.
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
@@ -296,17 +278,20 @@
         <div class="container mt-5">
             <h2 class="text-center">Dicas de Segurança</h2>
             <div class="row">
-                <div class="col-md-4 text-center" data-bs-toggle="tooltip" data-bs-placement="top" title="Mantenha sempre um olho nas crianças.">
+                <div class="col-md-4 text-center" data-bs-toggle="tooltip" data-bs-placement="top"
+                    title="Mantenha sempre um olho nas crianças.">
                     <i class="bi bi-shield-lock" style="font-size: 3rem;"></i>
                     <h5>Fique Atento</h5>
                     <p>Mantenha sempre um olho nas crianças e evite áreas muito movimentadas.</p>
                 </div>
-                <div class="col-md-4 text-center" data-bs-toggle="tooltip" data-bs-placement="top" title="Identificação é importante.">
+                <div class="col-md-4 text-center" data-bs-toggle="tooltip" data-bs-placement="top"
+                    title="Identificação é importante.">
                     <i class="bi bi-person-check" style="font-size: 3rem;"></i>
                     <h5>Identificação</h5>
                     <p>Certifique-se de que as crianças tenham identificação visível.</p>
                 </div>
-                <div class="col-md-4 text-center" data-bs-toggle="tooltip" data-bs-placement="top" title="Tenha sempre os números de emergência à mão.">
+                <div class="col-md-4 text-center" data-bs-toggle="tooltip" data-bs-placement="top"
+                    title="Tenha sempre os números de emergência à mão.">
                     <i class="bi bi-telephone" style="font-size: 3rem;"></i>
                     <h5>Contatos de Emergência</h5>
                     <p>Tenha sempre os números de emergência à mão.</p>
@@ -315,7 +300,7 @@
         </div>
     </div>
 
-    
+
 
     <!-- Rodapé -->
     <footer class="container-rodape container-fluid d-flex justify-content-around align-items-center py-2">
@@ -344,7 +329,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous">
-    </script>
+        </script>
     <script>
         // Inicializa o tooltip
         var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
