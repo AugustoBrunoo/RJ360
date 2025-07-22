@@ -16,56 +16,95 @@
 <body data-bs-theme="light">
     <!-- Cabeçalho da Página - Consistente com index.html -->
     <header>
-        <nav class="navbar navbar-expand-lg bg-body-custom fixed-top">
+        <nav class="navbar bg-body-custom fixed-top">
             <div class="container-fluid">
-                <div class="d-flex align-items-center">
-                    <a class="navbar-brand" href="../../../index.html">
-                        <img class="img-logo" src="../../../assets/logos/logo-rj360-removebg-preview.png" alt="Logo RJ360">
-                        <span class="span-logo">RJ</span><span class="span-logo2">360</span>
-                    </a>
-                </div>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
+                <!-- Logo -->
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <img class="img-logo" src="../../../assets/logos/logo-rj360-removebg-preview.png" alt="">
+                    <span class="span-logo">RJ</span><span class="span-logo2">360</span>
+                </a>
+
+                <!-- Botão que ativa o offcanvas -->
+                <button class="navbar-toggler me-4" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 px-4 d-flex align-items-center">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">
-                                <i class="bi bi-circle-half icon-aparencia" id="modo-noturno" title="Alternar Modo Noturno"></i>
+
+                <!-- Offcanvas -->
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title fs-2" id="offcanvasNavbarLabel">Menu</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+
+                    <div class="offcanvas-body d-flex flex-column justify-content-between">
+                        <!-- Bloco das opções -->
+                        <div class="container-opcao">
+                            <!-- Tema -->
+                            <a class="nav-link offcanvas-link active botoes-offcanvas" id="modo-noturno" href="#">
+                                <i class="bi bi-circle-half me-2"></i> Tema do Site
                             </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="../../../index.html">
-                                <i class="icon-home bi bi-house-door-fill" title="Página Inicial"></i>
+
+                            <!-- Página Inicial -->
+                            <a class="nav-link offcanvas-link active botoes-offcanvas" href="../../../index.html">
+                                <i class="bi bi-house-door-fill me-2"></i> Página Inicial
                             </a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Regiões
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="./pages/zonas/zona sul/zona-sul.html">Zona Sul</a></li>
-                                <li><a class="dropdown-item" href="./pages/zonas/zona norte/zona-norte.html">Zona Norte</a></li>
-                                <li><a class="dropdown-item" href="./pages/zonas/zona oeste/zona-oeste.html">Zona Oeste</a></li>
-                                <li><a class="dropdown-item" href="./pages/zonas/centro/centro.html">Centro</a></li>
-                                <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="#">Destaques</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Sobre Nós</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="./hospedagens.html"></a>
-                        </li>
-                    </ul>
+
+                            <!-- Dropdown Regiões -->
+                            <div class="dropdown">
+                                <a class="nav-link offcanvas-link dropdown-toggle text-center botoes-offcanvas" href="#"
+                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Regiões
+                                </a>
+                                <ul class="dropdown-menu text-center w-100">
+                                    <li><a class="dropdown-item" href="./zona-sul.html">Zona
+                                            Sul</a></li>
+                                    <li><a class="dropdown-item" href="./pages/zonas/zona norte/zona-norte.html">Zona
+                                            Norte</a></li>
+                                    <li><a class="dropdown-item" href="./pages/zonas/zona oeste/zona-oeste.html">Zona
+                                            Oeste</a></li>
+                                    <li><a class="dropdown-item" href="#">Centro</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item"
+                                            href="../../dmsfuncionalidades/dmsf.html">Explorar</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- Sobre Nós -->
+                            <a class="nav-link offcanvas-link fs-5 botoes-offcanvas"
+                                href="../../sobreNos/sobreNos.html">Sobre Nós</a>
+                        </div>
+
+                        <!-- Bloco do perfil (fixado embaixo) -->
+                        <!-- Bloco do perfil (fixado embaixo) -->
+                        <div class="container-perfil text-center mb-5">
+                            <div class="container-fazer-login">
+                                <h2 class="mb-4">Faça seu Login!</h2>
+                                <a href="./pages/login/login.html" class="btn btn-global fs-5">Entrar</a>
+                            </div>
+
+                            <div class="perfil-offcanvas fs-5 d-none">
+                                <div class="img-perfil">
+                                    <img src="../../../assets/perfil/Joana.png" alt="">
+                                </div>
+                                <p class="mt-2 fs-5 textoGlobalNormal-basic">Olá,<span class="nome-usuario">
+                                        Joana</span>!</p>
+                                <a href="../../perfil/perfil.html"
+                                    class="btn btn-textoGlobalNormal btn-sm fs-vp mt-2">Ver
+                                    perfil
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </nav>
     </header>
+    <div class="header-space"></div>
+
 
     <!-- Conteúdo Principal da Página -->
     <main class="container mt-custom">
@@ -104,14 +143,18 @@
 
             <!-- Exemplo de Card de Hospedagem 1: Hotel Atlântico Copacabana -->
             <article class="col">
-                <div class="card h-100 shadow-sm card-hover-zonas" data-type="hotel" data-price="350" data-region="copacabana">
-                    <img src="../../../assets/hospedagens/hotel-copacabana.jpg" class="card-img-top imagem-hospedagem" alt="Hotel Atlântico Copacabana">
+                <div class="card h-100 shadow-sm card-hover-zonas" data-type="hotel" data-price="350"
+                    data-region="copacabana">
+                    <img src="../../../assets/hospedagens/hotel-copacabana.jpg" class="card-img-top imagem-hospedagem"
+                        alt="Hotel Atlântico Copacabana">
                     <div class="card-body card-bg-zonas">
                         <h5 class="card-title text-destaque">Hotel Atlântico Copacabana</h5>
-                        <p class="card-text textoGlobalNormal">Hotel 4 estrelas localizado a poucos passos da praia de Copacabana, com piscina na cobertura e vista para o mar.</p>
+                        <p class="card-text textoGlobalNormal">Hotel 4 estrelas localizado a poucos passos da praia de
+                            Copacabana, com piscina na cobertura e vista para o mar.</p>
                         <ul class="list-unstyled">
                             <li class="textoGlobalNormal"><i class="bi bi-geo-alt-fill"></i> Copacabana, Zona Sul</li>
-                            <li class="textoGlobalNormal"><i class="bi bi-currency-dollar"></i> A partir de R$ 350/noite</li>
+                            <li class="textoGlobalNormal"><i class="bi bi-currency-dollar"></i> A partir de R$ 350/noite
+                            </li>
                             <li class="textoGlobalNormal">
                                 <i class="bi bi-star-fill text-warning"></i>
                                 <i class="bi bi-star-fill text-warning"></i>
@@ -127,14 +170,18 @@
 
             <!-- Exemplo de Card de Hospedagem 2: Lapa Hostel Rio -->
             <article class="col">
-                <div class="card h-100 shadow-sm card-hover-zonas" data-type="hotel" data-price="1200" data-region="ipanema">
-                    <img src="../../../assets/hospedagens/hotel-fasano.jpg" class="card-img-top imagem-hospedagem" alt="Hotel Fasano Rio">
+                <div class="card h-100 shadow-sm card-hover-zonas" data-type="hotel" data-price="1200"
+                    data-region="ipanema">
+                    <img src="../../../assets/hospedagens/hotel-fasano.jpg" class="card-img-top imagem-hospedagem"
+                        alt="Hotel Fasano Rio">
                     <div class="card-body card-bg-zonas">
                         <h5 class="card-title text-destaque">Hotel Fasano Rio</h5>
-                        <p class="card-text textoGlobalNormal">Luxuoso hotel 5 estrelas em Ipanema com vista deslumbrante, spa de classe mundial e restaurante premiado.</p>
+                        <p class="card-text textoGlobalNormal">Luxuoso hotel 5 estrelas em Ipanema com vista
+                            deslumbrante, spa de classe mundial e restaurante premiado.</p>
                         <ul class="list-unstyled">
                             <li class="textoGlobalNormal"><i class="bi bi-geo-alt-fill"></i> Ipanema, Zona Sul</li>
-                            <li class="textoGlobalNormal"><i class="bi bi-currency-dollar"></i> A partir de R$ 1200/noite</li>
+                            <li class="textoGlobalNormal"><i class="bi bi-currency-dollar"></i> A partir de R$
+                                1200/noite</li>
                             <li class="textoGlobalNormal">
                                 <i class="bi bi-star-fill text-warning"></i>
                                 <i class="bi bi-star-fill text-warning"></i>
@@ -150,14 +197,18 @@
 
             <!-- Exemplo de Card de Hospedagem 3: Apartamento Aconchegante Ipanema -->
             <article class="col">
-                <div class="card h-100 shadow-sm card-hover-zonas" data-type="apartamento" data-price="500" data-region="ipanema">
-                    <img src="../../../assets/hospedagens/apartamento-ipanema.jpg" class="card-img-top imagem-hospedagem" alt="Apartamento Aconchegante Ipanema">
+                <div class="card h-100 shadow-sm card-hover-zonas" data-type="apartamento" data-price="500"
+                    data-region="ipanema">
+                    <img src="../../../assets/hospedagens/apartamento-ipanema.jpg"
+                        class="card-img-top imagem-hospedagem" alt="Apartamento Aconchegante Ipanema">
                     <div class="card-body card-bg-zonas">
                         <h5 class="card-title text-destaque">Apartamento Aconchegante Ipanema</h5>
-                        <p class="card-text textoGlobalNormal">Apartamento inteiro para aluguel por temporada, mobiliado e próximo à praia de Ipanema, perfeito para famílias ou grupos.</p>
+                        <p class="card-text textoGlobalNormal">Apartamento inteiro para aluguel por temporada, mobiliado
+                            e próximo à praia de Ipanema, perfeito para famílias ou grupos.</p>
                         <ul class="list-unstyled">
                             <li class="textoGlobalNormal"><i class="bi bi-geo-alt-fill"></i> Ipanema, Zona Sul</li>
-                            <li class="textoGlobalNormal"><i class="bi bi-currency-dollar"></i> A partir de R$ 500/noite</li>
+                            <li class="textoGlobalNormal"><i class="bi bi-currency-dollar"></i> A partir de R$ 500/noite
+                            </li>
                             <li class="textoGlobalNormal">
                                 <i class="bi bi-star-fill text-warning"></i>
                                 <i class="bi bi-star-fill text-warning"></i>
@@ -174,14 +225,18 @@
             <!-- Adicione mais cards de hospedagem aqui, seguindo a mesma estrutura -->
             <!-- Novo Hostel em Ipanema -->
             <article class="col">
-                <div class="card h-100 shadow-sm card-hover-zonas" data-type="hostel" data-price="700" data-region="ipanema">
-                    <img src="../../../assets/hospedagens/hostel-ipanema.jpg" class="card-img-top imagem-hospedagem" alt="Hostel Mellow Mood Ipanema">
+                <div class="card h-100 shadow-sm card-hover-zonas" data-type="hostel" data-price="700"
+                    data-region="ipanema">
+                    <img src="../../../assets/hospedagens/hostel-ipanema.jpg" class="card-img-top imagem-hospedagem"
+                        alt="Hostel Mellow Mood Ipanema">
                     <div class="card-body card-bg-zonas">
                         <h5 class="card-title text-destaque">El Misti Ipanema</h5>
-                        <p class="card-text textoGlobalNormal">Situado em uma rua arborizada, este hostel descontraído fica a dois minutos a pé da Praia de Ipanema e a três de uma estação de metrô.</p>
+                        <p class="card-text textoGlobalNormal">Situado em uma rua arborizada, este hostel descontraído
+                            fica a dois minutos a pé da Praia de Ipanema e a três de uma estação de metrô.</p>
                         <ul class="list-unstyled">
                             <li class="textoGlobalNormal"><i class="bi bi-geo-alt-fill"></i> Ipanema, Zona Sul</li>
-                            <li class="textoGlobalNormal"><i class="bi bi-currency-dollar"></i> A partir de R$ 700/noite</li>
+                            <li class="textoGlobalNormal"><i class="bi bi-currency-dollar"></i> A partir de R$ 700/noite
+                            </li>
                             <li class="textoGlobalNormal">
                                 <i class="bi bi-star-fill text-warning"></i>
                                 <i class="bi bi-star-fill text-warning"></i>
@@ -197,14 +252,18 @@
 
             <!-- Nova Pousada em Copacabana -->
             <article class="col">
-                <div class="card h-100 shadow-sm card-hover-zonas" data-type="pousada" data-price="220" data-region="copacabana">
-                    <img src="../../../assets/hospedagens/pousada-copacabana.jpg" class="card-img-top imagem-hospedagem" alt="Pousada Samba do Copacabana">
+                <div class="card h-100 shadow-sm card-hover-zonas" data-type="pousada" data-price="220"
+                    data-region="copacabana">
+                    <img src="../../../assets/hospedagens/pousada-copacabana.jpg" class="card-img-top imagem-hospedagem"
+                        alt="Pousada Samba do Copacabana">
                     <div class="card-body card-bg-zonas">
                         <h5 class="card-title text-destaque">Pousada Samba do Copacabana</h5>
-                        <p class="card-text textoGlobalNormal">Pousada familiar a 1 quadra da praia, com decoração temática e piscina na cobertura com vista para o mar.</p>
+                        <p class="card-text textoGlobalNormal">Pousada familiar a 1 quadra da praia, com decoração
+                            temática e piscina na cobertura com vista para o mar.</p>
                         <ul class="list-unstyled">
                             <li class="textoGlobalNormal"><i class="bi bi-geo-alt-fill"></i> Copacabana, Zona Sul</li>
-                            <li class="textoGlobalNormal"><i class="bi bi-currency-dollar"></i> A partir de R$ 220/noite</li>
+                            <li class="textoGlobalNormal"><i class="bi bi-currency-dollar"></i> A partir de R$ 220/noite
+                            </li>
                             <li class="textoGlobalNormal">
                                 <i class="bi bi-star-fill text-warning"></i>
                                 <i class="bi bi-star-fill text-warning"></i>
@@ -220,14 +279,18 @@
 
             <!-- Novo Hotel em Leblon -->
             <article class="col">
-                <div class="card h-100 shadow-sm card-hover-zonas" data-type="hotel" data-price="850" data-region="leblon">
-                    <img src="../../../assets/hospedagens/hotel-leblon.jpg" class="card-img-top imagem-hospedagem" alt="Hotel Marina All Suites">
+                <div class="card h-100 shadow-sm card-hover-zonas" data-type="hotel" data-price="850"
+                    data-region="leblon">
+                    <img src="../../../assets/hospedagens/hotel-leblon.jpg" class="card-img-top imagem-hospedagem"
+                        alt="Hotel Marina All Suites">
                     <div class="card-body card-bg-zonas">
                         <h5 class="card-title text-destaque">Hotel Marina All Suites</h5>
-                        <p class="card-text textoGlobalNormal">Hotel boutique à beira-mar no Leblon, com suítes espaçosas, serviço impecável e restaurante premiado.</p>
+                        <p class="card-text textoGlobalNormal">Hotel boutique à beira-mar no Leblon, com suítes
+                            espaçosas, serviço impecável e restaurante premiado.</p>
                         <ul class="list-unstyled">
                             <li class="textoGlobalNormal"><i class="bi bi-geo-alt-fill"></i> Leblon, Zona Sul</li>
-                            <li class="textoGlobalNormal"><i class="bi bi-currency-dollar"></i> A partir de R$ 850/noite</li>
+                            <li class="textoGlobalNormal"><i class="bi bi-currency-dollar"></i> A partir de R$ 850/noite
+                            </li>
                             <li class="textoGlobalNormal">
                                 <i class="bi bi-star-fill text-warning"></i>
                                 <i class="bi bi-star-fill text-warning"></i>
@@ -272,41 +335,40 @@
     <!-- Scripts Bootstrap e Customizados -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous">
-    </script>
+        </script>
     <script src="../../../script.js"></script>
 </body>
 
-    <script src="../../../script.js"></script>
+<script src="../../../script.js"></script>
 </body>
 
 </html>
 
-    <script src="../../../script.js"></script>
-    <script>
-        document.getElementById('searchForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const destination = document.getElementById('destino').value.toLowerCase();
-            const type = document.getElementById('tipoHospedagem').value;
-            const price = parseFloat(document.getElementById('precoMax').value) || Infinity;
+<script src="../../../script.js"></script>
+<script>
+    document.getElementById('searchForm').addEventListener('submit', function (e) {
+        e.preventDefault();
 
-            const cards = document.querySelectorAll('.card-hover-zonas');
-            
-            cards.forEach(card => {
-                const cardText = card.textContent.toLowerCase();
-                const cardPrice = parseFloat(card.querySelector('li:nth-child(2)').textContent.match(/\d+/)[0]);
-                
-                const matchesDestination = destination ? cardText.includes(destination) : true;
-                const matchesType = type === 'Qualquer tipo...' || cardText.includes(type.toLowerCase());
-                const matchesPrice = cardPrice <= price;
+        const destination = document.getElementById('destino').value.toLowerCase();
+        const type = document.getElementById('tipoHospedagem').value;
+        const price = parseFloat(document.getElementById('precoMax').value) || Infinity;
 
-                const article = card.closest('article');
-                article.style.display = matchesDestination && matchesType && matchesPrice ? 'block' : 'none';
-            });
+        const cards = document.querySelectorAll('.card-hover-zonas');
+
+        cards.forEach(card => {
+            const cardText = card.textContent.toLowerCase();
+            const cardPrice = parseFloat(card.querySelector('li:nth-child(2)').textContent.match(/\d+/)[0]);
+
+            const matchesDestination = destination ? cardText.includes(destination) : true;
+            const matchesType = type === 'Qualquer tipo...' || cardText.includes(type.toLowerCase());
+            const matchesPrice = cardPrice <= price;
+
+            const article = card.closest('article');
+            article.style.display = matchesDestination && matchesType && matchesPrice ? 'block' : 'none';
         });
-    </script>
-    
+    });
+</script>
+
 </body>
 
 </html>
-

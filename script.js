@@ -153,6 +153,22 @@ document.getElementById('baixarPDF').addEventListener('click', () => {
     html2pdf().from(elemento).save('planner-rj360.pdf');
 });
 
+window.addEventListener('DOMContentLoaded', function () {
+    const mostrarToast = localStorage.getItem('mostrarToast');
+    const nome = localStorage.getItem('usuarioNome');
+
+    if (mostrarToast === 'true' && nome) {
+        const mensagem = `E aí ${nome}! Que bom te ver aqui! Veja as novas novidades do RJ360:`;
+        document.getElementById('toastMensagem').textContent = mensagem;
+
+        const toastEl = document.getElementById('toastBoasVindas');
+        const toast = new bootstrap.Toast(toastEl);
+        toast.show();
+
+        // Limpa para não mostrar de novo ao atualizar
+        localStorage.removeItem('mostrarToast');
+    }
+});
 
 
 

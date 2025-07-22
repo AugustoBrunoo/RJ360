@@ -99,16 +99,14 @@ const quizData = [
     },
     {
         giria: "Tega",
-        certa: "Variação de nega/negrão pra chamar amigo.",
+        certa: "Estou bem",
         erradas: [
             "Comida típica.",
             "Carro antigo.",
             "Dinheiro escondido."
         ],
         exemplos: [
-            "“Aí tega, desce pro campinho.”",
-            "“Chega mais, tega, vamo trocar ideia.”",
-            "“Tá moscando aí, tega?”"
+            "“Tô tega, vou desce pro campinho.”",
         ]
     },
     {

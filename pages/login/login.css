@@ -74,10 +74,6 @@ body {
     overflow-y: auto;
 }
 
-.btn-global:hover {
-    background-color: #333;
-}
-
 .btn-esqueci-senha:hover {
     color: #859F3D;
 }
@@ -86,13 +82,25 @@ body {
     margin-top: 10%;
 }
 
+#btn-voltar:hover {
+    color: #E4EFE7;
+}
+
 [data-bs-theme="dark"] {
+    input {
+        background-color: white;
+    }
+
+    input::placeholder {
+        color: black;
+    }
+
     .container-login {
-        background-color: var(--noturno-verde-off);
+        background-color: var(--off-white);
     }
 
     .login-left {
-        background-color: var(--noturno-verde-claro);
+        background-color: #393939;
     }
 
     .login-texto {
@@ -113,15 +121,15 @@ body {
         color: black;
     }
 
-    .btn-global {
-        background-color: #333;
+    .btn-esqueci-senha {
         color: white;
+        border: 1px solid var(--noturno-verde-claro);
     }
-
-        .btn-esqueci-senha:hover {
-            background-color: var(--azul-claro);
-            color: #1A1A19;
-        }
+   
+    .btn-esqueci-senha:hover {
+        background-color: var(--azul-claro);
+        color: #1A1A19;
+    }
 }
 
 
