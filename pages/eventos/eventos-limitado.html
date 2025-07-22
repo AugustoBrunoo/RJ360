@@ -16,6 +16,7 @@
             height: 400px;
             /* Ajuste a altura do card */
         }
+
         .card-img-top {
             width: 100%;
             /* A imagem ocupa toda a largura do card */
@@ -24,10 +25,13 @@
             object-fit: cover;
             /* A imagem se ajusta ao espaço, cortando o que não se encaixa */
         }
+
         .modal-img {
             width: 100%;
-            height: 300px; /* Altura fixa para a imagem no modal */
-            object-fit: cover; /* Ajusta a imagem para cobrir o espaço */
+            height: 300px;
+            /* Altura fixa para a imagem no modal */
+            object-fit: cover;
+            /* Ajusta a imagem para cobrir o espaço */
         }
     </style>
 </head>
@@ -66,7 +70,7 @@
                             </a>
 
                             <!-- Página Inicial -->
-                            <a class="nav-link offcanvas-link active botoes-offcanvas" href="#">
+                            <a class="nav-link offcanvas-link active botoes-offcanvas" href="../../index.html">
                                 <i class="bi bi-house-door-fill me-2"></i> Página Inicial
                             </a>
 
@@ -110,7 +114,7 @@
                                     <img src="../../assets/perfil/Joana.png" alt="">
                                 </div>
                                 <p class="mt-2 fs-5 textoGlobalNormal-basic">Olá,<span class="nome-usuario"></span>
-                                        Joana</span>!</p>
+                                    Joana</span>!</p>
                                 <a href="../perfil/perfil.html" class="btn btn-textoGlobalNormal btn-sm fs-vp mt-2">Ver
                                     perfil</a>
                             </div>
@@ -124,6 +128,33 @@
     <!-- Conteúdo Principal da Página -->
     <main class="container space-mt-card-2">
         <h1 class="text-center text-destaque mb-5">Eventos por Tempo Limitado no Rio de Janeiro</h1>
+        <!-- Seção de Filtros e Busca (Conceitual) -->
+        <section class="bg-body-custom mb-5 p-4 rounded shadow-sm">
+            <h3 class="text-destaque mb-4">Refine sua Busca</h3>
+            <form id="searchForm" class="row g-3 align-items-end">
+                <div class="col-md-4">
+                    <label for="destino" class="form-label textoGlobalNormal">Destino/Região</label>
+                    <input type="text" class="form-control" id="destino" placeholder="Ex: Copacabana, Lapa, Centro">
+                </div>
+                <div class="col-md-3">
+                    <label for="tipoEvento" class="form-label textoGlobalNormal">Tipo de Evento</label>
+                    <select id="tipoEvento" class="form-select" data-filter="type">
+                        <option selected>Qualquer tipo...</option>
+                        <option>Show</option>
+                        <option>Festival</option>
+                        <option>Teatro</option>
+                        <option>Exposição</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <label for="precoMax" class="form-label textoGlobalNormal">Preço Máximo (R$)</label>
+                    <input type="number" class="form-control" id="precoMax" placeholder="Ex: 500">
+                </div>
+                <div class="col-md-2">
+                    <button type="submit" class="btn btn-search w-100">Buscar</button>
+                </div>
+            </form>
+        </section>
 
         <!-- Seção de Listagem de Eventos -->
         <section class="row g-4" id="eventList">
@@ -144,22 +175,27 @@
                                 <i class="bi bi-calendar-fill"></i> 10 a 20 de Novembro
                             </li>
                         </ul>
-                        <button class="btn btn-primary btn-global mt-3" data-bs-toggle="modal" data-bs-target="#modalEvento1">Ver Detalhes</button>
+                        <button class="btn btn-primary btn-global mt-3" data-bs-toggle="modal"
+                            data-bs-target="#modalEvento1">Ver Detalhes</button>
                     </div>
                 </div>
             </article>
 
             <!-- Modal para Evento 1 -->
-            <div class="modal fade" id="modalEvento1" tabindex="-1" aria-labelledby="modalEvento1Label" aria-hidden="true">
+            <div class="modal fade" id="modalEvento1" tabindex="-1" aria-labelledby="modalEvento1Label"
+                aria-hidden="true">
                 <div class="modal-dialog modal-lg">
                     <div class="modal-content">
                         <div class="modal-header">
                             <h5 class="modal-title" id="modalEvento1Label">Rio Gastronomia 2025</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Fechar"></button>
                         </div>
                         <div class="modal-body">
-                            <img src="../../assets/eventos/rio-gastronomia.jpg" class="img-fluid" alt="Rio Gastronomia 2025">
-                            <p>A 15ª edição do festival de gastronomia traz os melhores restaurantes do Rio de Janeiro, com
+                            <img src="../../assets/eventos/rio-gastronomia.jpg" class="img-fluid"
+                                alt="Rio Gastronomia 2025">
+                            <p>A 15ª edição do festival de gastronomia traz os melhores restaurantes do Rio de Janeiro,
+                                com
                                 pratos exclusivos e shows ao vivo. Venha experimentar o melhor da culinária carioca!</p>
                             <p><strong>Data:</strong> 10 a 20 de Novembro</p>
                             <p><strong>Local:</strong> Centro do Rio de Janeiro</p>
@@ -188,21 +224,25 @@
                                 <i class="bi bi-calendar-fill"></i> 5 de Dezembro
                             </li>
                         </ul>
-                        <button class="btn btn-primary btn-global mt-3" data-bs-toggle="modal" data-bs-target="#modalEvento2">Ver Detalhes</button>
+                        <button class="btn btn-primary btn-global mt-3" data-bs-toggle="modal"
+                            data-bs-target="#modalEvento2">Ver Detalhes</button>
                     </div>
                 </div>
             </article>
 
             <!-- Modal para Evento 2 -->
-            <div class="modal fade" id="modalEvento2" tabindex="-1" aria-labelledby="modalEvento2Label" aria-hidden="true">
+            <div class="modal fade" id="modalEvento2" tabindex="-1" aria-labelledby="modalEvento2Label"
+                aria-hidden="true">
                 <div class="modal-dialog modal-lg">
                     <div class="modal-content">
                         <div class="modal-header">
                             <h5 class="modal-title" id="modalEvento2Label">CIRCUITO RJ 2025 - 1ª ETAPA</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Fechar"></button>
                         </div>
                         <div class="modal-body">
-                            <img src="../../assets/eventos/circuito-rj.jpg" class="img-fluid modal-img" alt="CIRCUITO RJ 2025">
+                            <img src="../../assets/eventos/circuito-rj.jpg" class="img-fluid modal-img"
+                                alt="CIRCUITO RJ 2025">
                             <p>Participe da 1ª etapa do CIRCUITO RJ, uma corrida e caminhada que promove a saúde e o
                                 bem-estar. Com distâncias de 3K, é ideal para toda a família!</p>
                             <p><strong>Data:</strong> 5 de Dezembro</p>
@@ -232,21 +272,25 @@
                                 <i class="bi bi-calendar-fill"></i> 15 de Janeiro
                             </li>
                         </ul>
-                        <button class="btn btn-primary btn-global mt-3" data-bs-toggle="modal" data-bs-target="#modalEvento3">Ver Detalhes</button>
+                        <button class="btn btn-primary btn-global mt-3" data-bs-toggle="modal"
+                            data-bs-target="#modalEvento3">Ver Detalhes</button>
                     </div>
                 </div>
             </article>
 
             <!-- Modal para Evento 3 -->
-            <div class="modal fade" id="modalEvento3" tabindex="-1" aria-labelledby="modalEvento3Label" aria-hidden="true">
+            <div class="modal fade" id="modalEvento3" tabindex="-1" aria-labelledby="modalEvento3Label"
+                aria-hidden="true">
                 <div class="modal-dialog modal-lg">
                     <div class="modal-content">
                         <div class="modal-header">
                             <h5 class="modal-title" id="modalEvento3Label">Show da Lady Gaga 2025</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Fechar"></button>
                         </div>
                         <div class="modal-body">
-                            <img src="../../assets/eventos/show-lady-gaga.jpg" class="img-fluid modal-img" alt="Show da Lady Gaga 2025">
+                            <img src="../../assets/eventos/show-lady-gaga.jpg" class="img-fluid modal-img"
+                                alt="Show da Lady Gaga 2025">
                             <p>Não perca a chance de ver a icônica Lady Gaga ao vivo em copacabana! Uma apresentação
                                 cheia de energia e grandes sucessos.</p>
                             <p><strong>Data:</strong> 15 de Janeiro</p>
@@ -276,21 +320,25 @@
                                 <i class="bi bi-calendar-fill"></i> 1 a 10 de Setembro
                             </li>
                         </ul>
-                        <button class="btn btn-primary btn-global mt-3" data-bs-toggle="modal" data-bs-target="#modalEvento4">Ver Detalhes</button>
+                        <button class="btn btn-primary btn-global mt-3" data-bs-toggle="modal"
+                            data-bs-target="#modalEvento4">Ver Detalhes</button>
                     </div>
                 </div>
             </article>
 
             <!-- Modal para Evento 4 -->
-            <div class="modal fade" id="modalEvento4" tabindex="-1" aria-labelledby="modalEvento4Label" aria-hidden="true">
+            <div class="modal fade" id="modalEvento4" tabindex="-1" aria-labelledby="modalEvento4Label"
+                aria-hidden="true">
                 <div class="modal-dialog modal-lg">
                     <div class="modal-content">
                         <div class="modal-header">
                             <h5 class="modal-title" id="modalEvento4Label">Bienal do Livro 2025</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Fechar"></button>
                         </div>
                         <div class="modal-body">
-                            <img src="../../assets/eventos/bienal-livro.jpg" class="img-fluid modal-img" alt="Bienal do Livro 2025">
+                            <img src="../../assets/eventos/bienal-livro.jpg" class="img-fluid modal-img"
+                                alt="Bienal do Livro 2025">
                             <p>A Bienal do Livro é a maior feira de livros do Brasil, reunindo autores, editoras e
                                 amantes da literatura. Venha participar de palestras, lançamentos e muito mais!</p>
                             <p><strong>Data:</strong> 1 a 10 de Setembro</p>
