@@ -52,7 +52,7 @@ const passeiosFixos = [
   },
   {
     nome: "Tour Histórico Centro",
-    desc: "Embarque em uma viagem cultural...",
+    desc: "Embarque em uma viagem cultural...Explore o coração do Rio de Janeiro em um passeio guiado pelo Centro Histórico. Comece na Praça Mauá, admirando o Museu do Amanhã e o Aquário Marinho. Siga pela Rua do Ouvidor, visitando a Igreja de São Francisco da Penitência e o deslumbrante Teatro Municipal.",
     img: "../../assets/imagens/outras_fotos/imagem_tour_centro.jpg",
     guia: `Guiado por Maria Souza...`
   },

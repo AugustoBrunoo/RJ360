@@ -129,13 +129,13 @@
         </nav>
     </header>
 
-    <div class="header-space"></div>
+    <div class="mt-4"></div>
 
     <div class="hero texto">
         <h1>Rumores do Rio</h1>
     </div>
 
-    <div class="container mt-4">
+    <div class="container mt-2">
         <h2 class="text-center">Fique por dentro dos burburinhos da cidade!</h2>
         <p class="text-center">Festas, eventos e tudo o que pode agitar o Rio nos próximos dias.</p>
 
@@ -159,22 +159,18 @@
                 </div> -->
             </div>
 
+            <!-- Card do Evento -->
             <div class="col-md-4 mb-4">
-                <div class="card">
+                <div class="card shadow-sm">
                     <img src="../../assets/eventos/evento2.jpg" class="card-img-top" alt="Evento 2">
                     <div class="card-body">
-                        <h5 class="card-title">Beyonce ta vindo ai?</h5>
+                        <h5 class="card-title">Beyoncé tá vindo aí?</h5>
                         <p class="card-text">Um show ao ar livre com artistas internacionais.</p>
-                        <button class="btn btn-global"
-                            onclick="verMais('Evento 2', 'Um show ao ar livre com artistas locais e internacionais. Imperdível!')">Ver
-                            mais</button>
+                        <button class="btn btn-global" data-bs-toggle="modal" data-bs-target="#modalEvento2">
+                            Ver mais
+                        </button>
                     </div>
                 </div>
-                <!-- <div class="comentarios mt-2">
-                    <h6>Comentários:</h6>
-                    <p>👤 Maria: "Estou muito animada para isso!"</p>
-                    <p>👤 Carlos: "Espero que tenha ingressos disponíveis!"</p>
-                </div> -->
             </div>
 
             <div class="col-md-4 mb-4">
@@ -193,6 +189,56 @@
                     <p>👤 Lucas: "Esse evento é imperdível!"</p>
                     <p>👤 Sofia: "Vou levar meus amigos!"</p>
                 </div> -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modalEvento2" tabindex="-1" aria-labelledby="modalEvento2Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalEvento2Label">Evento: Beyoncé tá vindo aí?</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="../../assets/eventos/evento2.jpg" class="img-fluid mb-3" alt="Evento 2">
+                    <p class="fw-bold text-primary">O burburinho nas redes sociais é real! Fãs especulam se Beyoncé fará
+                        uma aparição surpresa no festival.</p>
+                    <p>Um show ao ar livre com artistas locais e internacionais. Imperdível!</p>
+
+                    <!-- Comentários -->
+                    <div class="mt-4">
+                        <h6>Comentários:</h6>
+                        <div class="d-flex mb-3">
+                            <img src="../../assets/usuarios/maria.jpg" alt="Maria" class="rounded-circle me-2"
+                                width="40" height="40">
+                            <div>
+                                <strong>Maria</strong> <small class="text-muted">– 20/07/2025</small>
+                                <p>Estou muito animada para isso!</p>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-3">
+                            <img src="../../assets/usuarios/carlos.jpg" alt="Carlos" class="rounded-circle me-2"
+                                width="40" height="40">
+                            <div>
+                                <strong>Carlos</strong> <small class="text-muted">– 21/07/2025</small>
+                                <p>Espero que tenha ingressos disponíveis!</p>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-3">
+                            <img src="../../assets/usuarios/ana.jpg" alt="Ana" class="rounded-circle me-2" width="40"
+                                height="40">
+                            <div>
+                                <strong>Ana</strong> <small class="text-muted">– 22/07/2025</small>
+                                <p>Já estou escolhendo meu look pro show 😍</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
             </div>
         </div>
     </div>
