@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "nome": "Nicolas Lima",
+    "imagem": "./assets/avaliacoes/nicolas.jpeg",
+    "alt_imagem": "Foto de Nicolas Lima",
+    "comentario": "O RJ360 foi essencial para planejar minha viagem. Descobri lugares incríveis que nem sabia que existiam e aproveitei muito mais cada passeio.",
+    "estrelas": 5,
+    "postado": "Postado há 8 dias atrás"
+  },
+  {
+    "id": 2,
+    "nome": "Pedro Dusek",
+    "imagem": "./assets/avaliacoes/pedro_dusek.png",
+    "alt_imagem": "Foto de Pedro Dusek",
+    "comentario": "Com o RJ360 consegui organizar meu roteiro de forma prática. As dicas de transporte e segurança foram muito úteis durante toda minha estadia.",
+    "estrelas": 5,
+    "postado": "Postado há 7 dias atrás"
+  },
+  {
+    "id": 3,
+    "nome": "Hugo Giffoni",
+    "imagem": "./assets/avaliacoes/hugo.jpeg",
+    "alt_imagem": "Foto de Hugo Giffoni",
+    "comentario": "Nunca pensei que explorar o Rio fosse tão fácil! O site me deu sugestões incríveis e me senti mais confiante para andar pela cidade.",
+    "estrelas": 5,
+    "postado": "Postado há 2 semanas atrás"
+  },
+  {
+    "id": 4,
+    "nome": "Nilton Junior",
+    "imagem": "./assets/avaliacoes/nilton_junior.png",
+    "alt_imagem": "Foto de Nilton Junior",
+    "comentario": "Descobri um novo jeito de curtir o Rio com a ajuda do RJ360!! É muito fácil, prático e cheio de dicas que realmente fazem a diferença!",
+    "estrelas": 5,
+    "postado": "Postado há 5 dias atrás"
+  }
+]

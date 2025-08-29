@@ -79,18 +79,20 @@ body {
 }
 
 
-/*Imagem do Carrossel do Início*/
+/* Imagem do Carrossel do Início*/
 
-.img-carousel-1,
-.img-carousel-2,
-.img-carousel-3 {
+.img-carousel {
     width: 100%;
     height: 500px;
-    display: block;
     object-fit: cover;
+
 }
 
-/* Texto Inicial e Textos de Cards Zonas*/
+.carousel {
+    overflow-x: hidden; /* MÁGICA! Esconde o conteúdo que vaza para os lados durante a animação. */
+}
+
+/* Texto Inicial e Textos de Cards Zonas */
 
 .textoInicial,
 .card-text,
@@ -490,7 +492,7 @@ body {
 
     .card-body {
         color: var(--noturno-preto);
-        background-color: var(--off-white);
+        background-color: white;
     }
 
     .text-body-custom {
@@ -499,7 +501,7 @@ body {
     }
 
     .bg-fundo-card {
-        background-color: var(--off-white);
+        background-color: white;
     }
 
     .bg-fundo-avaliacao {
@@ -509,10 +511,6 @@ body {
     .container-rodape {
         background-color: var(--noturno-verde-claro);
     }
-
-    /* .carrousel-custom {
-        background-color: red
-    } */
 
     .text-custom-footer {
         color: var(--off-white);
@@ -524,6 +522,10 @@ body {
 
     .span-logo-rodape {
         color: var(--noturno-verde-claro);
+    }
+
+    .card-text-avaliacao {
+        color: black;
     }
 
     .span-logo2-rodape {
@@ -702,62 +704,52 @@ footer {
     /* Cor de fundo padrão dos cards */
 }
 
-
-/* @media (max-width: 2560px) {
-    
-
-    .img-carousel-1,
-    .img-carousel-2,
-    .img-carousel-3 {
-        height: 900px;
-    } 
-
-}*/
-
-/* @media (max-width: 1440px) {
-    
-
-    .img-carousel-1,
-    .img-carousel-2,
-    .img-carousel-3 {
-        height: 500px;
+@media (max-width: 768px) {
+    .img-carousel {
+        height: 300px; /* Uma altura mais amigável para celulares */
     }
-} */
+}
 
-/* @media (max-width: 768px) {
+
+@media (max-width: 576px) {
     
 
-    .img-carousel-1,
-    .img-carousel-2,
-    .img-carousel-3 {
-        height: 300px;
-    }
-} */
-
-/* @media (max-width: 425px) {
     
+}
 
-    .img-carousel-1,
-    .img-carousel-2,
-    .img-carousel-3 {
-        height: 200px;
-    }
-} */
+
+@media (max-width: 425px) {
+
+    /* .img-carousel {
+        height: 800px;
+    } */
+}
 
 /* Ajustar card de avaliação! esta ficando ruim */
 /* .bg-fundo-avaliacao {} */
 
-/* @media (max-width: 375px) {
+@media (max-width: 375px) {
     
+    .textoInicial {
+        font-size: 15px;
+    }
 
-    .img-carousel-1,
-    .img-carousel-2,
-    .img-carousel-3 {
-        height: 180px;
+    .textoZona {
+        font-size: 15px;
+    }
+
+    .text-custom-footer {
+        font-size: 15px;
+        width: 50%;
+    }
+
+    .rodape-copywrite {
+        display: flex;
+        justify-content: center;
     }
 
     
-} */
+}
 
 /* @media (max-width: 320px) {
     

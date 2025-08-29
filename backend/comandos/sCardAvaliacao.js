@@ -1,0 +1,5 @@
+try {
+    fetch();
+} catch (error) {
+    
+}
