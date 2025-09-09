@@ -12,30 +12,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
-// document.getElementById('btnRemoverAvaliacao').addEventListener('click', function () {
-//     if (confirm('Deseja apagar a avaliação?')) {
-//         // Remove a avaliação do accordion
-//         const accordionItem = document.querySelector('#accordionAvaliacoes .accordion-item');
-//         if (accordionItem) {
-//             accordionItem.remove();
-//         }
-
-//         // Fecha o modal
-//         const modal = bootstrap.Modal.getInstance(document.getElementById('modalReverAvaliacao'));
-//         modal.hide();
-
-//         // Mostra o alerta de sucesso
-//         const alerta = document.getElementById('alertaRemocao');
-//         alerta.style.display = 'block';
-
-//         // Oculta o alerta automaticamente após 3 segundos
-//         setTimeout(() => {
-//             alerta.classList.remove('show');
-//             alerta.classList.add('hide');
-//         }, 3000);
-//     }
-// });
-
 document.getElementById('confirmarRemocao').addEventListener('click', function () {
     // Remove a avaliação correta (ideal para versão dinâmica identificar o item certo)
     const accordionItem = document.querySelector('#avaliacao1'); // aqui pode variar se for dinâmico
