@@ -1,3 +1,5 @@
+/* === ESTILOS ORIGINAIS === */
+
 .img-perfil img {
     border-radius: 50%;
     width: 200px;
@@ -19,26 +21,24 @@
 
 .identidade-1 {
     background-color: #E4EFE7;
-    align-items: stretch;
     padding: 30px;
     border-radius: 20px;
-    display: flex;
-    gap: 40px;
-}
-
-.teste {
-    width: 73%;
+    /* O gap será controlado pelas classes do Bootstrap e media queries */
+    width: 90%; /* Ajuste para ter uma largura máxima controlada */
+    max-width: 1100px; /* Impede que o card fique excessivamente largo em telas grandes */
 }
 
 /* Faz a divisória acompanhar a altura dos blocos ao lado */
 .divisoria {
     width: 3px;
-    height: 290px;
+    /* A altura será esticada pelo flexbox, não precisa ser fixa */
+    align-self: stretch;
     background-color: black;
 }
 
 /* Força altura mínima padronizada para alinhar divisória e contato */
-.textos-biografia, .contato-perfil {
+.textos-biografia,
+.contato-perfil {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -50,11 +50,10 @@
     gap: 15px;
 }
 
-
 .icones-perfil {
     position: relative;
     border: 2px solid rgba(201, 201, 201, 0.823);
-    padding: 2%;
+    padding: 8px; /* Padding fixo para consistência */
     border-radius: 10px;
     background-color: #E4EFE7;
     color: black;
@@ -67,8 +66,7 @@
 
 .icones-perfil * {
     position: relative;
-    z-index: 2;
-    /* garante que ícone e texto fiquem acima do ::before */
+    z-index: 2; /* garante que ícone e texto fiquem acima do ::before */
 }
 
 .icones-perfil::before {
@@ -91,28 +89,54 @@
 
 .icones-perfil:hover {
     color: white;
-
-    .bi-linkedin {
-        color: rgb(2, 106, 172);
-    }
-
-    .bi-whatsapp {
-        color: rgb(72, 206, 77);
-    }
 }
 
-.bi-linkedin:hover {
-    color: red;
+.icones-perfil:hover .bi-linkedin {
+    color: rgb(2, 106, 172);
 }
 
+.icones-perfil:hover .bi-whatsapp {
+    color: rgb(72, 206, 77);
+}
 
-[data-bs-theme="dark"] {
+/* === ESTILOS PARA TEMA ESCURO === */
+
+[data-bs-theme="dark"] .identidade-1 {
+    background-color: #FAF1E6;
+    color: black;
+}
+
+[data-bs-theme="dark"] .textoSobreNos {
+    color: white;
+}
+
+[data-bs-theme="dark"] .icones-perfil {
+    background-color: #FDFAF6;
+}
+
+/* === ADIÇÕES PARA RESPONSIVIDADE === */
+
+@media (max-width: 767.98px) {
     .identidade-1 {
-        background-color: #FAF1E6;
-        color: black;
+        padding: 20px; /* Menos padding em telas pequenas */
+        width: 95%; /* Ocupa mais espaço na tela do celular */
     }
 
-    .icones-perfil {
-        background-color: #FDFAF6;
+    .img-perfil img {
+        width: 150px;
+        height: 150px;
+    }
+
+    h1 {
+        font-size: 1.75rem; /* Ajusta o tamanho do nome */
+    }
+
+    .biografia-info,
+    .fs-custom {
+        font-size: 16px; /* Fonte menor para melhor leitura */
+    }
+
+    .fs-custom-icon {
+        font-size: 24px;
     }
 }
